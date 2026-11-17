@@ -116,6 +116,30 @@
   .agency .services{font-size:.92rem;color:var(--muted);border-top:1px solid var(--line);padding-top:24px}
   .agency .services strong{color:var(--ink)}
 
+  .pricing{margin:0 0 72px;text-align:center}
+  .pricing .eyebrow{
+    display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--accent);margin-bottom:14px;
+  }
+  .pricing h2{font-family:'Fraunces',serif;font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:700;line-height:1.2;margin-bottom:12px}
+  .pricing-sub{color:var(--muted);max-width:620px;margin:0 auto 36px}
+  .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:left}
+  .plan{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:32px 28px;display:flex;flex-direction:column}
+  .plan.popular{border:2px solid var(--accent);position:relative}
+  .plan .badge{display:inline-block;background:var(--accent);color:var(--dark);font-size:.8rem;font-weight:700;padding:4px 12px;border-radius:999px;margin-bottom:16px;align-self:flex-start}
+  .plan h3{font-size:1.15rem;font-weight:700;margin-bottom:8px}
+  .plan .price{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;margin-bottom:4px}
+  .plan .plan-for{color:var(--muted);font-size:.92rem;margin-bottom:20px}
+  .plan ul{list-style:none;margin:0 0 20px;padding:0;display:flex;flex-direction:column;gap:10px;flex:1}
+  .plan ul li{font-size:.92rem;color:var(--ink);padding-left:24px;position:relative}
+  .plan ul li::before{content:"\2713";position:absolute;left:0;color:var(--accent);font-weight:700}
+  .plan .delivery{font-size:.9rem;color:var(--muted);margin-bottom:20px}
+  .plan a.pbtn{display:block;text-align:center;background:transparent;color:var(--accent);border:2px solid var(--accent);font-weight:700;text-decoration:none;padding:12px 24px;border-radius:999px;transition:.2s}
+  .plan a.pbtn:hover{background:var(--accent);color:var(--dark)}
+  .plan.popular a.pbtn{background:var(--accent);color:var(--dark)}
+  .plan.popular a.pbtn:hover{background:var(--accent-dark);border-color:var(--accent-dark)}
+  .pricing-note{color:var(--muted);font-size:.88rem;max-width:640px;margin:28px auto 0}
+
   /* CTA */
   .cta{
     background:var(--dark);color:#fff;border:1px solid var(--line);border-radius:20px;text-align:center;
@@ -141,6 +165,7 @@
     .hero{padding:48px 0 36px}
     .stats{grid-template-columns:repeat(2,1fr)}
     .agency{padding:40px 24px}
+    .plans{grid-template-columns:1fr;max-width:520px;margin:0 auto}
   }
 </style>
 </head>
@@ -186,6 +211,7 @@
     <a href="#roofers">Roofers</a>
     <a href="#hvac-services">HVAC Services</a>
     <a href="#moving-companies">Moving Companies</a>
+    <a href="#pricing">Pricing</a>
   </nav>
 
   <section id="restaurants">
@@ -846,6 +872,61 @@
       </div>
     </a>
     </div>
+  </section>
+
+  <section class="pricing" id="pricing">
+    <span class="eyebrow">Pricing</span>
+    <h2>Simple, honest pricing</h2>
+    <p class="pricing-sub">Every package includes design, development and animations — no hidden costs. Pick the package that fits your business.</p>
+    <div class="plans">
+      <article class="plan">
+        <h3>Starter Brand Suite</h3>
+        <p class="price">$1,800</p>
+        <p class="plan-for">For small businesses getting online</p>
+        <ul>
+          <li>3-page Figma UI/UX design (up to 15 sections)</li>
+          <li>1 premium logo design (2 concepts)</li>
+          <li>3-page WordPress website with Elementor</li>
+          <li>Up to 5 Lottie JSON animations</li>
+          <li>Animated email signature</li>
+        </ul>
+        <p class="delivery">Up to 22 business days</p>
+        <a class="pbtn" href="https://www.weblodge.agency/pricing" target="_blank" rel="noopener">Choose Starter</a>
+      </article>
+      <article class="plan popular">
+        <span class="badge">Most popular</span>
+        <h3>Growth Brand Suite</h3>
+        <p class="price">$2,770</p>
+        <p class="plan-for">For growing businesses that want more</p>
+        <ul>
+          <li>6-page Figma UI/UX design (up to 20 sections)</li>
+          <li>1 premium logo design (2 concepts)</li>
+          <li>6-page WordPress website with Elementor</li>
+          <li>Up to 7 Lottie JSON animations</li>
+          <li>Email signatures for you + 5 team members</li>
+          <li>30-second brand promo video</li>
+        </ul>
+        <p class="delivery">Up to 32 business days</p>
+        <a class="pbtn" href="https://www.weblodge.agency/pricing" target="_blank" rel="noopener">Choose Growth</a>
+      </article>
+      <article class="plan">
+        <h3>Established Brand Suite</h3>
+        <p class="price">$4,070</p>
+        <p class="plan-for">For established brands going all in</p>
+        <ul>
+          <li>10-page Figma UI/UX design (up to 30 sections)</li>
+          <li>1 premium logo design (2 concepts)</li>
+          <li>10-page WordPress website with Elementor</li>
+          <li>Up to 10 Lottie JSON animations</li>
+          <li>Email signatures for you + 10 team members</li>
+          <li>40-second brand promo video</li>
+          <li>Motion intro, outro &amp; preloader</li>
+        </ul>
+        <p class="delivery">Up to 45 business days</p>
+        <a class="pbtn" href="https://www.weblodge.agency/pricing" target="_blank" rel="noopener">Choose Established</a>
+      </article>
+    </div>
+    <p class="pricing-note">Domain, hosting and premium plugins are not included — contact us first and we will quote them separately. Prices may change; quoted prices are held for 14 days.</p>
   </section>
 
   <section class="agency">
