@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Demos — Weblodge Agency</title>
+<meta name="description" content="Live website demos by Weblodge Agency. See what your business could look like online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1a1d21;
+    --muted:#5b6066;
+    --line:#e7e3dc;
+    --bg:#faf8f4;
+    --card:#ffffff;
+    --accent:#c96f2e;
+    --accent-dark:#a85a22;
+    --dark:#22252a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:'Inter',system-ui,-apple-system,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+  /* Header */
+  header{padding:28px 0 8px}
+  .brand{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .logo{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:700;letter-spacing:-.02em;text-decoration:none}
+  .logo span{color:var(--accent)}
+  .brand a.site{font-size:.95rem;font-weight:600;color:var(--muted);text-decoration:none;border:1px solid var(--line);background:#fff;padding:8px 16px;border-radius:999px;transition:.2s}
+  .brand a.site:hover{color:var(--ink);border-color:#cfc9bd}
+
+  /* Hero */
+  .hero{text-align:center;padding:64px 0 48px}
+  .hero .eyebrow{
+    display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--accent);margin-bottom:16px;
+  }
+  .hero h1{
+    font-family:'Fraunces',serif;font-size:clamp(2.2rem,5vw,3.4rem);font-weight:700;
+    line-height:1.12;letter-spacing:-.02em;max-width:720px;margin:0 auto 18px;
+  }
+  .hero p{font-size:1.1rem;color:var(--muted);max-width:620px;margin:0 auto}
+  .hero p strong{color:var(--ink)}
+
+  /* Cards */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:16px 0 72px}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;
+    display:flex;flex-direction:column;text-decoration:none;
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(26,29,33,.10)}
+  .card img{width:100%;height:200px;object-fit:cover;display:block}
+  .card-body{padding:24px;display:flex;flex-direction:column;flex:1}
+  .tag{
+    font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--accent);margin-bottom:8px;
+  }
+  .card h2{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:700;line-height:1.25;margin-bottom:8px}
+  .card p{font-size:.95rem;color:var(--muted);flex:1;margin-bottom:20px}
+  .card .link{font-weight:700;font-size:.95rem;color:var(--accent-dark)}
+  .card .link::after{content:" →";transition:margin-left .2s}
+  .card:hover .link::after{margin-left:4px}
+
+  /* Agency */
+  .agency{
+    background:var(--card);border:1px solid var(--line);border-radius:20px;
+    padding:52px 40px;margin-bottom:72px;text-align:center;
+  }
+  .agency .eyebrow{
+    display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--accent);margin-bottom:14px;
+  }
+  .agency h2{font-family:'Fraunces',serif;font-size:clamp(1.5rem,3.2vw,2rem);font-weight:700;line-height:1.25;max-width:640px;margin:0 auto 12px}
+  .agency > p{color:var(--muted);max-width:620px;margin:0 auto}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin:36px 0 28px}
+  .stat b{font-family:'Fraunces',serif;font-size:2.3rem;font-weight:700;line-height:1.1;display:block;color:var(--accent-dark)}
+  .stat span{font-size:.9rem;color:var(--muted)}
+  .agency .services{font-size:.92rem;color:var(--muted);border-top:1px solid var(--line);padding-top:24px}
+  .agency .services strong{color:var(--ink)}
+
+  /* CTA */
+  .cta{
+    background:var(--dark);color:#fff;border-radius:20px;text-align:center;
+    padding:56px 32px;margin-bottom:72px;
+  }
+  .cta h2{font-family:'Fraunces',serif;font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:700;line-height:1.2;margin-bottom:12px}
+  .cta p{color:#c9cdd2;max-width:520px;margin:0 auto 28px}
+  .cta a.btn{
+    display:inline-block;background:var(--accent);color:#fff;font-weight:700;text-decoration:none;
+    padding:14px 30px;border-radius:999px;transition:background .2s;
+  }
+  .cta a.btn:hover{background:var(--accent-dark)}
+
+  footer{border-top:1px solid var(--line);padding:28px 0 40px;text-align:center;font-size:.9rem;color:var(--muted)}
+  footer a{color:var(--ink);font-weight:600}
+
+  @media (max-width:860px){
+    .grid{grid-template-columns:1fr;max-width:520px;margin:0 auto}
+    .hero{padding:48px 0 36px}
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .agency{padding:40px 24px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <a class="logo" href="https://weblodge.agency">Weblodge<span>.</span></a>
+      <a class="site" href="https://weblodge.agency">weblodge.agency</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <span class="eyebrow">Website demos by Weblodge Agency</span>
+    <h1>See what your business could look like online.</h1>
+    <p>Every demo below is a complete, ready-to-launch style website for a small business — <strong>menus, prices, bookings, reviews, and contact details</strong>, all in one page. Click any demo to explore it.</p>
+  </section>
+
+  <section class="grid">
+    <a class="card" href="restaurant/">
+      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop" alt="Warm restaurant dining room" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Restaurant · Austin, TX</span>
+        <h2>The Copper Skillet</h2>
+        <p>A warm, appetizing site for a local restaurant — menu highlights with prices, reviews, opening hours, and online reservations.</p>
+        <span class="link">View the demo</span>
+      </div>
+    </a>
+
+    <a class="card" href="salon/">
+      <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1200&auto=format&fit=crop" alt="Modern hair salon interior" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Salon &amp; Barbershop · Dallas, TX</span>
+        <h2>The Velvet Strand</h2>
+        <p>An elegant site for a salon — services with prices, stylist profiles, client reviews, and easy appointment booking.</p>
+        <span class="link">View the demo</span>
+      </div>
+    </a>
+
+    <a class="card" href="auto-repair/">
+      <img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?q=80&w=1200&auto=format&fit=crop" alt="Mechanic working on a car" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Auto Repair · Houston, TX</span>
+        <h2>Ironline Auto Care</h2>
+        <p>A bold, trustworthy site for an auto shop — services with prices, why customers choose them, reviews, and appointment booking.</p>
+        <span class="link">View the demo</span>
+      </div>
+    </a>
+  </section>
+
+  <section class="agency">
+    <span class="eyebrow">About the agency</span>
+    <h2>Weblodge Agency — make your website like a sales machine.</h2>
+    <p>A white-label Lottie animation, email signature &amp; WordPress agency. We design fast, professional websites for small businesses — and for agencies who deliver under their own brand.</p>
+    <div class="stats">
+      <div class="stat"><b>430+</b><span>Projects completed</span></div>
+      <div class="stat"><b>400+</b><span>Happy clients</span></div>
+      <div class="stat"><b>5+</b><span>Years of experience</span></div>
+      <div class="stat"><b>10+</b><span>Team members</span></div>
+    </div>
+    <p class="services"><strong>What we do:</strong> WordPress Development · Figma UI/UX Design · Lottie Animation · Logo Design · Animated Email Signatures · Motion Graphics</p>
+  </section>
+
+  <section class="cta">
+    <h2>Want a website like this for your business?</h2>
+    <p>Weblodge Agency builds fast, professional WordPress websites for small businesses — designed around your brand, your services, and your customers.</p>
+    <a class="btn" href="https://weblodge.agency">Get your website — weblodge.agency</a>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    Demo websites crafted by <a href="https://weblodge.agency">Weblodge Agency</a>. Business names, addresses, and details on the demo pages are fictional.
+  </div>
+</footer>
+
+</body>
+</html>

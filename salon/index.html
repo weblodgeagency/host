@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Velvet Strand | Salon & Barbershop in Dallas, TX</title>
+<meta name="description" content="The Velvet Strand is a modern salon and barbershop in Uptown Dallas. Precision haircuts, color, balayage, beard trims and styling — book your chair today.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#141414;
+    --ink-soft:#3d3d3d;
+    --muted:#6f6a63;
+    --cream:#faf7f2;
+    --sand:#f1e9df;
+    --gold:#c19a5b;
+    --gold-dark:#a37f42;
+    --white:#ffffff;
+    --line:#e8e0d5;
+    --radius:14px;
+    --shadow:0 12px 32px rgba(20,20,20,.09);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    color:var(--ink);
+    background:var(--white);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:600;line-height:1.15}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .eyebrow{
+    text-transform:uppercase;letter-spacing:.18em;
+    font-size:.78rem;font-weight:700;color:var(--gold-dark);
+    margin-bottom:10px;
+  }
+  .section{padding:84px 0}
+  .section-head{max-width:680px;margin:0 auto 48px;text-align:center}
+  .section-head h2{font-size:2.35rem;margin-bottom:12px}
+  .section-head p{color:var(--muted);font-size:1.05rem}
+
+  /* ---------- Nav ---------- */
+  .nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,.94);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    max-width:1120px;margin:0 auto;padding:16px 24px;
+    display:flex;align-items:center;justify-content:space-between;gap:20px;
+  }
+  .logo{font-family:'Playfair Display',Georgia,serif;font-size:1.45rem;font-weight:700;letter-spacing:.01em}
+  .logo span{color:var(--gold-dark);font-style:italic}
+  .nav-links{display:flex;align-items:center;gap:28px;font-size:.95rem;font-weight:500;color:var(--ink-soft)}
+  .nav-links a:hover{color:var(--gold-dark)}
+  .btn{
+    display:inline-block;padding:12px 22px;border-radius:999px;
+    font-weight:600;font-size:.95rem;transition:.2s ease;
+    border:1px solid transparent;cursor:pointer;text-align:center;
+  }
+  .btn-gold{background:var(--ink);color:#fff}
+  .btn-gold:hover{background:var(--gold-dark)}
+  .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.85)}
+  .btn-outline:hover{background:#fff;color:var(--ink)}
+  .btn-light{background:var(--gold);color:#fff}
+  .btn-light:hover{background:var(--gold-dark)}
+  .btn-sm{padding:10px 18px;font-size:.9rem}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;min-height:640px;
+    display:flex;align-items:center;
+    background:
+      linear-gradient(90deg, rgba(10,10,10,.78) 0%, rgba(10,10,10,.55) 52%, rgba(10,10,10,.18) 100%),
+      url('https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+    color:#fff;
+  }
+  .hero-inner{max-width:1120px;margin:0 auto;padding:90px 24px;width:100%}
+  .hero-copy{max-width:620px}
+  .hero-copy .eyebrow{color:#e8c88f}
+  .hero-copy h1{font-size:3.6rem;margin-bottom:18px}
+  .hero-copy h1 em{font-style:italic;color:#e8c88f}
+  .hero-copy p{font-size:1.15rem;color:rgba(255,255,255,.88);margin-bottom:30px;max-width:520px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-meta{
+    margin-top:38px;display:flex;gap:32px;flex-wrap:wrap;
+    font-size:.92rem;color:rgba(255,255,255,.85);
+    border-top:1px solid rgba(255,255,255,.22);padding-top:22px;max-width:560px;
+  }
+  .hero-meta strong{display:block;color:#fff;font-size:1rem}
+
+  /* ---------- Intro strip ---------- */
+  .intro{background:var(--cream);padding:56px 0}
+  .intro-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+  .intro-grid h2{font-size:2.1rem;margin-bottom:14px}
+  .intro-grid p{color:var(--muted);margin-bottom:12px}
+  .intro-img{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+  .intro-img img{width:100%;height:340px;object-fit:cover}
+  .ticks{margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:10px 22px;font-size:.95rem;font-weight:500}
+  .ticks span::before{content:"— ";color:var(--gold-dark);font-weight:700}
+
+  /* ---------- Services ---------- */
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .service{
+    border:1px solid var(--line);border-radius:var(--radius);
+    overflow:hidden;background:#fff;transition:.2s ease;
+  }
+  .service:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
+  .service img{width:100%;height:190px;object-fit:cover}
+  .service-body{padding:22px 22px 24px}
+  .service-top{display:flex;justify-content:space-between;align-items:baseline;gap:14px;margin-bottom:8px}
+  .service-top h3{font-size:1.3rem}
+  .price{font-family:'Playfair Display',Georgia,serif;font-size:1.35rem;font-weight:700;color:var(--gold-dark);white-space:nowrap}
+  .service-body p{color:var(--muted);font-size:.96rem}
+  .service-meta{margin-top:14px;font-size:.86rem;color:var(--muted);font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+  .services-note{text-align:center;color:var(--muted);margin-top:28px;font-size:.95rem}
+  .services-note a{color:var(--gold-dark);font-weight:600;text-decoration:underline}
+
+  /* ---------- Stylists ---------- */
+  .stylists{background:var(--cream)}
+  .stylist-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .stylist{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 6px 20px rgba(20,20,20,.06);text-align:center}
+  .stylist img{width:100%;height:320px;object-fit:cover}
+  .stylist-body{padding:24px 20px 28px}
+  .stylist-body h3{font-size:1.4rem;margin-bottom:4px}
+  .role{color:var(--gold-dark);font-weight:700;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+  .stylist-body p{color:var(--muted);font-size:.96rem}
+
+  /* ---------- Reviews ---------- */
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .review{
+    background:var(--cream);border-radius:var(--radius);
+    padding:30px 26px;border:1px solid var(--line);
+  }
+  .stars{color:var(--gold);letter-spacing:.15em;font-size:1.05rem;margin-bottom:14px}
+  .review p{font-size:1.02rem;color:var(--ink-soft);margin-bottom:18px}
+  .reviewer{font-weight:700}
+  .reviewer small{display:block;color:var(--muted);font-weight:500}
+
+  /* ---------- Booking CTA ---------- */
+  .cta{
+    background:
+      linear-gradient(rgba(15,15,15,.82), rgba(15,15,15,.82)),
+      url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+    color:#fff;text-align:center;
+  }
+  .cta h2{font-size:2.4rem;margin-bottom:12px}
+  .cta p{color:rgba(255,255,255,.85);max-width:600px;margin:0 auto 28px;font-size:1.05rem}
+  .cta .hero-actions{justify-content:center}
+  .cta small{display:block;margin-top:18px;color:rgba(255,255,255,.7);font-size:.9rem}
+
+  /* ---------- Visit ---------- */
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
+  .visit-card{border:1px solid var(--line);border-radius:var(--radius);padding:32px 30px;background:#fff}
+  .visit-card h3{font-size:1.5rem;margin-bottom:16px}
+  .hours{width:100%;border-collapse:collapse;font-size:1rem}
+  .hours td{padding:9px 0;border-bottom:1px solid #f0ebe2}
+  .hours td:last-child{text-align:right;font-weight:600}
+  .hours tr:last-child td{border-bottom:none}
+  .contact-line{margin-bottom:16px;color:var(--ink-soft)}
+  .contact-line strong{display:block;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:2px}
+  .contact-line a{font-weight:600}
+  .contact-line a:hover{color:var(--gold-dark)}
+  .visit-img{border-radius:var(--radius);overflow:hidden;min-height:300px}
+  .visit-img img{width:100%;height:100%;min-height:300px;object-fit:cover}
+
+  /* ---------- Footer ---------- */
+  footer{background:#111;color:rgba(255,255,255,.78);padding:52px 0 28px;font-size:.95rem}
+  .footer-grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.14)}
+  .footer-brand{max-width:360px}
+  .footer-brand .logo{color:#fff}
+  .footer-brand p{margin-top:10px;color:rgba(255,255,255,.65)}
+  .footer-col h4{color:#fff;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+  .footer-col a{display:block;margin-bottom:8px;color:rgba(255,255,255,.75)}
+  .footer-col a:hover{color:#e8c88f}
+  .footer-bottom{
+    padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+    font-size:.9rem;color:rgba(255,255,255,.6);
+  }
+  .footer-bottom a{color:#e8c88f;font-weight:600;text-decoration:underline}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 900px){
+    .services-grid,.stylist-grid,.reviews-grid{grid-template-columns:repeat(2,1fr)}
+    .intro-grid,.visit-grid{grid-template-columns:1fr}
+    .hero-copy h1{font-size:2.9rem}
+    .section{padding:68px 0}
+  }
+  @media (max-width: 640px){
+    .nav-links{display:none}
+    .services-grid,.stylist-grid,.reviews-grid{grid-template-columns:1fr}
+    .hero{min-height:560px}
+    .hero-copy h1{font-size:2.35rem}
+    .hero-copy p{font-size:1.02rem}
+    .section-head h2{font-size:1.9rem}
+    .cta h2{font-size:1.9rem}
+    .ticks{grid-template-columns:1fr}
+    .intro-img img{height:260px}
+    .stylist img{height:300px}
+    .btn{width:100%}
+    .hero-actions .btn{width:auto;flex:1 1 auto}
+    .nav-inner{padding:14px 20px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="#top">The Velvet <span>Strand</span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#services">Services</a>
+      <a href="#stylists">Stylists</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a class="btn btn-gold btn-sm" href="#book">Book Now</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Salon &amp; Barbershop — Uptown Dallas</p>
+        <h1>Great hair days, <em>every day.</em></h1>
+        <p>Precision cuts, lived-in color, and clean fades — done by stylists who listen first and cut second. Walk in, sit back, leave looking sharp.</p>
+        <div class="hero-actions">
+          <a class="btn btn-light" href="#services">View Services</a>
+          <a class="btn btn-outline" href="#book">Book an Appointment</a>
+        </div>
+        <div class="hero-meta">
+          <div><strong>4.9 rating</strong>from 600+ reviews</div>
+          <div><strong>Walk-ins welcome</strong>Mon – Sat</div>
+          <div><strong>Uptown Dallas</strong>Free parking on site</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="intro">
+    <div class="wrap">
+      <div class="intro-grid">
+        <div>
+          <p class="eyebrow">Welcome to The Velvet Strand</p>
+          <h2>A calm chair, a careful cut, and color that grows out beautifully.</h2>
+          <p>We are a neighborhood salon and barbershop in the heart of Uptown Dallas. Whether you want a classic fade, a fresh balayage, or a first haircut for your little one, our team takes the time to get it right.</p>
+          <p>No rushed chairs. No surprises at checkout. Just honest work and hair you love living with.</p>
+          <div class="ticks">
+            <span>Consultation before every cut</span>
+            <span>Premium, ammonia-free color</span>
+            <span>Hot-towel finish on beard trims</span>
+            <span>Online booking, same-day slots</span>
+          </div>
+        </div>
+        <div class="intro-img">
+          <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=1200&auto=format&fit=crop" alt="Stylist finishing a client's hair in the salon" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Services &amp; Pricing</p>
+        <h2>Simple pricing, no surprises</h2>
+        <p>Every service includes a consultation, a wash, and a finished style. Prices are starting rates — your stylist will confirm the exact price before we begin.</p>
+      </div>
+      <div class="services-grid">
+        <article class="service">
+          <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=1200&auto=format&fit=crop" alt="Hairdresser cutting a client's hair" loading="lazy">
+          <div class="service-body">
+            <div class="service-top"><h3>Signature Haircut</h3><span class="price">$45</span></div>
+            <p>A tailored cut for any hair type, with a wash, scalp massage, and a style you can repeat at home.</p>
+            <p class="service-meta">60 min &middot; Women &amp; men</p>
+          </div>
+        </article>
+        <article class="service">
+          <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=1200&auto=format&fit=crop" alt="Barber giving a client a precise haircut" loading="lazy">
+          <div class="service-body">
+            <div class="service-top"><h3>Beard Trim &amp; Shape</h3><span class="price">$25</span></div>
+            <p>Clean lines, a shaped beard, and a hot-towel finish with beard oil. The quickest way to look polished.</p>
+            <p class="service-meta">30 min &middot; Hot towel included</p>
+          </div>
+        </article>
+        <article class="service">
+          <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?q=80&w=1200&auto=format&fit=crop" alt="Salon chairs in a bright, modern salon" loading="lazy">
+          <div class="service-body">
+            <div class="service-top"><h3>Full Color</h3><span class="price">$85</span></div>
+            <p>Rich, even, all-over color with a gloss finish. Great for covering gray or going a shade deeper.</p>
+            <p class="service-meta">90 min &middot; Gloss finish included</p>
+          </div>
+        </article>
+        <article class="service">
+          <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=1200&auto=format&fit=crop" alt="Stylist working on highlighted hair" loading="lazy">
+          <div class="service-body">
+            <div class="service-top"><h3>Balayage / Highlights</h3><span class="price">$120</span></div>
+            <p>Hand-painted dimension that grows out softly — sun-kissed, natural, and low maintenance for months.</p>
+            <p class="service-meta">2.5 hrs &middot; Toner included</p>
+          </div>
+        </article>
+        <article class="service">
+          <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=1200&auto=format&fit=crop" alt="Barber tools arranged on a counter" loading="lazy">
+          <div class="service-body">
+            <div class="service-top"><h3>Kids Cut</h3><span class="price">$30</span></div>
+            <p>A patient, gentle cut for kids 12 and under — first haircuts included, with a keepsake lock of hair.</p>
+            <p class="service-meta">30 min &middot; Ages 12 &amp; under</p>
+          </div>
+        </article>
+        <article class="service">
+          <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1200&auto=format&fit=crop" alt="Bright salon interior with styling stations" loading="lazy">
+          <div class="service-body">
+            <div class="service-top"><h3>Blowout &amp; Styling</h3><span class="price">$40</span></div>
+            <p>A smooth, bouncy blowout with a wash and a light finish — perfect for a night out or a big meeting.</p>
+            <p class="service-meta">45 min &middot; Wash included</p>
+          </div>
+        </article>
+      </div>
+      <p class="services-note">Not sure what you need? <a href="tel:+12145550148">Call us at (214) 555-0148</a> and we will help you pick the right service.</p>
+    </div>
+  </section>
+
+  <!-- Stylists -->
+  <section class="section stylists" id="stylists">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Meet the Team</p>
+        <h2>Stylists who know your hair</h2>
+        <p>Small team, real experience. Every stylist here has spent years behind the chair — and it shows.</p>
+      </div>
+      <div class="stylist-grid">
+        <article class="stylist">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop" alt="Portrait of Maya, master stylist" loading="lazy">
+          <div class="stylist-body">
+            <h3>Maya</h3>
+            <p class="role">Master Stylist &middot; Balayage</p>
+            <p>Ten years in the chair and a true eye for dimension. Maya is the one to ask for lived-in color and soft, natural layers.</p>
+          </div>
+        </article>
+        <article class="stylist">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop" alt="Portrait of Jordan, barber" loading="lazy">
+          <div class="stylist-body">
+            <h3>Jordan</h3>
+            <p class="role">Barber &middot; Fades &amp; Beards</p>
+            <p>Sharp fades, clean line-ups, and beard work with a steady hand. Jordan keeps the barbershop side running like clockwork.</p>
+          </div>
+        </article>
+        <article class="stylist">
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=800&auto=format&fit=crop" alt="Portrait of Sofia, color specialist" loading="lazy">
+          <div class="stylist-body">
+            <h3>Sofia</h3>
+            <p class="role">Color Specialist &middot; Styling</p>
+            <p>From rich brunettes to bright blondes, Sofia builds color that suits your skin tone — and teaches you how to keep it fresh.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section" id="reviews">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Client Reviews</p>
+        <h2>What Dallas says about us</h2>
+        <p>Rated 4.9 out of 5 from more than 600 reviews across Google and Yelp.</p>
+      </div>
+      <div class="reviews-grid">
+        <article class="review">
+          <p class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+          <p>&ldquo;Maya gave me the best balayage I have ever had. She listened, showed me photos, and the color still looks great three months later.&rdquo;</p>
+          <p class="reviewer">Rachel<small>Balayage &middot; Uptown</small></p>
+        </article>
+        <article class="review">
+          <p class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+          <p>&ldquo;I have tried a lot of barbers in Dallas. Jordan is the first one who gets my fade right every single time. I will not go anywhere else.&rdquo;</p>
+          <p class="reviewer">Marcus<small>Fade &amp; beard trim &middot; Deep Ellum</small></p>
+        </article>
+        <article class="review">
+          <p class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+          <p>&ldquo;Booked online in two minutes, in the chair on time, and out the door feeling like a new person. The whole team is warm and professional.&rdquo;</p>
+          <p class="reviewer">Emily<small>Signature haircut &middot; Oak Lawn</small></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking CTA -->
+  <section class="section cta" id="book">
+    <div class="wrap">
+      <p class="eyebrow" style="color:#e8c88f">Ready when you are</p>
+      <h2>Your chair is waiting.</h2>
+      <p>Book online in under a minute, or call us and we will find a time that works. Same-day appointments are often available — walk-ins are always welcome.</p>
+      <div class="hero-actions">
+        <a class="btn btn-light" href="tel:+12145550148">Call (214) 555-0148</a>
+        <a class="btn btn-outline" href="#visit">Find Us in Uptown</a>
+      </div>
+      <small>No deposit needed for cuts and styling. Color appointments are held with a card on file.</small>
+    </div>
+  </section>
+
+  <!-- Visit -->
+  <section class="section" id="visit">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Visit Us</p>
+        <h2>Find us in Uptown Dallas</h2>
+        <p>Two blocks from the Katy Trail, with free parking behind the building and easy street parking on McKinney Avenue.</p>
+      </div>
+      <div class="visit-grid">
+        <div class="visit-card">
+          <h3>Opening Hours</h3>
+          <table class="hours">
+            <tr><td>Monday – Friday</td><td>9:00 AM – 7:00 PM</td></tr>
+            <tr><td>Saturday</td><td>9:00 AM – 6:00 PM</td></tr>
+            <tr><td>Sunday</td><td>11:00 AM – 5:00 PM</td></tr>
+          </table>
+          <p style="margin-top:18px;color:var(--muted);font-size:.95rem">Walk-ins are welcome, but weekend slots fill fast — booking ahead is the safest way to get your preferred stylist.</p>
+        </div>
+        <div class="visit-card">
+          <h3>Location &amp; Contact</h3>
+          <p class="contact-line"><strong>Address</strong>4123 McKinney Avenue<br>Dallas, TX 75204</p>
+          <p class="contact-line"><strong>Phone</strong><a href="tel:+12145550148">(214) 555-0148</a></p>
+          <p class="contact-line"><strong>Email</strong><a href="mailto:hello@thevelvetstrand.com">hello@thevelvetstrand.com</a></p>
+          <p class="contact-line" style="margin-bottom:0"><strong>Parking</strong>Free lot behind the building, plus metered street parking on McKinney Ave.</p>
+        </div>
+      </div>
+      <div class="visit-img" style="margin-top:28px">
+        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=1600&auto=format&fit=crop" alt="Classic barbershop interior with leather chairs" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="#top">The Velvet <span>Strand</span></a>
+        <p>A modern salon and barbershop in Uptown Dallas. Precision cuts, beautiful color, and a chair that feels like yours.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="#services">Services</a>
+        <a href="#stylists">Stylists</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#visit">Visit</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+12145550148">(214) 555-0148</a>
+        <a href="mailto:hello@thevelvetstrand.com">hello@thevelvetstrand.com</a>
+        <a href="#visit">4123 McKinney Ave, Dallas, TX 75204</a>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <a href="#visit">Mon – Fri: 9 AM – 7 PM</a>
+        <a href="#visit">Saturday: 9 AM – 6 PM</a>
+        <a href="#visit">Sunday: 11 AM – 5 PM</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 The Velvet Strand Salon &amp; Barbershop, Dallas TX. All rights reserved.</span>
+      <span>Demo website crafted by <a href="https://weblodge.agency" target="_blank" rel="noopener">Weblodge Agency</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
