@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/@dotlottie/player-component@2/dist/dotlottie-player.mjs" type="module"></script>
 <style>
   :root{
     --ink:#ffffff;
@@ -18,6 +19,7 @@
     --accent:#26c6f9;
     --accent-dark:#1e9fd6;
     --royal:#5b8cff;
+    --wa:#25d366;
     --dark:#080033;
   }
   *{margin:0;padding:0;box-sizing:border-box}
@@ -27,6 +29,7 @@
     background:var(--bg);
     line-height:1.6;
     -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
   }
   a{color:inherit}
   .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
@@ -34,8 +37,13 @@
   /* Header */
   header{padding:28px 0 8px}
   .brand{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
-  .logo{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:700;letter-spacing:-.02em;text-decoration:none}
+  .logo{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:700;letter-spacing:-.02em;text-decoration:none;display:flex;align-items:center;gap:12px}
   .logo span{color:var(--accent)}
+  .logo-anim{width:80px;height:48px;flex-shrink:0;display:block}
+  .brand-links{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .wa{display:inline-flex;align-items:center;gap:8px;font-size:.95rem;font-weight:600;color:var(--wa);text-decoration:none;border:1px solid var(--wa);background:transparent;padding:8px 16px;border-radius:999px;transition:.2s}
+  .wa:hover{background:var(--wa);color:#062d16}
+  .wa svg{width:18px;height:18px;flex-shrink:0}
   .brand a.site{font-size:.95rem;font-weight:600;color:var(--muted);text-decoration:none;border:1px solid var(--line);background:var(--card);padding:8px 16px;border-radius:999px;transition:.2s}
   .brand a.site:hover{color:var(--ink);border-color:var(--accent)}
 
@@ -68,7 +76,7 @@
   }
 
   /* Cards */
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:8px 0 56px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;padding:8px 0 56px}
   .card{
     background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;
     display:flex;flex-direction:column;text-decoration:none;
@@ -116,6 +124,10 @@
     padding:14px 30px;border-radius:999px;transition:.2s;
   }
   .cta a.btn:hover{background:var(--accent);color:var(--dark)}
+  .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .cta a.btn-wa{display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--wa);border:2px solid var(--wa);font-weight:700;text-decoration:none;padding:14px 30px;border-radius:999px;transition:.2s}
+  .cta a.btn-wa:hover{background:var(--wa);color:#062d16}
+  .cta a.btn-wa svg{width:20px;height:20px;flex-shrink:0}
 
   footer{border-top:1px solid var(--line);padding:28px 0 40px;text-align:center;font-size:.9rem;color:var(--muted)}
   footer a{color:var(--ink);font-weight:600}
@@ -133,8 +145,11 @@
 <header>
   <div class="wrap">
     <div class="brand">
-      <a class="logo" href="https://weblodge.agency" target="_blank" rel="noopener">Weblodge<span>.</span></a>
-      <a class="site" href="https://weblodge.agency" target="_blank" rel="noopener">weblodge.agency</a>
+      <a class="logo" href="https://weblodge.agency" target="_blank" rel="noopener"><dotlottie-player class="logo-anim" src="https://www.weblodge.agency/wp-content/uploads/2026/10/Weblodge-hero-animation.lottie" background="transparent" speed="1" loop autoplay aria-hidden="true"></dotlottie-player>Weblodge<span>.</span></a>
+      <div class="brand-links">
+        <a class="wa" href="https://wa.me/8801712799493" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#25D366"/><path fill="#fff" transform="translate(3,3) scale(0.75)" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>WhatsApp</a>
+        <a class="site" href="https://weblodge.agency" target="_blank" rel="noopener">weblodge.agency</a>
+      </div>
     </div>
   </div>
 </header>
@@ -845,7 +860,10 @@
   <section class="cta">
     <h2>Want a website like this for your business?</h2>
     <p>Weblodge Agency builds fast, professional WordPress websites for small businesses — designed around your brand, your services, and your customers.</p>
-    <a class="btn" href="https://weblodge.agency" target="_blank" rel="noopener">Get your website — weblodge.agency</a>
+    <div class="cta-btns">
+      <a class="btn" href="https://weblodge.agency" target="_blank" rel="noopener">Get your website — weblodge.agency</a>
+      <a class="btn-wa" href="https://wa.me/8801712799493" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#25D366"/><path fill="#fff" transform="translate(3,3) scale(0.75)" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>Chat on WhatsApp</a>
+    </div>
   </section>
 </main>
 
