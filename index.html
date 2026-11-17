@@ -10,14 +10,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#1a1d21;
-    --muted:#5b6066;
-    --line:#e7e3dc;
-    --bg:#faf8f4;
-    --card:#ffffff;
-    --accent:#c96f2e;
-    --accent-dark:#a85a22;
-    --dark:#22252a;
+    --ink:#ffffff;
+    --muted:#b3bce6;
+    --line:#2c1e7d;
+    --bg:#0d0046;
+    --card:#180a5c;
+    --accent:#26c6f9;
+    --accent-dark:#1e9fd6;
+    --royal:#5b8cff;
+    --dark:#080033;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   body{
@@ -35,8 +36,8 @@
   .brand{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .logo{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:700;letter-spacing:-.02em;text-decoration:none}
   .logo span{color:var(--accent)}
-  .brand a.site{font-size:.95rem;font-weight:600;color:var(--muted);text-decoration:none;border:1px solid var(--line);background:#fff;padding:8px 16px;border-radius:999px;transition:.2s}
-  .brand a.site:hover{color:var(--ink);border-color:#cfc9bd}
+  .brand a.site{font-size:.95rem;font-weight:600;color:var(--muted);text-decoration:none;border:1px solid var(--line);background:var(--card);padding:8px 16px;border-radius:999px;transition:.2s}
+  .brand a.site:hover{color:var(--ink);border-color:var(--accent)}
 
   /* Hero */
   .hero{text-align:center;padding:64px 0 40px}
@@ -48,6 +49,7 @@
     font-family:'Fraunces',serif;font-size:clamp(2.2rem,5vw,3.4rem);font-weight:700;
     line-height:1.12;letter-spacing:-.02em;max-width:720px;margin:0 auto 18px;
   }
+  .hero h1 .hl{color:var(--royal)}
   .hero p{font-size:1.1rem;color:var(--muted);max-width:640px;margin:0 auto}
   .hero p strong{color:var(--ink)}
 
@@ -55,9 +57,9 @@
   .cat-nav{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:0 auto 56px;max-width:900px}
   .cat-nav a{
     font-size:.85rem;font-weight:600;color:var(--muted);text-decoration:none;
-    border:1px solid var(--line);background:#fff;padding:7px 14px;border-radius:999px;transition:.2s;
+    border:1px solid var(--line);background:var(--card);padding:7px 14px;border-radius:999px;transition:.2s;
   }
-  .cat-nav a:hover{color:var(--ink);border-color:#cfc9bd}
+  .cat-nav a:hover{color:var(--ink);border-color:var(--accent)}
 
   /* Category sections */
   .cat-heading{
@@ -72,7 +74,7 @@
     display:flex;flex-direction:column;text-decoration:none;
     transition:transform .25s ease, box-shadow .25s ease;
   }
-  .card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(26,29,33,.10)}
+  .card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(38,198,249,.18)}
   .card img{width:100%;height:200px;object-fit:cover;display:block}
   .card-body{padding:24px;display:flex;flex-direction:column;flex:1}
   .tag{
@@ -104,16 +106,16 @@
 
   /* CTA */
   .cta{
-    background:var(--dark);color:#fff;border-radius:20px;text-align:center;
+    background:var(--dark);color:#fff;border:1px solid var(--line);border-radius:20px;text-align:center;
     padding:56px 32px;margin-bottom:72px;
   }
   .cta h2{font-family:'Fraunces',serif;font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:700;line-height:1.2;margin-bottom:12px}
-  .cta p{color:#c9cdd2;max-width:520px;margin:0 auto 28px}
+  .cta p{color:var(--muted);max-width:520px;margin:0 auto 28px}
   .cta a.btn{
-    display:inline-block;background:var(--accent);color:#fff;font-weight:700;text-decoration:none;
-    padding:14px 30px;border-radius:999px;transition:background .2s;
+    display:inline-block;background:transparent;color:var(--accent);border:2px solid var(--accent);font-weight:700;text-decoration:none;
+    padding:14px 30px;border-radius:999px;transition:.2s;
   }
-  .cta a.btn:hover{background:var(--accent-dark)}
+  .cta a.btn:hover{background:var(--accent);color:var(--dark)}
 
   footer{border-top:1px solid var(--line);padding:28px 0 40px;text-align:center;font-size:.9rem;color:var(--muted)}
   footer a{color:var(--ink);font-weight:600}
@@ -131,8 +133,8 @@
 <header>
   <div class="wrap">
     <div class="brand">
-      <a class="logo" href="https://weblodge.agency">Weblodge<span>.</span></a>
-      <a class="site" href="https://weblodge.agency">weblodge.agency</a>
+      <a class="logo" href="https://weblodge.agency" target="_blank" rel="noopener">Weblodge<span>.</span></a>
+      <a class="site" href="https://weblodge.agency" target="_blank" rel="noopener">weblodge.agency</a>
     </div>
   </div>
 </header>
@@ -140,7 +142,7 @@
 <main class="wrap">
   <section class="hero">
     <span class="eyebrow">Selected work · Weblodge Agency</span>
-    <h1>Websites we've built for local businesses.</h1>
+    <h1>Websites we've built for <span class="hl">local businesses.</span></h1>
     <p>Every project below is a complete website for a local business — <strong>menus, prices, bookings, reviews, and contact details</strong>, all in one page. Browse all <strong>60 projects across 20 business types</strong>.</p>
   </section>
 
@@ -170,7 +172,7 @@
   <section id="restaurants">
     <h2 class="cat-heading">Restaurants</h2>
     <div class="grid">
-    <a class="card" href="restaurant/">
+    <a class="card" target="_blank" rel="noopener" href="restaurant/">
       <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1600&auto=format&fit=crop" alt="The Copper Skillet" loading="lazy">
       <div class="card-body">
         <span class="tag">Restaurants · Austin, TX</span>
@@ -179,7 +181,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="osteria-lume/">
+    <a class="card" target="_blank" rel="noopener" href="osteria-lume/">
       <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=1600&auto=format&fit=crop" alt="Osteria Lume" loading="lazy">
       <div class="card-body">
         <span class="tag">Restaurants · Charleston, SC</span>
@@ -188,7 +190,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="smoky-ridge-smokehouse/">
+    <a class="card" target="_blank" rel="noopener" href="smoky-ridge-smokehouse/">
       <img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?q=80&w=1600&auto=format&fit=crop" alt="Smoky Ridge Smokehouse" loading="lazy">
       <div class="card-body">
         <span class="tag">Restaurants · Nashville, TN</span>
@@ -203,7 +205,7 @@
   <section id="hair-salons-barbershops">
     <h2 class="cat-heading">Hair Salons &amp; Barbershops</h2>
     <div class="grid">
-    <a class="card" href="salon/">
+    <a class="card" target="_blank" rel="noopener" href="salon/">
       <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1600&auto=format&fit=crop" alt="The Velvet Strand" loading="lazy">
       <div class="card-body">
         <span class="tag">Hair Salons &amp; Barbershops · Dallas, TX</span>
@@ -212,7 +214,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="shear-stone-salon/">
+    <a class="card" target="_blank" rel="noopener" href="shear-stone-salon/">
       <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1400&auto=format&fit=crop" alt="Shear &amp; Stone" loading="lazy">
       <div class="card-body">
         <span class="tag">Hair Salons &amp; Barbershops · Portland, OR</span>
@@ -221,7 +223,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="bearded-oak-barbershop/">
+    <a class="card" target="_blank" rel="noopener" href="bearded-oak-barbershop/">
       <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=1600&auto=format&fit=crop" alt="The Bearded Oak" loading="lazy">
       <div class="card-body">
         <span class="tag">Hair Salons &amp; Barbershops · Boise, ID</span>
@@ -236,7 +238,7 @@
   <section id="auto-repair">
     <h2 class="cat-heading">Auto Repair</h2>
     <div class="grid">
-    <a class="card" href="auto-repair/">
+    <a class="card" target="_blank" rel="noopener" href="auto-repair/">
       <img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?q=80&w=1600&auto=format&fit=crop" alt="Ironline Auto Care" loading="lazy">
       <div class="card-body">
         <span class="tag">Auto Repair · Houston, TX</span>
@@ -245,7 +247,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="lakefront-auto-care/">
+    <a class="card" target="_blank" rel="noopener" href="lakefront-auto-care/">
       <img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?q=80&w=1600&auto=format&fit=crop" alt="Lakefront Auto Care" loading="lazy">
       <div class="card-body">
         <span class="tag">Auto Repair · Chicago, IL</span>
@@ -254,7 +256,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="buckeye-motor-works/">
+    <a class="card" target="_blank" rel="noopener" href="buckeye-motor-works/">
       <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=1200&auto=format&fit=crop" alt="Buckeye Motor Works" loading="lazy">
       <div class="card-body">
         <span class="tag">Auto Repair · Columbus, OH</span>
@@ -269,7 +271,7 @@
   <section id="bakeries">
     <h2 class="cat-heading">Bakeries</h2>
     <div class="grid">
-    <a class="card" href="sugar-magnolia-bakery/">
+    <a class="card" target="_blank" rel="noopener" href="sugar-magnolia-bakery/">
       <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1600&auto=format&fit=crop" alt="The Sugar Magnolia Bakery" loading="lazy">
       <div class="card-body">
         <span class="tag">Bakeries · Decatur, GA</span>
@@ -278,7 +280,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="crumb-craft-bakery/">
+    <a class="card" target="_blank" rel="noopener" href="crumb-craft-bakery/">
       <img src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?q=80&w=1600&auto=format&fit=crop" alt="Crumb &amp; Craft Bakery" loading="lazy">
       <div class="card-body">
         <span class="tag">Bakeries · Richmond, VA</span>
@@ -287,7 +289,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="sweetwater-bakehouse/">
+    <a class="card" target="_blank" rel="noopener" href="sweetwater-bakehouse/">
       <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?q=80&w=1600&auto=format&fit=crop" alt="Sweetwater Bakehouse" loading="lazy">
       <div class="card-body">
         <span class="tag">Bakeries · Tampa, FL</span>
@@ -302,7 +304,7 @@
   <section id="landscaping">
     <h2 class="cat-heading">Landscaping</h2>
     <div class="grid">
-    <a class="card" href="greenhaven-landscaping/">
+    <a class="card" target="_blank" rel="noopener" href="greenhaven-landscaping/">
       <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?q=80&w=1600&auto=format&fit=crop" alt="Greenhaven Landscaping" loading="lazy">
       <div class="card-body">
         <span class="tag">Landscaping · Boston, MA</span>
@@ -311,7 +313,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="stone-and-sprout-landscaping/">
+    <a class="card" target="_blank" rel="noopener" href="stone-and-sprout-landscaping/">
       <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=1400&auto=format&fit=crop" alt="Stone &amp; Sprout Landscaping" loading="lazy">
       <div class="card-body">
         <span class="tag">Landscaping · Pittsburgh, PA</span>
@@ -320,7 +322,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="harborview-lawn-garden/">
+    <a class="card" target="_blank" rel="noopener" href="harborview-lawn-garden/">
       <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=80&w=1600&auto=format&fit=crop" alt="Harborview Lawn &amp; Garden" loading="lazy">
       <div class="card-body">
         <span class="tag">Landscaping · Portland, ME</span>
@@ -335,7 +337,7 @@
   <section id="cleaning-services">
     <h2 class="cat-heading">Cleaning Services</h2>
     <div class="grid">
-    <a class="card" href="brightline-cleaning/">
+    <a class="card" target="_blank" rel="noopener" href="brightline-cleaning/">
       <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1200&auto=format&fit=crop" alt="Brightline Cleaning Co." loading="lazy">
       <div class="card-body">
         <span class="tag">Cleaning Services · Philadelphia, PA</span>
@@ -344,7 +346,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="sparrow-and-shine-cleaning/">
+    <a class="card" target="_blank" rel="noopener" href="sparrow-and-shine-cleaning/">
       <img src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?q=80&w=1600&auto=format&fit=crop" alt="Sparrow &amp; Shine Cleaning" loading="lazy">
       <div class="card-body">
         <span class="tag">Cleaning Services · Providence, RI</span>
@@ -353,7 +355,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="freshfield-cleaning/">
+    <a class="card" target="_blank" rel="noopener" href="freshfield-cleaning/">
       <img src="https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?q=80&w=1400&auto=format&fit=crop" alt="Freshfield Cleaning Co." loading="lazy">
       <div class="card-body">
         <span class="tag">Cleaning Services · Buffalo, NY</span>
@@ -368,7 +370,7 @@
   <section id="plumbers">
     <h2 class="cat-heading">Plumbers</h2>
     <div class="grid">
-    <a class="card" href="clearflow-plumbing/">
+    <a class="card" target="_blank" rel="noopener" href="clearflow-plumbing/">
       <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?q=80&w=1200&auto=format&fit=crop" alt="ClearFlow Plumbing" loading="lazy">
       <div class="card-body">
         <span class="tag">Plumbers · Oklahoma City, OK</span>
@@ -377,7 +379,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="red-rock-plumbing/">
+    <a class="card" target="_blank" rel="noopener" href="red-rock-plumbing/">
       <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?q=80&w=1600&auto=format&fit=crop" alt="Red Rock Plumbing" loading="lazy">
       <div class="card-body">
         <span class="tag">Plumbers · Albuquerque, NM</span>
@@ -386,7 +388,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="bayou-drain-plumbing/">
+    <a class="card" target="_blank" rel="noopener" href="bayou-drain-plumbing/">
       <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?q=80&w=1600&auto=format&fit=crop" alt="Bayou Drain &amp; Plumbing" loading="lazy">
       <div class="card-body">
         <span class="tag">Plumbers · New Orleans, LA</span>
@@ -401,7 +403,7 @@
   <section id="electricians">
     <h2 class="cat-heading">Electricians</h2>
     <div class="grid">
-    <a class="card" href="high-volt-electric/">
+    <a class="card" target="_blank" rel="noopener" href="high-volt-electric/">
       <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1600&auto=format&fit=crop" alt="High Volt Electric" loading="lazy">
       <div class="card-body">
         <span class="tag">Electricians · Tulsa, OK</span>
@@ -410,7 +412,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="desert-current-electric/">
+    <a class="card" target="_blank" rel="noopener" href="desert-current-electric/">
       <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1200&auto=format&fit=crop" alt="Desert Current Electric" loading="lazy">
       <div class="card-body">
         <span class="tag">Electricians · Tucson, AZ</span>
@@ -419,7 +421,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="magnolia-electric/">
+    <a class="card" target="_blank" rel="noopener" href="magnolia-electric/">
       <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?q=80&w=1600&auto=format&fit=crop" alt="Magnolia Electric Co." loading="lazy">
       <div class="card-body">
         <span class="tag">Electricians · Jackson, MS</span>
@@ -434,7 +436,7 @@
   <section id="dental-clinics">
     <h2 class="cat-heading">Dental Clinics</h2>
     <div class="grid">
-    <a class="card" href="brightpath-dental/">
+    <a class="card" target="_blank" rel="noopener" href="brightpath-dental/">
       <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1200&auto=format&fit=crop" alt="BrightPath Dental" loading="lazy">
       <div class="card-body">
         <span class="tag">Dental Clinics · Little Rock, AR</span>
@@ -443,7 +445,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="canyon-view-dental/">
+    <a class="card" target="_blank" rel="noopener" href="canyon-view-dental/">
       <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1600&auto=format&fit=crop" alt="Canyon View Dental" loading="lazy">
       <div class="card-body">
         <span class="tag">Dental Clinics · Santa Fe, NM</span>
@@ -452,7 +454,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="riverbend-dental/">
+    <a class="card" target="_blank" rel="noopener" href="riverbend-dental/">
       <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1200&auto=format&fit=crop" alt="Riverbend Dental Studio" loading="lazy">
       <div class="card-body">
         <span class="tag">Dental Clinics · Memphis, TN</span>
@@ -467,7 +469,7 @@
   <section id="fitness-centers-gyms">
     <h2 class="cat-heading">Fitness Centers &amp; Gyms</h2>
     <div class="grid">
-    <a class="card" href="forge-fitness-studio/">
+    <a class="card" target="_blank" rel="noopener" href="forge-fitness-studio/">
       <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1800&auto=format&fit=crop" alt="Forge Fitness Studio" loading="lazy">
       <div class="card-body">
         <span class="tag">Fitness Centers &amp; Gyms · Orlando, FL</span>
@@ -476,7 +478,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="pacific-strength/">
+    <a class="card" target="_blank" rel="noopener" href="pacific-strength/">
       <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1800&auto=format&fit=crop" alt="Pacific Strength &amp; Conditioning" loading="lazy">
       <div class="card-body">
         <span class="tag">Fitness Centers &amp; Gyms · Long Beach, CA</span>
@@ -485,7 +487,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="red-rock-fitness/">
+    <a class="card" target="_blank" rel="noopener" href="red-rock-fitness/">
       <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1800&auto=format&fit=crop" alt="Red Rock Fitness Co." loading="lazy">
       <div class="card-body">
         <span class="tag">Fitness Centers &amp; Gyms · San Antonio, TX</span>
@@ -500,7 +502,7 @@
   <section id="photographers">
     <h2 class="cat-heading">Photographers</h2>
     <div class="grid">
-    <a class="card" href="ember-oak-photography/">
+    <a class="card" target="_blank" rel="noopener" href="ember-oak-photography/">
       <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1800&auto=format&fit=crop" alt="Ember &amp; Oak Photography" loading="lazy">
       <div class="card-body">
         <span class="tag">Photographers · Phoenix, AZ</span>
@@ -509,7 +511,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="harbor-light-photography/">
+    <a class="card" target="_blank" rel="noopener" href="harbor-light-photography/">
       <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1800&auto=format&fit=crop" alt="Harbor Light Photography" loading="lazy">
       <div class="card-body">
         <span class="tag">Photographers · Seattle, WA</span>
@@ -518,7 +520,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="golden-hour-studio/">
+    <a class="card" target="_blank" rel="noopener" href="golden-hour-studio/">
       <img src="https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?q=80&w=1800&auto=format&fit=crop" alt="Golden Hour Studio" loading="lazy">
       <div class="card-body">
         <span class="tag">Photographers · Sacramento, CA</span>
@@ -533,7 +535,7 @@
   <section id="law-firms-attorneys">
     <h2 class="cat-heading">Law Firms &amp; Attorneys</h2>
     <div class="grid">
-    <a class="card" href="harrington-cole-law/">
+    <a class="card" target="_blank" rel="noopener" href="harrington-cole-law/">
       <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=1800&auto=format&fit=crop" alt="Harrington &amp; Cole Law Firm" loading="lazy">
       <div class="card-body">
         <span class="tag">Law Firms &amp; Attorneys · Tampa, FL</span>
@@ -542,7 +544,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="beacon-legal-group/">
+    <a class="card" target="_blank" rel="noopener" href="beacon-legal-group/">
       <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1800&auto=format&fit=crop" alt="Beacon Legal Group" loading="lazy">
       <div class="card-body">
         <span class="tag">Law Firms &amp; Attorneys · San Jose, CA</span>
@@ -551,7 +553,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="westgate-law-firm/">
+    <a class="card" target="_blank" rel="noopener" href="westgate-law-firm/">
       <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1800&auto=format&fit=crop" alt="Westgate Law Firm" loading="lazy">
       <div class="card-body">
         <span class="tag">Law Firms &amp; Attorneys · Fort Worth, TX</span>
@@ -566,7 +568,7 @@
   <section id="real-estate-agents">
     <h2 class="cat-heading">Real Estate Agents</h2>
     <div class="grid">
-    <a class="card" href="harbor-pine-realty/">
+    <a class="card" target="_blank" rel="noopener" href="harbor-pine-realty/">
       <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=1800&auto=format&fit=crop" alt="Harbor &amp; Pine Realty" loading="lazy">
       <div class="card-body">
         <span class="tag">Real Estate Agents · Jacksonville, FL</span>
@@ -575,7 +577,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="valley-oak-realty/">
+    <a class="card" target="_blank" rel="noopener" href="valley-oak-realty/">
       <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1800&auto=format&fit=crop" alt="Valley Oak Realty" loading="lazy">
       <div class="card-body">
         <span class="tag">Real Estate Agents · Fresno, CA</span>
@@ -584,7 +586,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="bluebonnet-realty-group/">
+    <a class="card" target="_blank" rel="noopener" href="bluebonnet-realty-group/">
       <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1800&auto=format&fit=crop" alt="Bluebonnet Realty Group" loading="lazy">
       <div class="card-body">
         <span class="tag">Real Estate Agents · Corpus Christi, TX</span>
@@ -599,7 +601,7 @@
   <section id="florists">
     <h2 class="cat-heading">Florists</h2>
     <div class="grid">
-    <a class="card" href="wild-fern-floral/">
+    <a class="card" target="_blank" rel="noopener" href="wild-fern-floral/">
       <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=1600&auto=format&fit=crop" alt="Wild Fern Floral Co." loading="lazy">
       <div class="card-body">
         <span class="tag">Florists · Raleigh, NC</span>
@@ -608,7 +610,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="petal-and-stem/">
+    <a class="card" target="_blank" rel="noopener" href="petal-and-stem/">
       <img src="https://images.unsplash.com/photo-1494972308805-463bc619d34e?q=80&w=1600&auto=format&fit=crop" alt="Petal &amp; Stem" loading="lazy">
       <div class="card-body">
         <span class="tag">Florists · Savannah, GA</span>
@@ -617,7 +619,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="blooming-branch/">
+    <a class="card" target="_blank" rel="noopener" href="blooming-branch/">
       <img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?q=80&w=1600&auto=format&fit=crop" alt="The Blooming Branch" loading="lazy">
       <div class="card-body">
         <span class="tag">Florists · New Orleans, LA</span>
@@ -632,7 +634,7 @@
   <section id="pet-grooming">
     <h2 class="cat-heading">Pet Grooming</h2>
     <div class="grid">
-    <a class="card" href="paws-pine-grooming/">
+    <a class="card" target="_blank" rel="noopener" href="paws-pine-grooming/">
       <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=1600&auto=format&fit=crop" alt="Paws &amp; Pine" loading="lazy">
       <div class="card-body">
         <span class="tag">Pet Grooming · Denver, CO</span>
@@ -641,7 +643,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="golden-leash-grooming/">
+    <a class="card" target="_blank" rel="noopener" href="golden-leash-grooming/">
       <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?q=80&w=1200&auto=format&fit=crop" alt="The Golden Leash" loading="lazy">
       <div class="card-body">
         <span class="tag">Pet Grooming · San Diego, CA</span>
@@ -650,7 +652,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="suds-whiskers-grooming/">
+    <a class="card" target="_blank" rel="noopener" href="suds-whiskers-grooming/">
       <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=80&w=1200&auto=format&fit=crop" alt="Suds &amp; Whiskers" loading="lazy">
       <div class="card-body">
         <span class="tag">Pet Grooming · Salt Lake City, UT</span>
@@ -665,7 +667,7 @@
   <section id="tutors-coaching">
     <h2 class="cat-heading">Tutors &amp; Coaching</h2>
     <div class="grid">
-    <a class="card" href="bright-path-tutoring/">
+    <a class="card" target="_blank" rel="noopener" href="bright-path-tutoring/">
       <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop" alt="Bright Path Tutoring" loading="lazy">
       <div class="card-body">
         <span class="tag">Tutors &amp; Coaching · Charlotte, NC</span>
@@ -674,7 +676,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="keystone-tutors/">
+    <a class="card" target="_blank" rel="noopener" href="keystone-tutors/">
       <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1600&auto=format&fit=crop" alt="Keystone Tutors" loading="lazy">
       <div class="card-body">
         <span class="tag">Tutors &amp; Coaching · Winter Park, FL</span>
@@ -683,7 +685,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="compass-coaching/">
+    <a class="card" target="_blank" rel="noopener" href="compass-coaching/">
       <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=1600&auto=format&fit=crop" alt="Compass Coaching &amp; Tutoring" loading="lazy">
       <div class="card-body">
         <span class="tag">Tutors &amp; Coaching · Homewood, AL</span>
@@ -698,7 +700,7 @@
   <section id="event-planners">
     <h2 class="cat-heading">Event Planners</h2>
     <div class="grid">
-    <a class="card" href="gather-gold-events/">
+    <a class="card" target="_blank" rel="noopener" href="gather-gold-events/">
       <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=1800&auto=format&fit=crop" alt="Gather &amp; Gold Events" loading="lazy">
       <div class="card-body">
         <span class="tag">Event Planners · Las Vegas, NV</span>
@@ -707,7 +709,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="sage-cedar-events/">
+    <a class="card" target="_blank" rel="noopener" href="sage-cedar-events/">
       <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=1400&auto=format&fit=crop" alt="Sage &amp; Cedar Events" loading="lazy">
       <div class="card-body">
         <span class="tag">Event Planners · Tucson, AZ</span>
@@ -716,7 +718,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="high-desert-celebrations/">
+    <a class="card" target="_blank" rel="noopener" href="high-desert-celebrations/">
       <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=1800&auto=format&fit=crop" alt="High Desert Celebrations" loading="lazy">
       <div class="card-body">
         <span class="tag">Event Planners · Albuquerque, NM</span>
@@ -731,7 +733,7 @@
   <section id="roofers">
     <h2 class="cat-heading">Roofers</h2>
     <div class="grid">
-    <a class="card" href="north-peak-roofing/">
+    <a class="card" target="_blank" rel="noopener" href="north-peak-roofing/">
       <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=1600&auto=format&fit=crop" alt="North Peak Roofing" loading="lazy">
       <div class="card-body">
         <span class="tag">Roofers · Minneapolis, MN</span>
@@ -740,7 +742,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="heartland-roofing/">
+    <a class="card" target="_blank" rel="noopener" href="heartland-roofing/">
       <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1600&auto=format&fit=crop" alt="Heartland Roofing Co." loading="lazy">
       <div class="card-body">
         <span class="tag">Roofers · Kansas City, MO</span>
@@ -749,7 +751,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="cream-city-roofing/">
+    <a class="card" target="_blank" rel="noopener" href="cream-city-roofing/">
       <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=1600&auto=format&fit=crop" alt="Cream City Roofing" loading="lazy">
       <div class="card-body">
         <span class="tag">Roofers · Milwaukee, WI</span>
@@ -764,7 +766,7 @@
   <section id="hvac-services">
     <h2 class="cat-heading">HVAC Services</h2>
     <div class="grid">
-    <a class="card" href="circle-city-comfort/">
+    <a class="card" target="_blank" rel="noopener" href="circle-city-comfort/">
       <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1200&auto=format&fit=crop" alt="Circle City Comfort" loading="lazy">
       <div class="card-body">
         <span class="tag">HVAC Services · Indianapolis, IN</span>
@@ -773,7 +775,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="motor-city-heating-cooling/">
+    <a class="card" target="_blank" rel="noopener" href="motor-city-heating-cooling/">
       <img src="https://images.unsplash.com/photo-1418985991508-e47386d96a71?q=80&w=1600&auto=format&fit=crop" alt="Motor City Heating &amp; Cooling" loading="lazy">
       <div class="card-body">
         <span class="tag">HVAC Services · Detroit, MI</span>
@@ -782,7 +784,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="gateway-air-heat/">
+    <a class="card" target="_blank" rel="noopener" href="gateway-air-heat/">
       <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?q=80&w=1200&auto=format&fit=crop" alt="Gateway Air &amp; Heat" loading="lazy">
       <div class="card-body">
         <span class="tag">HVAC Services · St. Louis, MO</span>
@@ -797,7 +799,7 @@
   <section id="moving-companies">
     <h2 class="cat-heading">Moving Companies</h2>
     <div class="grid">
-    <a class="card" href="keystone-city-movers/">
+    <a class="card" target="_blank" rel="noopener" href="keystone-city-movers/">
       <img src="https://images.unsplash.com/photo-1600518464441-9154a4dea21b?q=80&w=1600&auto=format&fit=crop" alt="Keystone City Movers" loading="lazy">
       <div class="card-body">
         <span class="tag">Moving Companies · Baltimore, MD</span>
@@ -806,7 +808,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="northstar-moving/">
+    <a class="card" target="_blank" rel="noopener" href="northstar-moving/">
       <img src="https://images.unsplash.com/photo-1600518464441-9154a4dea21b?q=80&w=1400&auto=format&fit=crop" alt="Northstar Moving Co." loading="lazy">
       <div class="card-body">
         <span class="tag">Moving Companies · Hartford, CT</span>
@@ -815,7 +817,7 @@
         <span class="link">View website</span>
       </div>
     </a>
-    <a class="card" href="liberty-line-movers/">
+    <a class="card" target="_blank" rel="noopener" href="liberty-line-movers/">
       <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop" alt="Liberty Line Movers" loading="lazy">
       <div class="card-body">
         <span class="tag">Moving Companies · Washington, DC</span>
@@ -843,13 +845,13 @@
   <section class="cta">
     <h2>Want a website like this for your business?</h2>
     <p>Weblodge Agency builds fast, professional WordPress websites for small businesses — designed around your brand, your services, and your customers.</p>
-    <a class="btn" href="https://weblodge.agency">Get your website — weblodge.agency</a>
+    <a class="btn" href="https://weblodge.agency" target="_blank" rel="noopener">Get your website — weblodge.agency</a>
   </section>
 </main>
 
 <footer>
   <div class="wrap">
-    Websites designed &amp; built by <a href="https://weblodge.agency">Weblodge Agency</a>.
+    Websites designed &amp; built by <a href="https://weblodge.agency" target="_blank" rel="noopener">Weblodge Agency</a>.
   </div>
 </footer>
 
