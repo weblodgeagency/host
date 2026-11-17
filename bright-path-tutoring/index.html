@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bright Path Tutoring — Tutoring &amp; Test Prep in Charlotte, NC</title>
+<meta name="description" content="Bright Path Tutoring offers one-on-one tutoring and SAT/ACT prep in Charlotte, NC. Math, reading, science, and college admissions help — in person and online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1e2a4a; --navy-dark:#141d33; --navy-light:#2c3d68; --sun:#f6b73c; --sun-dark:#e09e1f;
+    --cream:#fdfbf6; --sand:#f4f0e4; --ink:#23272f; --muted:#5f6570; --line:#e7e2d3; --green:#2e8b6e;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;font-size:17px}
+  h1,h2,h3{font-family:'Poppins',sans-serif;line-height:1.15;font-weight:700}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .section{padding:90px 0}
+  .section-head{max-width:680px;margin:0 auto 48px;text-align:center}
+  .section-head h2{font-size:clamp(30px,4.5vw,42px);color:var(--navy);margin-bottom:12px}
+  .section-head p{color:var(--muted);font-size:18px}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--sun-dark);margin-bottom:12px}
+  .section-title{font-size:clamp(30px,4.5vw,42px);color:var(--navy);margin-bottom:14px}
+  .section-sub{color:var(--muted);max-width:620px;font-size:18px}
+  .btn{display:inline-block;padding:14px 30px;border-radius:999px;font-weight:700;font-size:16px;transition:.2s}
+  .btn:hover{transform:translateY(-1px)}
+  .btn-primary{background:var(--sun);color:var(--navy-dark)}
+  .btn-primary:hover{background:var(--sun-dark);color:#fff}
+  .btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.9)}
+  .btn-outline:hover{background:rgba(255,255,255,.16)}
+  .btn-dark{background:var(--navy);color:#fff}
+  .btn-dark:hover{background:var(--navy-dark)}
+  .nav{position:sticky;top:0;z-index:100;background:#fff;box-shadow:0 2px 14px rgba(30,42,74,.1)}
+  .nav-inner{max-width:1120px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:72px}
+  .logo{display:inline-flex;align-items:center;gap:11px;font-family:'Poppins',sans-serif;font-size:24px;font-weight:800;color:var(--navy)}
+  .logo span{color:var(--sun-dark)}
+  .nav-links{display:flex;gap:30px;list-style:none}
+  .nav-links a{color:#3d4454;font-weight:600;font-size:15px}
+  .nav-links a:hover{color:var(--navy)}
+  .hero{position:relative;min-height:640px;display:flex;align-items:center;background:linear-gradient(90deg,rgba(20,29,51,.92) 0%,rgba(20,29,51,.75) 52%,rgba(20,29,51,.3) 100%),url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;color:#fff}
+  .hero-inner{max-width:1120px;margin:0 auto;padding:90px 24px;width:100%}
+  .hero-copy{max-width:620px}
+  .hero-copy .eyebrow{color:var(--sun)}
+  .hero-copy h1{font-size:clamp(38px,5.5vw,58px);margin-bottom:18px}
+  .hero-copy h1 em{font-style:normal;color:var(--sun)}
+  .hero-copy p{font-size:18px;color:rgba(255,255,255,.88);margin-bottom:30px;max-width:540px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-meta{margin-top:36px;display:flex;gap:30px;flex-wrap:wrap;font-size:14px;color:rgba(255,255,255,.85);border-top:1px solid rgba(255,255,255,.25);padding-top:20px;max-width:560px}
+  .hero-meta strong{display:block;color:#fff;font-size:16px}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .about-grid img{border-radius:16px;width:100%;height:420px;object-fit:cover}
+  .about-copy p{color:var(--muted);margin-bottom:16px;font-size:18px}
+  .ticks{margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:10px 22px;font-size:15px;font-weight:600}
+  .ticks span::before{content:"✓ ";color:var(--green);font-weight:800}
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .service{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:.2s}
+  .service:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(30,42,74,.1)}
+  .service img{width:100%;height:180px;object-fit:cover}
+  .service-body{padding:22px}
+  .service-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:8px}
+  .service h3{font-size:20px;color:var(--navy)}
+  .price{font-family:'Poppins',sans-serif;font-size:20px;font-weight:700;color:var(--sun-dark);white-space:nowrap}
+  .service-body p{color:var(--muted);font-size:15px}
+  .service-meta{margin-top:12px;font-size:12px;color:var(--muted);font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+  .services-section{background:var(--sand)}
+  .services-note{text-align:center;color:var(--muted);margin-top:28px;font-size:15px}
+  .services-note a{color:var(--sun-dark);font-weight:700}
+  .tutors-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .tutor{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 6px 20px rgba(30,42,74,.07);text-align:center}
+  .tutor img{width:100%;height:300px;object-fit:cover}
+  .tutor-body{padding:24px 20px 28px}
+  .tutor-body h3{font-size:21px;color:var(--navy);margin-bottom:4px}
+  .role{color:var(--sun-dark);font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+  .tutor-body p{color:var(--muted);font-size:15px}
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .review{background:var(--sand);border-radius:16px;padding:30px 26px;border:1px solid var(--line)}
+  .stars{color:var(--sun);letter-spacing:2px;font-size:18px;margin-bottom:14px}
+  .review blockquote{font-size:17px;margin-bottom:18px}
+  .review cite{font-style:normal;font-weight:700;color:var(--navy)}
+  .review cite span{display:block;font-weight:400;font-size:14px;color:var(--muted)}
+  .cta{background:linear-gradient(rgba(20,29,51,.88),rgba(20,29,51,.88)),url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;color:#fff;text-align:center}
+  .cta h2{font-size:clamp(30px,4.5vw,42px);margin-bottom:12px}
+  .cta p{color:rgba(255,255,255,.88);max-width:600px;margin:0 auto 28px;font-size:18px}
+  .cta .hero-actions{justify-content:center}
+  .cta small{display:block;margin-top:18px;color:rgba(255,255,255,.7);font-size:14px}
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
+  .visit-card{border:1px solid var(--line);border-radius:16px;padding:32px 30px;background:#fff}
+  .visit-card h3{font-size:22px;color:var(--navy);margin-bottom:16px}
+  .hours{width:100%;border-collapse:collapse;font-size:16px}
+  .hours td{padding:9px 0;border-bottom:1px solid #f0ece0}
+  .hours td:last-child{text-align:right;font-weight:700}
+  .hours tr:last-child td{border-bottom:none}
+  .contact-line{margin-bottom:16px;color:var(--muted)}
+  .contact-line strong{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--sun-dark);margin-bottom:2px}
+  .contact-line a{font-weight:700;color:var(--navy)}
+  .contact-line a:hover{color:var(--sun-dark)}
+  .visit-img{border-radius:16px;overflow:hidden;min-height:300px;margin-top:28px}
+  .visit-img img{width:100%;height:100%;min-height:300px;object-fit:cover}
+  footer{background:var(--navy-dark);color:rgba(255,255,255,.75);padding:52px 0 28px;font-size:15px}
+  .footer-grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.14)}
+  .footer-brand{max-width:360px}
+  .footer-brand .logo{color:#fff}
+  .footer-brand p{margin-top:10px;color:rgba(255,255,255,.65)}
+  .footer-col h4{color:#fff;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+  .footer-col a{display:block;margin-bottom:8px;color:rgba(255,255,255,.75)}
+  .footer-col a:hover{color:var(--sun)}
+  .footer-bottom{padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px;color:rgba(255,255,255,.6)}
+  .footer-bottom a{color:var(--sun);font-weight:700;text-decoration:underline}
+  @media (max-width:900px){
+    .services-grid,.tutors-grid,.reviews-grid{grid-template-columns:1fr 1fr}
+    .about-grid,.visit-grid{grid-template-columns:1fr}
+  }
+  @media (max-width:640px){
+    .nav-links{display:none}
+    .services-grid,.tutors-grid,.reviews-grid{grid-template-columns:1fr}
+    .hero{min-height:560px}
+    .hero-copy h1{font-size:34px}
+    .section{padding:64px 0}
+    .section-head h2{font-size:28px}
+    .ticks{grid-template-columns:1fr}
+    .about-grid img{height:300px}
+    .tutor img{height:280px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 4 2 10l14 6 14-6L16 4Z" fill="#1e2a4a"/><path d="M8 14.5V22c0 2.5 3.6 4.5 8 4.5s8-2 8-4.5v-7.5l-8 3.5-8-3.5Z" fill="#f6b73c"/><path d="M28 10v8" stroke="#1e2a4a" stroke-width="2" stroke-linecap="round"/><circle cx="28" cy="20" r="1.8" fill="#1e2a4a"/></svg>Bright <span>Path</span></a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#subjects">Subjects</a></li>
+        <li><a href="#tutors">Tutors</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+    </nav>
+    <a href="#book" class="btn btn-primary">Book a Free Trial</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">Tutoring &amp; Test Prep — Charlotte, NC</p>
+      <h1>One-on-one help that <em>actually clicks.</em></h1>
+      <p>Patient, expert tutors for math, reading, science, and test prep — in person in South End or online, with a free first session to find the right fit.</p>
+      <div class="hero-actions">
+        <a href="#subjects" class="btn btn-primary">See Subjects &amp; Rates</a>
+        <a href="#book" class="btn btn-outline">Book a Free Trial</a>
+      </div>
+      <div class="hero-meta">
+        <div><strong>4.9 rating</strong>from 400+ families</div>
+        <div><strong>Free first session</strong>no commitment</div>
+        <div><strong>South End, Charlotte</strong>in person &amp; online</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="wrap">
+    <div class="about-grid">
+      <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=80&w=1200&auto=format&fit=crop" alt="A tutor working one-on-one with a student" loading="lazy">
+      <div class="about-copy">
+        <p class="eyebrow">How We Work</p>
+        <h2 class="section-title">Every student learns differently. We start there.</h2>
+        <p>Bright Path opened in 2019 with a simple idea: tutoring works best when it's personal. We match each student with a tutor who fits their learning style, set clear goals together, and track progress every step of the way.</p>
+        <p>Parents get a short update after every session, so you always know what's improving — and what's next.</p>
+        <div class="ticks">
+          <span>Free first session, no obligation</span>
+          <span>Certified teachers &amp; subject experts</span>
+          <span>Progress update after every session</span>
+          <span>In person in South End or online</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="subjects" class="section services-section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Subjects &amp; Rates</p>
+      <h2>Clear pricing, no contracts</h2>
+      <p>Every session is one-on-one and tailored to your child. Book week by week — pause or stop any time.</p>
+    </div>
+    <div class="services-grid">
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?q=80&w=800&auto=format&fit=crop" alt="Math tutoring session" loading="lazy">
+        <div class="service-body">
+          <div class="service-top"><h3>Math Tutoring</h3><span class="price">$55/hr</span></div>
+          <p>From elementary arithmetic to AP Calculus — patient, step-by-step help that builds real confidence.</p>
+          <p class="service-meta">Grades 3–12 &middot; AP included</p>
+        </div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1456406644174-8ddd4cd52a06?q=80&w=800&auto=format&fit=crop" alt="Reading and writing tutoring" loading="lazy">
+        <div class="service-body">
+          <div class="service-top"><h3>Reading &amp; Writing</h3><span class="price">$50/hr</span></div>
+          <p>Reading comprehension, essay writing, and grammar — for students who need a boost or a bigger challenge.</p>
+          <p class="service-meta">Grades 3–12 &middot; All levels</p>
+        </div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=800&auto=format&fit=crop" alt="Science tutoring with experiments" loading="lazy">
+        <div class="service-body">
+          <div class="service-top"><h3>Science Tutoring</h3><span class="price">$55/hr</span></div>
+          <p>Biology, chemistry, and physics — with clear explanations and plenty of practice problems.</p>
+          <p class="service-meta">Grades 6–12 &middot; AP included</p>
+        </div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=800&auto=format&fit=crop" alt="SAT and ACT test preparation" loading="lazy">
+        <div class="service-body">
+          <div class="service-top"><h3>SAT &amp; ACT Prep</h3><span class="price">$65/hr</span></div>
+          <p>Targeted prep with real practice tests and proven strategies. Average score gain: 140+ points.</p>
+          <p class="service-meta">8–12 week programs</p>
+        </div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800&auto=format&fit=crop" alt="College admissions coaching" loading="lazy">
+        <div class="service-body">
+          <div class="service-top"><h3>College Admissions</h3><span class="price">$75/hr</span></div>
+          <p>Essay coaching, application strategy, and interview prep from counselors who know the process inside out.</p>
+          <p class="service-meta">Juniors &amp; seniors</p>
+        </div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop" alt="Homework help and study skills" loading="lazy">
+        <div class="service-body">
+          <div class="service-top"><h3>Homework &amp; Study Skills</h3><span class="price">$45/hr</span></div>
+          <p>Weekly homework support and study habits that stick — organization, planning, and focus strategies.</p>
+          <p class="service-meta">Grades 3–8 &middot; Weekly plans</p>
+        </div>
+      </article>
+    </div>
+    <p class="services-note">Not sure what your child needs? <a href="tel:+17045550108">Call (704) 555-0108</a> — we'll help you figure it out, free.</p>
+  </div>
+</section>
+
+<section id="tutors" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Meet the Tutors</p>
+      <h2>Teachers, not just tutors</h2>
+      <p>Every Bright Path tutor is a certified teacher or a subject expert with years of one-on-one experience.</p>
+    </div>
+    <div class="tutors-grid">
+      <article class="tutor">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop" alt="Portrait of Sarah, math tutor" loading="lazy">
+        <div class="tutor-body">
+          <h3>Sarah</h3>
+          <p class="role">Math &middot; SAT Prep</p>
+          <p>Former high school math teacher with 12 years in the classroom. Specializes in algebra, geometry, and SAT math.</p>
+        </div>
+      </article>
+      <article class="tutor">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop" alt="Portrait of Marcus, science tutor" loading="lazy">
+        <div class="tutor-body">
+          <h3>Marcus</h3>
+          <p class="role">Science &middot; ACT Prep</p>
+          <p>Chemistry graduate and AP science teacher. Makes tough concepts feel simple — and even fun.</p>
+        </div>
+      </article>
+      <article class="tutor">
+        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=800&auto=format&fit=crop" alt="Portrait of Emily, reading and college admissions tutor" loading="lazy">
+        <div class="tutor-body">
+          <h3>Emily</h3>
+          <p class="role">Reading &middot; College Essays</p>
+          <p>English teacher and admissions coach. Helps students find their voice — in essays and in the classroom.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Parent Reviews</p>
+      <h2>What Charlotte families say</h2>
+      <p>Rated 4.9 out of 5 from more than 400 families across Charlotte.</p>
+    </div>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"My son went from dreading math homework to asking for extra practice. Sarah found the way he learns — and everything changed."</blockquote>
+        <cite>Jennifer <span>Mom of a 7th grader</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"The SAT prep was worth every penny. My daughter's score went up 180 points and she got into her first-choice school."</blockquote>
+        <cite>David <span>Dad of a senior</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"The progress updates after every session are so helpful. We always know exactly what she's working on and how she's doing."</blockquote>
+        <cite>Angela <span>Mom of a 4th grader</span></cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section cta" id="book">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--sun)">Free First Session</p>
+    <h2>Try a session — free, no strings attached.</h2>
+    <p>Meet a tutor, set a goal, and see how it feels. If it's a good fit, we'll build a plan together. If not, no charge and no hard feelings.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="tel:+17045550108">Call (704) 555-0108</a>
+      <a class="btn btn-outline" href="#visit">Visit Our Center</a>
+    </div>
+    <small>Evening and weekend slots available. Online sessions offered nationwide.</small>
+  </div>
+</section>
+
+<section id="visit" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Visit Us</p>
+      <h2>Find us in South End</h2>
+      <p>Our learning center is on South Boulevard, two blocks from the light rail. Free parking in the lot behind the building.</p>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-card">
+        <h3>Opening Hours</h3>
+        <table class="hours">
+          <tr><td>Monday – Thursday</td><td>2:00 PM – 8:00 PM</td></tr>
+          <tr><td>Friday</td><td>2:00 PM – 6:00 PM</td></tr>
+          <tr><td>Saturday</td><td>9:00 AM – 4:00 PM</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+        </table>
+        <p style="margin-top:18px;color:var(--muted);font-size:15px">Online sessions available seven days a week — mornings, afternoons, and evenings.</p>
+      </div>
+      <div class="visit-card">
+        <h3>Location &amp; Contact</h3>
+        <p class="contact-line"><strong>Address</strong>1924 South Boulevard, Suite 210<br>Charlotte, NC 28203</p>
+        <p class="contact-line"><strong>Phone</strong><a href="tel:+17045550108">(704) 555-0108</a></p>
+        <p class="contact-line"><strong>Email</strong><a href="mailto:hello@brightpathtutoring.com">hello@brightpathtutoring.com</a></p>
+        <p class="contact-line" style="margin-bottom:0"><strong>Parking</strong>Free lot behind the building, plus light rail access at East/West Blvd station.</p>
+      </div>
+    </div>
+    <div class="visit-img">
+      <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1600&auto=format&fit=crop" alt="Students learning at the Bright Path center" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="#top"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 4 2 10l14 6 14-6L16 4Z" fill="#1e2a4a"/><path d="M8 14.5V22c0 2.5 3.6 4.5 8 4.5s8-2 8-4.5v-7.5l-8 3.5-8-3.5Z" fill="#f6b73c"/><path d="M28 10v8" stroke="#1e2a4a" stroke-width="2" stroke-linecap="round"/><circle cx="28" cy="20" r="1.8" fill="#1e2a4a"/></svg>Bright <span>Path</span></a>
+        <p>One-on-one tutoring and test prep in Charlotte, NC. Math, reading, science, and college admissions — in person and online.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="#subjects">Subjects</a>
+        <a href="#tutors">Tutors</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#visit">Visit</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+17045550108">(704) 555-0108</a>
+        <a href="mailto:hello@brightpathtutoring.com">hello@brightpathtutoring.com</a>
+        <a href="#visit">1924 S Blvd, Charlotte, NC 28203</a>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <a href="#visit">Mon – Thu: 2 PM – 8 PM</a>
+        <a href="#visit">Friday: 2 PM – 6 PM</a>
+        <a href="#visit">Saturday: 9 AM – 4 PM</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Bright Path Tutoring, Charlotte NC. All rights reserved.</span>
+      <span>Website designed &amp; built by <a href="https://weblodge.agency" target="_blank" rel="noopener">Weblodge Agency</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

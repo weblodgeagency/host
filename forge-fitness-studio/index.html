@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forge Fitness Studio | Gym &amp; Personal Training in Orlando, FL</title>
+<meta name="description" content="Forge Fitness Studio is a strength and conditioning gym in Orlando, Florida. Small-group training, expert coaches, and memberships from $39/month. First week free.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --charcoal:#16181d;
+    --charcoal-2:#1f2229;
+    --ember:#e8491d;
+    --ember-dark:#c93a13;
+    --ember-light:#fff0ec;
+    --sand:#f6f4f1;
+    --text:#23262c;
+    --muted:#6b6f78;
+    --white:#fff;
+    --border:#e6e2dc;
+    --radius:12px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);line-height:1.6;background:#fff;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.display{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.01em;line-height:1.1}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+  .section{padding:88px 0}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ember);margin-bottom:12px}
+  .section-head{max-width:640px;margin-bottom:48px}
+  .section-head h2{font-size:clamp(30px,4.2vw,44px);margin-bottom:12px}
+  .section-head p{color:var(--muted);font-size:17px}
+  .btn{display:inline-block;padding:14px 28px;border-radius:6px;font-weight:700;font-size:15px;transition:.2s;cursor:pointer;border:2px solid transparent;text-align:center}
+  .btn-ember{background:var(--ember);color:#fff}
+  .btn-ember:hover{background:var(--ember-dark)}
+  .btn-dark{background:var(--charcoal);color:#fff}
+  .btn-dark:hover{background:#000}
+  .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.7)}
+  .btn-outline:hover{background:rgba(255,255,255,.12)}
+
+  /* Nav */
+  .nav{position:sticky;top:0;z-index:50;background:var(--charcoal);box-shadow:0 2px 14px rgba(0,0,0,.25)}
+  .nav-inner{max-width:1140px;margin:0 auto;padding:0 24px;height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .logo{display:inline-flex;align-items:center;gap:11px;color:#fff;font-family:'Oswald',sans-serif;font-size:24px;font-weight:700;letter-spacing:.02em;text-transform:uppercase}
+  .logo em{font-style:normal;color:var(--ember)}
+  .logo svg{flex-shrink:0}
+  .nav-links{display:flex;gap:30px;list-style:none;font-weight:600;font-size:15px}
+  .nav-links a{color:#d8d5cf}
+  .nav-links a:hover{color:#fff}
+  .nav-cta{padding:10px 20px;font-size:14px}
+
+  /* Hero */
+  .hero{position:relative;min-height:86vh;display:flex;align-items:center;color:#fff;background:var(--charcoal) url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1800&auto=format&fit=crop') center/cover no-repeat}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,16,20,.88),rgba(15,16,20,.55) 60%,rgba(15,16,20,.25))}
+  .hero-inner{position:relative;max-width:1140px;margin:0 auto;padding:110px 24px;width:100%}
+  .hero-copy{max-width:620px}
+  .hero-copy .eyebrow{color:#ff8a66}
+  .hero-copy h1{font-size:clamp(46px,7vw,78px);margin-bottom:18px}
+  .hero-copy h1 em{font-style:normal;color:var(--ember)}
+  .hero-copy p{font-size:19px;color:#e8e5e0;margin-bottom:34px;max-width:540px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-stats{display:flex;gap:40px;flex-wrap:wrap;margin-top:44px;padding-top:28px;border-top:1px solid rgba(255,255,255,.2)}
+  .hero-stats strong{display:block;font-family:'Oswald',sans-serif;font-size:28px;line-height:1}
+  .hero-stats span{font-size:13px;color:#cfccc6;text-transform:uppercase;letter-spacing:.08em}
+
+  /* About */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .about-grid img{border-radius:var(--radius);width:100%;height:460px;object-fit:cover}
+  .about-copy p{color:var(--muted);font-size:17px;margin-bottom:14px}
+  .feature-list{list-style:none;margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:12px 24px;font-weight:600;font-size:15px}
+  .feature-list li::before{content:"";display:inline-block;width:10px;height:10px;background:var(--ember);margin-right:10px}
+
+  /* Programs */
+  .programs{background:var(--sand)}
+  .program-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .program{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,.05);transition:.2s}
+  .program:hover{transform:translateY(-4px);box-shadow:0 14px 32px rgba(0,0,0,.1)}
+  .program img{width:100%;height:200px;object-fit:cover}
+  .program-body{padding:24px}
+  .program-body h3{font-size:21px;margin-bottom:8px}
+  .program-body p{color:var(--muted);font-size:15px;margin-bottom:14px}
+  .program-meta{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ember)}
+
+  /* Pricing */
+  .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+  .plan{border:2px solid var(--border);border-radius:var(--radius);padding:34px 30px;display:flex;flex-direction:column;background:#fff}
+  .plan.featured{border-color:var(--ember);background:var(--charcoal);color:#fff;position:relative}
+  .plan.featured .plan-price,.plan.featured h3{color:#fff}
+  .plan.featured p,.plan.featured li{color:#d8d5cf}
+  .plan-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--ember);color:#fff;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:6px 14px;border-radius:999px;white-space:nowrap}
+  .plan h3{font-size:22px;margin-bottom:6px}
+  .plan>p{color:var(--muted);font-size:15px;margin-bottom:20px}
+  .plan-price{font-family:'Oswald',sans-serif;font-size:48px;font-weight:700;line-height:1;margin-bottom:4px}
+  .plan-price span{font-size:17px;font-family:'Inter',sans-serif;font-weight:500;color:var(--muted)}
+  .plan.featured .plan-price span{color:#b9b5ae}
+  .plan ul{list-style:none;margin:22px 0 28px;display:flex;flex-direction:column;gap:10px;font-size:15px}
+  .plan li::before{content:"✓";color:var(--ember);font-weight:800;margin-right:10px}
+  .plan .btn{margin-top:auto}
+  .pricing-note{text-align:center;color:var(--muted);margin-top:28px;font-size:15px}
+  .pricing-note strong{color:var(--text)}
+
+  /* Trainers */
+  .trainers{background:var(--sand)}
+  .trainer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .trainer{background:#fff;border-radius:var(--radius);overflow:hidden;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.05)}
+  .trainer img{width:100%;height:320px;object-fit:cover}
+  .trainer-body{padding:24px 20px 28px}
+  .trainer-body h3{font-size:20px;margin-bottom:4px}
+  .trainer-role{color:var(--ember);font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+  .trainer-body p{color:var(--muted);font-size:15px}
+
+  /* Reviews */
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .review{background:var(--sand);border-radius:var(--radius);padding:30px 26px}
+  .stars{color:var(--ember);letter-spacing:3px;font-size:17px;margin-bottom:14px}
+  .review blockquote{font-size:16px;margin-bottom:18px}
+  .review cite{font-style:normal;font-weight:700}
+  .review cite span{display:block;font-weight:500;font-size:14px;color:var(--muted)}
+
+  /* CTA band */
+  .cta-band{background:var(--ember);color:#fff;text-align:center}
+  .cta-band h2{font-size:clamp(30px,4.5vw,46px);margin-bottom:12px}
+  .cta-band p{font-size:18px;color:#ffe4dc;max-width:600px;margin:0 auto 30px}
+
+  /* Visit */
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+  .visit-card{border:1px solid var(--border);border-radius:var(--radius);padding:32px 30px}
+  .visit-card h3{font-size:21px;margin-bottom:16px}
+  .hours{width:100%;border-collapse:collapse}
+  .hours td{padding:9px 0;border-bottom:1px solid #f0ede8}
+  .hours td:last-child{text-align:right;font-weight:600}
+  .hours tr:last-child td{border-bottom:none}
+  .contact-line{margin-bottom:16px;color:var(--muted)}
+  .contact-line strong{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ember);margin-bottom:2px}
+  .contact-line a{font-weight:700;color:var(--text)}
+  .contact-line a:hover{color:var(--ember)}
+
+  footer{background:var(--charcoal);color:#a9a6a0;padding:48px 0 30px;font-size:15px;text-align:center}
+  footer .logo{font-size:22px;margin-bottom:12px}
+  footer a{color:#ff8a66;font-weight:600}
+  footer a:hover{text-decoration:underline}
+  .footer-bottom{margin-top:24px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);font-size:14px;color:#8b8882}
+
+  @media (max-width:900px){
+    .program-grid,.pricing-grid,.trainer-grid,.reviews-grid{grid-template-columns:1fr 1fr}
+    .about-grid,.visit-grid{grid-template-columns:1fr}
+    .about-grid img{height:320px}
+    .section{padding:64px 0}
+  }
+  @media (max-width:640px){
+    .nav-links{display:none}
+    .program-grid,.pricing-grid,.trainer-grid,.reviews-grid{grid-template-columns:1fr}
+    .feature-list{grid-template-columns:1fr}
+    .hero-inner{padding:80px 24px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="2" y="12" width="4" height="8" rx="1" fill="#e8491d"/><rect x="7" y="9" width="3.5" height="14" rx="1" fill="#fff"/><rect x="21.5" y="9" width="3.5" height="14" rx="1" fill="#fff"/><rect x="26" y="12" width="4" height="8" rx="1" fill="#e8491d"/><rect x="10.5" y="14.5" width="11" height="3" rx="1.5" fill="#e8491d"/></svg>Forge <em>Fitness</em></a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#pricing">Membership</a></li>
+        <li><a href="#trainers">Coaches</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+    </nav>
+    <a href="#pricing" class="btn btn-ember nav-cta">Start Free Week</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">Strength &amp; Conditioning Gym — Orlando, FL</p>
+      <h1>Stronger every <em>single week.</em></h1>
+      <p>Real coaching, real programming, and a community that shows up. Whether it is your first workout or your five-hundredth, we meet you where you are and push you further.</p>
+      <div class="hero-actions">
+        <a href="#pricing" class="btn btn-ember">Claim Your Free Week</a>
+        <a href="#programs" class="btn btn-outline">Explore Programs</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>4.9 ★</strong><span>480+ reviews</span></div>
+        <div><strong>12</strong><span>Expert coaches</span></div>
+        <div><strong>2,100+</strong><span>Members strong</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="about-grid">
+      <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1200&auto=format&fit=crop" alt="Members training with weights at Forge Fitness Studio" loading="lazy">
+      <div class="about-copy">
+        <p class="eyebrow">Why Forge</p>
+        <h2 class="section-head" style="margin-bottom:16px;font-size:clamp(30px,4vw,42px)">A gym built around coaching, not machines.</h2>
+        <p>Forge Fitness Studio opened in 2016 with one idea: a gym where every member has a plan and a coach who knows their name. No crowded floor, no guessing what to do next — just structured training that actually works.</p>
+        <p>Our 8,000-square-foot space in downtown Orlando has a full strength floor, a turf zone for conditioning, and a dedicated room for small-group classes. Come in for a free week and see the difference coaching makes.</p>
+        <ul class="feature-list">
+          <li>Coach-led sessions, every time</li>
+          <li>Open gym 5 AM – 10 PM daily</li>
+          <li>Nutrition guidance included</li>
+          <li>Showers, lockers &amp; towel service</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="programs" class="section programs">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Programs</p>
+      <h2>Train the way you want to train</h2>
+      <p>Every program is led by a certified coach and capped at small numbers, so you get real attention in every session.</p>
+    </div>
+    <div class="program-grid">
+      <article class="program">
+        <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?q=80&w=1200&auto=format&fit=crop" alt="Athlete performing a barbell deadlift" loading="lazy">
+        <div class="program-body">
+          <h3>Strength Training</h3>
+          <p>Barbell-first programming built around the big lifts. Learn proper form, follow a progressive plan, and watch your numbers climb week after week.</p>
+          <p class="program-meta">Small groups · All levels</p>
+        </div>
+      </article>
+      <article class="program">
+        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1200&auto=format&fit=crop" alt="High-energy group fitness class in session" loading="lazy">
+        <div class="program-body">
+          <h3>Forge Conditioning</h3>
+          <p>High-energy 45-minute classes mixing sleds, ropes, kettlebells, and intervals. The fastest way to build real-world fitness — and have fun doing it.</p>
+          <p class="program-meta">45 min · 12 spots per class</p>
+        </div>
+      </article>
+      <article class="program">
+        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1200&auto=format&fit=crop" alt="Coach guiding a member through a workout" loading="lazy">
+        <div class="program-body">
+          <h3>Personal Training</h3>
+          <p>One-on-one coaching with a program built around your goals, your schedule, and your body. Ideal for beginners, athletes, and anyone coming back from injury.</p>
+          <p class="program-meta">1-on-1 · From $65/session</p>
+        </div>
+      </article>
+      <article class="program">
+        <img src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1?q=80&w=1200&auto=format&fit=crop" alt="Indoor cycling class" loading="lazy">
+        <div class="program-body">
+          <h3>Forge Cycle</h3>
+          <p>Rhythm-based indoor cycling with great music and zero judgment. Low impact on your joints, high impact on your cardio.</p>
+          <p class="program-meta">45 min · Bikes provided</p>
+        </div>
+      </article>
+      <article class="program">
+        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1200&auto=format&fit=crop" alt="Yoga class stretching on mats" loading="lazy">
+        <div class="program-body">
+          <h3>Mobility &amp; Yoga</h3>
+          <p>Stretch, breathe, and recover. Our mobility sessions keep you moving well between hard training days — and help prevent injuries before they happen.</p>
+          <p class="program-meta">60 min · All levels welcome</p>
+        </div>
+      </article>
+      <article class="program">
+        <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?q=80&w=1200&auto=format&fit=crop" alt="Dumbbell rack on the open gym floor" loading="lazy">
+        <div class="program-body">
+          <h3>Open Gym Access</h3>
+          <p>Prefer to train on your own? Full access to the strength floor, cardio deck, and turf zone — with a coach on the floor whenever you need a spot or a tip.</p>
+          <p class="program-meta">5 AM – 10 PM · 7 days a week</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Membership</p>
+      <h2>Simple pricing. No joining fee. No lock-in.</h2>
+      <p>Every membership starts with a free week — full access, no card required. Cancel anytime with 30 days' notice.</p>
+    </div>
+    <div class="pricing-grid">
+      <article class="plan">
+        <h3>Open Gym</h3>
+        <p>For self-directed trainers who want great equipment and a great space.</p>
+        <p class="plan-price">$39<span>/month</span></p>
+        <ul>
+          <li>Full open gym access, 7 days a week</li>
+          <li>Strength floor, turf &amp; cardio deck</li>
+          <li>Locker room &amp; showers</li>
+          <li>Free intro session with a coach</li>
+        </ul>
+        <a href="#visit" class="btn btn-dark">Start Free Week</a>
+      </article>
+      <article class="plan featured">
+        <span class="plan-badge">Most Popular</span>
+        <h3>All Access</h3>
+        <p>Our full experience — unlimited classes, coaching, and recovery.</p>
+        <p class="plan-price">$79<span>/month</span></p>
+        <ul>
+          <li>Everything in Open Gym</li>
+          <li>Unlimited group classes</li>
+          <li>Monthly progress check-in</li>
+          <li>Nutrition guidance &amp; meal plans</li>
+          <li>Guest pass every month</li>
+        </ul>
+        <a href="#visit" class="btn btn-ember">Start Free Week</a>
+      </article>
+      <article class="plan">
+        <h3>Personal Training</h3>
+        <p>One-on-one coaching plus full gym access, built around your goals.</p>
+        <p class="plan-price">$249<span>/month</span></p>
+        <ul>
+          <li>Everything in All Access</li>
+          <li>4 personal training sessions / month</li>
+          <li>Custom training program</li>
+          <li>Direct message access to your coach</li>
+        </ul>
+        <a href="#visit" class="btn btn-dark">Book a Free Consult</a>
+      </article>
+    </div>
+    <p class="pricing-note"><strong>Students, teachers, and first responders save 15%</strong> — bring your ID when you sign up. Day passes available for $15.</p>
+  </div>
+</section>
+
+<section id="trainers" class="section trainers">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Meet the Coaches</p>
+      <h2>Certified coaches who actually coach</h2>
+      <p>Every Forge coach is nationally certified and leads sessions on the floor — not from behind a desk.</p>
+    </div>
+    <div class="trainer-grid">
+      <article class="trainer">
+        <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?q=80&w=800&auto=format&fit=crop" alt="Portrait of Derek, head coach at Forge Fitness" loading="lazy">
+        <div class="trainer-body">
+          <h3>Derek</h3>
+          <p class="trainer-role">Head Coach · Strength</p>
+          <p>Twelve years coaching powerlifting and general strength. Derek built Forge's strength program from scratch — and still coaches the 6 AM crew every weekday.</p>
+        </div>
+      </article>
+      <article class="trainer">
+        <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=800&auto=format&fit=crop" alt="Nina coaching a kettlebell session" loading="lazy">
+        <div class="trainer-body">
+          <h3>Nina</h3>
+          <p class="trainer-role">Conditioning &amp; Classes</p>
+          <p>A former college sprinter, Nina leads our conditioning classes with energy that is honestly hard to keep up with. Her Saturday morning class is legendary.</p>
+        </div>
+      </article>
+      <article class="trainer">
+        <img src="https://images.unsplash.com/photo-1571731956672-f2b94d7dd0cb?q=80&w=800&auto=format&fit=crop" alt="Alex leading a training session" loading="lazy">
+        <div class="trainer-body">
+          <h3>Alex</h3>
+          <p class="trainer-role">Personal Training · Rehab</p>
+          <p>Alex specializes in training around injuries and getting people moving again after time off. Patient, precise, and genuinely encouraging.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Member Reviews</p>
+      <h2>What Orlando says about Forge</h2>
+      <p>Rated 4.9 out of 5 from more than 480 reviews on Google.</p>
+    </div>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>"I was nervous about joining a gym for the first time in years. The coaches walked me through everything, and six months later I am deadlifting more than I ever thought I could."</blockquote>
+        <cite>Sarah <span>Member since 2024</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>"The 6 AM strength class is the best part of my day. Small groups, real coaching, and people who notice when you show up — and when you don't."</blockquote>
+        <cite>Marcus <span>All Access member</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>"Clean, never overcrowded, and the coaches actually correct your form instead of scrolling their phones. Worth every penny."</blockquote>
+        <cite>Jessica <span>Personal training client</span></cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section cta-band">
+  <div class="wrap">
+    <h2>Your first week is on us.</h2>
+    <p>Full access to the gym, all classes, and a free intro session with a coach. No card required, no strings attached.</p>
+    <a href="tel:+14075550200" class="btn btn-dark">Call (407) 555-0200 to Start</a>
+  </div>
+</section>
+
+<section id="visit" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Visit Us</p>
+      <h2>Find us in downtown Orlando</h2>
+      <p>Two blocks from Lake Eola, with free parking in the lot on Pine Street.</p>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-card">
+        <h3>Opening Hours</h3>
+        <table class="hours">
+          <tr><td>Monday – Friday</td><td>5:00 AM – 10:00 PM</td></tr>
+          <tr><td>Saturday</td><td>7:00 AM – 8:00 PM</td></tr>
+          <tr><td>Sunday</td><td>8:00 AM – 6:00 PM</td></tr>
+        </table>
+        <p style="margin-top:16px;color:var(--muted);font-size:15px">Staffed hours are 6 AM – 8 PM weekdays. Members get 24/7 keycard access after their first month.</p>
+      </div>
+      <div class="visit-card">
+        <h3>Location &amp; Contact</h3>
+        <p class="contact-line"><strong>Address</strong>812 East Pine Street<br>Orlando, FL 32801</p>
+        <p class="contact-line"><strong>Phone</strong><a href="tel:+14075550200">(407) 555-0200</a></p>
+        <p class="contact-line"><strong>Email</strong><a href="mailto:hello@forgefitnessorlando.com">hello@forgefitnessorlando.com</a></p>
+        <p class="contact-line" style="margin-bottom:0"><strong>Parking</strong>Free member parking in the Pine Street lot, plus bike racks at the front door.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="logo"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="2" y="12" width="4" height="8" rx="1" fill="#e8491d"/><rect x="7" y="9" width="3.5" height="14" rx="1" fill="#fff"/><rect x="21.5" y="9" width="3.5" height="14" rx="1" fill="#fff"/><rect x="26" y="12" width="4" height="8" rx="1" fill="#e8491d"/><rect x="10.5" y="14.5" width="11" height="3" rx="1.5" fill="#e8491d"/></svg> Forge <em>Fitness</em></span>
+    <p>812 East Pine Street, Orlando, FL 32801 &middot; (407) 555-0200</p>
+    <p class="footer-bottom">&copy; 2026 Forge Fitness Studio. All rights reserved. &middot; Website designed &amp; built by <a href="https://weblodge.agency" target="_blank" rel="noopener">Weblodge Agency</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

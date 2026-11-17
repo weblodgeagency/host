@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harborview Lawn &amp; Garden — Landscaping in Portland, Maine</title>
+<meta name="description" content="Harborview Lawn & Garden keeps Portland, Maine yards beautiful: lawn care, coastal gardens, stonework, and seasonal cleanups. Local, licensed, and free estimates.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#16324a; --navy-dark:#0e2233; --sea:#4f8f7b; --sea-light:#d9ebe2;
+    --sand:#f5f1e8; --paper:#fdfcf8; --ink:#24313b; --muted:#5d6b73; --line:#e2ddd0;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Jost',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;font-size:17px}
+  h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;line-height:1.1}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .section{padding:90px 0}
+  .eyebrow{font-size:13px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--sea);margin-bottom:12px}
+  .section-title{font-size:clamp(34px,5vw,50px);color:var(--navy);margin-bottom:14px}
+  .section-sub{color:var(--muted);max-width:620px;font-size:18px}
+  .btn{display:inline-block;padding:14px 30px;border-radius:999px;font-weight:600;font-size:16px;letter-spacing:.02em;transition:.2s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-navy{background:var(--navy);color:#fff}
+  .btn-navy:hover{background:var(--navy-dark)}
+  .btn-sea{background:var(--sea);color:#fff}
+  .btn-sea:hover{background:#3f7663}
+  .btn-white{background:#fff;color:var(--navy)}
+  .btn-white:hover{background:var(--sea-light)}
+
+  .nav{position:sticky;top:0;z-index:100;background:rgba(253,252,248,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav-inner{max-width:1120px;margin:0 auto;padding:0 24px;height:72px;display:flex;align-items:center;justify-content:space-between}
+  .logo{display:inline-flex;align-items:center;gap:11px;font-family:'Cormorant Garamond',Georgia,serif;font-size:26px;font-weight:700;color:var(--navy)}
+  .logo svg{flex-shrink:0}
+  .logo em{font-style:italic;color:var(--sea);font-weight:500}
+  .nav-links{display:flex;gap:32px;list-style:none}
+  .nav-links a{color:var(--muted);font-weight:500;font-size:16px;letter-spacing:.03em}
+  .nav-links a:hover{color:var(--navy)}
+  .nav-cta{padding:11px 22px;font-size:15px}
+
+  .hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;color:#fff;background:var(--navy-dark) url('https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,34,51,.25) 30%,rgba(14,34,51,.85) 90%)}
+  .hero-inner{position:relative;max-width:1120px;margin:0 auto;padding:100px 24px 72px;width:100%}
+  .hero h1{font-size:clamp(46px,7vw,80px);max-width:820px;margin-bottom:16px}
+  .hero h1 em{font-style:italic;color:#bfe0cd}
+  .hero p{font-size:19px;color:#e2ece6;max-width:620px;margin-bottom:32px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-strip{margin-top:44px;padding-top:24px;border-top:1px solid rgba(255,255,255,.25);display:flex;gap:40px;flex-wrap:wrap;font-size:15px;color:#d8e4dc}
+  .hero-strip strong{color:#fff;font-size:17px}
+
+  .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
+  .about-grid img{border-radius:160px 160px 16px 16px;width:100%;height:480px;object-fit:cover}
+  .about-copy p{color:var(--muted);margin-bottom:14px;font-size:18px}
+  .about-copy .quote{font-family:'Cormorant Garamond',Georgia,serif;font-size:26px;font-style:italic;color:var(--navy);border-left:3px solid var(--sea);padding-left:20px;margin:24px 0;line-height:1.35}
+
+  .services-section{background:var(--sand)}
+  .services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:48px}
+  .service{background:#fff;border-radius:14px;padding:30px 28px;display:flex;gap:20px;align-items:flex-start;box-shadow:0 6px 20px rgba(22,50,74,.06)}
+  .service-icon{flex-shrink:0;width:56px;height:56px;border-radius:50%;background:var(--sea-light);display:flex;align-items:center;justify-content:center;font-size:26px}
+  .service h3{font-size:26px;color:var(--navy);margin-bottom:6px}
+  .service p{color:var(--muted);font-size:16px;margin-bottom:10px}
+  .service .price{font-weight:600;color:var(--sea);font-size:16px}
+
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:48px}
+  .gallery img{width:100%;height:240px;object-fit:cover;border-radius:12px}
+
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .review{border-top:3px solid var(--sea);padding-top:22px}
+  .stars{color:var(--sea);letter-spacing:2px;font-size:17px;margin-bottom:12px}
+  .review blockquote{font-family:'Cormorant Garamond',Georgia,serif;font-size:23px;font-style:italic;line-height:1.35;color:var(--navy);margin-bottom:16px}
+  .review cite{font-style:normal;font-weight:600;color:var(--ink);font-family:'Jost',sans-serif;font-size:15px}
+  .review cite span{display:block;font-weight:400;color:var(--muted)}
+
+  .visit-section{background:var(--navy);color:#d8e4dc}
+  .visit-section .section-title{color:#fff}
+  .visit-section .eyebrow{color:#8fc7ab}
+  .visit-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;margin-top:44px}
+  .visit-block{margin-bottom:26px}
+  .visit-block h3{font-size:24px;color:#fff;margin-bottom:8px}
+  .visit-block a{color:#fff;font-weight:600}
+  .visit-block a:hover{color:#8fc7ab}
+  .hours-table{width:100%;border-collapse:collapse}
+  .hours-table td{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.14);color:#c4d3cb}
+  .hours-table td:last-child{text-align:right;color:#fff;font-weight:600}
+
+  .cta{text-align:center}
+  .cta h2{font-size:clamp(34px,5vw,48px);color:var(--navy);margin-bottom:14px}
+  .cta p{color:var(--muted);font-size:18px;max-width:580px;margin:0 auto 30px}
+  .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+  footer{background:var(--navy-dark);color:#93a9b5;padding:44px 0;text-align:center;font-size:15px}
+  footer .logo{color:#fff;font-size:24px;display:block;margin-bottom:12px}
+  footer a{color:#8fc7ab;font-weight:600}
+  footer a:hover{text-decoration:underline}
+
+  @media (max-width:900px){
+    .about-grid,.visit-grid{grid-template-columns:1fr;gap:32px}
+    .services-grid,.reviews-grid{grid-template-columns:1fr 1fr}
+    .gallery{grid-template-columns:1fr 1fr}
+    .about-grid img{height:340px;border-radius:120px 120px 14px 14px}
+  }
+  @media (max-width:640px){
+    .nav-links{display:none}
+    .section{padding:64px 0}
+    .services-grid,.reviews-grid,.gallery{grid-template-columns:1fr}
+    .hero-inner{padding:80px 24px 56px}
+    .service{flex-direction:column}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M3 24c3-2 6-2 9 0s6 2 9 0 5-1.8 8 0" stroke="#4f8f7b" stroke-width="2.2" stroke-linecap="round" fill="none"/><path d="M16 21V7M16 12c-3 0-5-2-5.5-5M16 9c3 0 5-2 5.5-5" stroke="#16324a" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M6 27h20" stroke="#16324a" stroke-width="2" stroke-linecap="round"/></svg>Harbor<em>view</em></a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="tel:+12075550163" class="btn btn-navy nav-cta">Call (207) 555-0163</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow" style="color:#bfe0cd">Lawn &amp; Garden — Portland, Maine</p>
+    <h1>Coastal yards, <em>cared for</em> like our own.</h1>
+    <p>Harborview is a small Portland landscaping crew that knows Maine soil, Maine salt air, and Maine winters. We keep your yard healthy from the first thaw to the last leaf.</p>
+    <div class="hero-actions">
+      <a href="#services" class="btn btn-white">See Services &amp; Prices</a>
+      <a href="tel:+12075550163" class="btn btn-sea">Free Estimate</a>
+    </div>
+    <div class="hero-strip">
+      <span><strong>11 years</strong> in Portland</span>
+      <span><strong>400+ homes</strong> on our routes</span>
+      <span><strong>4.9 rating</strong> on Google</span>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="wrap">
+    <div class="about-grid">
+      <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=1200&auto=format&fit=crop" alt="Gardener planting in a Portland coastal garden" loading="lazy">
+      <div class="about-copy">
+        <p class="eyebrow">About Harborview</p>
+        <h2 class="section-title">Grown in Maine, for Maine yards.</h2>
+        <p>We started Harborview in 2015 with a pickup, a mower, and a love for this coastline. Portland yards face salt wind, rocky soil, and short growing seasons — so we plant tough, salt-tolerant natives and build stonework that shrugs off the winter.</p>
+        <p class="quote">"A yard should feel like it belongs here — because it does. We work with the coast, not against it."</p>
+        <p>— <strong>Ben Calloway</strong>, founder of Harborview Lawn &amp; Garden</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section services-section">
+  <div class="wrap">
+    <p class="eyebrow">Services &amp; Pricing</p>
+    <h2 class="section-title">Everything your yard needs, by the season.</h2>
+    <p class="section-sub">Free estimates on every job. Written quotes, honest prices, and crews that show up when they say they will.</p>
+    <div class="services-grid">
+      <article class="service">
+        <div class="service-icon" aria-hidden="true">&#127793;</div>
+        <div><h3>Weekly Lawn Care</h3><p>Mowing, trimming, and edging on a weekly route from May through October, with organic feeding.</p><p class="price">from $52 / visit</p></div>
+      </article>
+      <article class="service">
+        <div class="service-icon" aria-hidden="true">&#127799;</div>
+        <div><h3>Coastal Garden Design</h3><p>Salt-tolerant plantings, native perennials, and cottage-style beds built for Maine's climate.</p><p class="price">from $480 / project</p></div>
+      </article>
+      <article class="service">
+        <div class="service-icon" aria-hidden="true">&#129521;</div>
+        <div><h3>Stonework &amp; Walls</h3><p>Granite steps, dry-stacked walls, and stone patios using local Maine stone.</p><p class="price">from $2,100 / project</p></div>
+      </article>
+      <article class="service">
+        <div class="service-icon" aria-hidden="true">&#127811;</div>
+        <div><h3>Spring &amp; Fall Cleanups</h3><p>Leaf and debris removal, bed prep, pruning, and winterizing so your yard rests well.</p><p class="price">from $260 / cleanup</p></div>
+      </article>
+      <article class="service">
+        <div class="service-icon" aria-hidden="true">&#127795;</div>
+        <div><h3>Tree &amp; Shrub Care</h3><p>Pruning, shaping, and storm-damage cleanup for trees and shrubs of every size.</p><p class="price">from $140 / visit</p></div>
+      </article>
+      <article class="service">
+        <div class="service-icon" aria-hidden="true">&#128167;</div>
+        <div><h3>Irrigation &amp; Watering</h3><p>Drip systems and smart sprinklers that keep beds watered without wasting a drop.</p><p class="price">from $720 / install</p></div>
+      </article>
+    </div>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?q=80&w=800&auto=format&fit=crop" alt="Flowering garden bed in Portland" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?q=80&w=800&auto=format&fit=crop" alt="Green shrubs and garden plants" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1589923188900-85dae523342b?q=80&w=800&auto=format&fit=crop" alt="Freshly mowed lawn" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="section">
+  <div class="wrap">
+    <p class="eyebrow">Kind Words</p>
+    <h2 class="section-title">What Portland neighbors say.</h2>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"Our front yard faces the ocean wind and nothing ever grew. Harborview planted a coastal garden that is gorgeous — and it survived its first winter beautifully."</blockquote>
+        <cite>Susan <span>East End &middot; Coastal garden</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"Reliable, friendly, and they actually clean up after themselves. The lawn has never looked this good, and I never have to think about it."</blockquote>
+        <cite>Peter <span>Deering &middot; Weekly lawn care</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"Ben rebuilt our granite steps and regraded the whole front slope. Honest price, tidy crew, and the work is rock solid — literally."</blockquote>
+        <cite>Laura <span>West End &middot; Stonework</span></cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="section visit-section">
+  <div class="wrap">
+    <p class="eyebrow">Visit or Call</p>
+    <h2 class="section-title">Let's talk about your yard.</h2>
+    <div class="visit-grid">
+      <div>
+        <div class="visit-block">
+          <h3>Office</h3>
+          <p>84 Fore Street<br>Portland, ME 04101<br>Downtown, near the Old Port</p>
+        </div>
+        <div class="visit-block">
+          <h3>Contact</h3>
+          <p><a href="tel:+12075550163">(207) 555-0163</a><br><a href="mailto:hello@harborviewlawn.com">hello@harborviewlawn.com</a></p>
+        </div>
+        <div class="visit-block">
+          <h3>Service Area</h3>
+          <p>Portland, South Portland, Scarborough, Falmouth, Cape Elizabeth, Yarmouth, and Cumberland.</p>
+        </div>
+      </div>
+      <div>
+        <div class="visit-block">
+          <h3>Office Hours</h3>
+          <table class="hours-table">
+            <tr><td>Monday – Friday</td><td>7:00 AM – 5:00 PM</td></tr>
+            <tr><td>Saturday</td><td>8:00 AM – 12:00 PM</td></tr>
+            <tr><td>Sunday</td><td>Closed</td></tr>
+          </table>
+          <p style="margin-top:16px;color:#c4d3cb">Season runs April through November. Winter snow and ice services available for existing customers.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section cta">
+  <div class="wrap">
+    <p class="eyebrow">Free Estimates</p>
+    <h2>Your yard deserves a crew that loves Maine as much as you do.</h2>
+    <p>Call or email today — we'll visit your property, listen to what you want, and send a clear written quote within two days.</p>
+    <div class="cta-actions">
+      <a href="tel:+12075550163" class="btn btn-navy">Call (207) 555-0163</a>
+      <a href="mailto:hello@harborviewlawn.com" class="btn btn-sea">Request an Estimate</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="logo"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M3 24c3-2 6-2 9 0s6 2 9 0 5-1.8 8 0" stroke="#4f8f7b" stroke-width="2.2" stroke-linecap="round" fill="none"/><path d="M16 21V7M16 12c-3 0-5-2-5.5-5M16 9c3 0 5-2 5.5-5" stroke="#ffffff" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M6 27h20" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/></svg> Harbor<em>view</em></span>
+    <p>84 Fore Street, Portland, ME 04101 &middot; (207) 555-0163 &middot; hello@harborviewlawn.com</p>
+    <p style="margin-top:12px">&copy; 2026 Harborview Lawn &amp; Garden. All rights reserved.</p>
+    <p style="margin-top:8px">Website designed &amp; built by <a href="https://weblodge.agency">Weblodge Agency</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

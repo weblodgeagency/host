@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Blooming Branch — Florist in New Orleans, LA</title>
+<meta name="description" content="The Blooming Branch is a florist in New Orleans' Garden District. Lush bouquets, wedding flowers, and same-day delivery across New Orleans.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --plum:#5b2d4d; --plum-dark:#42203a; --cream:#fdf8f3; --sand:#f4e9e2;
+    --gold:#c9a24e; --gold-light:#e8d3a2; --leaf:#4f6b4a; --ink:#2e2428; --muted:#7d6f72; --line:#e8dcd3;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;font-size:17px}
+  h1,h2,h3{font-family:'Marcellus',Georgia,serif;font-weight:400;line-height:1.15}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .section{padding:90px 0}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--plum);margin-bottom:12px}
+  .section-title{font-size:clamp(32px,4.5vw,46px);color:var(--plum-dark);margin-bottom:14px}
+  .section-sub{color:var(--muted);max-width:620px;font-size:18px}
+  .btn{display:inline-block;padding:14px 30px;border-radius:8px;font-weight:700;font-size:16px;transition:.2s}
+  .btn:hover{transform:translateY(-1px)}
+  .btn-primary{background:var(--plum);color:#fff}
+  .btn-primary:hover{background:var(--plum-dark)}
+  .btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.9)}
+  .btn-outline:hover{background:rgba(255,255,255,.16)}
+  .btn-dark{background:var(--ink);color:#fff}
+  .btn-dark:hover{background:#1f181b}
+  .nav{position:sticky;top:0;z-index:100;background:var(--plum-dark);box-shadow:0 2px 14px rgba(0,0,0,.25)}
+  .nav-inner{max-width:1120px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:72px}
+  .logo{display:inline-flex;align-items:center;gap:11px;font-family:'Marcellus',Georgia,serif;font-size:26px;color:#fff}
+  .logo span{color:var(--gold-light)}
+  .nav-links{display:flex;gap:30px;list-style:none}
+  .nav-links a{color:#e6d9de;font-weight:500;font-size:15px}
+  .nav-links a:hover{color:#fff}
+  .hero{position:relative;min-height:86vh;display:flex;align-items:center;color:#fff;text-align:center;background:var(--plum-dark) url('https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(66,32,58,.55),rgba(66,32,58,.72))}
+  .hero-inner{position:relative;max-width:780px;margin:0 auto;padding:120px 24px}
+  .hero h1{font-size:clamp(42px,6.5vw,68px);margin-bottom:18px}
+  .hero h1 em{color:var(--gold-light)}
+  .hero p{font-size:clamp(18px,2.4vw,21px);color:#f3e8ec;margin-bottom:34px}
+  .hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .hero-note{margin-top:26px;font-size:15px;color:#d9c8d0}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .about-grid img{border-radius:14px;width:100%;height:430px;object-fit:cover}
+  .about-copy p{color:var(--muted);margin-bottom:16px;font-size:18px}
+  .about-stats{display:flex;gap:36px;margin-top:26px;flex-wrap:wrap}
+  .stat b{display:block;font-family:'Marcellus',Georgia,serif;font-size:38px;color:var(--plum)}
+  .stat span{font-size:14px;color:var(--muted)}
+  .shop-section{background:var(--sand)}
+  .shop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:46px}
+  .item{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.2s}
+  .item:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(91,45,77,.14)}
+  .item img{width:100%;height:200px;object-fit:cover}
+  .item-body{padding:22px}
+  .item-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+  .item h3{font-size:24px;color:var(--plum-dark)}
+  .price{font-family:'Marcellus',Georgia,serif;font-size:23px;color:var(--plum);white-space:nowrap}
+  .item p{color:var(--muted);font-size:15px;margin-top:8px}
+  .item-tag{margin-top:12px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+  .shop-note{text-align:center;margin-top:36px;color:var(--muted)}
+  .shop-note a{color:var(--plum);font-weight:700}
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:46px}
+  .review{background:#fff;border:1px solid var(--line);border-radius:14px;padding:30px 26px}
+  .stars{color:var(--gold);letter-spacing:2px;font-size:18px;margin-bottom:14px}
+  .review blockquote{font-size:17px;margin-bottom:18px}
+  .review cite{font-style:normal;font-weight:700;color:var(--plum-dark)}
+  .review cite span{display:block;font-weight:400;font-size:14px;color:var(--muted)}
+  .visit-section{background:var(--plum);color:#eadfe3}
+  .visit-section .section-title{color:#fff}
+  .visit-section .eyebrow{color:var(--gold-light)}
+  .visit-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;margin-top:46px;align-items:start}
+  .visit-grid img{border-radius:14px;width:100%;height:340px;object-fit:cover}
+  .visit-block{margin-bottom:26px}
+  .visit-block h3{font-size:23px;color:#fff;margin-bottom:8px}
+  .visit-block p,.visit-block a{color:#d9c8d0}
+  .visit-block a:hover{color:#fff}
+  .hours-table{width:100%;border-collapse:collapse}
+  .hours-table td{padding:6px 0;border-bottom:1px solid rgba(255,255,255,.16);color:#d9c8d0}
+  .hours-table td:last-child{text-align:right;color:#fff;font-weight:600}
+  .cta{text-align:center}
+  .cta h2{font-size:clamp(32px,4.5vw,46px);color:var(--plum-dark);margin-bottom:14px}
+  .cta p{color:var(--muted);font-size:18px;max-width:560px;margin:0 auto 30px}
+  .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .cta-phone{margin-top:22px;color:var(--muted)}
+  .cta-phone a{color:var(--plum);font-weight:700}
+  footer{background:#2e1626;color:#b39aa6;padding:42px 0;text-align:center;font-size:15px}
+  footer .logo{font-size:25px;display:block;margin-bottom:10px}
+  footer .logo svg{vertical-align:-6px}
+  footer a{color:var(--gold-light);font-weight:700}
+  footer a:hover{text-decoration:underline}
+  @media (max-width:900px){.shop-grid{grid-template-columns:1fr 1fr}.reviews-grid{grid-template-columns:1fr}}
+  @media (max-width:820px){
+    .section{padding:64px 0}
+    .nav-links{display:none}
+    .about-grid,.visit-grid{grid-template-columns:1fr;gap:32px}
+    .about-grid img{height:300px}
+  }
+  @media (max-width:560px){.shop-grid{grid-template-columns:1fr}.hero-inner{padding:90px 24px}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 29V13" stroke="#4f6b4a" stroke-width="2" stroke-linecap="round"/><path d="M16 20c-4 0-7-2-7-6 4 0 7 2 7 6ZM16 20c4 0 7-2 7-6-4 0-7 2-7 6ZM16 26c-4 0-7-2-7-6 4 0 7 2 7 6ZM16 26c4 0 7-2 7-6-4 0-7 2-7 6Z" fill="#4f6b4a"/><path d="M16 3c1.8 1.8 2.2 4.2 1.2 6.2C16.2 7 14.4 6.2 13.2 6.8c.6-1.6 1.6-2.9 2.8-3.8ZM21.5 5.5c.6 2.4-.5 4.8-2.4 6-.2-2.3-1.5-4-3.3-4.7 1.8-1.4 4-1.6 5.7-.3ZM24 11c-.9 2.3-3 3.9-5.5 3.9 1.1-2 1-4.4-.2-6.1 2.2-.1 4.4 1 5.7 2.2ZM22 17.5c-2 .1-4-1-5.2-2.8 2.1-.5 3.9-1.8 4.9-3.6 1.5 1.7 1.7 4.2.3 6.4ZM16 20c-1.4-1.8-1.5-4.3-.3-6.3 1.3 1.9 3.3 2.8 5.5 2.5-.9 2-2.6 3.5-5.2 3.8ZM10 17.5c-1.4-2.2-1.2-4.7.3-6.4 1 1.8 2.8 3.1 4.9 3.6-1.2 1.8-3.2 2.9-5.2 2.8ZM8 11c1.3-1.2 3.5-2.3 5.7-2.2-1.2 1.7-1.3 4.1-.2 6.1-2.5 0-4.6-1.6-5.5-3.9ZM10.5 5.5c1.7-1.3 3.9-1.1 5.7.3-1.8.7-3.1 2.4-3.3 4.7-1.9-1.2-3-3.6-2.4-6Z" fill="#c9a24e"/></svg>The Blooming <span>Branch</span></a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#shop">Flowers</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+    </nav>
+    <a href="#order" class="btn btn-primary">Order Flowers</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <h1>Lush blooms for <em>life's big moments.</em></h1>
+    <p>A Garden District florist with a love for bold color and Southern abundance — hand-tied bouquets, wedding flowers, and same-day delivery across New Orleans.</p>
+    <div class="hero-actions">
+      <a href="#shop" class="btn btn-primary">Shop Flowers</a>
+      <a href="#order" class="btn btn-outline">Order for Delivery</a>
+    </div>
+    <p class="hero-note">Same-day delivery across New Orleans &middot; 2718 Magazine Street, New Orleans, LA</p>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="wrap">
+    <div class="about-grid">
+      <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=1200&auto=format&fit=crop" alt="A florist arranging a bouquet at The Blooming Branch" loading="lazy">
+      <div class="about-copy">
+        <p class="eyebrow">Our Story</p>
+        <h2 class="section-title">Rooted in the Garden District since 2013.</h2>
+        <p>The Blooming Branch began in a tiny Magazine Street storefront with a wheelbarrow of magnolias and a big idea: New Orleans deserves flowers as bold and joyful as the city itself. Today we're one of the Garden District's favorite florists — for Mardi Gras parties, French Quarter weddings, and everyday just-because bouquets.</p>
+        <p>We source from Louisiana growers first, arrange everything by hand, and deliver across the city the same day.</p>
+        <div class="about-stats">
+          <div class="stat"><b>13</b><span>Years on Magazine St</span></div>
+          <div class="stat"><b>400+</b><span>Weddings flowered</span></div>
+          <div class="stat"><b>4.9</b><span>Average customer rating</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="shop" class="section shop-section">
+  <div class="wrap">
+    <p class="eyebrow">The Collection</p>
+    <h2 class="section-title">Fresh this week</h2>
+    <p class="section-sub">Our bouquets follow the seasons and the garden. Order by 1 PM for same-day delivery anywhere in New Orleans.</p>
+    <div class="shop-grid">
+      <article class="item">
+        <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=800&auto=format&fit=crop" alt="Magnolia and rose bouquet" loading="lazy">
+        <div class="item-body">
+          <div class="item-head"><h3>The Garden District</h3><span class="price">$65</span></div>
+          <p>Magnolias, garden roses, and jasmine in soft whites and pinks — our signature New Orleans bouquet.</p>
+          <p class="item-tag">Same-day delivery</p>
+        </div>
+      </article>
+      <article class="item">
+        <img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?q=80&w=800&auto=format&fit=crop" alt="Bold colorful bouquet" loading="lazy">
+        <div class="item-body">
+          <div class="item-head"><h3>Mardi Gras Mix</h3><span class="price">$58</span></div>
+          <p>Bold purples, greens, and golds — a joyful, generous bunch that's pure New Orleans, all year round.</p>
+          <p class="item-tag">Same-day delivery</p>
+        </div>
+      </article>
+      <article class="item">
+        <img src="https://images.unsplash.com/photo-1494972308805-463bc619d34e?q=80&w=800&auto=format&fit=crop" alt="Dozen red roses" loading="lazy">
+        <div class="item-body">
+          <div class="item-head"><h3>Dozen Red Roses</h3><span class="price">$72</span></div>
+          <p>Twelve long-stem red roses with eucalyptus, wrapped in kraft paper with a handwritten card.</p>
+          <p class="item-tag">Same-day delivery</p>
+        </div>
+      </article>
+      <article class="item">
+        <img src="https://images.unsplash.com/photo-1455659817273-f96807779a8a?q=80&w=800&auto=format&fit=crop" alt="Tropical bouquet" loading="lazy">
+        <div class="item-body">
+          <div class="item-head"><h3>Tropical Stems</h3><span class="price">$54</span></div>
+          <p>Orchids, birds of paradise, and anthurium — a striking arrangement that lasts for weeks.</p>
+          <p class="item-tag">Long-lasting</p>
+        </div>
+      </article>
+      <article class="item">
+        <img src="https://images.unsplash.com/photo-1487530811176-3780de880c2d?q=80&w=800&auto=format&fit=crop" alt="White sympathy arrangement" loading="lazy">
+        <div class="item-body">
+          <div class="item-head"><h3>Sympathy Arrangement</h3><span class="price">$90</span></div>
+          <p>Soft white lilies and roses in a keepsake vase, delivered with a handwritten card. Handled with care.</p>
+          <p class="item-tag">Delivered with a card</p>
+        </div>
+      </article>
+      <article class="item">
+        <img src="https://images.unsplash.com/photo-1522748906645-95d8adfd52c7?q=80&w=800&auto=format&fit=crop" alt="Wedding bridal bouquet" loading="lazy">
+        <div class="item-body">
+          <div class="item-head"><h3>Wedding Flowers</h3><span class="price">from $1,500</span></div>
+          <p>From French Quarter courtyards to Garden District mansions — full wedding florals, designed with you.</p>
+          <p class="item-tag">Free consultation</p>
+        </div>
+      </article>
+    </div>
+    <p class="shop-note">Delivery across New Orleans, Metairie, and Kenner &middot; <a href="#order">Order by phone or email</a></p>
+  </div>
+</section>
+
+<section id="reviews" class="section">
+  <div class="wrap">
+    <p class="eyebrow">What Customers Say</p>
+    <h2 class="section-title">New Orleans' favorite florist.</h2>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"They flowered our wedding in a French Quarter courtyard and it was magical — the magnolias, the colors, everything felt so New Orleans."</blockquote>
+        <cite>Gabrielle <span>Married March 2026</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"The Mardi Gras Mix bouquet is my go-to gift. It arrives looking incredible every time, and it lasts for ages."</blockquote>
+        <cite>Andre <span>Uptown, New Orleans</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"Ordered roses from Chicago for my mom in the Garden District — delivered the same afternoon, fresh and beautiful."</blockquote>
+        <cite>Nicole <span>Chicago, IL</span></cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="section visit-section">
+  <div class="wrap">
+    <p class="eyebrow">Find Us</p>
+    <h2 class="section-title">Come smell the magnolias.</h2>
+    <div class="visit-grid">
+      <div>
+        <div class="visit-block">
+          <h3>Location</h3>
+          <p>2718 Magazine Street<br>New Orleans, LA 70130<br>In the Garden District</p>
+        </div>
+        <div class="visit-block">
+          <h3>Contact</h3>
+          <p><a href="tel:+15045550107">(504) 555-0107</a><br><a href="mailto:hello@bloomingbranch.com">hello@bloomingbranch.com</a></p>
+        </div>
+        <div class="visit-block">
+          <h3>Opening Hours</h3>
+          <table class="hours-table">
+            <tr><td>Monday – Friday</td><td>9:00 AM – 6:00 PM</td></tr>
+            <tr><td>Saturday</td><td>9:00 AM – 5:00 PM</td></tr>
+            <tr><td>Sunday</td><td>11:00 AM – 3:00 PM</td></tr>
+          </table>
+        </div>
+      </div>
+      <img src="https://images.unsplash.com/photo-1469259943454-aa100abba749?q=80&w=1200&auto=format&fit=crop" alt="Fresh blooms in The Blooming Branch shop" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section id="order" class="section cta">
+  <div class="wrap">
+    <p class="eyebrow">Send Something Beautiful</p>
+    <h2>Order by 1 PM for same-day delivery.</h2>
+    <p>Call or email and we'll arrange a bouquet today — or book a free consultation for weddings and events.</p>
+    <div class="cta-actions">
+      <a href="tel:+15045550107" class="btn btn-primary">Call (504) 555-0107</a>
+      <a href="#visit" class="btn btn-dark">Visit the Shop</a>
+    </div>
+    <p class="cta-phone">Wedding inquiries: <a href="mailto:hello@bloomingbranch.com">hello@bloomingbranch.com</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="logo"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 29V13" stroke="#4f6b4a" stroke-width="2" stroke-linecap="round"/><path d="M16 20c-4 0-7-2-7-6 4 0 7 2 7 6ZM16 20c4 0 7-2 7-6-4 0-7 2-7 6ZM16 26c-4 0-7-2-7-6 4 0 7 2 7 6ZM16 26c4 0 7-2 7-6-4 0-7 2-7 6Z" fill="#4f6b4a"/><path d="M16 3c1.8 1.8 2.2 4.2 1.2 6.2C16.2 7 14.4 6.2 13.2 6.8c.6-1.6 1.6-2.9 2.8-3.8ZM21.5 5.5c.6 2.4-.5 4.8-2.4 6-.2-2.3-1.5-4-3.3-4.7 1.8-1.4 4-1.6 5.7-.3ZM24 11c-.9 2.3-3 3.9-5.5 3.9 1.1-2 1-4.4-.2-6.1 2.2-.1 4.4 1 5.7 2.2ZM22 17.5c-2 .1-4-1-5.2-2.8 2.1-.5 3.9-1.8 4.9-3.6 1.5 1.7 1.7 4.2.3 6.4ZM16 20c-1.4-1.8-1.5-4.3-.3-6.3 1.3 1.9 3.3 2.8 5.5 2.5-.9 2-2.6 3.5-5.2 3.8ZM10 17.5c-1.4-2.2-1.2-4.7.3-6.4 1 1.8 2.8 3.1 4.9 3.6-1.2 1.8-3.2 2.9-5.2 2.8ZM8 11c1.3-1.2 3.5-2.3 5.7-2.2-1.2 1.7-1.3 4.1-.2 6.1-2.5 0-4.6-1.6-5.5-3.9ZM10.5 5.5c1.7-1.3 3.9-1.1 5.7.3-1.8.7-3.1 2.4-3.3 4.7-1.9-1.2-3-3.6-2.4-6Z" fill="#c9a24e"/></svg> The Blooming <span>Branch</span></span>
+    <p>2718 Magazine Street, New Orleans, LA 70130 &middot; (504) 555-0107</p>
+    <p style="margin-top: 12px;">Website designed &amp; built by <a href="https://weblodge.agency">Weblodge Agency</a> &mdash; we build beautiful websites for small businesses.</p>
+  </div>
+</footer>
+
+</body>
+</html>

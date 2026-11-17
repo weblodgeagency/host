@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bayou Drain &amp; Plumbing | Plumbers in New Orleans, LA</title>
+<meta name="description" content="Bayou Drain & Plumbing — New Orleans plumbers for drain cleaning, sewer repair, water heaters and 24/7 emergency service. Flat-rate pricing, local crew, fast response.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#14532d; --green-2:#0d3a1f; --moss:#166534; --gold:#c9a227; --gold-2:#a8861d;
+    --cream:#faf7ef; --cream-2:#f1ead8; --ink:#22271f; --muted:#5f6a5c;
+    --line:#e3dcc6; --white:#fff; --radius:14px;
+    --shadow:0 14px 34px rgba(20,83,45,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Source Sans 3',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Zilla Slab',Georgia,serif;line-height:1.15;color:var(--green-2)}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .section{padding:88px 0}
+  .eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:12.5px;font-weight:700;color:var(--gold-2);margin-bottom:10px}
+  .section-head{max-width:640px;margin-bottom:48px}
+  .section-head h2{font-size:clamp(30px,4.2vw,42px);margin-bottom:12px}
+  .section-head p{color:var(--muted);font-size:17.5px}
+  .btn{display:inline-block;padding:14px 28px;border-radius:999px;font-weight:700;font-size:16px;transition:.2s;border:2px solid transparent;text-align:center}
+  .btn-green{background:var(--green);color:#fff}
+  .btn-green:hover{background:var(--green-2);transform:translateY(-1px)}
+  .btn-gold{background:var(--gold);color:#221a04}
+  .btn-gold:hover{background:var(--gold-2);color:#fff}
+  .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.85)}
+  .btn-outline:hover{background:rgba(255,255,255,.15)}
+
+  .nav{position:sticky;top:0;z-index:60;background:var(--green);box-shadow:0 2px 14px rgba(0,0,0,.18)}
+  .nav-inner{max-width:1120px;margin:0 auto;padding:0 24px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .logo{display:inline-flex;align-items:center;gap:11px;font-family:'Zilla Slab',Georgia,serif;font-size:23px;font-weight:700;color:#fff}
+  .logo svg{flex-shrink:0}
+  .logo span{color:var(--gold)}
+  .nav-links{display:flex;gap:30px;list-style:none;font-weight:600;font-size:15px}
+  .nav-links a{color:#dcead9}
+  .nav-links a:hover{color:#fff}
+  .nav-cta{padding:11px 22px;font-size:15px}
+
+  .hero{position:relative;color:#fff;background:var(--green-2)}
+  .hero-bg{position:absolute;inset:0}
+  .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.42}
+  .hero-inner{position:relative;max-width:1120px;margin:0 auto;padding:110px 24px;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+  .hero h1{color:#fff;font-size:clamp(38px,5.4vw,58px);margin:12px 0 18px}
+  .hero h1 em{font-style:normal;color:var(--gold)}
+  .hero p{font-size:18.5px;color:#e4ecdf;margin-bottom:30px;max-width:540px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-panel{background:rgba(255,255,255,.97);color:var(--ink);border-radius:var(--radius);padding:30px 28px;box-shadow:var(--shadow)}
+  .hero-panel h3{font-size:22px;margin-bottom:6px}
+  .hero-panel p{font-size:15px;color:var(--muted);margin-bottom:18px}
+  .hero-panel .big-phone{font-family:'Zilla Slab',Georgia,serif;font-size:30px;font-weight:700;color:var(--green);display:block;margin-bottom:4px}
+  .hero-panel .big-phone:hover{color:var(--moss)}
+  .hero-panel ul{list-style:none;margin-top:18px;display:grid;gap:8px;font-size:15px;font-weight:600}
+  .hero-panel li::before{content:"\2713  ";color:var(--moss);font-weight:700}
+
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .service{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:.2s}
+  .service:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .service img{width:100%;height:180px;object-fit:cover}
+  .service-body{padding:24px}
+  .service h3{font-size:20px;margin-bottom:8px}
+  .service p{color:var(--muted);font-size:15.5px;margin-bottom:14px}
+  .price{font-family:'Zilla Slab',Georgia,serif;font-weight:700;font-size:20px;color:var(--green)}
+  .price small{font-family:'Source Sans 3',sans-serif;font-size:12.5px;color:var(--muted);font-weight:600}
+
+  .why{background:var(--green);color:#dcead9}
+  .why h2{color:#fff}
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px}
+  .why-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);padding:26px 22px}
+  .why-card h3{color:#fff;font-size:19px;margin-bottom:8px}
+  .why-card p{font-size:15px;color:#c3d4bd}
+  .why-card .icon{font-size:28px;margin-bottom:12px;display:block}
+
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .review{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px}
+  .stars{color:var(--gold);letter-spacing:2px;font-size:17px;margin-bottom:14px}
+  .review p{font-size:16px;margin-bottom:18px}
+  .review cite{font-style:normal;font-weight:700;color:var(--green-2)}
+  .review cite span{display:block;font-weight:500;font-size:14px;color:var(--muted)}
+
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .visit-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px 30px}
+  .visit-card h3{font-size:22px;margin-bottom:18px}
+  .hours{width:100%;border-collapse:collapse}
+  .hours td{padding:9px 0;border-bottom:1px solid #f0ebdb}
+  .hours td:last-child{text-align:right;font-weight:600;color:var(--green-2)}
+  .hours tr:last-child td{border-bottom:none}
+  .contact-line{margin-bottom:16px;color:var(--muted)}
+  .contact-line strong{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-2);margin-bottom:3px}
+  .contact-line a{color:var(--green-2);font-weight:700}
+  .contact-line a:hover{color:var(--moss)}
+
+  .cta{text-align:center;background:var(--cream-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .cta h2{font-size:clamp(30px,4.2vw,42px);margin-bottom:14px}
+  .cta p{color:var(--muted);font-size:18px;max-width:580px;margin:0 auto 30px}
+  .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+  footer{background:var(--green-2);color:#a8bda4;padding:48px 0 30px;font-size:14.5px}
+  .footer-grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .footer-brand{max-width:340px}
+  .footer-brand .logo{color:#fff}
+  .footer-brand p{margin-top:10px}
+  .footer-col h4{color:#fff;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
+  .footer-col a{display:block;margin-bottom:8px;color:#c3d4bd}
+  .footer-col a:hover{color:#fff}
+  .footer-bottom{padding-top:22px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  .footer-bottom a{color:var(--gold);font-weight:700}
+  .footer-bottom a:hover{text-decoration:underline}
+
+  @media (max-width: 900px){
+    .hero-inner{grid-template-columns:1fr;gap:32px;padding:72px 24px}
+    .services-grid,.reviews-grid{grid-template-columns:repeat(2,1fr)}
+    .why-grid{grid-template-columns:repeat(2,1fr)}
+    .visit-grid{grid-template-columns:1fr}
+    .section{padding:64px 0}
+  }
+  @media (max-width: 620px){
+    .nav-links{display:none}
+    .services-grid,.reviews-grid,.why-grid{grid-template-columns:1fr}
+    .btn{width:100%}
+    .hero-actions .btn{width:auto;flex:1 1 auto}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="14.5" fill="#c9a227"/><path d="M16 6.5c0 0-6.2 6.5-6.2 10.6a6.2 6.2 0 0 0 12.4 0C22.2 13 16 6.5 16 6.5Z" fill="#14532d"/><path d="M13.4 17.2a2.6 2.6 0 0 0 2.6 2.6" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>Bayou <span>Drain</span> &amp; Plumbing</a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="tel:+15045550183" class="btn btn-gold nav-cta">Call (504) 555-0183</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"><img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?q=80&w=1600&auto=format&fit=crop" alt="" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div>
+      <p class="eyebrow" style="color:var(--gold)">Drain &amp; Plumbing Experts &middot; New Orleans</p>
+      <h1>When the water won't go down, <em>we come running.</em></h1>
+      <p>Bayou Drain &amp; Plumbing clears stubborn drains, repairs sewers, and handles every plumbing job in between — for homes and businesses across New Orleans, with flat-rate pricing and a crew that shows up when promised.</p>
+      <div class="hero-actions">
+        <a href="tel:+15045550183" class="btn btn-gold">Call (504) 555-0183</a>
+        <a href="#services" class="btn btn-outline">See Services &amp; Prices</a>
+      </div>
+    </div>
+    <aside class="hero-panel">
+      <h3>Need a plumber today?</h3>
+      <p>Same-day appointments in most of the metro. Emergencies answered 24/7.</p>
+      <a class="big-phone" href="tel:+15045550183">(504) 555-0183</a>
+      <span style="font-size:14px;color:var(--muted)">A real person answers — no phone trees, no waiting.</span>
+      <ul>
+        <li>Flat-rate quotes before work starts</li>
+        <li>Licensed, bonded &amp; insured</li>
+        <li>90-day guarantee on drain cleaning</li>
+        <li>Serving NOLA, Metairie &amp; Kenner</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section id="services" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Services &amp; Upfront Pricing</p>
+      <h2>From a slow sink to a full sewer line.</h2>
+      <p>We quote the job before we start, and the price doesn't change when we're done. Every drain cleaning comes with a 90-day no-clog guarantee.</p>
+    </div>
+    <div class="services-grid">
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?q=80&w=800&auto=format&fit=crop" alt="Plumber clearing a kitchen drain" loading="lazy">
+        <div class="service-body">
+          <h3>Drain Cleaning</h3>
+          <p>Kitchen sinks, tubs, toilets, and main lines — cleared fast with professional augers and hydro-jetting.</p>
+          <span class="price">$99 <small>starting &middot; 90-day guarantee</small></span>
+        </div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?q=80&w=800&auto=format&fit=crop" alt="Sewer repair equipment" loading="lazy">
+        <div class="service-body">
+          <h3>Sewer Line Repair</h3>
+          <p>Camera inspection pinpoints the problem, and trenchless repair fixes it without digging up your yard or driveway.</p>
+          <span class="price">$2,400 <small>starting</small></span>
+        </div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop" alt="New water heater installation" loading="lazy">
+        <div class="service-body">
+          <h3>Water Heaters</h3>
+          <p>Tank and tankless heaters installed same-day, plus flushes and anode replacement that add years to your unit's life.</p>
+          <span class="price">$1,350 <small>installed</small></span>
+        </div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?q=80&w=800&auto=format&fit=crop" alt="Renovated bathroom" loading="lazy">
+        <div class="service-body">
+          <h3>Bathroom &amp; Kitchen Plumbing</h3>
+          <p>New fixtures, moved lines, and full remodel rough-ins — done cleanly and to code, the first time.</p>
+          <span class="price">$165 <small>starting</small></span>
+        </div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?q=80&w=800&auto=format&fit=crop" alt="Bathroom faucet and sink" loading="lazy">
+        <div class="service-body">
+          <h3>Leak Repair</h3>
+          <p>Old New Orleans homes hide leaks in the walls and under the slab. We find them without tearing your house apart.</p>
+          <span class="price">$110 <small>starting</small></span>
+        </div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?q=80&w=800&auto=format&fit=crop" alt="Kitchen sink with garbage disposal" loading="lazy">
+        <div class="service-body">
+          <h3>Gas Lines &amp; Fixtures</h3>
+          <p>Gas line installation and repair, garbage disposals, ice-maker lines, and outdoor hose bibs — all permitted and pressure-tested.</p>
+          <span class="price">$195 <small>starting</small></span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="section why">
+  <div class="wrap">
+    <div class="section-head" style="margin-bottom:0">
+      <p class="eyebrow" style="color:var(--gold)">Why New Orleans Calls Bayou</p>
+      <h2 style="color:#fff">We know old houses and wet ground.</h2>
+      <p style="color:#c3d4bd">New Orleans plumbing is its own world — raised houses, cast-iron stacks, shifting soil, and storm-season backups. We've worked on it all, for 15 years and counting.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card"><span class="icon">&#128167;</span><h3>Drain specialists</h3><p>Drains and sewers are our specialty, not a side job. We carry the right equipment on every truck.</p></div>
+      <div class="why-card"><span class="icon">&#128336;</span><h3>Fast response</h3><p>Same-day service in most neighborhoods, and a live dispatcher answering emergencies 24/7.</p></div>
+      <div class="why-card"><span class="icon">&#128179;</span><h3>Flat-rate pricing</h3><p>You approve the price in writing before we start. No hourly meters running while we work.</p></div>
+      <div class="why-card"><span class="icon">&#127968;</span><h3>Local crew</h3><p>Our techs live in the neighborhoods they serve — from the Bywater to Metairie — and it shows in the work.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Customer Reviews</p>
+      <h2>Trusted across the Crescent City.</h2>
+      <p>Rated 4.9 out of 5 from more than 800 reviews across Google and Yelp.</p>
+    </div>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;Main line backed up during a rainstorm and they had it flowing again in two hours — on a Saturday. Lifesavers, honestly.&rdquo;</p>
+        <cite>Tanya <span>Gentilly &middot; Sewer repair</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;They showed me the camera footage of my sewer line and explained every option. No pressure, no scare tactics, fair price.&rdquo;</p>
+        <cite>Andre <span>Uptown &middot; Drain cleaning</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;Our 1920s shotgun house has plumbing from another era. Bayou's crew knew exactly what to do and left the place spotless.&rdquo;</p>
+        <cite>Claire <span>Bywater &middot; Leak repair</span></cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section cta">
+  <div class="wrap">
+    <p class="eyebrow">Clogged, leaking, or backing up?</p>
+    <h2>One call and it's handled.</h2>
+    <p>Same-day appointments across New Orleans, Metairie, and Kenner. Emergencies answered around the clock.</p>
+    <div class="cta-actions">
+      <a href="tel:+15045550183" class="btn btn-green">Call (504) 555-0183</a>
+      <a href="mailto:hello@bayoudrain.com" class="btn btn-gold">Email Us</a>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Visit &amp; Contact</p>
+      <h2>Find us on Esplanade Avenue.</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-card">
+        <h3>Office Hours</h3>
+        <table class="hours">
+          <tr><td>Monday – Friday</td><td>7:00 AM – 6:00 PM</td></tr>
+          <tr><td>Saturday</td><td>8:00 AM – 4:00 PM</td></tr>
+          <tr><td>Sunday</td><td>Emergency calls only</td></tr>
+          <tr><td>Emergencies</td><td>24 hours, 7 days</td></tr>
+        </table>
+        <p style="margin-top:18px;color:var(--muted);font-size:15px">Serving New Orleans, Metairie, Kenner, Gretna, and the Westbank.</p>
+      </div>
+      <div class="visit-card">
+        <h3>Location &amp; Contact</h3>
+        <p class="contact-line"><strong>Address</strong>3315 Esplanade Avenue<br>New Orleans, LA 70119</p>
+        <p class="contact-line"><strong>Phone</strong><a href="tel:+15045550183">(504) 555-0183</a></p>
+        <p class="contact-line"><strong>Email</strong><a href="mailto:hello@bayoudrain.com">hello@bayoudrain.com</a></p>
+        <p class="contact-line" style="margin-bottom:0"><strong>License</strong>LA Master Plumber #MP-7734 &middot; Fully insured</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="14.5" fill="#c9a227"/><path d="M16 6.5c0 0-6.2 6.5-6.2 10.6a6.2 6.2 0 0 0 12.4 0C22.2 13 16 6.5 16 6.5Z" fill="#14532d"/><path d="M13.4 17.2a2.6 2.6 0 0 0 2.6 2.6" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>Bayou <span>Drain</span> &amp; Plumbing</a>
+        <p>New Orleans drain and plumbing specialists since 2011 — flat-rate pricing, fast response, and a 90-day guarantee on every drain we clear.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#services">Drain Cleaning</a>
+        <a href="#services">Sewer Repair</a>
+        <a href="#services">Water Heaters</a>
+        <a href="#services">Leak Repair</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+15045550183">(504) 555-0183</a>
+        <a href="mailto:hello@bayoudrain.com">hello@bayoudrain.com</a>
+        <a href="#visit">3315 Esplanade Ave, New Orleans</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Bayou Drain &amp; Plumbing, New Orleans, LA. All rights reserved.</span>
+      <span>Website designed &amp; built by <a href="https://weblodge.agency" target="_blank" rel="noopener">Weblodge Agency</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

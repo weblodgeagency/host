@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valley Oak Realty | Homes for Sale in Fresno, CA</title>
+<meta name="description" content="Valley Oak Realty is a family-run brokerage in Fresno, California. Homes across the Central Valley, free valuations, and honest local advice for buyers and sellers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --olive:#4a5d23;
+    --olive-dark:#3a4a1b;
+    --olive-2:#5d7229;
+    --brown:#6b4f2e;
+    --tan:#d9c7a7;
+    --tan-light:#f5efe3;
+    --cream:#faf7f0;
+    --ink:#2b2b24;
+    --muted:#6d6a5e;
+    --white:#fff;
+    --line:#e8e2d3;
+    --radius:12px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);line-height:1.7;background:#fff;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Bitter',Georgia,serif;line-height:1.2;font-weight:700}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .section{padding:88px 0}
+  .eyebrow{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--olive-2);margin-bottom:12px}
+  .section-head{max-width:660px;margin-bottom:48px}
+  .section-head.center{margin-left:auto;margin-right:auto;text-align:center}
+  .section-head h2{font-size:clamp(30px,4.2vw,42px);color:var(--olive-dark);margin-bottom:12px}
+  .section-head p{color:var(--muted);font-size:17px}
+  .btn{display:inline-block;padding:14px 28px;border-radius:8px;font-weight:700;font-size:15px;transition:.2s;border:2px solid transparent;cursor:pointer;text-align:center}
+  .btn-olive{background:var(--olive);color:#fff}
+  .btn-olive:hover{background:var(--olive-dark)}
+  .btn-brown{background:var(--brown);color:#fff}
+  .btn-brown:hover{background:#573e22}
+  .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.7)}
+  .btn-outline:hover{background:rgba(255,255,255,.14)}
+  .btn-line{background:transparent;color:var(--olive);border-color:var(--olive)}
+  .btn-line:hover{background:var(--olive);color:#fff}
+
+  /* Nav */
+  .nav{position:sticky;top:0;z-index:50;background:#fff;border-bottom:2px solid var(--olive);box-shadow:0 2px 10px rgba(43,43,36,.06)}
+  .nav-inner{max-width:1120px;margin:0 auto;padding:0 24px;height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .logo{display:inline-flex;align-items:center;gap:11px;color:var(--olive-dark);font-family:'Bitter',Georgia,serif;font-size:24px;font-weight:800}
+  .logo span{color:var(--brown)}
+  .logo svg{flex-shrink:0}
+  .nav-links{display:flex;gap:30px;list-style:none;font-weight:600;font-size:15px}
+  .nav-links a{color:#4a4a40}
+  .nav-links a:hover{color:var(--olive)}
+  .nav-cta{padding:10px 20px;font-size:14px}
+
+  /* Hero */
+  .hero{position:relative;min-height:86vh;display:flex;align-items:center;color:#fff;background:var(--olive-dark) url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1800&auto=format&fit=crop') center/cover no-repeat}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(35,45,20,.88) 0%,rgba(35,45,20,.55) 60%,rgba(35,45,20,.25) 100%)}
+  .hero-inner{position:relative;max-width:1120px;margin:0 auto;padding:120px 24px;width:100%}
+  .hero-copy{max-width:620px}
+  .hero-copy .eyebrow{color:var(--tan)}
+  .hero-copy h1{font-size:clamp(40px,6vw,62px);margin-bottom:18px}
+  .hero-copy p{font-size:19px;color:#f0ead9;margin-bottom:32px;max-width:540px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-stats{display:flex;gap:36px;flex-wrap:wrap;margin-top:44px;padding-top:26px;border-top:1px solid rgba(255,255,255,.25)}
+  .hero-stats strong{display:block;font-family:'Bitter',Georgia,serif;font-size:28px;line-height:1}
+  .hero-stats span{font-size:13px;color:#d9d2bd;text-transform:uppercase;letter-spacing:.08em}
+
+  /* About */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .about-grid img{border-radius:var(--radius);width:100%;height:440px;object-fit:cover}
+  .about-copy p{color:var(--muted);font-size:17px;margin-bottom:14px}
+  .about-quote{font-family:'Bitter',Georgia,serif;font-size:22px;font-style:italic;color:var(--olive-dark);border-left:3px solid var(--tan);padding-left:20px;margin:24px 0}
+
+  /* Listings */
+  .listings{background:var(--cream)}
+  .listing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .listing{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 4px 16px rgba(43,43,36,.06);transition:.2s}
+  .listing:hover{transform:translateY(-4px);box-shadow:0 16px 30px rgba(43,43,36,.12)}
+  .listing-img{position:relative}
+  .listing-img img{width:100%;height:220px;object-fit:cover}
+  .listing-tag{position:absolute;top:14px;left:14px;background:var(--olive);color:#fff;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:999px}
+  .listing-tag.acreage{background:var(--brown)}
+  .listing-body{padding:24px}
+  .listing-price{font-family:'Bitter',Georgia,serif;font-size:27px;color:var(--olive-dark);margin-bottom:4px}
+  .listing-body h3{font-size:17px;font-family:'Inter',sans-serif;font-weight:700;margin-bottom:4px}
+  .listing-loc{color:var(--muted);font-size:14px;margin-bottom:14px}
+  .listing-specs{display:flex;gap:14px;flex-wrap:wrap;padding-top:14px;border-top:1px solid var(--line);font-size:14px;font-weight:600;color:#4a4a40}
+
+  /* Neighborhoods */
+  .hood-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .hood{border-radius:var(--radius);overflow:hidden;position:relative;min-height:260px;display:flex;align-items:flex-end;color:#fff}
+  .hood img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .hood::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(20,25,10,.85),rgba(20,25,10,.15) 60%)}
+  .hood-body{position:relative;padding:20px;width:100%}
+  .hood-body h3{font-size:20px;margin-bottom:4px}
+  .hood-body p{font-size:14px;color:#e8e2d3}
+  .hood-body strong{font-size:14px;color:var(--tan)}
+
+  /* Services */
+  .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .service{background:var(--tan-light);border-radius:var(--radius);padding:32px 28px}
+  .service h3{font-size:22px;color:var(--olive-dark);margin-bottom:10px}
+  .service p{color:var(--muted);font-size:15px;margin-bottom:16px}
+  .service a{color:var(--olive);font-weight:700}
+  .service a:hover{color:var(--olive-dark)}
+
+  /* Team */
+  .team{background:var(--cream)}
+  .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .agent{background:#fff;border-radius:var(--radius);overflow:hidden;text-align:center;box-shadow:0 4px 16px rgba(43,43,36,.05)}
+  .agent img{width:100%;height:320px;object-fit:cover}
+  .agent-body{padding:24px 22px 28px}
+  .agent-body h3{font-size:22px;color:var(--olive-dark);margin-bottom:4px}
+  .agent-role{color:var(--brown);font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+  .agent-body p{color:var(--muted);font-size:15px}
+
+  /* Reviews */
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .review{border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px}
+  .stars{color:var(--olive-2);letter-spacing:3px;font-size:17px;margin-bottom:14px}
+  .review blockquote{font-size:16px;margin-bottom:18px}
+  .review cite{font-style:normal;font-weight:700}
+  .review cite span{display:block;font-weight:500;font-size:14px;color:var(--muted)}
+
+  /* CTA */
+  .cta{background:var(--olive);color:#fff;text-align:center}
+  .cta h2{font-size:clamp(30px,4.2vw,42px);margin-bottom:12px}
+  .cta p{color:#e3e8d2;font-size:18px;max-width:580px;margin:0 auto 30px}
+
+  /* Visit */
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+  .visit-card{border:1px solid var(--line);border-radius:var(--radius);padding:32px 30px}
+  .visit-card h3{font-size:22px;color:var(--olive-dark);margin-bottom:16px}
+  .hours{width:100%;border-collapse:collapse}
+  .hours td{padding:9px 0;border-bottom:1px solid #f0ebdd}
+  .hours td:last-child{text-align:right;font-weight:700}
+  .hours tr:last-child td{border-bottom:none}
+  .contact-line{margin-bottom:16px;color:var(--muted)}
+  .contact-line strong{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--olive-2);margin-bottom:2px}
+  .contact-line a{font-weight:700;color:var(--olive-dark)}
+
+  footer{background:#232b14;color:#b9bfa9;padding:48px 0 28px;font-size:15px;text-align:center}
+  footer .logo{color:#fff;font-size:23px;margin-bottom:10px}
+  footer a{color:var(--tan);font-weight:600}
+  footer a:hover{text-decoration:underline}
+  .footer-bottom{margin-top:22px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);font-size:14px}
+
+  @media (max-width:900px){
+    .listing-grid,.service-grid,.team-grid,.reviews-grid{grid-template-columns:1fr 1fr}
+    .hood-grid{grid-template-columns:1fr 1fr}
+    .about-grid,.visit-grid{grid-template-columns:1fr}
+    .about-grid img{height:320px}
+    .section{padding:64px 0}
+  }
+  @media (max-width:640px){
+    .nav-links{display:none}
+    .listing-grid,.service-grid,.team-grid,.reviews-grid,.hood-grid{grid-template-columns:1fr}
+    .hero-inner{padding:90px 24px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 4c-5 3-8 6.5-8 10.5 0 4 3 7.5 8 7.5s8-3.5 8-7.5C24 10.5 21 7 16 4z" fill="#4a5d23"/><path d="M16 22v7M12 27.5h8" stroke="#6b4f2e" stroke-width="2.2" stroke-linecap="round"/><path d="M16 9v8M13 13h6" stroke="#f5efe3" stroke-width="1.8" stroke-linecap="round"/></svg>Valley Oak <span>Realty</span></a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#listings">Listings</a></li>
+        <li><a href="#neighborhoods">Neighborhoods</a></li>
+        <li><a href="#team">Agents</a></li>
+        <li><a href="#visit">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="#visit" class="btn btn-olive nav-cta">Free Valuation</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">Real Estate — Fresno &amp; the Central Valley</p>
+      <h1>Rooted in Fresno. Here for your next chapter.</h1>
+      <p>Valley Oak Realty is a family-run brokerage helping Central Valley families buy and sell with confidence — from first homes in Clovis to acreage in the foothills.</p>
+      <div class="hero-actions">
+        <a href="#listings" class="btn btn-olive">Browse Homes</a>
+        <a href="#visit" class="btn btn-outline">What's My Home Worth?</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>$185M+</strong><span>Homes sold</span></div>
+        <div><strong>720+</strong><span>Families moved</span></div>
+        <div><strong>18 yrs</strong><span>In the Valley</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="about-grid">
+      <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200&auto=format&fit=crop" alt="Valley Oak agent handing keys to new homeowners" loading="lazy">
+      <div class="about-copy">
+        <p class="eyebrow">About Valley Oak</p>
+        <h2 style="font-size:clamp(30px,4vw,40px);color:var(--olive-dark);margin-bottom:16px">A family brokerage, not a corporate chain.</h2>
+        <p>Valley Oak Realty was founded in 2008 by the Alvarez family, who have lived and worked in Fresno for three generations. We started with one office and a simple promise: treat every client like family, and tell them the truth — even when it's not what they want to hear.</p>
+        <p class="about-quote">"We don't chase volume. We build relationships — and most of our business still comes from past clients and their families."</p>
+        <p>Today our team of eight agents serves Fresno, Clovis, and the surrounding Central Valley communities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="listings" class="section listings">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Featured Listings</p>
+      <h2>Current homes on the market</h2>
+      <p>From starter homes to country acreage — call us to schedule a showing, usually within 24 hours.</p>
+    </div>
+    <div class="listing-grid">
+      <article class="listing">
+        <div class="listing-img">
+          <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=1200&auto=format&fit=crop" alt="Single-family home with a front porch in Fresno" loading="lazy">
+          <span class="listing-tag">New Listing</span>
+        </div>
+        <div class="listing-body">
+          <p class="listing-price">$365,000</p>
+          <h3>4821 East Clinton Avenue</h3>
+          <p class="listing-loc">Fresno, CA 93703</p>
+          <div class="listing-specs"><span>3 bd</span><span>2 ba</span><span>1,640 sq ft</span><span>Built 1962</span></div>
+        </div>
+      </article>
+      <article class="listing">
+        <div class="listing-img">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop" alt="Modern home with a landscaped yard in Clovis" loading="lazy">
+          <span class="listing-tag">Open House Sun</span>
+        </div>
+        <div class="listing-body">
+          <p class="listing-price">$589,000</p>
+          <h3>1187 Sierra Vista Drive</h3>
+          <p class="listing-loc">Clovis, CA 93619</p>
+          <div class="listing-specs"><span>4 bd</span><span>3 ba</span><span>2,380 sq ft</span><span>Built 2018</span></div>
+        </div>
+      </article>
+      <article class="listing">
+        <div class="listing-img">
+          <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?q=80&w=1200&auto=format&fit=crop" alt="Brick home with a two-car garage" loading="lazy">
+          <span class="listing-tag">New Listing</span>
+        </div>
+        <div class="listing-body">
+          <p class="listing-price">$429,000</p>
+          <h3>2940 North Marks Avenue</h3>
+          <p class="listing-loc">Fresno, CA 93722</p>
+          <div class="listing-specs"><span>4 bd</span><span>2 ba</span><span>1,980 sq ft</span><span>Built 1978</span></div>
+        </div>
+      </article>
+      <article class="listing">
+        <div class="listing-img">
+          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1200&auto=format&fit=crop" alt="Luxury home with a pool" loading="lazy">
+          <span class="listing-tag">Pool Home</span>
+        </div>
+        <div class="listing-body">
+          <p class="listing-price">$725,000</p>
+          <h3>842 Winding Oak Lane</h3>
+          <p class="listing-loc">Fresno, CA 93711</p>
+          <div class="listing-specs"><span>5 bd</span><span>4 ba</span><span>3,410 sq ft</span><span>Built 2005</span></div>
+        </div>
+      </article>
+      <article class="listing">
+        <div class="listing-img">
+          <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=1200&auto=format&fit=crop" alt="Country home on acreage in the foothills" loading="lazy">
+          <span class="listing-tag acreage">2.5 Acres</span>
+        </div>
+        <div class="listing-body">
+          <p class="listing-price">$649,000</p>
+          <h3>15600 Auberry Road</h3>
+          <p class="listing-loc">Clovis, CA 93619</p>
+          <div class="listing-specs"><span>3 bd</span><span>2 ba</span><span>2,100 sq ft</span><span>2.5 acres</span></div>
+        </div>
+      </article>
+      <article class="listing">
+        <div class="listing-img">
+          <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1200&auto=format&fit=crop" alt="Contemporary home with clean lines" loading="lazy">
+          <span class="listing-tag">Price Reduced</span>
+        </div>
+        <div class="listing-body">
+          <p class="listing-price">$398,000</p>
+          <h3>731 East Gettysburg Avenue</h3>
+          <p class="listing-loc">Fresno, CA 93704</p>
+          <div class="listing-specs"><span>3 bd</span><span>2 ba</span><span>1,720 sq ft</span><span>Built 1988</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="neighborhoods" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Where We Work</p>
+      <h2>Neighborhoods we know by heart</h2>
+      <p>We live in these communities — ask us anything, from school districts to the best taco truck on the block.</p>
+    </div>
+    <div class="hood-grid">
+      <article class="hood">
+        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=800&auto=format&fit=crop" alt="Tree-lined street in the Tower District" loading="lazy">
+        <div class="hood-body"><h3>Tower District</h3><p>Historic charm, walkable streets, great food.</p><strong>From the low $300s</strong></div>
+      </article>
+      <article class="hood">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" alt="Newer homes in Clovis" loading="lazy">
+        <div class="hood-body"><h3>Clovis</h3><p>Top-rated schools and newer family homes.</p><strong>From the mid $400s</strong></div>
+      </article>
+      <article class="hood">
+        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=800&auto=format&fit=crop" alt="Established homes in Fig Garden" loading="lazy">
+        <div class="hood-body"><h3>Fig Garden</h3><p>Established homes under mature trees.</p><strong>From the mid $300s</strong></div>
+      </article>
+      <article class="hood">
+        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=800&auto=format&fit=crop" alt="Larger homes in northeast Fresno" loading="lazy">
+        <div class="hood-body"><h3>Northeast Fresno</h3><p>Newer builds, great parks, easy freeway access.</p><strong>From the high $400s</strong></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--cream)">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">Services</p>
+      <h2>How we help you move</h2>
+    </div>
+    <div class="service-grid">
+      <div class="service">
+        <h3>Buying a Home</h3>
+        <p>From pre-approval to keys in hand, we guide you through every step — and we're honest when a house isn't right for you, even if it means a longer search.</p>
+        <a href="#visit">Start your search →</a>
+      </div>
+      <div class="service">
+        <h3>Selling Your Home</h3>
+        <p>Professional photos, staging advice, and pricing based on real neighborhood data. Our listings sell in an average of 24 days.</p>
+        <a href="#visit">Get a free valuation →</a>
+      </div>
+      <div class="service">
+        <h3>First-Time Buyers</h3>
+        <p>Buying your first home is a big deal. We explain everything in plain language, connect you with trusted local lenders, and never rush you.</p>
+        <a href="#visit">Talk to an agent →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="team" class="section team">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">Meet the Agents</p>
+      <h2>The people behind Valley Oak</h2>
+    </div>
+    <div class="team-grid">
+      <article class="agent">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop" alt="Portrait of Carlos Alvarez, broker and founder" loading="lazy">
+        <div class="agent-body">
+          <h3>Carlos Alvarez</h3>
+          <p class="agent-role">Broker &amp; Founder</p>
+          <p>Carlos founded Valley Oak in 2008 after 10 years selling homes across the Valley. A third-generation Fresnan, he knows this market inside out.</p>
+        </div>
+      </article>
+      <article class="agent">
+        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=800&auto=format&fit=crop" alt="Portrait of Maria Alvarez, listing agent" loading="lazy">
+        <div class="agent-body">
+          <h3>Maria Alvarez</h3>
+          <p class="agent-role">Listing Agent · Fresno &amp; Clovis</p>
+          <p>Maria stages and markets our listings — and her eye for presentation is a big reason our homes sell fast and for top dollar.</p>
+        </div>
+      </article>
+      <article class="agent">
+        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop" alt="Portrait of Ben Whitfield, buyer's agent" loading="lazy">
+        <div class="agent-body">
+          <h3>Ben Whitfield</h3>
+          <p class="agent-role">Buyer's Agent · First-Time Buyers</p>
+          <p>Ben specializes in first-time buyers and VA loans. Patient, detail-oriented, and always on your side at the negotiating table.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">Client Reviews</p>
+      <h2>What Valley families say</h2>
+      <p>Rated 4.9 out of 5 from more than 340 reviews on Google and Zillow.</p>
+    </div>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>"Carlos talked us OUT of a house that had problems we couldn't see — then found us a better one two weeks later. That's the kind of agent you want."</blockquote>
+        <cite>Anthony <span>Bought in Clovis</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>"Maria sold our family home of 30 years with such care. She staged it beautifully and it sold in nine days, above asking."</blockquote>
+        <cite>Linda <span>Sold in Fig Garden</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>"As first-time buyers we were lost. Ben explained everything, connected us with a great lender, and got us into our home in under two months."</blockquote>
+        <cite>Jose <span>First-time buyer, Fresno</span></cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section cta">
+  <div class="wrap">
+    <h2>Thinking about buying or selling?</h2>
+    <p>Call us for a free, no-pressure conversation about your home and the Fresno market. The coffee's on us.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a href="tel:+15595550207" class="btn btn-brown">Call (559) 555-0207</a>
+      <a href="mailto:hello@valleyoakrealty.com" class="btn btn-outline">Email Us</a>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Visit Us</p>
+      <h2>Our office in the Tower District</h2>
+      <p>On Olive Avenue, with free parking in the lot behind the office.</p>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-card">
+        <h3>Office Hours</h3>
+        <table class="hours">
+          <tr><td>Monday – Friday</td><td>9:00 AM – 6:00 PM</td></tr>
+          <tr><td>Saturday</td><td>10:00 AM – 4:00 PM</td></tr>
+          <tr><td>Sunday</td><td>By appointment</td></tr>
+        </table>
+        <p style="margin-top:16px;color:var(--muted);font-size:15px">Showings available 7 days a week, including evenings.</p>
+      </div>
+      <div class="visit-card">
+        <h3>Location &amp; Contact</h3>
+        <p class="contact-line"><strong>Address</strong>1245 East Olive Avenue<br>Fresno, CA 93728</p>
+        <p class="contact-line"><strong>Phone</strong><a href="tel:+15595550207">(559) 555-0207</a></p>
+        <p class="contact-line"><strong>Email</strong><a href="mailto:hello@valleyoakrealty.com">hello@valleyoakrealty.com</a></p>
+        <p class="contact-line" style="margin-bottom:0"><strong>License</strong>Licensed Real Estate Broker, State of California</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="logo"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 4c-5 3-8 6.5-8 10.5 0 4 3 7.5 8 7.5s8-3.5 8-7.5C24 10.5 21 7 16 4z" fill="#5d7229"/><path d="M16 22v7M12 27.5h8" stroke="#d9c7a7" stroke-width="2.2" stroke-linecap="round"/><path d="M16 9v8M13 13h6" stroke="#f5efe3" stroke-width="1.8" stroke-linecap="round"/></svg> Valley Oak <span>Realty</span></span>
+    <p>1245 East Olive Avenue, Fresno, CA 93728 &middot; (559) 555-0207</p>
+    <p class="footer-bottom">&copy; 2026 Valley Oak Realty. All rights reserved. Equal Housing Opportunity. &middot; Website designed &amp; built by <a href="https://weblodge.agency" target="_blank" rel="noopener">Weblodge Agency</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

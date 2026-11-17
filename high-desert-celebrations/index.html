@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>High Desert Celebrations — Wedding &amp; Event Planning in Albuquerque, New Mexico</title>
+<meta name="description" content="High Desert Celebrations is an Albuquerque wedding and event planning studio. Desert weddings, fiestas, and celebrations with Southwestern soul across New Mexico.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,600;0,700;1,500&family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700;6..12,800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --terra:#b85c38;
+    --terra-dark:#96451f;
+    --terra-light:#f7e8dd;
+    --turq:#2e7d7b;
+    --turq-dark:#1f5c5a;
+    --sand:#f6efe3;
+    --cream:#fdf9f1;
+    --ink:#3a322a;
+    --muted:#77695a;
+    --line:#e8dcc8;
+    --radius:14px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Nunito Sans',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Alegreya',Georgia,serif;line-height:1.15;font-weight:600}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .section{padding:90px 0}
+  .eyebrow{font-size:12.5px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--terra);margin-bottom:12px}
+  .section-title{font-size:clamp(31px,4.5vw,45px);color:var(--ink);margin-bottom:14px}
+  .section-sub{color:var(--muted);max-width:640px;font-size:18px}
+  .center{text-align:center}
+  .center .section-sub{margin-left:auto;margin-right:auto}
+  .btn{display:inline-block;padding:14px 30px;border-radius:8px;font-weight:800;font-size:15.5px;transition:.2s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-terra{background:var(--terra);color:#fff}
+  .btn-terra:hover{background:var(--terra-dark)}
+  .btn-turq{background:var(--turq);color:#fff}
+  .btn-turq:hover{background:var(--turq-dark)}
+  .btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.85)}
+  .btn-outline:hover{background:rgba(255,255,255,.15)}
+  .btn-white{background:#fff;color:var(--terra-dark)}
+  .btn-white:hover{background:var(--terra-light)}
+
+  /* Nav */
+  .nav{position:sticky;top:0;z-index:100;background:#fff;box-shadow:0 2px 12px rgba(58,50,42,.08)}
+  .nav-inner{max-width:1120px;margin:0 auto;padding:0 24px;height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .logo{display:inline-flex;align-items:center;gap:11px;font-family:'Alegreya',Georgia,serif;font-size:24px;font-weight:700;color:var(--ink)}
+  .logo span{color:var(--terra)}
+  .logo svg{flex-shrink:0}
+  .nav-links{display:flex;gap:30px;list-style:none;font-weight:700;font-size:15px;color:var(--ink)}
+  .nav-links a:hover{color:var(--terra)}
+  .nav-cta{padding:11px 22px;font-size:15px}
+
+  /* Hero */
+  .hero{position:relative;color:#fff;text-align:center;background:var(--terra-dark) url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=1800&auto=format&fit=crop') center/cover no-repeat}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(120,52,26,.6),rgba(58,50,42,.72))}
+  .hero-inner{position:relative;max-width:820px;margin:0 auto;padding:140px 24px 130px}
+  .hero-inner .eyebrow{color:#f2c9a8}
+  .hero h1{font-size:clamp(42px,6.5vw,70px);margin-bottom:20px}
+  .hero h1 em{font-style:italic;color:#f2c9a8}
+  .hero p{font-size:19px;color:#f5e8da;margin-bottom:34px;max-width:620px;margin-left:auto;margin-right:auto}
+  .hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .hero-meta{margin-top:30px;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:#e8d5bd}
+
+  /* About */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .about-grid img{border-radius:var(--radius);width:100%;height:460px;object-fit:cover}
+  .about-copy p{color:var(--muted);margin-bottom:16px;font-size:18px}
+  .about-points{margin-top:26px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .point{border-left:3px solid var(--turq);padding-left:16px}
+  .point b{display:block;color:var(--ink);font-size:16px}
+  .point span{color:var(--muted);font-size:15px}
+
+  /* Services */
+  .services-section{background:var(--sand)}
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .service{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px 28px;display:flex;flex-direction:column;transition:.2s}
+  .service:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(58,50,42,.1)}
+  .service.featured{border:2px solid var(--terra);background:var(--terra-light)}
+  .service h3{font-size:25px;color:var(--ink);margin-bottom:6px}
+  .price{font-family:'Alegreya',Georgia,serif;font-size:36px;font-weight:700;color:var(--terra-dark);margin-bottom:4px}
+  .price-note{font-size:13.5px;color:var(--muted);margin-bottom:18px}
+  .service ul{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:26px;font-size:15.5px}
+  .service li::before{content:"\2713  ";color:var(--turq);font-weight:800}
+  .service .btn{margin-top:auto;text-align:center}
+  .services-note{text-align:center;margin-top:28px;color:var(--muted)}
+  .services-note a{color:var(--terra-dark);font-weight:800}
+
+  /* Gallery — editorial */
+  .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:14px;margin-top:48px}
+  .gallery-grid figure{position:relative;border-radius:var(--radius);overflow:hidden}
+  .gallery-grid img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+  .gallery-grid figure:hover img{transform:scale(1.05)}
+  .gallery-grid .wide{grid-column:span 2}
+  .gallery-grid .tall{grid-row:span 2}
+  .gallery-grid figcaption{position:absolute;left:0;right:0;bottom:0;padding:30px 16px 12px;background:linear-gradient(transparent,rgba(58,50,42,.85));color:#fff;font-family:'Alegreya',Georgia,serif;font-size:19px}
+
+  /* Process */
+  .process-section{background:var(--turq-dark);color:#d5e8e7}
+  .process-section .section-title{color:#fff}
+  .process-section .eyebrow{color:#f2c9a8}
+  .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px}
+  .process-step{text-align:center}
+  .process-step .num{font-family:'Alegreya',Georgia,serif;font-size:46px;color:#f2c9a8;line-height:1;margin-bottom:10px}
+  .process-step h3{font-size:20px;color:#fff;margin-bottom:8px}
+  .process-step p{font-size:15px;color:#c4dcd9}
+
+  /* Reviews */
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .review{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px}
+  .stars{color:var(--terra);letter-spacing:2px;font-size:17px;margin-bottom:14px}
+  .review p{font-size:16.5px;margin-bottom:18px}
+  .review cite{font-style:normal;font-weight:800;color:var(--ink)}
+  .review cite span{display:block;font-weight:600;font-size:14px;color:var(--muted)}
+
+  /* Visit */
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;margin-top:48px}
+  .visit-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+  .visit-card h3{font-size:21px;color:var(--ink);margin-bottom:12px}
+  .visit-card p{font-size:15.5px;color:var(--muted)}
+  .visit-card a{color:var(--terra-dark);font-weight:800}
+  .hours{width:100%;border-collapse:collapse}
+  .hours td{padding:8px 0;border-bottom:1px solid var(--line);color:var(--muted)}
+  .hours td:last-child{text-align:right;color:var(--ink);font-weight:700}
+
+  /* CTA */
+  .cta{background:var(--terra);color:#fff;text-align:center}
+  .cta h2{font-size:clamp(31px,4.5vw,45px);margin-bottom:14px}
+  .cta p{color:#fbe4d4;font-size:18px;max-width:580px;margin:0 auto 30px}
+  .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .cta small{display:block;margin-top:20px;color:#f2c9a8}
+
+  footer{background:#2e2620;color:#b3a48f;padding:48px 0 30px;font-size:15px}
+  .footer-inner{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .footer-brand .logo{color:#fff;font-size:22px}
+  .footer-brand p{margin-top:10px;max-width:340px}
+  .footer-col h4{color:#fff;font-family:'Nunito Sans',sans-serif;font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px}
+  .footer-col a{display:block;margin-bottom:8px}
+  .footer-col a:hover{color:#f2c9a8}
+  .footer-bottom{padding-top:22px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .footer-bottom a{color:#f2c9a8;font-weight:700}
+
+  @media (max-width:900px){
+    .about-grid{grid-template-columns:1fr;gap:36px}
+    .about-grid img{height:340px}
+    .services-grid,.reviews-grid,.visit-grid{grid-template-columns:1fr 1fr}
+    .gallery-grid{grid-template-columns:1fr 1fr;grid-auto-rows:200px}
+    .process-grid{grid-template-columns:1fr 1fr}
+    .section{padding:68px 0}
+  }
+  @media (max-width:640px){
+    .nav-links{display:none}
+    .services-grid,.reviews-grid,.visit-grid,.process-grid{grid-template-columns:1fr}
+    .gallery-grid{grid-template-columns:1fr;grid-auto-rows:240px}
+    .gallery-grid .wide,.gallery-grid .tall{grid-column:span 1;grid-row:span 1}
+    .hero-inner{padding:110px 24px 100px}
+    .about-points{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="11" r="5" fill="#b85c38"/><path d="M16 2v3M16 17v3M7 11H4M28 11h-3M9.5 4.5 7.5 6.5M24.5 4.5l-2 2" stroke="#b85c38" stroke-width="2" stroke-linecap="round"/><path d="M3 24l5-4 4 3 4-5 4 5 4-3 5 4v4H3v-4z" fill="#2e7d7b"/></svg>High Desert <span>Celebrations</span></a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Events</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="#book" class="btn btn-terra nav-cta">Plan My Event</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Wedding &amp; Event Planning &middot; Albuquerque, New Mexico</p>
+    <h1>Celebrations with <em>desert soul.</em></h1>
+    <p>High Desert Celebrations is an Albuquerque event planning studio for weddings, fiestas, and gatherings with Southwestern warmth — under wide skies, string lights, and the Sandia sunset.</p>
+    <div class="hero-actions">
+      <a href="#services" class="btn btn-terra">View Services</a>
+      <a href="#book" class="btn btn-outline">Book a Consultation</a>
+    </div>
+    <p class="hero-meta">Weddings &middot; Fiestas &middot; Quincea&ntilde;eras &middot; Corporate Events</p>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="wrap">
+    <div class="about-grid">
+      <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=1200&auto=format&fit=crop" alt="Outdoor dinner celebration with string lights in the desert" loading="lazy">
+      <div class="about-copy">
+        <p class="eyebrow">Our Studio</p>
+        <h2 class="section-title">Rooted in New Mexico, made for your story.</h2>
+        <p>High Desert Celebrations was founded in 2017 by Sofia Delgado, an Albuquerque planner who grew up at big family fiestas and never lost her love of a good gathering. We plan weddings, quincea&ntilde;eras, and celebrations across New Mexico — from Old Town courtyards to ranches in the foothills.</p>
+        <p>Our style is warm and unpretentious: adobe and turquoise, marigolds and string lights, food that people actually want to eat. Every event we plan feels like the people throwing it — never like a template.</p>
+        <div class="about-points">
+          <div class="point"><b>One dedicated planner</b><span>The same person from first call to last dance.</span></div>
+          <div class="point"><b>Local vendors first</b><span>New Mexico florists, caterers, mariachis &amp; venues.</span></div>
+          <div class="point"><b>Bilingual planning</b><span>Planning in English and Spanish, for every family.</span></div>
+          <div class="point"><b>Honest budgets</b><span>Clear pricing and no surprise fees, ever.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section services-section">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">Services &amp; Pricing</p>
+      <h2 class="section-title">Three ways to work with us.</h2>
+      <p class="section-sub">Every package starts with a free consultation. Custom packages are available for multi-day events and destination weddings.</p>
+    </div>
+    <div class="services-grid">
+      <article class="service">
+        <h3>Day-of Coordination</h3>
+        <div class="price">$1,050</div>
+        <p class="price-note">For couples who planned it all — and want to enjoy it</p>
+        <ul>
+          <li>Planning handoff 4 weeks before the event</li>
+          <li>Vendor confirmation &amp; timeline creation</li>
+          <li>Rehearsal attendance</li>
+          <li>Full day-of management (up to 10 hours)</li>
+          <li>Setup &amp; breakdown supervision</li>
+        </ul>
+        <a href="#book" class="btn btn-turq">Enquire Now</a>
+      </article>
+      <article class="service featured">
+        <h3>Full-Service Planning</h3>
+        <div class="price">$4,200</div>
+        <p class="price-note">Our most popular package — start to finish</p>
+        <ul>
+          <li>Everything in Day-of Coordination</li>
+          <li>Venue scouting &amp; vendor selection</li>
+          <li>Budget management &amp; contract review</li>
+          <li>Design concept, mood boards &amp; styling</li>
+          <li>Unlimited planning meetings</li>
+          <li>Guest list &amp; RSVP management</li>
+        </ul>
+        <a href="#book" class="btn btn-terra">Enquire Now</a>
+      </article>
+      <article class="service">
+        <h3>Design &amp; Styling</h3>
+        <div class="price">$2,500</div>
+        <p class="price-note">For events that need a beautiful look</p>
+        <ul>
+          <li>Full design concept &amp; mood boards</li>
+          <li>Florals, tablescapes &amp; lighting design</li>
+          <li>Rentals &amp; decor sourcing</li>
+          <li>On-site styling &amp; installation</li>
+          <li>Day-of design management</li>
+        </ul>
+        <a href="#book" class="btn btn-turq">Enquire Now</a>
+      </article>
+    </div>
+    <p class="services-note">Quincea&ntilde;eras, corporate events, and multi-day celebrations quoted individually — <a href="tel:+15055550130">call (505) 555-0130</a> for a custom quote.</p>
+  </div>
+</section>
+
+<section id="gallery" class="section">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">Recent Events</p>
+      <h2 class="section-title">Celebrations we're proud of.</h2>
+      <p class="section-sub">A look at a few recent weddings, fiestas, and parties we've planned around Albuquerque and New Mexico.</p>
+    </div>
+    <div class="gallery-grid">
+      <figure class="wide tall">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop" alt="Bride and groom celebrating at their desert wedding" loading="lazy">
+        <figcaption>Wedding &middot; Elena &amp; Diego, Old Town</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=600&auto=format&fit=crop" alt="Elegantly set event table" loading="lazy">
+        <figcaption>Wedding &middot; Tablescape, Santa Fe</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=600&auto=format&fit=crop" alt="Guests enjoying a lively fiesta" loading="lazy">
+        <figcaption>Fiesta &middot; Milestone birthday</figcaption>
+      </figure>
+      <figure class="tall">
+        <img src="https://images.unsplash.com/photo-1478146896981-b80fe463b330?q=80&w=600&auto=format&fit=crop" alt="Beautifully decorated wedding table with candles" loading="lazy">
+        <figcaption>Wedding &middot; Hannah &amp; Chris, Corrales</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=600&auto=format&fit=crop" alt="Evening celebration with warm lights" loading="lazy">
+        <figcaption>Corporate Event &middot; Launch party</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?q=80&w=600&auto=format&fit=crop" alt="Wedding celebration with sparklers at dusk" loading="lazy">
+        <figcaption>Wedding &middot; Send-off, Rio Rancho</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section process-section">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">Our Process</p>
+      <h2 class="section-title">From first hello to last dance.</h2>
+    </div>
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="num">01</div>
+        <h3>Consultation</h3>
+        <p>A free, relaxed chat about your vision, your guest list, and your budget. No pressure, no obligation.</p>
+      </div>
+      <div class="process-step">
+        <div class="num">02</div>
+        <h3>Design</h3>
+        <p>We build your concept — mood boards, color palettes, and a design plan that feels like you.</p>
+      </div>
+      <div class="process-step">
+        <div class="num">03</div>
+        <h3>Planning</h3>
+        <p>Venues, vendors, timelines, and budgets — managed for you, with regular updates along the way.</p>
+      </div>
+      <div class="process-step">
+        <div class="num">04</div>
+        <h3>The Day</h3>
+        <p>We run the show so you can be fully present. You celebrate — we handle everything else.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="section">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">Client Reviews</p>
+      <h2 class="section-title">Kind words from happy hosts.</h2>
+    </div>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;Sofia planned our wedding in Old Town and it was perfect — marigolds, string lights, and the best food our guests had ever had at a wedding. She thought of everything.&rdquo;</p>
+        <cite>Elena &amp; Diego <span>Wedding &middot; Old Town Albuquerque</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;They planned my daughter's quincea&ntilde;era for 150 guests and handled every detail — the church, the hall, the mariachi, all of it. We just showed up and celebrated.&rdquo;</p>
+        <cite>Carmen <span>Quincea&ntilde;era &middot; South Valley</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;Professional, warm, and so organized. Our company retreat dinner looked stunning and ran like clockwork. We'll be calling them for every event from now on.&rdquo;</p>
+        <cite>Robert <span>Corporate event &middot; Downtown Albuquerque</span></cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="section" style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow">Studio &amp; Contact</p>
+    <h2 class="section-title">Let's plan your celebration.</h2>
+    <div class="visit-grid">
+      <div class="visit-card">
+        <h3>Studio</h3>
+        <p>High Desert Celebrations<br>2018 Central Avenue SW, Suite 5<br>Albuquerque, NM 87104<br><br>Old Town — free parking in the lot on Romero Street.</p>
+      </div>
+      <div class="visit-card">
+        <h3>Contact</h3>
+        <p><a href="tel:+15055550130">(505) 555-0130</a><br><a href="mailto:hello@highdesertcelebrations.com">hello@highdesertcelebrations.com</a></p>
+        <p style="margin-top:12px">Every inquiry gets a personal reply within one business day — in English or Spanish.</p>
+      </div>
+      <div class="visit-card">
+        <h3>Studio Hours</h3>
+        <table class="hours">
+          <tr><td>Monday – Friday</td><td>9:00 AM – 5:00 PM</td></tr>
+          <tr><td>Saturday</td><td>By appointment</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+        </table>
+        <p style="margin-top:12px">Consultations are free and last about an hour — in person or by video call.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="book" class="section cta">
+  <div class="wrap">
+    <h2>Let's make it unforgettable.</h2>
+    <p>Wedding dates book 9–12 months ahead, and fall weekends go first. Reach out today for a free consultation — no obligation, just a conversation about your celebration.</p>
+    <div class="cta-actions">
+      <a href="tel:+15055550130" class="btn btn-white">Call (505) 555-0130</a>
+      <a href="mailto:hello@highdesertcelebrations.com" class="btn btn-turq">Email to Book</a>
+    </div>
+    <small>Every inquiry gets a personal reply within one business day.</small>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="11" r="5" fill="#b85c38"/><path d="M16 2v3M16 17v3M7 11H4M28 11h-3M9.5 4.5 7.5 6.5M24.5 4.5l-2 2" stroke="#f2c9a8" stroke-width="2" stroke-linecap="round"/><path d="M3 24l5-4 4 3 4-5 4 5 4-3 5 4v4H3v-4z" fill="#2e7d7b"/></svg>High Desert <span>Celebrations</span></span>
+        <p>Wedding and event planning in Albuquerque, New Mexico. Celebrations with desert soul.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Events</a>
+        <a href="#reviews">Reviews</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+15055550130">(505) 555-0130</a>
+        <a href="mailto:hello@highdesertcelebrations.com">hello@highdesertcelebrations.com</a>
+        <a href="#visit">2018 Central Ave SW, Albuquerque, NM 87104</a>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <a href="#visit">Mon – Fri: 9 AM – 5 PM</a>
+        <a href="#visit">Saturday: By appointment</a>
+        <a href="#visit">Sunday: Closed</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 High Desert Celebrations, Albuquerque NM. All rights reserved.</span>
+      <span>Website designed &amp; built by <a href="https://weblodge.agency" target="_blank" rel="noopener">Weblodge Agency</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

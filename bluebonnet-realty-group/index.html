@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bluebonnet Realty Group | Homes for Sale in Corpus Christi, TX</title>
+<meta name="description" content="Bluebonnet Realty Group helps buyers and sellers across Corpus Christi, Texas. Coastal homes, family neighborhoods, and free home valuations from local agents.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#1e4f8a;
+    --blue-dark:#163d6b;
+    --blue-light:#eaf2fa;
+    --coral:#f26d4b;
+    --coral-dark:#d95534;
+    --sand:#faf8f5;
+    --ink:#1f2a33;
+    --muted:#5f6f7a;
+    --white:#fff;
+    --line:#e3e6e9;
+    --radius:16px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);line-height:1.65;background:#fff;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Outfit',sans-serif;line-height:1.12;letter-spacing:-.01em}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+  .section{padding:88px 0}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--coral-dark);margin-bottom:12px}
+  .section-head{max-width:660px;margin-bottom:48px}
+  .section-head.center{margin-left:auto;margin-right:auto;text-align:center}
+  .section-head h2{font-size:clamp(30px,4.2vw,44px);color:var(--blue-dark);margin-bottom:12px}
+  .section-head p{color:var(--muted);font-size:17px}
+  .btn{display:inline-block;padding:14px 28px;border-radius:999px;font-weight:700;font-size:15px;transition:.2s;border:2px solid transparent;cursor:pointer;text-align:center}
+  .btn-coral{background:var(--coral);color:#fff}
+  .btn-coral:hover{background:var(--coral-dark)}
+  .btn-blue{background:var(--blue);color:#fff}
+  .btn-blue:hover{background:var(--blue-dark)}
+  .btn-white{background:#fff;color:var(--blue-dark)}
+  .btn-white:hover{background:var(--blue-light)}
+  .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.7)}
+  .btn-outline:hover{background:rgba(255,255,255,.14)}
+
+  /* Nav */
+  .nav{position:sticky;top:0;z-index:50;background:var(--blue-dark);box-shadow:0 2px 14px rgba(22,61,107,.3)}
+  .nav-inner{max-width:1140px;margin:0 auto;padding:0 24px;height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .logo{display:inline-flex;align-items:center;gap:11px;color:#fff;font-family:'Outfit',sans-serif;font-size:23px;font-weight:800}
+  .logo span{color:#ffb59e}
+  .logo svg{flex-shrink:0}
+  .nav-links{display:flex;gap:30px;list-style:none;font-weight:600;font-size:15px}
+  .nav-links a{color:#d6e4f0}
+  .nav-links a:hover{color:#fff}
+  .nav-cta{padding:10px 20px;font-size:14px}
+
+  /* Hero */
+  .hero{position:relative;min-height:88vh;display:flex;align-items:center;color:#fff;background:var(--blue-dark) url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1800&auto=format&fit=crop') center/cover no-repeat}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,45,80,.9) 0%,rgba(18,45,80,.6) 55%,rgba(18,45,80,.3) 100%)}
+  .hero-inner{position:relative;max-width:1140px;margin:0 auto;padding:120px 24px;width:100%}
+  .hero-copy{max-width:620px}
+  .hero-copy .eyebrow{color:#ffb59e}
+  .hero-copy h1{font-size:clamp(42px,6.5vw,68px);margin-bottom:18px}
+  .hero-copy h1 em{font-style:normal;color:#ffb59e}
+  .hero-copy p{font-size:19px;color:#e2ecf4;margin-bottom:32px;max-width:540px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-stats{display:flex;gap:36px;flex-wrap:wrap;margin-top:44px;padding-top:26px;border-top:1px solid rgba(255,255,255,.22)}
+  .hero-stats strong{display:block;font-family:'Outfit',sans-serif;font-size:28px;line-height:1}
+  .hero-stats span{font-size:13px;color:#b9cede;text-transform:uppercase;letter-spacing:.08em}
+
+  /* Listings */
+  .listings{background:var(--sand)}
+  .listing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .listing{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 4px 18px rgba(30,79,138,.07);transition:.2s}
+  .listing:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(30,79,138,.13)}
+  .listing-img{position:relative}
+  .listing-img img{width:100%;height:230px;object-fit:cover}
+  .listing-tag{position:absolute;top:14px;left:14px;background:var(--coral);color:#fff;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:999px}
+  .listing-tag.beach{background:var(--blue)}
+  .listing-body{padding:24px}
+  .listing-price{font-family:'Outfit',sans-serif;font-size:28px;font-weight:800;color:var(--blue-dark);margin-bottom:4px}
+  .listing-body h3{font-size:17px;font-family:'Inter',sans-serif;font-weight:700;margin-bottom:4px}
+  .listing-loc{color:var(--muted);font-size:14px;margin-bottom:14px}
+  .listing-specs{display:flex;gap:16px;flex-wrap:wrap;padding-top:14px;border-top:1px solid var(--line);font-size:14px;font-weight:600;color:#3d4f5c}
+
+  /* Services */
+  .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .service{border:1px solid var(--line);border-radius:var(--radius);padding:32px 28px}
+  .service-num{font-family:'Outfit',sans-serif;font-size:44px;font-weight:800;color:var(--blue-light);line-height:1;margin-bottom:14px}
+  .service h3{font-size:22px;color:var(--blue-dark);margin-bottom:10px}
+  .service p{color:var(--muted);font-size:15px;margin-bottom:16px}
+  .service a{color:var(--coral-dark);font-weight:700}
+
+  /* Coastal band */
+  .coastal{background:var(--blue);color:#fff}
+  .coastal-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
+  .coastal-grid img{border-radius:var(--radius);width:100%;height:380px;object-fit:cover}
+  .coastal h2{font-size:clamp(30px,4vw,42px);margin-bottom:14px}
+  .coastal p{color:#d6e4f0;font-size:17px;margin-bottom:14px}
+  .coastal ul{list-style:none;margin:20px 0 28px;display:flex;flex-direction:column;gap:10px;font-weight:600}
+  .coastal li::before{content:"✓ ";color:#ffb59e;font-weight:800}
+
+  /* Team */
+  .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .agent{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;text-align:center}
+  .agent img{width:100%;height:320px;object-fit:cover}
+  .agent-body{padding:24px 22px 28px}
+  .agent-body h3{font-size:22px;color:var(--blue-dark);margin-bottom:4px}
+  .agent-role{color:var(--coral-dark);font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+  .agent-body p{color:var(--muted);font-size:15px}
+
+  /* Reviews */
+  .reviews{background:var(--sand)}
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .review{background:#fff;border-radius:var(--radius);padding:30px 26px;box-shadow:0 4px 16px rgba(30,79,138,.05)}
+  .stars{color:var(--coral);letter-spacing:3px;font-size:17px;margin-bottom:14px}
+  .review blockquote{font-size:16px;margin-bottom:18px}
+  .review cite{font-style:normal;font-weight:700}
+  .review cite span{display:block;font-weight:500;font-size:14px;color:var(--muted)}
+
+  /* CTA */
+  .cta{text-align:center}
+  .cta h2{font-size:clamp(30px,4.2vw,44px);color:var(--blue-dark);margin-bottom:12px}
+  .cta p{color:var(--muted);font-size:18px;max-width:580px;margin:0 auto 30px}
+
+  /* Visit */
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+  .visit-card{border:1px solid var(--line);border-radius:var(--radius);padding:32px 30px}
+  .visit-card h3{font-size:22px;color:var(--blue-dark);margin-bottom:16px}
+  .hours{width:100%;border-collapse:collapse}
+  .hours td{padding:9px 0;border-bottom:1px solid #f0f1f2}
+  .hours td:last-child{text-align:right;font-weight:700}
+  .hours tr:last-child td{border-bottom:none}
+  .contact-line{margin-bottom:16px;color:var(--muted)}
+  .contact-line strong{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--coral-dark);margin-bottom:2px}
+  .contact-line a{font-weight:700;color:var(--blue-dark)}
+
+  footer{background:var(--blue-dark);color:#9fb8cd;padding:48px 0 28px;font-size:15px;text-align:center}
+  footer .logo{font-size:22px;margin-bottom:10px}
+  footer a{color:#ffb59e;font-weight:600}
+  footer a:hover{text-decoration:underline}
+  .footer-bottom{margin-top:22px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);font-size:14px}
+
+  @media (max-width:900px){
+    .listing-grid,.service-grid,.team-grid,.reviews-grid{grid-template-columns:1fr 1fr}
+    .coastal-grid,.visit-grid{grid-template-columns:1fr}
+    .coastal-grid img{height:280px}
+    .section{padding:64px 0}
+  }
+  @media (max-width:640px){
+    .nav-links{display:none}
+    .listing-grid,.service-grid,.team-grid,.reviews-grid{grid-template-columns:1fr}
+    .hero-inner{padding:90px 24px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 4c-1.8 2.4-4.5 3.4-7 3.4 2.2 2 3.2 4.5 3 7.3-.2 2.6-1.8 4.8-4.2 5.6 2.7 1 5.5.3 7.2-1.8.4 2 .3 4.1-.3 6.1h2.6c-.6-2-.7-4.1-.3-6.1 1.7 2.1 4.5 2.8 7.2 1.8-2.4-.8-4-3-4.2-5.6-.2-2.8.8-5.3 3-7.3-2.5 0-5.2-1-7-3.4z" fill="#7fb3e8"/><circle cx="16" cy="9" r="1.6" fill="#f26d4b"/><path d="M16 24.6V29" stroke="#7fb3e8" stroke-width="2" stroke-linecap="round"/></svg>Bluebonnet <span>Realty Group</span></a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#listings">Listings</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#team">Agents</a></li>
+        <li><a href="#visit">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="#visit" class="btn btn-coral nav-cta">Free Valuation</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">Real Estate — Corpus Christi, Texas</p>
+      <h1>Coastal living, <em>Texas roots.</em></h1>
+      <p>Bluebonnet Realty Group helps families find their place on the Gulf Coast — from beachfront condos on Padre Island to family homes in Southside. Local agents, honest advice, and a move that actually feels good.</p>
+      <div class="hero-actions">
+        <a href="#listings" class="btn btn-coral">Browse Homes</a>
+        <a href="#visit" class="btn btn-outline">What's My Home Worth?</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>$160M+</strong><span>Homes sold</span></div>
+        <div><strong>680+</strong><span>Families moved</span></div>
+        <div><strong>15 yrs</strong><span>On the Gulf Coast</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="listings" class="section listings">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Featured Listings</p>
+      <h2>Fresh on the market</h2>
+      <p>From island condos to family homes — call us to schedule a showing, usually within 24 hours.</p>
+    </div>
+    <div class="listing-grid">
+      <article class="listing">
+        <div class="listing-img">
+          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200&auto=format&fit=crop" alt="Luxury coastal home with a pool" loading="lazy">
+          <span class="listing-tag beach">Beachfront</span>
+        </div>
+        <div class="listing-body">
+          <p class="listing-price">$685,000</p>
+          <h3>1412 Windward Drive</h3>
+          <p class="listing-loc">North Padre Island, Corpus Christi, TX 78418</p>
+          <div class="listing-specs"><span>4 bd</span><span>3 ba</span><span>2,720 sq ft</span><span>Built 2012</span></div>
+        </div>
+      </article>
+      <article class="listing">
+        <div class="listing-img">
+          <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=1200&auto=format&fit=crop" alt="Single-family home with a front porch" loading="lazy">
+          <span class="listing-tag">New Listing</span>
+        </div>
+        <div class="listing-body">
+          <p class="listing-price">$329,000</p>
+          <h3>4817 Castilian Drive</h3>
+          <p class="listing-loc">Southside, Corpus Christi, TX 78411</p>
+          <div class="listing-specs"><span>4 bd</span><span>2 ba</span><span>2,050 sq ft</span><span>Built 1985</span></div>
+        </div>
+      </article>
+      <article class="listing">
+        <div class="listing-img">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop" alt="Modern home with a landscaped yard" loading="lazy">
+          <span class="listing-tag">Open House Sat</span>
+        </div>
+        <div class="listing-body">
+          <p class="listing-price">$459,000</p>
+          <h3>2908 Oso Bay Court</h3>
+          <p class="listing-loc">Southside, Corpus Christi, TX 78414</p>
+          <div class="listing-specs"><span>4 bd</span><span>3 ba</span><span>2,430 sq ft</span><span>Built 2017</span></div>
+        </div>
+      </article>
+      <article class="listing">
+        <div class="listing-img">
+          <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=1200&auto=format&fit=crop" alt="Two-story home with a large lawn" loading="lazy">
+          <span class="listing-tag">New Listing</span>
+        </div>
+        <div class="listing-body">
+          <p class="listing-price">$289,000</p>
+          <h3>1126 Santa Fe Street</h3>
+          <p class="listing-loc">Downtown, Corpus Christi, TX 78401</p>
+          <div class="listing-specs"><span>3 bd</span><span>2 ba</span><span>1,780 sq ft</span><span>Built 1954</span></div>
+        </div>
+      </article>
+      <article class="listing">
+        <div class="listing-img">
+          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1200&auto=format&fit=crop" alt="Elegant home with a pool at dusk" loading="lazy">
+          <span class="listing-tag beach">Waterfront</span>
+        </div>
+        <div class="listing-body">
+          <p class="listing-price">$795,000</p>
+          <h3>63 Oceanview Terrace</h3>
+          <p class="listing-loc">Ocean Drive, Corpus Christi, TX 78404</p>
+          <div class="listing-specs"><span>5 bd</span><span>4 ba</span><span>3,650 sq ft</span><span>Built 2009</span></div>
+        </div>
+      </article>
+      <article class="listing">
+        <div class="listing-img">
+          <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1200&auto=format&fit=crop" alt="Contemporary home with clean lines" loading="lazy">
+          <span class="listing-tag">Price Reduced</span>
+        </div>
+        <div class="listing-body">
+          <p class="listing-price">$375,000</p>
+          <h3>7105 Bluebonnet Lane</h3>
+          <p class="listing-loc">Calallen, Corpus Christi, TX 78410</p>
+          <div class="listing-specs"><span>3 bd</span><span>2 ba</span><span>1,920 sq ft</span><span>Built 2001</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">How We Help</p>
+      <h2>Buying or selling on the Gulf Coast</h2>
+      <p>Coastal property has its quirks — flood zones, windstorm insurance, HOA rules. We know them all, and we'll walk you through every one.</p>
+    </div>
+    <div class="service-grid">
+      <div class="service">
+        <div class="service-num">01</div>
+        <h3>Buying a Home</h3>
+        <p>We help you find the right home and the right neighborhood — and we flag the coastal details others miss, from flood insurance to foundation checks.</p>
+        <a href="#visit">Start your search →</a>
+      </div>
+      <div class="service">
+        <div class="service-num">02</div>
+        <h3>Selling Your Home</h3>
+        <p>Professional photos, drone shots for coastal homes, and pricing grounded in real local sales. Our listings sell in an average of 22 days.</p>
+        <a href="#visit">Get a free valuation →</a>
+      </div>
+      <div class="service">
+        <div class="service-num">03</div>
+        <h3>Relocating &amp; Military Moves</h3>
+        <p>Moving to Corpus Christi for NAS Corpus Christi or the port? We offer virtual tours and honest neighborhood guidance before you arrive.</p>
+        <a href="#visit">Plan your move →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section coastal">
+  <div class="wrap">
+    <div class="coastal-grid">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop" alt="Sandy Gulf Coast beach near Corpus Christi" loading="lazy">
+      <div>
+        <p class="eyebrow" style="color:#ffb59e">Life on the Coast</p>
+        <h2>Why people fall in love with Corpus Christi.</h2>
+        <p>Three hundred days of sunshine, miles of Gulf beaches, and a cost of living that makes coastal life genuinely affordable. It's no wonder so many families are moving here — and staying.</p>
+        <ul>
+          <li>Padre Island beaches minutes from downtown</li>
+          <li>No state income tax in Texas</li>
+          <li>Strong job market: port, energy, military, healthcare</li>
+          <li>Median home price well below the national average</li>
+        </ul>
+        <a href="#listings" class="btn btn-white">See Coastal Homes</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="team" class="section">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">Meet the Agents</p>
+      <h2>Coastal Texans, through and through</h2>
+    </div>
+    <div class="team-grid">
+      <article class="agent">
+        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=800&auto=format&fit=crop" alt="Portrait of Laura Bennett, principal broker" loading="lazy">
+        <div class="agent-body">
+          <h3>Laura Bennett</h3>
+          <p class="agent-role">Principal Broker · Southside &amp; Padre Island</p>
+          <p>Laura founded Bluebonnet in 2011 and has helped more than 500 families buy and sell along the Gulf Coast. She still answers her own phone.</p>
+        </div>
+      </article>
+      <article class="agent">
+        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=800&auto=format&fit=crop" alt="Portrait of Chris Delgado, listing agent" loading="lazy">
+        <div class="agent-body">
+          <h3>Chris Delgado</h3>
+          <p class="agent-role">Listing Agent · Ocean Drive &amp; Downtown</p>
+          <p>Chris grew up in Corpus Christi and knows the historic neighborhoods block by block. His listings average 20 days on market.</p>
+        </div>
+      </article>
+      <article class="agent">
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop" alt="Portrait of Hannah Lee, buyer's agent" loading="lazy">
+        <div class="agent-body">
+          <h3>Hannah Lee</h3>
+          <p class="agent-role">Buyer's Agent · Military &amp; Relocation</p>
+          <p>Hannah specializes in military relocations and first-time buyers. She has helped dozens of Navy families settle into Corpus Christi.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section reviews">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">Client Reviews</p>
+      <h2>Families we've helped move</h2>
+      <p>Rated 4.9 out of 5 from more than 310 reviews on Google and Zillow.</p>
+    </div>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>"Laura sold our Southside home in two weeks and helped us buy on Padre Island. She warned us about flood insurance costs upfront — no surprises, ever."</blockquote>
+        <cite>Michelle <span>Sold &amp; bought in Corpus Christi</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>"We moved here for the Navy and bought a house we'd only seen on video. Hannah was honest about everything — the house was exactly as she described."</blockquote>
+        <cite>Brian <span>Military relocation</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>"Chris knew our downtown neighborhood so well he priced our home perfectly — it sold in 11 days for more than we hoped."</blockquote>
+        <cite>Angela <span>Sold in Downtown</span></cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section cta">
+  <div class="wrap">
+    <h2>Ready to find your place on the coast?</h2>
+    <p>Call us for a no-pressure chat about buying or selling in Corpus Christi. We'll tell you honestly where the market stands.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a href="tel:+13615550208" class="btn btn-blue">Call (361) 555-0208</a>
+      <a href="mailto:hello@bluebonnetrealtygroup.com" class="btn btn-coral">Email Us</a>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="section" style="background:var(--sand)">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Visit Us</p>
+      <h2>Our office on South Padre Island Drive</h2>
+      <p>Easy to reach from anywhere in Corpus Christi, with free parking right out front.</p>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-card" style="background:#fff">
+        <h3>Office Hours</h3>
+        <table class="hours">
+          <tr><td>Monday – Friday</td><td>9:00 AM – 6:00 PM</td></tr>
+          <tr><td>Saturday</td><td>10:00 AM – 4:00 PM</td></tr>
+          <tr><td>Sunday</td><td>By appointment</td></tr>
+        </table>
+        <p style="margin-top:16px;color:var(--muted);font-size:15px">Showings available 7 days a week, including evenings.</p>
+      </div>
+      <div class="visit-card" style="background:#fff">
+        <h3>Location &amp; Contact</h3>
+        <p class="contact-line"><strong>Address</strong>5920 South Padre Island Drive, Suite 210<br>Corpus Christi, TX 78411</p>
+        <p class="contact-line"><strong>Phone</strong><a href="tel:+13615550208">(361) 555-0208</a></p>
+        <p class="contact-line"><strong>Email</strong><a href="mailto:hello@bluebonnetrealtygroup.com">hello@bluebonnetrealtygroup.com</a></p>
+        <p class="contact-line" style="margin-bottom:0"><strong>License</strong>Licensed Real Estate Broker, State of Texas</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="logo"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 4c-1.8 2.4-4.5 3.4-7 3.4 2.2 2 3.2 4.5 3 7.3-.2 2.6-1.8 4.8-4.2 5.6 2.7 1 5.5.3 7.2-1.8.4 2 .3 4.1-.3 6.1h2.6c-.6-2-.7-4.1-.3-6.1 1.7 2.1 4.5 2.8 7.2 1.8-2.4-.8-4-3-4.2-5.6-.2-2.8.8-5.3 3-7.3-2.5 0-5.2-1-7-3.4z" fill="#7fb3e8"/><circle cx="16" cy="9" r="1.6" fill="#f26d4b"/><path d="M16 24.6V29" stroke="#7fb3e8" stroke-width="2" stroke-linecap="round"/></svg> Bluebonnet <span>Realty Group</span></span>
+    <p>5920 South Padre Island Drive, Suite 210, Corpus Christi, TX 78411 &middot; (361) 555-0208</p>
+    <p class="footer-bottom">&copy; 2026 Bluebonnet Realty Group. All rights reserved. Equal Housing Opportunity. &middot; Website designed &amp; built by <a href="https://weblodge.agency" target="_blank" rel="noopener">Weblodge Agency</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

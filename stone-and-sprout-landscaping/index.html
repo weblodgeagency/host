@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stone &amp; Sprout Landscaping — Pittsburgh, PA | Yards Built to Last</title>
+<meta name="description" content="Stone & Sprout Landscaping builds and maintains Pittsburgh yards: retaining walls, patios, lawn care, and native plant gardens. Family-owned, free estimates.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --stone:#3f3a33; --stone-dark:#2b2721; --clay:#b4552d; --clay-dark:#96421f;
+    --moss:#5d7a4a; --paper:#fbf9f5; --sand:#f0ebe0; --ink:#2e2a24; --muted:#6f675c; --line:#e3dccf;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;font-size:17px}
+  h1,h2,h3{font-family:'Zilla Slab',Georgia,serif;line-height:1.2}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .section{padding:88px 0}
+  .eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--clay);margin-bottom:10px}
+  .section-title{font-size:clamp(30px,4.5vw,42px);color:var(--stone);margin-bottom:14px}
+  .section-sub{color:var(--muted);max-width:620px;font-size:18px}
+  .btn{display:inline-block;padding:13px 26px;border-radius:6px;font-weight:700;font-size:16px;transition:.2s}
+  .btn:hover{transform:translateY(-1px)}
+  .btn-clay{background:var(--clay);color:#fff}
+  .btn-clay:hover{background:var(--clay-dark)}
+  .btn-stone{background:var(--stone);color:#fff}
+  .btn-stone:hover{background:var(--stone-dark)}
+  .btn-outline{background:transparent;color:var(--stone);border:2px solid var(--stone)}
+  .btn-outline:hover{background:var(--stone);color:#fff}
+
+  .topbar{background:var(--stone-dark);color:#cfc8ba;font-size:14px;text-align:center;padding:9px 16px}
+  .topbar a{color:#fff;font-weight:700}
+  .nav{position:sticky;top:0;z-index:100;background:rgba(251,249,245,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav-inner{max-width:1120px;margin:0 auto;padding:0 24px;height:70px;display:flex;align-items:center;justify-content:space-between}
+  .logo{display:inline-flex;align-items:center;gap:10px;font-family:'Zilla Slab',Georgia,serif;font-size:23px;font-weight:700;color:var(--stone)}
+  .logo svg{flex-shrink:0}
+  .logo em{font-style:normal;color:var(--clay)}
+  .nav-links{display:flex;gap:30px;list-style:none}
+  .nav-links a{color:var(--muted);font-weight:600;font-size:15px}
+  .nav-links a:hover{color:var(--clay)}
+  .nav-cta{padding:10px 20px;font-size:15px}
+
+  .hero{display:grid;grid-template-columns:1.05fr .95fr;min-height:600px}
+  .hero-copy{padding:88px 48px 88px max(24px,calc((100vw - 1120px)/2 + 24px));display:flex;flex-direction:column;justify-content:center;background:var(--paper)}
+  .hero-copy h1{font-size:clamp(38px,4.8vw,56px);color:var(--stone);margin-bottom:18px}
+  .hero-copy h1 em{font-style:normal;color:var(--clay)}
+  .hero-copy p{font-size:18px;color:var(--muted);margin-bottom:30px;max-width:520px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-note{margin-top:26px;font-size:14px;color:var(--muted)}
+  .hero-note strong{color:var(--stone)}
+  .hero-img{position:relative;min-height:420px}
+  .hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .hero-img::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(251,249,245,.35),transparent 30%)}
+
+  .intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .intro-grid img{border-radius:12px;width:100%;height:400px;object-fit:cover}
+  .intro-copy p{color:var(--muted);margin-bottom:14px;font-size:18px}
+  .stats{display:flex;gap:36px;margin-top:26px;flex-wrap:wrap}
+  .stat b{display:block;font-family:'Zilla Slab',Georgia,serif;font-size:32px;color:var(--clay)}
+  .stat span{font-size:14px;color:var(--muted)}
+
+  .services-section{background:var(--sand)}
+  .services-list{display:grid;grid-template-columns:1fr 1fr;gap:0 48px;margin-top:44px}
+  .service-row{display:flex;justify-content:space-between;gap:20px;padding:24px 0;border-bottom:1px solid #d8d0bd;align-items:baseline}
+  .service-row h3{font-size:22px;color:var(--stone);margin-bottom:4px}
+  .service-row p{color:var(--muted);font-size:15.5px}
+  .service-row .price{font-family:'Zilla Slab',Georgia,serif;font-weight:700;font-size:20px;color:var(--clay);white-space:nowrap}
+
+  .process{background:var(--stone);color:#ddd6c6}
+  .process .section-title{color:#fff}
+  .process .eyebrow{color:#d9a441}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px}
+  .step{border-top:3px solid var(--clay);padding-top:20px}
+  .step b{display:block;font-family:'Zilla Slab',Georgia,serif;font-size:15px;color:#d9a441;letter-spacing:.1em;margin-bottom:8px}
+  .step h3{font-size:21px;color:#fff;margin-bottom:8px}
+  .step p{font-size:15.5px;color:#cfc8ba}
+
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .review{background:#fff;border:1px solid var(--line);border-radius:12px;padding:30px 26px}
+  .stars{color:var(--clay);letter-spacing:2px;font-size:17px;margin-bottom:14px}
+  .review blockquote{font-size:16.5px;margin-bottom:18px}
+  .review cite{font-style:normal;font-weight:700;color:var(--stone)}
+  .review cite span{display:block;font-weight:400;font-size:14px;color:var(--muted)}
+
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:44px}
+  .visit-card{border:1px solid var(--line);border-radius:12px;padding:32px;background:#fff}
+  .visit-card h3{font-size:22px;color:var(--stone);margin-bottom:16px}
+  .hours{width:100%;border-collapse:collapse}
+  .hours td{padding:9px 0;border-bottom:1px solid #efe9dc;color:var(--muted)}
+  .hours td:last-child{text-align:right;font-weight:600;color:var(--ink)}
+  .hours tr:last-child td{border-bottom:none}
+  .contact-line{margin-bottom:14px;color:var(--muted)}
+  .contact-line strong{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--clay);margin-bottom:2px}
+  .contact-line a{font-weight:700;color:var(--ink)}
+  .contact-line a:hover{color:var(--clay)}
+
+  .cta{background:var(--clay);color:#fff;text-align:center;border-radius:16px;padding:56px 32px}
+  .cta h2{font-size:clamp(28px,4vw,38px);margin-bottom:12px}
+  .cta p{color:#fbe9df;max-width:560px;margin:0 auto 28px;font-size:18px}
+  .cta .btn-clay{background:#fff;color:var(--clay-dark)}
+  .cta .btn-clay:hover{background:#f7e8df}
+
+  footer{background:var(--stone-dark);color:#a89f8e;padding:44px 0;text-align:center;font-size:15px}
+  footer .logo{color:#fff;font-size:22px;display:block;margin-bottom:12px}
+  footer a{color:#d9a441;font-weight:700}
+  footer a:hover{text-decoration:underline}
+
+  @media (max-width:900px){
+    .hero{grid-template-columns:1fr}
+    .hero-copy{padding:64px 24px}
+    .hero-img{min-height:320px;position:relative}
+    .hero-img img{position:relative}
+    .steps{grid-template-columns:repeat(2,1fr)}
+    .intro-grid,.visit-grid{grid-template-columns:1fr;gap:32px}
+    .reviews-grid{grid-template-columns:1fr 1fr}
+    .services-list{grid-template-columns:1fr}
+  }
+  @media (max-width:640px){
+    .nav-links{display:none}
+    .section{padding:64px 0}
+    .steps,.reviews-grid{grid-template-columns:1fr}
+    .intro-grid img{height:280px}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">Spring books fill fast — call <a href="tel:+14125550162">(412) 555-0162</a> to reserve your spot for this season.</div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M4 24c0-6 5-10 11-10 1.5 0 3 .2 4.4.7L21 12l2.5 4.5c2.5 1.4 4.5 3.7 4.5 7.5H4Z" fill="#5d7a4a"/><path d="M16 14V6M16 10c-2 0-3.5-1.4-4-3.5M16 8c2 0 3.5-1.4 4-3.5" stroke="#b4552d" stroke-width="1.8" stroke-linecap="round" fill="none"/><circle cx="9" cy="22" r="1.6" fill="#fbf9f5"/><circle cx="23" cy="21" r="1.6" fill="#fbf9f5"/></svg>Stone <em>&amp;</em> Sprout</a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="tel:+14125550162" class="btn btn-clay nav-cta">Free Estimate</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">Landscaping &amp; Hardscaping — Pittsburgh, PA</p>
+    <h1>Strong stone. <em>Soft green.</em> Yards that last.</h1>
+    <p>Stone &amp; Sprout is a family-run landscaping crew in Pittsburgh. We build retaining walls and patios that hold up to Western Pennsylvania weather — and plant gardens that come back stronger every year.</p>
+    <div class="hero-actions">
+      <a href="#services" class="btn btn-clay">See Services &amp; Prices</a>
+      <a href="#visit" class="btn btn-outline">Get in Touch</a>
+    </div>
+    <p class="hero-note"><strong>Family-owned since 2011.</strong> Licensed &amp; insured &middot; Serving Allegheny County</p>
+  </div>
+  <div class="hero-img">
+    <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=1400&auto=format&fit=crop" alt="Pittsburgh home with stone landscaping and a green lawn">
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="wrap">
+    <div class="intro-grid">
+      <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?q=80&w=1200&auto=format&fit=crop" alt="Flowering garden beds planted by Stone and Sprout" loading="lazy">
+      <div class="intro-copy">
+        <p class="eyebrow">Our Story</p>
+        <h2 class="section-title">Built on Pittsburgh hillsides — literally.</h2>
+        <p>Pittsburgh yards are tough: steep slopes, clay soil, and winters that test everything. We started Stone &amp; Sprout in 2011 because we love the challenge. Our crews know how to terrace a hillside, drain a soggy yard, and pick plants that thrive in Pennsylvania soil.</p>
+        <p>We're a small team, and we like it that way. The person who quotes your job is the person who shows up to do it.</p>
+        <div class="stats">
+          <div class="stat"><b>15 yrs</b><span>in business</span></div>
+          <div class="stat"><b>600+</b><span>projects completed</span></div>
+          <div class="stat"><b>4.8</b><span>average rating</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section services-section">
+  <div class="wrap">
+    <p class="eyebrow">Services &amp; Pricing</p>
+    <h2 class="section-title">Straightforward work, straightforward prices.</h2>
+    <p class="section-sub">Every project starts with a free on-site visit and a written estimate. Prices below are typical starting points for homes in the Pittsburgh area.</p>
+    <div class="services-list">
+      <div class="service-row"><div><h3>Retaining Walls</h3><p>Stone and block walls that tame slopes and stop erosion — engineered for hillside lots.</p></div><span class="price">from $2,400</span></div>
+      <div class="service-row"><div><h3>Patios &amp; Fire Pits</h3><p>Paver and natural-stone patios, plus built-in fire pits for cool Pennsylvania evenings.</p></div><span class="price">from $3,100</span></div>
+      <div class="service-row"><div><h3>Weekly Lawn Care</h3><p>Mowing, edging, and cleanup on a set weekly schedule, April through November.</p></div><span class="price">from $48 / visit</span></div>
+      <div class="service-row"><div><h3>Native Plant Gardens</h3><p>Pollinator-friendly beds with Pennsylvania natives that need less water and less fuss.</p></div><span class="price">from $520</span></div>
+      <div class="service-row"><div><h3>Drainage &amp; Grading</h3><p>French drains, regrading, and downspout fixes for wet basements and soggy yards.</p></div><span class="price">from $890</span></div>
+      <div class="service-row"><div><h3>Seasonal Cleanups</h3><p>Spring wake-up and fall leaf removal, including bed clearing and mulch refresh.</p></div><span class="price">from $240</span></div>
+      <div class="service-row"><div><h3>Mulch &amp; Bed Care</h3><p>Fresh mulch, weeding, and edging that makes beds look sharp all season long.</p></div><span class="price">from $180</span></div>
+      <div class="service-row"><div><h3>Snow Removal</h3><p>Driveway and walkway clearing for our regular customers, all winter long.</p></div><span class="price">from $45 / visit</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="process" class="section process">
+  <div class="wrap">
+    <p class="eyebrow">How It Works</p>
+    <h2 class="section-title">From first call to finished yard.</h2>
+    <div class="steps">
+      <div class="step"><b>Step 01</b><h3>You call us</h3><p>Tell us what's bugging you about your yard. We'll ask a few questions and book a free visit.</p></div>
+      <div class="step"><b>Step 02</b><h3>We walk the yard</h3><p>We visit, measure, and talk through options on the spot — no pushy sales talk.</p></div>
+      <div class="step"><b>Step 03</b><h3>Written estimate</h3><p>A clear, itemized quote within 48 hours. The price we quote is the price you pay.</p></div>
+      <div class="step"><b>Step 04</b><h3>We build it</h3><p>Our crew shows up on schedule, works clean, and leaves your yard better than we found it.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="section">
+  <div class="wrap">
+    <p class="eyebrow">Reviews</p>
+    <h2 class="section-title">Pittsburgh homeowners trust us with their hillsides.</h2>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"They built a retaining wall on our steep backyard that three other companies said was too tricky. Two winters later, it hasn't moved an inch."</blockquote>
+        <cite>Karen <span>Squirrel Hill &middot; Retaining wall</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"The native garden they planted is the talk of the street — butterflies everywhere, and I barely have to water it. Worth every penny."</blockquote>
+        <cite>Mike <span>Regent Square &middot; Native garden</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"On time every week, fair price, and they text me before they come. After two years, I don't even think about the lawn anymore — they handle it."</blockquote>
+        <cite>Angela <span>Mt. Lebanon &middot; Weekly lawn care</span></cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="section" style="background:var(--sand)">
+  <div class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h2 class="section-title">Come by, call, or send us a note.</h2>
+    <div class="visit-grid">
+      <div class="visit-card">
+        <h3>Office Hours</h3>
+        <table class="hours">
+          <tr><td>Monday – Friday</td><td>7:30 AM – 5:30 PM</td></tr>
+          <tr><td>Saturday</td><td>8:00 AM – 2:00 PM</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+        </table>
+        <p style="margin-top:16px;color:var(--muted);font-size:15px">Estimates are free and usually happen within 3 business days of your call. Winter hours (Dec – Feb) are 8 AM – 4 PM weekdays.</p>
+      </div>
+      <div class="visit-card">
+        <h3>Location &amp; Contact</h3>
+        <p class="contact-line"><strong>Address</strong>2207 Murray Avenue<br>Pittsburgh, PA 15217</p>
+        <p class="contact-line"><strong>Phone</strong><a href="tel:+14125550162">(412) 555-0162</a></p>
+        <p class="contact-line"><strong>Email</strong><a href="mailto:hello@stoneandsprout.com">hello@stoneandsprout.com</a></p>
+        <p class="contact-line" style="margin-bottom:0"><strong>Service area</strong>Pittsburgh, Mt. Lebanon, Dormont, Bethel Park, Upper St. Clair, and surrounding Allegheny County towns.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="cta">
+      <h2>Ready to fix that yard?</h2>
+      <p>Call for a free estimate. We'll walk your property, give you an honest price, and get you on the schedule — usually within the week.</p>
+      <a href="tel:+14125550162" class="btn btn-clay">Call (412) 555-0162</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="logo"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M4 24c0-6 5-10 11-10 1.5 0 3 .2 4.4.7L21 12l2.5 4.5c2.5 1.4 4.5 3.7 4.5 7.5H4Z" fill="#5d7a4a"/><path d="M16 14V6M16 10c-2 0-3.5-1.4-4-3.5M16 8c2 0 3.5-1.4 4-3.5" stroke="#b4552d" stroke-width="1.8" stroke-linecap="round" fill="none"/><circle cx="9" cy="22" r="1.6" fill="#fbf9f5"/><circle cx="23" cy="21" r="1.6" fill="#fbf9f5"/></svg> Stone <em>&amp;</em> Sprout</span>
+    <p>2207 Murray Avenue, Pittsburgh, PA 15217 &middot; (412) 555-0162 &middot; hello@stoneandsprout.com</p>
+    <p style="margin-top:12px">&copy; 2026 Stone &amp; Sprout Landscaping. All rights reserved.</p>
+    <p style="margin-top:8px">Website designed &amp; built by <a href="https://weblodge.agency">Weblodge Agency</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

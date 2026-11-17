@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Petal &amp; Stem — Florist in Savannah, GA</title>
+<meta name="description" content="Petal & Stem is a florist in Savannah's Historic District. Romantic bouquets, wedding flowers, and same-day delivery across Savannah.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --rose:#b4556e; --rose-dark:#944257; --rose-light:#fbeef1; --cream:#fdfbf7; --sand:#f6efe6;
+    --ink:#33292b; --muted:#857671; --line:#eadfd8; --gold:#c8a24e; --green:#5f7263;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Karla',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;font-size:17px}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.12;font-weight:600}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .section{padding:90px 0}
+  .section-head{max-width:680px;margin:0 auto 48px;text-align:center}
+  .section-head h2{font-size:clamp(32px,4.5vw,46px);color:var(--ink);margin-bottom:12px}
+  .section-head p{color:var(--muted);font-size:18px}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--rose);margin-bottom:12px}
+  .section-title{font-size:clamp(32px,4.5vw,46px);color:var(--ink);margin-bottom:14px}
+  .section-sub{color:var(--muted);max-width:620px;font-size:18px}
+  .btn{display:inline-block;padding:14px 30px;border-radius:999px;font-weight:700;font-size:16px;transition:.2s}
+  .btn:hover{transform:translateY(-1px)}
+  .btn-primary{background:var(--rose);color:#fff}
+  .btn-primary:hover{background:var(--rose-dark)}
+  .btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.9)}
+  .btn-outline:hover{background:rgba(255,255,255,.16)}
+  .btn-dark{background:var(--ink);color:#fff}
+  .btn-dark:hover{background:#241d1f}
+  .nav{position:sticky;top:0;z-index:100;background:rgba(253,251,247,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav-inner{max-width:1120px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:74px}
+  .logo{display:inline-flex;align-items:center;gap:11px;font-family:'Playfair Display',Georgia,serif;font-size:27px;font-weight:700;color:var(--ink)}
+  .logo span{color:var(--rose);font-style:italic}
+  .nav-links{display:flex;gap:30px;list-style:none}
+  .nav-links a{color:#5a4c4e;font-weight:600;font-size:15px}
+  .nav-links a:hover{color:var(--rose)}
+  .hero{position:relative;min-height:640px;display:flex;align-items:center;background:linear-gradient(90deg,rgba(30,20,22,.78) 0%,rgba(30,20,22,.5) 52%,rgba(30,20,22,.15) 100%),url('https://images.unsplash.com/photo-1494972308805-463bc619d34e?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;color:#fff}
+  .hero-inner{max-width:1120px;margin:0 auto;padding:90px 24px;width:100%}
+  .hero-copy{max-width:600px}
+  .hero-copy .eyebrow{color:#f0c3a5}
+  .hero-copy h1{font-size:clamp(42px,6vw,66px);margin-bottom:18px}
+  .hero-copy h1 em{font-style:italic;color:#f0c3a5}
+  .hero-copy p{font-size:18px;color:rgba(255,255,255,.9);margin-bottom:30px;max-width:520px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-meta{margin-top:36px;display:flex;gap:30px;flex-wrap:wrap;font-size:14px;color:rgba(255,255,255,.85);border-top:1px solid rgba(255,255,255,.25);padding-top:20px;max-width:540px}
+  .hero-meta strong{display:block;color:#fff;font-size:16px}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .about-grid img{border-radius:16px;width:100%;height:430px;object-fit:cover}
+  .about-copy p{color:var(--muted);margin-bottom:16px;font-size:18px}
+  .about-stats{display:flex;gap:36px;margin-top:26px;flex-wrap:wrap}
+  .stat b{display:block;font-family:'Playfair Display',Georgia,serif;font-size:36px;color:var(--rose)}
+  .stat span{font-size:14px;color:var(--muted)}
+  .shop-section{background:var(--rose-light)}
+  .shop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .item{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:.2s}
+  .item:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(180,85,110,.14)}
+  .item img{width:100%;height:200px;object-fit:cover}
+  .item-body{padding:22px}
+  .item-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+  .item h3{font-size:24px}
+  .price{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:23px;color:var(--rose);white-space:nowrap}
+  .item p{color:var(--muted);font-size:15px;margin-top:8px}
+  .item-tag{margin-top:12px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+  .shop-note{text-align:center;color:var(--muted);margin-top:32px}
+  .shop-note a{color:var(--rose);font-weight:700}
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .review{background:var(--sand);border-radius:16px;padding:30px 26px;border:1px solid var(--line)}
+  .stars{color:var(--gold);letter-spacing:2px;font-size:18px;margin-bottom:14px}
+  .review blockquote{font-size:17px;margin-bottom:18px}
+  .review cite{font-style:normal;font-weight:700;color:var(--ink)}
+  .review cite span{display:block;font-weight:400;font-size:14px;color:var(--muted)}
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
+  .visit-card{border:1px solid var(--line);border-radius:16px;padding:32px 30px;background:#fff}
+  .visit-card h3{font-size:26px;margin-bottom:16px}
+  .hours{width:100%;border-collapse:collapse;font-size:16px}
+  .hours td{padding:9px 0;border-bottom:1px solid #f0e8e0}
+  .hours td:last-child{text-align:right;font-weight:700}
+  .hours tr:last-child td{border-bottom:none}
+  .contact-line{margin-bottom:16px;color:var(--muted)}
+  .contact-line strong{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--rose);margin-bottom:2px}
+  .contact-line a{font-weight:700;color:var(--ink)}
+  .contact-line a:hover{color:var(--rose)}
+  .visit-img{border-radius:16px;overflow:hidden;min-height:300px;margin-top:28px}
+  .visit-img img{width:100%;height:100%;min-height:300px;object-fit:cover}
+  .cta{background:linear-gradient(rgba(60,30,38,.82),rgba(60,30,38,.82)),url('https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;color:#fff;text-align:center}
+  .cta h2{font-size:clamp(32px,4.5vw,46px);margin-bottom:12px}
+  .cta p{color:rgba(255,255,255,.88);max-width:600px;margin:0 auto 28px;font-size:18px}
+  .cta .hero-actions{justify-content:center}
+  .cta small{display:block;margin-top:18px;color:rgba(255,255,255,.7);font-size:14px}
+  footer{background:#241d1f;color:rgba(255,255,255,.75);padding:52px 0 28px;font-size:15px}
+  .footer-grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.14)}
+  .footer-brand{max-width:360px}
+  .footer-brand .logo{color:#fff}
+  .footer-brand p{margin-top:10px;color:rgba(255,255,255,.65)}
+  .footer-col h4{color:#fff;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+  .footer-col a{display:block;margin-bottom:8px;color:rgba(255,255,255,.75)}
+  .footer-col a:hover{color:#f0c3a5}
+  .footer-bottom{padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px;color:rgba(255,255,255,.6)}
+  .footer-bottom a{color:#f0c3a5;font-weight:700;text-decoration:underline}
+  @media (max-width:900px){.shop-grid,.reviews-grid{grid-template-columns:1fr 1fr}.about-grid,.visit-grid{grid-template-columns:1fr}}
+  @media (max-width:640px){
+    .nav-links{display:none}
+    .shop-grid,.reviews-grid{grid-template-columns:1fr}
+    .hero{min-height:560px}
+    .hero-copy h1{font-size:40px}
+    .section{padding:64px 0}
+    .section-head h2{font-size:30px}
+    .about-grid img{height:300px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="11" r="3.2" fill="#c8a24e"/><path d="M16 2.5c2.4 1.6 3.4 4 2.6 6.5C17.4 6.5 15 5.5 13.4 6 14 4 15 3 16 2.5ZM22.5 7c.6 2.8-.6 5.3-2.9 6.3.4-2.6-.5-4.9-2.3-6.2 1.9-1.2 3.9-.9 5.2.1ZM25 13.5c-1 2.6-3.4 4.1-6 3.9 1.9-1.9 2.3-4.4 1.4-6.6 2.3.2 4.2 1.3 4.6 2.7ZM23 21c-2.4 1.3-5.3.9-6.9-1 2.7-.6 4.6-2.2 5.3-4.4 1.5 1.6 2 3.6 1.6 5.4ZM16 25.5c-2.7-.9-4.4-3-4.4-5.7 2.1 1.7 4.6 1.9 6.7.9-.4 2.2-1.4 3.9-2.3 4.8ZM9 21c-.4-1.8.1-3.8 1.6-5.4.7 2.2 2.6 3.8 5.3 4.4-1.6 1.9-4.5 2.3-6.9 1ZM7 13.5c.4-1.4 2.3-2.5 4.6-2.7-.9 2.2-.5 4.7 1.4 6.6-2.6.2-5-1.3-6-3.9ZM9.5 7c1.3-1 3.3-1.3 5.2-.1-1.8 1.3-2.7 3.6-2.3 6.2-2.3-1-3.5-3.5-2.9-6.1Z" fill="#b4556e"/><path d="M16 22v7M16 25c-1.5-.8-3-.8-4.5 0M16 27c1.5-.8 3-.8 4.5 0" stroke="#5f7263" stroke-width="1.8" stroke-linecap="round"/></svg>Petal <span>&amp; Stem</span></a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#shop">Flowers</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+    </nav>
+    <a href="#order" class="btn btn-primary">Order Flowers</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">Florist — Historic District, Savannah</p>
+      <h1>Romantic flowers, <em>arranged by hand.</em></h1>
+      <p>Garden roses, peonies, and seasonal Southern blooms — arranged in our little shop on Bull Street and delivered across Savannah the same day.</p>
+      <div class="hero-actions">
+        <a href="#shop" class="btn btn-primary">Shop Flowers</a>
+        <a href="#order" class="btn btn-outline">Order for Delivery</a>
+      </div>
+      <div class="hero-meta">
+        <div><strong>4.9 rating</strong>from 500+ reviews</div>
+        <div><strong>Same-day delivery</strong>order by 1 PM</div>
+        <div><strong>Historic District</strong>216 Bull Street</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="wrap">
+    <div class="about-grid">
+      <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=1200&auto=format&fit=crop" alt="A florist arranging roses at Petal & Stem" loading="lazy">
+      <div class="about-copy">
+        <p class="eyebrow">Our Story</p>
+        <h2 class="section-title">A little flower shop with a big Southern heart.</h2>
+        <p>Petal &amp; Stem opened in 2015 in a former carriage house on Bull Street, two blocks from Forsyth Park. We buy from Georgia flower farms, arrange everything by hand, and believe a bouquet should look like it was just gathered — not assembled.</p>
+        <p>From anniversary roses to full wedding weekends in the Historic District, we pour the same care into every stem.</p>
+        <div class="about-stats">
+          <div class="stat"><b>11</b><span>Years on Bull Street</span></div>
+          <div class="stat"><b>250+</b><span>Weddings flowered</span></div>
+          <div class="stat"><b>4.9</b><span>Average customer rating</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="shop" class="section shop-section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">The Collection</p>
+      <h2>Fresh this week</h2>
+      <p>Our bouquets follow the seasons. Order by 1 PM for same-day delivery anywhere in Savannah.</p>
+    </div>
+    <div class="shop-grid">
+      <article class="item">
+        <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=800&auto=format&fit=crop" alt="Romantic pink bouquet" loading="lazy">
+        <div class="item-body">
+          <div class="item-head"><h3>The Savannah Rose</h3><span class="price">$62</span></div>
+          <p>Garden roses, ranunculus, and sweet peas in soft pinks and creams — our signature romantic bouquet.</p>
+          <p class="item-tag">Same-day delivery</p>
+        </div>
+      </article>
+      <article class="item">
+        <img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?q=80&w=800&auto=format&fit=crop" alt="Bright seasonal bouquet" loading="lazy">
+        <div class="item-body">
+          <div class="item-head"><h3>Seasonal Market Bouquet</h3><span class="price">$45</span></div>
+          <p>Whatever is freshest at the market this week — a cheerful, generous bunch wrapped in kraft paper.</p>
+          <p class="item-tag">Same-day delivery</p>
+        </div>
+      </article>
+      <article class="item">
+        <img src="https://images.unsplash.com/photo-1455659817273-f96807779a8a?q=80&w=800&auto=format&fit=crop" alt="Peony bouquet" loading="lazy">
+        <div class="item-body">
+          <div class="item-head"><h3>Peony &amp; Garden Mix</h3><span class="price">$72</span></div>
+          <p>Lush peonies with garden roses and trailing jasmine — available while peony season lasts.</p>
+          <p class="item-tag">Seasonal &middot; Limited</p>
+        </div>
+      </article>
+      <article class="item">
+        <img src="https://images.unsplash.com/photo-1508610048659-a06b669e3321?q=80&w=800&auto=format&fit=crop" alt="Tulips in a vase" loading="lazy">
+        <div class="item-body">
+          <div class="item-head"><h3>Tulip Vase</h3><span class="price">$48</span></div>
+          <p>Twenty fresh tulips in a simple glass vase — clean, bright, and long-lasting.</p>
+          <p class="item-tag">Same-day delivery</p>
+        </div>
+      </article>
+      <article class="item">
+        <img src="https://images.unsplash.com/photo-1487530811176-3780de880c2d?q=80&w=800&auto=format&fit=crop" alt="White sympathy arrangement" loading="lazy">
+        <div class="item-body">
+          <div class="item-head"><h3>Sympathy Arrangement</h3><span class="price">$88</span></div>
+          <p>Soft white blooms and greenery in a keepsake vase, delivered with a handwritten card.</p>
+          <p class="item-tag">Delivered with a card</p>
+        </div>
+      </article>
+      <article class="item">
+        <img src="https://images.unsplash.com/photo-1522748906645-95d8adfd52c7?q=80&w=800&auto=format&fit=crop" alt="Wedding bridal bouquet" loading="lazy">
+        <div class="item-body">
+          <div class="item-head"><h3>Wedding Flowers</h3><span class="price">from $1,400</span></div>
+          <p>Bridal bouquets, arches, and reception flowers for Savannah's most beautiful days. Free consultation.</p>
+          <p class="item-tag">Free consultation</p>
+        </div>
+      </article>
+    </div>
+    <p class="shop-note">Delivery across Savannah, Pooler, and Tybee Island &middot; <a href="#order">Order by phone or email</a></p>
+  </div>
+</section>
+
+<section id="reviews" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Customer Reviews</p>
+      <h2>What Savannah says about us</h2>
+      <p>Rated 4.9 out of 5 from more than 500 reviews.</p>
+    </div>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"They did our wedding flowers at Forsyth Park and the photos are unreal. The team understood exactly the romantic look we wanted."</blockquote>
+        <cite>Caroline <span>Married April 2026</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"I send my wife the Savannah Rose bouquet every anniversary. It arrives looking like it was picked that morning — because it was."</blockquote>
+        <cite>Robert <span>Savannah, GA</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"Ordered from out of state for my sister's birthday and the bouquet was stunning. The handwritten card was a lovely touch."</blockquote>
+        <cite>Melissa <span>Atlanta, GA</span></cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section cta" id="order">
+  <div class="wrap">
+    <p class="eyebrow" style="color:#f0c3a5">Send Something Beautiful</p>
+    <h2>Order by 1 PM for same-day delivery.</h2>
+    <p>Call or email and we'll arrange a bouquet today — or book a free consultation for weddings and events.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="tel:+19125550106">Call (912) 555-0106</a>
+      <a class="btn btn-outline" href="#visit">Visit the Shop</a>
+    </div>
+    <small>Wedding consultations are free and take about 30 minutes.</small>
+  </div>
+</section>
+
+<section id="visit" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Visit Us</p>
+      <h2>Find us on Bull Street</h2>
+      <p>Two blocks from Forsyth Park, in the heart of the Historic District. Metered street parking nearby.</p>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-card">
+        <h3>Opening Hours</h3>
+        <table class="hours">
+          <tr><td>Monday – Friday</td><td>9:00 AM – 6:00 PM</td></tr>
+          <tr><td>Saturday</td><td>9:00 AM – 5:00 PM</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+        </table>
+        <p style="margin-top:18px;color:var(--muted);font-size:15px">Wedding consultations by appointment — call or email to book a time that suits you.</p>
+      </div>
+      <div class="visit-card">
+        <h3>Location &amp; Contact</h3>
+        <p class="contact-line"><strong>Address</strong>216 Bull Street<br>Savannah, GA 31401</p>
+        <p class="contact-line"><strong>Phone</strong><a href="tel:+19125550106">(912) 555-0106</a></p>
+        <p class="contact-line"><strong>Email</strong><a href="mailto:hello@petalandstem.com">hello@petalandstem.com</a></p>
+        <p class="contact-line" style="margin-bottom:0"><strong>Delivery</strong>Same-day across Savannah, Pooler &amp; Tybee Island when you order by 1 PM.</p>
+      </div>
+    </div>
+    <div class="visit-img">
+      <img src="https://images.unsplash.com/photo-1469259943454-aa100abba749?q=80&w=1600&auto=format&fit=crop" alt="Fresh flowers on display in the Petal & Stem shop" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="#top"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="11" r="3.2" fill="#c8a24e"/><path d="M16 2.5c2.4 1.6 3.4 4 2.6 6.5C17.4 6.5 15 5.5 13.4 6 14 4 15 3 16 2.5ZM22.5 7c.6 2.8-.6 5.3-2.9 6.3.4-2.6-.5-4.9-2.3-6.2 1.9-1.2 3.9-.9 5.2.1ZM25 13.5c-1 2.6-3.4 4.1-6 3.9 1.9-1.9 2.3-4.4 1.4-6.6 2.3.2 4.2 1.3 4.6 2.7ZM23 21c-2.4 1.3-5.3.9-6.9-1 2.7-.6 4.6-2.2 5.3-4.4 1.5 1.6 2 3.6 1.6 5.4ZM16 25.5c-2.7-.9-4.4-3-4.4-5.7 2.1 1.7 4.6 1.9 6.7.9-.4 2.2-1.4 3.9-2.3 4.8ZM9 21c-.4-1.8.1-3.8 1.6-5.4.7 2.2 2.6 3.8 5.3 4.4-1.6 1.9-4.5 2.3-6.9 1ZM7 13.5c.4-1.4 2.3-2.5 4.6-2.7-.9 2.2-.5 4.7 1.4 6.6-2.6.2-5-1.3-6-3.9ZM9.5 7c1.3-1 3.3-1.3 5.2-.1-1.8 1.3-2.7 3.6-2.3 6.2-2.3-1-3.5-3.5-2.9-6.1Z" fill="#b4556e"/><path d="M16 22v7M16 25c-1.5-.8-3-.8-4.5 0M16 27c1.5-.8 3-.8 4.5 0" stroke="#5f7263" stroke-width="1.8" stroke-linecap="round"/></svg>Petal <span>&amp; Stem</span></a>
+        <p>A florist in Savannah's Historic District. Romantic bouquets, wedding flowers, and same-day delivery across the city.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="#about">About</a>
+        <a href="#shop">Flowers</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#visit">Visit</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+19125550106">(912) 555-0106</a>
+        <a href="mailto:hello@petalandstem.com">hello@petalandstem.com</a>
+        <a href="#visit">216 Bull St, Savannah, GA 31401</a>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <a href="#visit">Mon – Fri: 9 AM – 6 PM</a>
+        <a href="#visit">Saturday: 9 AM – 5 PM</a>
+        <a href="#visit">Sunday: Closed</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Petal &amp; Stem, Savannah GA. All rights reserved.</span>
+      <span>Website designed &amp; built by <a href="https://weblodge.agency" target="_blank" rel="noopener">Weblodge Agency</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

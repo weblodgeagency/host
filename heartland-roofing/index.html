@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heartland Roofing Co. | Roofing Contractor in Kansas City, MO</title>
+<meta name="description" content="Heartland Roofing Co. is a family-owned roofing contractor in Kansas City, MO. Roof replacement, repairs, storm damage restoration and gutters — free inspections and honest estimates.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --brown:#4a3226;
+    --brown-dark:#37241a;
+    --terra:#c2542b;
+    --terra-dark:#a3431f;
+    --cream:#faf5ef;
+    --sand:#f0e7da;
+    --gold:#d9a441;
+    --ink:#2b2320;
+    --muted:#6d6258;
+    --line:#e5dacb;
+    --white:#fff;
+    --radius:14px;
+    --shadow:0 14px 34px rgba(74,50,38,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'DM Sans',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased;font-size:17px}
+  h1,h2,h3{font-family:'DM Serif Display',Georgia,serif;line-height:1.15;color:var(--brown)}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .section{padding:88px 0}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra)}
+  .section-head{max-width:680px;margin:0 auto 48px;text-align:center}
+  .section-head h2{font-size:clamp(30px,4.4vw,44px);margin:10px 0 12px}
+  .section-head p{color:var(--muted);font-size:18px}
+  .btn{display:inline-block;padding:14px 28px;border-radius:999px;font-weight:700;font-size:16px;transition:.2s;cursor:pointer;text-align:center}
+  .btn-terra{background:var(--terra);color:#fff}
+  .btn-terra:hover{background:var(--terra-dark)}
+  .btn-brown{background:var(--brown);color:#fff}
+  .btn-brown:hover{background:var(--brown-dark)}
+  .btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.85)}
+  .btn-outline:hover{background:rgba(255,255,255,.14)}
+
+  /* Nav */
+  header{position:sticky;top:0;z-index:50;background:rgba(250,245,239,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;height:76px}
+  .logo{display:flex;align-items:center;gap:12px}
+  .logo-text{line-height:1.05}
+  .logo-text strong{display:block;font-family:'DM Serif Display',Georgia,serif;font-size:24px;color:var(--brown)}
+  .logo-text small{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .nav-links{display:flex;gap:30px;list-style:none;font-weight:700;font-size:15px}
+  .nav-links a{color:var(--ink)}
+  .nav-links a:hover{color:var(--terra)}
+
+  /* Hero */
+  .hero{position:relative;color:#fff}
+  .hero-bg{position:absolute;inset:0}
+  .hero-bg img{width:100%;height:100%;object-fit:cover}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(55,36,26,.88) 0%,rgba(55,36,26,.66) 55%,rgba(55,36,26,.35) 100%)}
+  .hero-inner{position:relative;padding:110px 0 104px;max-width:640px}
+  .hero h1{color:#fff;font-size:clamp(40px,6vw,62px);margin:14px 0 18px}
+  .hero h1 em{font-style:normal;color:var(--gold)}
+  .hero p{font-size:19px;color:#f0e7da;max-width:560px;margin-bottom:30px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-trust{display:flex;gap:28px;flex-wrap:wrap;margin-top:36px;padding-top:26px;border-top:1px solid rgba(255,255,255,.25)}
+  .hero-trust strong{display:block;font-family:'DM Serif Display',Georgia,serif;font-size:24px;color:#fff;line-height:1.1}
+  .hero-trust span{font-size:13.5px;color:#e5dacb}
+
+  /* Intro */
+  .intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .intro-grid img{border-radius:var(--radius);width:100%;height:420px;object-fit:cover;box-shadow:var(--shadow)}
+  .intro-copy p{color:var(--muted);font-size:17.5px;margin-bottom:16px}
+  .ticks{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:10px 22px;font-weight:700;font-size:15.5px}
+  .ticks span::before{content:"— ";color:var(--terra)}
+
+  /* Services */
+  .services{background:#fff}
+  .services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  .service{display:flex;gap:22px;border:1px solid var(--line);border-radius:var(--radius);padding:26px;background:var(--cream);transition:.2s;align-items:flex-start}
+  .service:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
+  .service img{width:150px;height:150px;object-fit:cover;border-radius:10px;flex-shrink:0}
+  .service-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+  .service h3{font-size:24px}
+  .price{font-family:'DM Serif Display',Georgia,serif;font-size:23px;color:var(--terra);white-space:nowrap}
+  .service p{color:var(--muted);font-size:15.5px;margin-top:8px}
+  .service-meta{margin-top:12px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--brown)}
+
+  /* Why */
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;text-align:center}
+  .why-item{padding:10px}
+  .why-num{font-family:'DM Serif Display',Georgia,serif;font-size:46px;color:var(--terra);line-height:1}
+  .why-item h3{font-size:19px;margin:10px 0 6px;font-family:'DM Sans',sans-serif;font-weight:700}
+  .why-item p{font-size:15px;color:var(--muted)}
+
+  /* Reviews */
+  .reviews{background:#fff}
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .review{background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px}
+  .stars{color:var(--gold);letter-spacing:3px;font-size:17px;margin-bottom:14px}
+  .review p{font-size:16px;margin-bottom:18px}
+  .reviewer{font-weight:700}
+  .reviewer small{display:block;color:var(--muted);font-weight:500}
+
+  /* Visit */
+  .visit-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:stretch}
+  .visit-card{border:1px solid var(--line);border-radius:var(--radius);padding:32px;background:#fff}
+  .visit-card h3{font-size:24px;margin-bottom:16px}
+  .hours{width:100%;border-collapse:collapse;font-size:16px}
+  .hours td{padding:9px 0;border-bottom:1px solid #f0e7da}
+  .hours td:last-child{text-align:right;font-weight:700}
+  .hours tr:last-child td{border-bottom:none}
+  .contact-line{margin-bottom:16px;color:var(--ink);font-size:16px}
+  .contact-line strong{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--terra);margin-bottom:2px}
+  .contact-line a{font-weight:700}
+  .contact-line a:hover{color:var(--terra)}
+  .areas{margin-top:22px;font-size:15px;color:var(--muted);line-height:1.8}
+  .areas strong{color:var(--brown)}
+
+  /* CTA */
+  .cta{position:relative;color:#fff;text-align:center}
+  .cta-bg{position:absolute;inset:0}
+  .cta-bg img{width:100%;height:100%;object-fit:cover}
+  .cta-bg::after{content:"";position:absolute;inset:0;background:rgba(55,36,26,.86)}
+  .cta-inner{position:relative;padding:88px 24px}
+  .cta h2{color:#fff;font-size:clamp(30px,4.4vw,44px);margin-bottom:14px}
+  .cta p{color:#f0e7da;font-size:18px;max-width:600px;margin:0 auto 30px}
+  .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .cta small{display:block;margin-top:20px;color:#e5dacb;font-size:14px}
+
+  footer{background:var(--brown-dark);color:#c9bba9;padding:52px 0 28px;font-size:15px}
+  .footer-grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .footer-brand{max-width:360px}
+  .footer-brand .logo-text strong{color:#fff}
+  .footer-brand .logo-text small{color:#c9bba9}
+  .footer-brand p{margin-top:12px}
+  .footer-col h4{color:#fff;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+  .footer-col a{display:block;margin-bottom:9px}
+  .footer-col a:hover{color:#fff}
+  .footer-bottom{padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px}
+  .footer-bottom a{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+
+  @media (max-width:900px){
+    .section{padding:64px 0}
+    .nav-links{display:none}
+    .intro-grid{grid-template-columns:1fr;gap:32px}
+    .intro-grid img{height:320px}
+    .services-grid{grid-template-columns:1fr}
+    .why-grid{grid-template-columns:1fr 1fr}
+    .reviews-grid{grid-template-columns:1fr}
+    .visit-grid{grid-template-columns:1fr}
+  }
+  @media (max-width:560px){
+    .service{flex-direction:column}
+    .service img{width:100%;height:180px}
+    .why-grid{grid-template-columns:1fr}
+    .hero-inner{padding:84px 0}
+    .hero-actions .btn{width:100%}
+    .ticks{grid-template-columns:1fr}
+    .footer-bottom{justify-content:center;text-align:center}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="logo" aria-label="Heartland Roofing Co. — home">
+      <svg width="42" height="42" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M4 26 24 8l20 18" stroke="#c2542b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 24v16h28V24" stroke="#4a3226" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 40v-8h8v8" stroke="#c2542b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="17" r="2.4" fill="#d9a441"/></svg>
+      <span class="logo-text"><strong>Heartland Roofing Co.</strong><small>Kansas City · Missouri</small></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-terra" href="tel:+18165550143" style="padding:11px 22px;font-size:15px">Free Estimate</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1600&auto=format&fit=crop" alt="Kansas City home with a new roof from Heartland Roofing Co.">
+    </div>
+    <div class="wrap">
+      <div class="hero-inner">
+        <p class="eyebrow" style="color:var(--gold)">Family-Owned Roofing — Kansas City, Missouri</p>
+        <h1>Good roofs, <em>honest prices,</em> neighbors you can call.</h1>
+        <p>We are a family roofing company serving the Kansas City metro since 2008. Free inspections, written estimates, and a crew that treats your home like its own.</p>
+        <div class="hero-actions">
+          <a class="btn btn-terra" href="#visit">Get a Free Inspection</a>
+          <a class="btn btn-outline" href="#services">See Services &amp; Prices</a>
+        </div>
+        <div class="hero-trust">
+          <div><strong>4.9 ★</strong><span>420+ Google reviews</span></div>
+          <div><strong>1,800+</strong><span>Roofs completed</span></div>
+          <div><strong>20-year</strong><span>Workmanship warranty</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="intro-grid">
+        <div class="intro-copy">
+          <p class="eyebrow">Our Story</p>
+          <h2 style="font-size:clamp(30px,4vw,42px);margin:10px 0 16px">A family business, built one roof at a time.</h2>
+          <p>Heartland Roofing started in 2008 when brothers Dan and Rick Meyer decided Kansas City deserved a roofing company that answered the phone, showed up on time, and stood behind its work. Today their kids work alongside them — and the standards have not budged an inch.</p>
+          <p>We know the weather here: spring hail, summer storms, and the freeze-thaw cycles that wear a roof down year after year. Every roof we install is built for Missouri weather, and every job is backed by our 20-year workmanship warranty.</p>
+          <div class="ticks">
+            <span>Free, no-pressure inspections</span>
+            <span>Written estimates, fixed prices</span>
+            <span>Our own crew — no day labor</span>
+            <span>Insurance claim help included</span>
+          </div>
+        </div>
+        <img loading="lazy" src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=1200&auto=format&fit=crop" alt="Kansas City home with a new architectural shingle roof">
+      </div>
+    </div>
+  </section>
+
+  <section class="section services" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Services &amp; Pricing</p>
+        <h2>Everything your roof needs</h2>
+        <p>Clear pricing on the work Kansas City homeowners ask for most. Every project starts with a free inspection and a written estimate.</p>
+      </div>
+      <div class="services-grid">
+        <article class="service">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=400&auto=format&fit=crop" alt="New roof on a modern home">
+          <div>
+            <div class="service-top"><h3>Roof Replacement</h3><span class="price">$8,900</span></div>
+            <p>Full tear-off and replacement with architectural shingles, new underlayment, and ridge venting. Most homes finished in a day or two.</p>
+            <p class="service-meta">From $8,900 · 20-yr warranty</p>
+          </div>
+        </article>
+        <article class="service">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=400&auto=format&fit=crop" alt="Roofing crew at work on a repair">
+          <div>
+            <div class="service-top"><h3>Roof Repair</h3><span class="price">$325</span></div>
+            <p>Leaks, storm-lifted shingles, flashing failures, and vent problems — found and fixed properly the first time.</p>
+            <p class="service-meta">From $325 · Same-week service</p>
+          </div>
+        </article>
+        <article class="service">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=400&auto=format&fit=crop" alt="Home restored after hail damage">
+          <div>
+            <div class="service-top"><h3>Hail &amp; Storm Damage</h3><span class="price">Free</span></div>
+            <p>Free storm inspection with photos and a full report for your insurer. We meet your adjuster and handle the paperwork.</p>
+            <p class="service-meta">Free inspection · Claim help</p>
+          </div>
+        </article>
+        <article class="service">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=400&auto=format&fit=crop" alt="Home with new seamless gutters">
+          <div>
+            <div class="service-top"><h3>Gutters &amp; Downspouts</h3><span class="price">$1,100</span></div>
+            <p>Seamless aluminum gutters, guards, and downspouts that protect your foundation and your flower beds.</p>
+            <p class="service-meta">From $1,100 · Custom fit</p>
+          </div>
+        </article>
+        <article class="service">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=400&auto=format&fit=crop" alt="Standing seam metal roof on a home">
+          <div>
+            <div class="service-top"><h3>Metal Roofing</h3><span class="price">$17,500</span></div>
+            <p>Standing seam metal that shrugs off hail, lasts 50 years, and keeps your home cooler in a Missouri summer.</p>
+            <p class="service-meta">From $17,500 · 50-yr material life</p>
+          </div>
+        </article>
+        <article class="service">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=400&auto=format&fit=crop" alt="Roof inspection and ventilation planning">
+          <div>
+            <div class="service-top"><h3>Roof Inspections</h3><span class="price">Free</span></div>
+            <p>Buying a home, or just want to know where your roof stands? A full inspection with photos and an honest report.</p>
+            <p class="service-meta">Free · Written report included</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="why-us">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Why Heartland</p>
+        <h2>The numbers tell the story</h2>
+        <p>Eighteen years, thousands of roofs, and a reputation built the slow way — one happy neighbor at a time.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-item">
+          <div class="why-num">18</div>
+          <h3>Years in business</h3>
+          <p>Family owned since 2008, and still answering our own phones.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-num">1,800+</div>
+          <h3>Roofs completed</h3>
+          <p>Replacements, repairs, and storm restorations across the metro.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-num">4.9 ★</div>
+          <h3>Average rating</h3>
+          <p>From more than 420 reviews on Google, Yelp, and the BBB.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-num">20-yr</div>
+          <h3>Workmanship warranty</h3>
+          <p>On every roof we install — in writing, no fine print games.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reviews" id="reviews">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Customer Reviews</p>
+        <h2>What Kansas City says about us</h2>
+        <p>Rated 4.9 out of 5 from more than 420 reviews.</p>
+      </div>
+      <div class="reviews-grid">
+        <article class="review">
+          <p class="stars" aria-label="5 out of 5 stars">★★★★★</p>
+          <p>“After the April hailstorm, Dan came out the next day, walked the roof with me, and showed me the damage on his phone. The insurance claim went through without a single headache.”</p>
+          <p class="reviewer">Melissa<small>Storm restoration · Overland Park</small></p>
+        </article>
+        <article class="review">
+          <p class="stars" aria-label="5 out of 5 stars">★★★★★</p>
+          <p>“They replaced our roof in one day. One day! The crew was polite, the yard was cleaner than before they came, and the price was exactly what they quoted. I have already recommended them twice.”</p>
+          <p class="reviewer">Greg<small>Roof replacement · Liberty</small></p>
+        </article>
+        <article class="review">
+          <p class="stars" aria-label="5 out of 5 stars">★★★★★</p>
+          <p>“We had a leak that two other companies could not find. Heartland found it in twenty minutes — a bad vent boot — and fixed it the same afternoon for a fair price.”</p>
+          <p class="reviewer">Janet<small>Roof repair · Waldo</small></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="visit">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Contact &amp; Hours</p>
+        <h2>Talk to a real roofer, not a call center</h2>
+        <p>Call, email, or stop by — we will get your free inspection on the calendar within a couple of days.</p>
+      </div>
+      <div class="visit-grid">
+        <div class="visit-card">
+          <h3>Opening Hours</h3>
+          <table class="hours">
+            <tr><td>Monday – Friday</td><td>7:30 AM – 5:30 PM</td></tr>
+            <tr><td>Saturday</td><td>8:00 AM – 12:00 PM</td></tr>
+            <tr><td>Sunday</td><td>Closed</td></tr>
+          </table>
+          <p style="margin-top:18px;color:var(--muted);font-size:15px">Storm emergency? Call any time — we answer 24/7 after major storms and can tarp a damaged roof the same day.</p>
+        </div>
+        <div class="visit-card">
+          <h3>Location &amp; Contact</h3>
+          <p class="contact-line"><strong>Address</strong>4150 Main Street<br>Kansas City, MO 64111</p>
+          <p class="contact-line"><strong>Phone</strong><a href="tel:+18165550143">(816) 555-0143</a></p>
+          <p class="contact-line"><strong>Email</strong><a href="mailto:hello@heartlandroofingkc.com">hello@heartlandroofingkc.com</a></p>
+          <p class="areas"><strong>Serving:</strong> Kansas City, Overland Park, Independence, Liberty, Lee's Summit, Blue Springs, Shawnee, Lenexa, Olathe, and the whole KC metro.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="cta-bg">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?q=80&w=1600&auto=format&fit=crop" alt="Kansas City home with a Heartland roof at sunset">
+    </div>
+    <div class="wrap cta-inner">
+      <p class="eyebrow" style="color:var(--gold)">Free inspection — no obligation</p>
+      <h2>Your roof protects everything you own.</h2>
+      <p>Let us take a look — free, with photos and an honest report. If it is fine, we will tell you it is fine.</p>
+      <div class="cta-actions">
+        <a class="btn btn-terra" href="tel:+18165550143">Call (816) 555-0143</a>
+        <a class="btn btn-outline" href="#services">View Services</a>
+      </div>
+      <small>Most inspections scheduled within 2 business days. Written estimate included.</small>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <svg width="42" height="42" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M4 26 24 8l20 18" stroke="#c2542b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 24v16h28V24" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 40v-8h8v8" stroke="#c2542b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="17" r="2.4" fill="#d9a441"/></svg>
+          <span class="logo-text"><strong>Heartland Roofing Co.</strong><small>Kansas City · Missouri</small></span>
+        </a>
+        <p>Family-owned roofing in Kansas City since 2008. Free inspections, honest estimates, and a 20-year workmanship warranty on every roof.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#services">Roof Replacement — from $8,900</a>
+        <a href="#services">Roof Repair — from $325</a>
+        <a href="#services">Hail &amp; Storm Damage — free inspection</a>
+        <a href="#services">Gutters — from $1,100</a>
+        <a href="#services">Metal Roofing — from $17,500</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="#visit">4150 Main St, Kansas City, MO 64111</a>
+        <a href="tel:+18165550143">(816) 555-0143</a>
+        <a href="#visit">Mon–Fri: 7:30 AM – 5:30 PM</a>
+        <a href="#visit">Sat: 8 AM – 12 PM · Sun: Closed</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Heartland Roofing Co., Kansas City MO. All rights reserved.</span>
+      <span>Website designed &amp; built by <a href="https://weblodge.agency" target="_blank" rel="noopener">Weblodge Agency</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

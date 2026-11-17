@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harrington &amp; Cole Law Firm | Attorneys in Tampa, FL</title>
+<meta name="description" content="Harrington & Cole is a full-service law firm in Tampa, Florida. Personal injury, family law, estate planning, and business law — with a free first consultation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#16233a;
+    --navy-2:#1e3049;
+    --navy-dark:#0e1826;
+    --gold:#b9975b;
+    --gold-dark:#96793f;
+    --gold-light:#f4ecdb;
+    --cream:#faf7f1;
+    --ink:#232a33;
+    --muted:#66707c;
+    --white:#fff;
+    --line:#e7e0d2;
+    --radius:10px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);line-height:1.7;background:#fff;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;line-height:1.12;font-weight:600}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .section{padding:88px 0}
+  .eyebrow{font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:12px}
+  .section-head{max-width:660px;margin-bottom:48px}
+  .section-head.center{margin-left:auto;margin-right:auto;text-align:center}
+  .section-head h2{font-size:clamp(32px,4.4vw,46px);color:var(--navy);margin-bottom:12px}
+  .section-head p{color:var(--muted);font-size:17px}
+  .btn{display:inline-block;padding:14px 28px;border-radius:4px;font-weight:600;font-size:15px;transition:.2s;border:1px solid transparent;cursor:pointer;text-align:center}
+  .btn-gold{background:var(--gold);color:#fff}
+  .btn-gold:hover{background:var(--gold-dark)}
+  .btn-navy{background:var(--navy);color:#fff}
+  .btn-navy:hover{background:var(--navy-2)}
+  .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
+  .btn-outline:hover{background:rgba(255,255,255,.12)}
+
+  /* Top bar */
+  .topbar{background:var(--navy-dark);color:#c3ccd8;font-size:13.5px}
+  .topbar .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+  .topbar a{color:#fff;font-weight:600}
+  .topbar a:hover{color:var(--gold)}
+
+  /* Nav */
+  .nav{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 2px 12px rgba(22,35,58,.06)}
+  .nav-inner{max-width:1120px;margin:0 auto;padding:0 24px;height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .logo{display:inline-flex;align-items:center;gap:12px;font-family:'Cormorant Garamond',Georgia,serif;font-size:27px;font-weight:700;color:var(--navy);line-height:1}
+  .logo small{display:block;font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-dark);font-weight:700;margin-top:2px}
+  .nav-links{display:flex;gap:30px;list-style:none;font-weight:600;font-size:15px}
+  .nav-links a{color:#3a4552}
+  .nav-links a:hover{color:var(--gold-dark)}
+  .nav-cta{padding:11px 22px;font-size:14px}
+
+  /* Hero */
+  .hero{position:relative;min-height:82vh;display:flex;align-items:center;color:#fff;background:var(--navy) url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=1800&auto=format&fit=crop') center/cover no-repeat}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,24,38,.92) 0%,rgba(14,24,38,.68) 55%,rgba(14,24,38,.35) 100%)}
+  .hero-inner{position:relative;max-width:1120px;margin:0 auto;padding:110px 24px;width:100%}
+  .hero-copy{max-width:640px}
+  .hero-copy .eyebrow{color:#d9c48f}
+  .hero-copy h1{font-size:clamp(44px,6.5vw,68px);margin-bottom:18px}
+  .hero-copy h1 em{font-style:italic;color:#d9c48f}
+  .hero-copy p{font-size:19px;color:#dfe5ec;margin-bottom:32px;max-width:560px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-note{margin-top:26px;font-size:15px;color:#b9c3cf}
+  .hero-note strong{color:#fff}
+
+  /* Stats strip */
+  .strip{background:var(--navy);color:#fff;border-top:1px solid rgba(255,255,255,.1)}
+  .strip-inner{max-width:1120px;margin:0 auto;padding:30px 24px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  .strip-item strong{display:block;font-family:'Cormorant Garamond',Georgia,serif;font-size:38px;line-height:1;color:#d9c48f}
+  .strip-item span{font-size:13px;color:#b9c3cf;text-transform:uppercase;letter-spacing:.08em}
+
+  /* About */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .about-grid img{border-radius:var(--radius);width:100%;height:460px;object-fit:cover}
+  .about-copy p{color:var(--muted);font-size:17px;margin-bottom:14px}
+  .about-copy blockquote{font-family:'Cormorant Garamond',Georgia,serif;font-size:24px;font-style:italic;color:var(--navy);border-left:3px solid var(--gold);padding-left:20px;margin:24px 0}
+
+  /* Practice areas */
+  .practice{background:var(--cream)}
+  .practice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  .area{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px 30px;display:flex;gap:22px;transition:.2s}
+  .area:hover{box-shadow:0 12px 28px rgba(22,35,58,.08)}
+  .area-icon{width:56px;height:56px;flex-shrink:0;border-radius:50%;background:var(--gold-light);display:grid;place-items:center}
+  .area h3{font-size:26px;color:var(--navy);margin-bottom:8px}
+  .area p{color:var(--muted);font-size:15px;margin-bottom:12px}
+  .area-fee{font-size:14px;font-weight:700;color:var(--gold-dark)}
+
+  /* Attorneys */
+  .attorney-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .attorney{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;text-align:center}
+  .attorney img{width:100%;height:340px;object-fit:cover}
+  .attorney-body{padding:26px 22px 30px}
+  .attorney-body h3{font-size:26px;color:var(--navy);margin-bottom:4px}
+  .attorney-role{color:var(--gold-dark);font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px}
+  .attorney-body p{color:var(--muted);font-size:15px}
+
+  /* Process */
+  .process{background:var(--navy);color:#fff}
+  .process .section-head h2{color:#fff}
+  .process .section-head p{color:#b9c3cf}
+  .process .eyebrow{color:#d9c48f}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:step}
+  .step{border-top:2px solid var(--gold);padding-top:22px}
+  .step-num{font-family:'Cormorant Garamond',Georgia,serif;font-size:44px;color:#d9c48f;line-height:1;margin-bottom:10px}
+  .step h3{font-size:24px;margin-bottom:8px}
+  .step p{color:#c3ccd8;font-size:15px}
+
+  /* Reviews */
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .review{background:var(--cream);border-radius:var(--radius);padding:30px 26px;border:1px solid var(--line)}
+  .stars{color:var(--gold);letter-spacing:3px;font-size:17px;margin-bottom:14px}
+  .review blockquote{font-family:'Cormorant Garamond',Georgia,serif;font-size:21px;line-height:1.4;color:var(--navy);margin-bottom:18px}
+  .review cite{font-style:normal;font-weight:700;font-size:15px}
+  .review cite span{display:block;font-weight:400;font-size:14px;color:var(--muted)}
+
+  /* CTA */
+  .cta{text-align:center;background:var(--gold-light)}
+  .cta h2{font-size:clamp(32px,4.4vw,46px);color:var(--navy);margin-bottom:12px}
+  .cta p{color:var(--muted);font-size:18px;max-width:600px;margin:0 auto 30px}
+
+  /* Visit */
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+  .visit-card{border:1px solid var(--line);border-radius:var(--radius);padding:32px 30px}
+  .visit-card h3{font-size:26px;color:var(--navy);margin-bottom:16px}
+  .hours{width:100%;border-collapse:collapse}
+  .hours td{padding:9px 0;border-bottom:1px solid #f0ece1}
+  .hours td:last-child{text-align:right;font-weight:600}
+  .hours tr:last-child td{border-bottom:none}
+  .contact-line{margin-bottom:16px;color:var(--muted)}
+  .contact-line strong{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:2px}
+  .contact-line a{font-weight:700;color:var(--navy)}
+
+  footer{background:var(--navy-dark);color:#9aa7b8;padding:52px 0 28px;font-size:15px}
+  .footer-grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .footer-brand{max-width:360px}
+  .footer-brand .logo{color:#fff}
+  .footer-brand p{margin-top:12px;color:#9aa7b8}
+  .footer-col h4{color:#fff;font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px}
+  .footer-col a{display:block;margin-bottom:8px;color:#b9c3cf}
+  .footer-col a:hover{color:#d9c48f}
+  .footer-bottom{padding-top:22px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:13.5px;color:#8a97a8}
+  .footer-bottom a{color:#d9c48f;font-weight:600}
+
+  @media (max-width:900px){
+    .practice-grid,.attorney-grid,.reviews-grid{grid-template-columns:1fr 1fr}
+    .steps{grid-template-columns:1fr 1fr}
+    .strip-inner{grid-template-columns:1fr 1fr}
+    .about-grid,.visit-grid{grid-template-columns:1fr}
+    .about-grid img{height:320px}
+    .section{padding:64px 0}
+  }
+  @media (max-width:640px){
+    .nav-links{display:none}
+    .practice-grid,.attorney-grid,.reviews-grid,.steps{grid-template-columns:1fr}
+    .area{flex-direction:column}
+    .hero-inner{padding:84px 24px}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>Mon – Fri 8:30 AM – 5:30 PM &middot; Free first consultation</span>
+    <span>Call us: <a href="tel:+18135550203">(813) 555-0203</a></span>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo"><svg width="36" height="36" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 4v28" stroke="#b9975b" stroke-width="2.4" stroke-linecap="round"/><path d="M8 10h24" stroke="#16233a" stroke-width="2.4" stroke-linecap="round"/><circle cx="20" cy="6" r="2.6" fill="#b9975b"/><path d="M8 10l-3.5 9a4.5 4.5 0 0 0 7 0L8 10z" fill="#16233a"/><path d="M32 10l-3.5 9a4.5 4.5 0 0 0 7 0L32 10z" fill="#16233a"/><path d="M12 34h16" stroke="#b9975b" stroke-width="2.4" stroke-linecap="round"/></svg><span>Harrington &amp; Cole<small>Law Firm &middot; Tampa, FL</small></span></a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#practice">Practice Areas</a></li>
+        <li><a href="#attorneys">Attorneys</a></li>
+        <li><a href="#process">How We Work</a></li>
+        <li><a href="#visit">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="#consult" class="btn btn-gold nav-cta">Free Consultation</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">Full-Service Law Firm — Tampa, Florida</p>
+      <h1>Clear counsel. <em>Honest advice.</em> Results that matter.</h1>
+      <p>For over 25 years, Harrington &amp; Cole has helped Tampa families and businesses through injury claims, family matters, estate planning, and business disputes — with straight answers and no jargon.</p>
+      <div class="hero-actions">
+        <a href="#consult" class="btn btn-gold">Book a Free Consultation</a>
+        <a href="#practice" class="btn btn-outline">Our Practice Areas</a>
+      </div>
+      <p class="hero-note"><strong>No fee unless we win</strong> on personal injury cases &middot; Evening appointments available on request</p>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="strip-inner">
+    <div class="strip-item"><strong>25+</strong><span>Years in practice</span></div>
+    <div class="strip-item"><strong>$180M+</strong><span>Recovered for clients</span></div>
+    <div class="strip-item"><strong>3,400+</strong><span>Cases handled</span></div>
+    <div class="strip-item"><strong>4.9 ★</strong><span>Client rating</span></div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="wrap">
+    <div class="about-grid">
+      <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop" alt="Attorney shaking hands with a client at Harrington and Cole" loading="lazy">
+      <div class="about-copy">
+        <p class="eyebrow">About the Firm</p>
+        <h2 style="font-size:clamp(32px,4vw,44px);color:var(--navy);margin-bottom:16px">A Tampa firm that treats you like a neighbor, not a case number.</h2>
+        <p>James Harrington and Rachel Cole founded this firm in 1999 with a simple belief: good legal help should be clear, honest, and within reach. Today our team of nine attorneys serves clients across the Tampa Bay area from our downtown office on Kennedy Boulevard.</p>
+        <blockquote>"Most people come to us during the hardest week of their lives. Our job is to make the legal part the easiest part."</blockquote>
+        <p>We return every call within one business day, explain your options in plain English, and give you a written fee agreement before any work begins.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="practice" class="section practice">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Practice Areas</p>
+      <h2>How we can help</h2>
+      <p>Your first consultation is always free. We will tell you honestly whether you need a lawyer — and if you don't, we'll say so.</p>
+    </div>
+    <div class="practice-grid">
+      <article class="area">
+        <span class="area-icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#96793f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg></span>
+        <div>
+          <h3>Personal Injury</h3>
+          <p>Car accidents, slip and falls, and workplace injuries. We handle the insurance companies so you can focus on getting better.</p>
+          <p class="area-fee">No fee unless we win &middot; Free consultation</p>
+        </div>
+      </article>
+      <article class="area">
+        <span class="area-icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#96793f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></span>
+        <div>
+          <h3>Family Law</h3>
+          <p>Divorce, child custody, child support, and prenuptial agreements — handled with care, discretion, and respect for your family.</p>
+          <p class="area-fee">Flat-fee uncontested divorce from $1,250</p>
+        </div>
+      </article>
+      <article class="area">
+        <span class="area-icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#96793f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6"/></svg></span>
+        <div>
+          <h3>Estate Planning</h3>
+          <p>Wills, trusts, powers of attorney, and probate. Protect your family and make sure your wishes are honored.</p>
+          <p class="area-fee">Simple will from $350 &middot; Trust packages from $1,500</p>
+        </div>
+      </article>
+      <article class="area">
+        <span class="area-icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#96793f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="1"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 12h18"/></svg></span>
+        <div>
+          <h3>Business Law</h3>
+          <p>Business formation, contracts, employment matters, and disputes. Practical counsel for Tampa's small and growing businesses.</p>
+          <p class="area-fee">Business formation from $750 &middot; Contract review from $300</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="attorneys" class="section">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">Meet Your Attorneys</p>
+      <h2>Experienced lawyers, approachable people</h2>
+      <p>Every client works directly with an attorney — not a case manager, not a call center.</p>
+    </div>
+    <div class="attorney-grid">
+      <article class="attorney">
+        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop" alt="Portrait of James Harrington, founding partner" loading="lazy">
+        <div class="attorney-body">
+          <h3>James Harrington</h3>
+          <p class="attorney-role">Founding Partner · Personal Injury</p>
+          <p>Twenty-six years litigating injury cases across Florida. James has recovered over $120 million for injured clients and their families.</p>
+        </div>
+      </article>
+      <article class="attorney">
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop" alt="Portrait of Rachel Cole, founding partner" loading="lazy">
+        <div class="attorney-body">
+          <h3>Rachel Cole</h3>
+          <p class="attorney-role">Founding Partner · Family Law</p>
+          <p>Rachel guides families through divorce and custody with steady judgment and genuine compassion. Board Certified in Family Law since 2012.</p>
+        </div>
+      </article>
+      <article class="attorney">
+        <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=800&auto=format&fit=crop" alt="Portrait of Michael Tran, partner" loading="lazy">
+        <div class="attorney-body">
+          <h3>Michael Tran</h3>
+          <p class="attorney-role">Partner · Estate &amp; Business Law</p>
+          <p>Michael helps Tampa families plan for the future and local businesses grow on solid legal ground — clearly and affordably.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="process" class="section process">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">How We Work</p>
+      <h2>Working with us is straightforward</h2>
+      <p>No confusing process, no surprise bills. Here is exactly what to expect.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Free consultation</h3>
+        <p>Call or book online. We listen to your situation and give you an honest first read — free, with no obligation.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Clear plan &amp; fee</h3>
+        <p>You get a written plan and a written fee agreement before any work begins. No surprises, ever.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>We do the work</h3>
+        <p>Your attorney handles filings, calls, and negotiations — and keeps you updated at every step.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <h3>Resolution</h3>
+        <p>Settlement, courtroom, or signed documents — we see your matter through to the end, and we're here after.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">Client Reviews</p>
+      <h2>What our clients say</h2>
+      <p>Rated 4.9 out of 5 from more than 500 reviews across Google and Avvo.</p>
+    </div>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>"After my car accident, the insurance company offered me almost nothing. James took the case and settled it for ten times that — and explained every step along the way."</blockquote>
+        <cite>Robert <span>Personal injury client</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>"Rachel handled my divorce with such care. She protected my kids' interests, kept things civil, and always returned my calls the same day."</blockquote>
+        <cite>Amanda <span>Family law client</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>"Michael set up our wills and my business contracts in two meetings. Clear pricing, no jargon, and everything done right the first time."</blockquote>
+        <cite>Daniel <span>Estate planning &amp; business client</span></cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="consult" class="section cta">
+  <div class="wrap">
+    <h2>Talk to a lawyer — free, today.</h2>
+    <p>Your first consultation is free and completely confidential. Call now, or send us a message and we will get back to you within one business day.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a href="tel:+18135550203" class="btn btn-navy">Call (813) 555-0203</a>
+      <a href="mailto:info@harringtoncolelaw.com" class="btn btn-gold">Email the Firm</a>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Visit Us</p>
+      <h2>Our Tampa office</h2>
+      <p>Downtown Tampa on Kennedy Boulevard, with validated parking in the garage next door.</p>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-card">
+        <h3>Office Hours</h3>
+        <table class="hours">
+          <tr><td>Monday – Friday</td><td>8:30 AM – 5:30 PM</td></tr>
+          <tr><td>Saturday</td><td>By appointment</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+        </table>
+        <p style="margin-top:16px;color:var(--muted);font-size:15px">Evening and weekend appointments are available for injury and family law matters — just ask when you call.</p>
+      </div>
+      <div class="visit-card">
+        <h3>Location &amp; Contact</h3>
+        <p class="contact-line"><strong>Address</strong>1205 East Kennedy Boulevard, Suite 400<br>Tampa, FL 33602</p>
+        <p class="contact-line"><strong>Phone</strong><a href="tel:+18135550203">(813) 555-0203</a></p>
+        <p class="contact-line"><strong>Email</strong><a href="mailto:info@harringtoncolelaw.com">info@harringtoncolelaw.com</a></p>
+        <p class="contact-line" style="margin-bottom:0"><strong>Parking</strong>Validated parking in the garage at 1205 E Kennedy Blvd.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo"><svg width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 4v28" stroke="#b9975b" stroke-width="2.4" stroke-linecap="round"/><path d="M8 10h24" stroke="#e7e0d2" stroke-width="2.4" stroke-linecap="round"/><circle cx="20" cy="6" r="2.6" fill="#b9975b"/><path d="M8 10l-3.5 9a4.5 4.5 0 0 0 7 0L8 10z" fill="#e7e0d2"/><path d="M32 10l-3.5 9a4.5 4.5 0 0 0 7 0L32 10z" fill="#e7e0d2"/><path d="M12 34h16" stroke="#b9975b" stroke-width="2.4" stroke-linecap="round"/></svg><span>Harrington &amp; Cole<small>Law Firm &middot; Tampa, FL</small></span></a>
+        <p>A full-service law firm serving Tampa Bay since 1999. Personal injury, family law, estate planning, and business law.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Practice Areas</h4>
+        <a href="#practice">Personal Injury</a>
+        <a href="#practice">Family Law</a>
+        <a href="#practice">Estate Planning</a>
+        <a href="#practice">Business Law</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+18135550203">(813) 555-0203</a>
+        <a href="mailto:info@harringtoncolelaw.com">info@harringtoncolelaw.com</a>
+        <a href="#visit">1205 E Kennedy Blvd, Suite 400, Tampa, FL 33602</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Harrington &amp; Cole Law Firm. All rights reserved. Attorney advertising. Prior results do not guarantee a similar outcome.</span>
+      <span>Website designed &amp; built by <a href="https://weblodge.agency" target="_blank" rel="noopener">Weblodge Agency</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

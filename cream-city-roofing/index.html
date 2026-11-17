@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cream City Roofing | Roofing Contractor in Milwaukee, WI</title>
+<meta name="description" content="Cream City Roofing is a roofing contractor in Milwaukee, WI. Roof replacement, repairs, storm damage and gutters — free inspections, honest estimates, 25-year warranty.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1b2a4a;
+    --navy-2:#24365e;
+    --cream:#f6efdf;
+    --cream-dark:#ece1c8;
+    --gold:#d9a441;
+    --gold-dark:#b9872a;
+    --ink:#23272e;
+    --muted:#5d646e;
+    --line:#e3dcc9;
+    --white:#fff;
+    --radius:14px;
+    --shadow:0 16px 36px rgba(27,42,74,.14);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Open Sans',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Montserrat',sans-serif;line-height:1.15;color:var(--navy)}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+  .section{padding:88px 0}
+  .eyebrow{font-size:13px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-dark)}
+  .section-head{max-width:680px;margin-bottom:46px}
+  .section-head h2{font-size:clamp(30px,4.4vw,44px);margin:10px 0 12px}
+  .section-head p{color:var(--muted);font-size:18px}
+  .btn{display:inline-block;padding:15px 30px;border-radius:8px;font-weight:700;font-size:16px;transition:.2s;cursor:pointer;border:none;text-align:center}
+  .btn-gold{background:var(--gold);color:#241a05}
+  .btn-gold:hover{background:var(--gold-dark);color:#fff}
+  .btn-navy{background:var(--navy);color:#fff}
+  .btn-navy:hover{background:var(--navy-2)}
+  .btn-outline{background:transparent;color:var(--navy);border:2px solid var(--navy)}
+  .btn-outline:hover{background:var(--navy);color:#fff}
+
+  /* Top bar */
+  .topbar{background:var(--navy);color:#cdd8ea;font-size:14px}
+  .topbar .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+  .topbar strong{color:#fff}
+  .topbar a:hover{color:#fff}
+
+  /* Nav */
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;height:76px}
+  .logo{display:flex;align-items:center;gap:12px}
+  .logo-mark{width:48px;height:48px;border-radius:10px;background:var(--cream);border:1px solid var(--line);display:grid;place-items:center;flex-shrink:0}
+  .logo-text{line-height:1.05}
+  .logo-text strong{display:block;font-family:'Montserrat',sans-serif;font-size:21px;color:var(--navy)}
+  .logo-text small{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .nav-links{display:flex;gap:30px;list-style:none;font-weight:700;font-size:15px}
+  .nav-links a{color:var(--ink)}
+  .nav-links a:hover{color:var(--gold-dark)}
+
+  /* Hero */
+  .hero{position:relative;color:#fff;background:var(--navy)}
+  .hero-bg{position:absolute;inset:0}
+  .hero-bg img{width:100%;height:100%;object-fit:cover}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,28,52,.93) 0%,rgba(18,28,52,.78) 52%,rgba(18,28,52,.4) 100%)}
+  .hero-grid{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding:88px 0}
+  .hero h1{color:#fff;font-size:clamp(38px,5.4vw,58px);margin:14px 0 18px}
+  .hero h1 em{font-style:normal;color:var(--gold)}
+  .hero p{font-size:18px;color:#dbe4f0;max-width:540px;margin-bottom:26px}
+  .hero-points{list-style:none;display:flex;flex-direction:column;gap:10px;font-size:16px;font-weight:600;color:#eef2f8}
+  .hero-points li{padding-left:28px;position:relative}
+  .hero-points li::before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:800}
+  .hero-card{background:#fff;color:var(--ink);border-radius:16px;padding:30px;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+  .hero-card h3{font-size:22px;margin-bottom:4px}
+  .hero-card>p{font-size:14.5px;color:var(--muted);margin-bottom:20px}
+  .field{margin-bottom:14px}
+  .field label{display:block;font-size:13px;font-weight:700;margin-bottom:6px;color:var(--navy)}
+  .field input,.field select{width:100%;padding:12px 14px;border:1px solid #cfc9b8;border-radius:8px;font:inherit;font-size:15px;color:var(--ink);background:#fff}
+  .field input:focus,.field select:focus{outline:2px solid #f0d9a0;border-color:var(--gold)}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .form-note{font-size:12.5px;color:var(--muted);text-align:center;margin-top:12px}
+  .form-success{display:none;background:#e7f6e9;border:1px solid #bfe6c4;color:#1e6b2e;border-radius:8px;padding:14px;font-size:14.5px;font-weight:700;margin-top:14px;text-align:center}
+
+  /* Services */
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .service{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff;transition:.2s}
+  .service:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .service-img{height:180px;overflow:hidden}
+  .service-img img{width:100%;height:100%;object-fit:cover;transition:.4s}
+  .service:hover .service-img img{transform:scale(1.05)}
+  .service-body{padding:24px}
+  .service-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:8px}
+  .service h3{font-size:20px}
+  .price{font-family:'Montserrat',sans-serif;font-weight:800;font-size:21px;color:var(--gold-dark);white-space:nowrap}
+  .price small{display:block;font-family:'Open Sans',sans-serif;font-size:11px;color:var(--muted);font-weight:700;text-align:right;text-transform:uppercase}
+  .service p{font-size:15px;color:var(--muted)}
+
+  /* Gallery */
+  .gallery{background:var(--cream)}
+  .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .gallery-grid figure{border-radius:12px;overflow:hidden;position:relative}
+  .gallery-grid img{width:100%;height:230px;object-fit:cover;transition:.4s}
+  .gallery-grid figure:hover img{transform:scale(1.05)}
+  .gallery-grid figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 16px 12px;background:linear-gradient(transparent,rgba(18,28,52,.85));color:#fff;font-size:14px;font-weight:700}
+
+  /* Reviews */
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .review{background:var(--cream);border-radius:var(--radius);padding:30px 26px;border:1px solid var(--line)}
+  .stars{color:var(--gold-dark);letter-spacing:3px;font-size:17px;margin-bottom:14px}
+  .review p{font-size:16px;margin-bottom:18px}
+  .reviewer{font-weight:700}
+  .reviewer small{display:block;color:var(--muted);font-weight:400}
+
+  /* Visit */
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
+  .visit-card{border:1px solid var(--line);border-radius:var(--radius);padding:32px;background:#fff}
+  .visit-card h3{font-size:23px;margin-bottom:16px}
+  .hours{width:100%;border-collapse:collapse;font-size:16px}
+  .hours td{padding:9px 0;border-bottom:1px solid #f0ead8}
+  .hours td:last-child{text-align:right;font-weight:700}
+  .hours tr:last-child td{border-bottom:none}
+  .contact-line{margin-bottom:16px;color:var(--ink);font-size:16px}
+  .contact-line strong{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:2px}
+  .contact-line a{font-weight:700}
+  .contact-line a:hover{color:var(--gold-dark)}
+  .cta-band{margin-top:28px;background:var(--navy);border-radius:var(--radius);padding:44px 36px;color:#fff;text-align:center}
+  .cta-band h2{color:#fff;font-size:clamp(28px,4vw,38px);margin-bottom:10px}
+  .cta-band p{color:#cdd8ea;font-size:17px;max-width:560px;margin:0 auto 26px}
+
+  footer{background:var(--navy);color:#aebdd4;padding:52px 0 28px;font-size:15px}
+  .footer-grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .footer-brand{max-width:360px}
+  .footer-brand .logo-text strong{color:#fff}
+  .footer-brand .logo-text small{color:#aebdd4}
+  .footer-brand p{margin-top:12px}
+  .footer-col h4{color:#fff;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+  .footer-col a{display:block;margin-bottom:9px}
+  .footer-col a:hover{color:#fff}
+  .footer-bottom{padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px}
+  .footer-bottom a{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+
+  @media (max-width:900px){
+    .section{padding:64px 0}
+    .nav-links{display:none}
+    .hero-grid{grid-template-columns:1fr;gap:36px;padding:64px 0}
+    .services-grid{grid-template-columns:1fr 1fr}
+    .gallery-grid{grid-template-columns:1fr 1fr}
+    .reviews-grid{grid-template-columns:1fr}
+    .visit-grid{grid-template-columns:1fr}
+  }
+  @media (max-width:560px){
+    .services-grid,.gallery-grid{grid-template-columns:1fr}
+    .form-row{grid-template-columns:1fr}
+    .hero-card{padding:24px 20px}
+    .footer-bottom{justify-content:center;text-align:center}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>Mon–Fri 7:30 AM – 5:30 PM &nbsp;·&nbsp; Sat 8:00 AM – 1:00 PM</span>
+    <span>Free inspections &nbsp;·&nbsp; Call <a href="tel:+14145550144"><strong>(414) 555-0144</strong></a></span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="logo" aria-label="Cream City Roofing — home">
+      <span class="logo-mark"><svg width="30" height="30" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M4 26 24 8l20 18" stroke="#b9872a" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 24v16h28V24" stroke="#1b2a4a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 40v-8h8v8" stroke="#b9872a" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span class="logo-text"><strong>Cream City Roofing</strong><small>Milwaukee · Wisconsin</small></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">Recent Work</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-navy" href="#estimate" style="padding:11px 22px;font-size:15px">Free Estimate</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=1600&auto=format&fit=crop" alt="Milwaukee home with a new roof installed by Cream City Roofing">
+    </div>
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow" style="color:var(--gold)">Roofing Contractor — Milwaukee, Wisconsin</p>
+          <h1>Milwaukee's hometown <em>roofing crew.</em></h1>
+          <p>From the cream brick duplexes of the East Side to the bungalows of Wauwatosa, we have been roofing Milwaukee homes for over a decade — with honest estimates and work we stand behind for 25 years.</p>
+          <ul class="hero-points">
+            <li>Free inspection with photos of your roof</li>
+            <li>Written estimate — the price never changes</li>
+            <li>Most roofs finished in 1–2 days</li>
+            <li>25-year workmanship warranty</li>
+          </ul>
+        </div>
+        <div class="hero-card" id="estimate">
+          <h3>Get a free estimate</h3>
+          <p>Tell us a little about your roof and we will call you back within one business day.</p>
+          <form id="estimateForm">
+            <div class="form-row">
+              <div class="field">
+                <label for="fname">First name</label>
+                <input id="fname" name="fname" type="text" required autocomplete="given-name">
+              </div>
+              <div class="field">
+                <label for="lname">Last name</label>
+                <input id="lname" name="lname" type="text" required autocomplete="family-name">
+              </div>
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" required autocomplete="tel">
+            </div>
+            <div class="field">
+              <label for="need">What do you need?</label>
+              <select id="need" name="need" required>
+                <option value="" disabled selected>Choose one</option>
+                <option>Full roof replacement</option>
+                <option>Roof repair / leak</option>
+                <option>Storm or hail damage</option>
+                <option>Gutters</option>
+                <option>Just an inspection</option>
+              </select>
+            </div>
+            <button class="btn btn-gold" type="submit" style="width:100%">Request My Free Estimate</button>
+            <div class="form-success" id="formSuccess">Thanks! We will call you within one business day to schedule your free inspection.</div>
+            <p class="form-note">No obligation. Your details stay with us.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Services &amp; Pricing</p>
+        <h2>Roofing for every Milwaukee home</h2>
+        <p>Straightforward pricing on the work Milwaukee homeowners need most. Every job starts with a free inspection and a written estimate.</p>
+      </div>
+      <div class="services-grid">
+        <article class="service">
+          <div class="service-img"><img loading="lazy" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop" alt="New architectural shingle roof on a home"></div>
+          <div class="service-body">
+            <div class="service-top"><h3>Roof Replacement</h3><span class="price">$9,200<small>from</small></span></div>
+            <p>Full tear-off and replacement with architectural shingles, ice-and-water shield, and new ventilation.</p>
+          </div>
+        </article>
+        <article class="service">
+          <div class="service-img"><img loading="lazy" src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1200&auto=format&fit=crop" alt="Roofing crew repairing a roof"></div>
+          <div class="service-body">
+            <div class="service-top"><h3>Roof Repair</h3><span class="price">$340<small>from</small></span></div>
+            <p>Leaks, ice dam damage, missing shingles, and flashing failures — diagnosed and fixed properly.</p>
+          </div>
+        </article>
+        <article class="service">
+          <div class="service-img"><img loading="lazy" src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=1200&auto=format&fit=crop" alt="Home restored after storm damage"></div>
+          <div class="service-body">
+            <div class="service-top"><h3>Storm Damage</h3><span class="price">Free<small>inspection</small></span></div>
+            <p>Hail and wind damage restoration, with full documentation and help through your insurance claim.</p>
+          </div>
+        </article>
+        <article class="service">
+          <div class="service-img"><img loading="lazy" src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1200&auto=format&fit=crop" alt="Home with new gutters"></div>
+          <div class="service-body">
+            <div class="service-top"><h3>Gutters &amp; Guards</h3><span class="price">$1,150<small>from</small></span></div>
+            <p>Seamless aluminum gutters and leaf guards, custom-fit to your home and built for Wisconsin winters.</p>
+          </div>
+        </article>
+        <article class="service">
+          <div class="service-img"><img loading="lazy" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1200&auto=format&fit=crop" alt="Standing seam metal roof"></div>
+          <div class="service-body">
+            <div class="service-top"><h3>Metal Roofing</h3><span class="price">$18,500<small>from</small></span></div>
+            <p>Standing seam metal roofs that shed snow and ice, last 50+ years, and look sharp doing it.</p>
+          </div>
+        </article>
+        <article class="service">
+          <div class="service-img"><img loading="lazy" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200&auto=format&fit=crop" alt="Flat roof on a commercial building"></div>
+          <div class="service-body">
+            <div class="service-top"><h3>Flat &amp; Commercial</h3><span class="price">Custom<small>quote</small></span></div>
+            <p>TPO and EPDM systems for flat roofs, duplexes, and small businesses — with maintenance plans available.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section gallery" id="work">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Recent Work</p>
+        <h2>Roofs around Milwaukee</h2>
+        <p>A few recent projects from neighborhoods across the city — from full replacements to storm restorations.</p>
+      </div>
+      <div class="gallery-grid">
+        <figure>
+          <img loading="lazy" src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?q=80&w=800&auto=format&fit=crop" alt="New roof on a home in Wauwatosa">
+          <figcaption>Full replacement · Wauwatosa</figcaption>
+        </figure>
+        <figure>
+          <img loading="lazy" src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=800&auto=format&fit=crop" alt="New roof on a home in Bay View">
+          <figcaption>Architectural shingles · Bay View</figcaption>
+        </figure>
+        <figure>
+          <img loading="lazy" src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=800&auto=format&fit=crop" alt="Storm restoration on a home in Brookfield">
+          <figcaption>Storm restoration · Brookfield</figcaption>
+        </figure>
+        <figure>
+          <img loading="lazy" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" alt="New roof on a home in Shorewood">
+          <figcaption>Full replacement · Shorewood</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="reviews">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Customer Reviews</p>
+        <h2>What Milwaukee homeowners say</h2>
+        <p>Rated 4.9 out of 5 from more than 350 reviews on Google.</p>
+      </div>
+      <div class="reviews-grid">
+        <article class="review">
+          <p class="stars" aria-label="5 out of 5 stars">★★★★★</p>
+          <p>“They replaced our roof and gutters in two days, and the crew was incredible — polite, fast, and they cleaned up every last nail. The house looks brand new.”</p>
+          <p class="reviewer">Rachel<small>Roof replacement · Wauwatosa</small></p>
+        </article>
+        <article class="review">
+          <p class="stars" aria-label="5 out of 5 stars">★★★★★</p>
+          <p>“After the hailstorm, Cream City handled everything — the inspection, the photos, the insurance adjuster meeting. I barely had to lift a finger.”</p>
+          <p class="reviewer">Steve<small>Storm restoration · Bay View</small></p>
+        </article>
+        <article class="review">
+          <p class="stars" aria-label="5 out of 5 stars">★★★★★</p>
+          <p>“Honest people. They told me my roof had five good years left and just fixed the flashing. That kind of honesty is rare — they have a customer for life.”</p>
+          <p class="reviewer">Maria<small>Roof repair · East Side</small></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="visit" style="background:var(--cream)">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Contact &amp; Hours</p>
+        <h2>Visit the office, or just give us a call</h2>
+        <p>We are on Farwell Avenue on the East Side, and we answer our own phones.</p>
+      </div>
+      <div class="visit-grid">
+        <div class="visit-card">
+          <h3>Opening Hours</h3>
+          <table class="hours">
+            <tr><td>Monday – Friday</td><td>7:30 AM – 5:30 PM</td></tr>
+            <tr><td>Saturday</td><td>8:00 AM – 1:00 PM</td></tr>
+            <tr><td>Sunday</td><td>Closed</td></tr>
+          </table>
+          <p style="margin-top:18px;color:var(--muted);font-size:15px">Storm emergency? Call any time — we answer 24/7 after major storms and can tarp a damaged roof the same day.</p>
+        </div>
+        <div class="visit-card">
+          <h3>Location &amp; Contact</h3>
+          <p class="contact-line"><strong>Address</strong>1926 N Farwell Avenue<br>Milwaukee, WI 53202</p>
+          <p class="contact-line"><strong>Phone</strong><a href="tel:+14145550144">(414) 555-0144</a></p>
+          <p class="contact-line"><strong>Email</strong><a href="mailto:hello@creamcityroofing.com">hello@creamcityroofing.com</a></p>
+          <p class="contact-line" style="margin-bottom:0"><strong>Serving</strong>Milwaukee, Wauwatosa, Shorewood, Bay View, Brookfield, West Allis, Greenfield, and the metro area.</p>
+        </div>
+      </div>
+      <div class="cta-band">
+        <h2>Not sure how your roof is doing?</h2>
+        <p>A free inspection takes about 30 minutes — and you will know exactly where your roof stands, with photos to prove it.</p>
+        <a class="btn btn-gold" href="tel:+14145550144">Call (414) 555-0144</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <span class="logo-mark"><svg width="30" height="30" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M4 26 24 8l20 18" stroke="#d9a441" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 24v16h28V24" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 40v-8h8v8" stroke="#d9a441" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="logo-text"><strong>Cream City Roofing</strong><small>Milwaukee · Wisconsin</small></span>
+        </a>
+        <p>Milwaukee's hometown roofing crew since 2014. Free inspections, honest estimates, and a 25-year workmanship warranty on every roof.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#services">Roof Replacement — from $9,200</a>
+        <a href="#services">Roof Repair — from $340</a>
+        <a href="#services">Storm Damage — free inspection</a>
+        <a href="#services">Gutters — from $1,150</a>
+        <a href="#services">Metal Roofing — from $18,500</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="#visit">1926 N Farwell Ave, Milwaukee, WI 53202</a>
+        <a href="tel:+14145550144">(414) 555-0144</a>
+        <a href="#visit">Mon–Fri: 7:30 AM – 5:30 PM</a>
+        <a href="#visit">Sat: 8 AM – 1 PM · Sun: Closed</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Cream City Roofing, Milwaukee WI. All rights reserved.</span>
+      <span>Website designed &amp; built by <a href="https://weblodge.agency" target="_blank" rel="noopener">Weblodge Agency</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('estimateForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    document.getElementById('formSuccess').style.display = 'block';
+    this.querySelector('button[type="submit"]').textContent = 'Request Sent';
+  });
+</script>
+
+</body>
+</html>

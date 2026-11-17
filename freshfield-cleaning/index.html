@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Freshfield Cleaning Co. — House Cleaning in Buffalo, NY</title>
+<meta name="description" content="Freshfield Cleaning Co. brings fresh, spotless homes to Buffalo, NY. Recurring cleaning, deep cleans, and move-out service — trusted local cleaners, fair prices.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#0f766e; --teal-dark:#0b5c55; --mint:#d7f0e8; --mint-light:#eefaf5;
+    --ink:#1f2a26; --muted:#5c6d66; --paper:#ffffff; --sand:#f7f5ef; --line:#dde6df;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Open Sans',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;font-size:17px}
+  h1,h2,h3{font-family:'Montserrat',system-ui,sans-serif;line-height:1.2}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .section{padding:88px 0}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin-bottom:10px}
+  .section-title{font-size:clamp(30px,4.5vw,42px);color:var(--ink);margin-bottom:14px}
+  .section-sub{color:var(--muted);max-width:620px;font-size:18px}
+  .btn{display:inline-block;padding:14px 28px;border-radius:8px;font-weight:700;font-size:16px;transition:.2s;font-family:'Montserrat',sans-serif}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-teal{background:var(--teal);color:#fff}
+  .btn-teal:hover{background:var(--teal-dark)}
+  .btn-dark{background:var(--ink);color:#fff}
+  .btn-dark:hover{background:#101715}
+  .btn-outline{background:transparent;color:var(--teal);border:2px solid var(--teal)}
+  .btn-outline:hover{background:var(--teal);color:#fff}
+
+  .nav{position:sticky;top:0;z-index:100;background:var(--teal);box-shadow:0 2px 14px rgba(0,0,0,.15)}
+  .nav-inner{max-width:1120px;margin:0 auto;padding:0 24px;height:70px;display:flex;align-items:center;justify-content:space-between}
+  .logo{display:inline-flex;align-items:center;gap:10px;font-family:'Montserrat',sans-serif;font-size:21px;font-weight:800;color:#fff}
+  .logo svg{flex-shrink:0}
+  .logo em{font-style:normal;color:#a7e8d4}
+  .nav-links{display:flex;gap:30px;list-style:none}
+  .nav-links a{color:#d7f0e8;font-weight:600;font-size:15px}
+  .nav-links a:hover{color:#fff}
+  .nav-phone{color:#fff;font-weight:700;font-size:15px}
+
+  .hero{display:grid;grid-template-columns:1fr 1fr;min-height:560px;background:var(--mint-light)}
+  .hero-copy{padding:88px 24px 88px max(24px,calc((100vw - 1120px)/2 + 24px));display:flex;flex-direction:column;justify-content:center}
+  .hero h1{font-size:clamp(38px,5vw,56px);margin-bottom:18px}
+  .hero h1 em{font-style:normal;color:var(--teal)}
+  .hero p{font-size:18px;color:var(--muted);margin-bottom:30px;max-width:500px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-stats{display:flex;gap:32px;margin-top:36px;flex-wrap:wrap}
+  .hero-stats b{display:block;font-family:'Montserrat',sans-serif;font-size:26px;color:var(--teal)}
+  .hero-stats span{font-size:14px;color:var(--muted)}
+  .hero-img{position:relative;min-height:380px}
+  .hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+  .intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .intro-grid img{border-radius:14px;width:100%;height:400px;object-fit:cover}
+  .intro-copy p{color:var(--muted);margin-bottom:14px;font-size:18px}
+  .ticks{list-style:none;margin-top:20px}
+  .ticks li{padding:7px 0 7px 30px;position:relative;font-weight:600}
+  .ticks li::before{content:"\2713";position:absolute;left:0;top:7px;width:20px;height:20px;border-radius:50%;background:var(--mint);color:var(--teal);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+
+  .services-section{background:var(--sand)}
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .service{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(15,118,110,.08)}
+  .service img{width:100%;height:170px;object-fit:cover}
+  .service-body{padding:24px}
+  .service-body h3{font-size:20px;margin-bottom:8px}
+  .service-body p{color:var(--muted);font-size:15.5px;margin-bottom:12px}
+  .service-body .price{font-weight:700;color:var(--teal);font-size:17px}
+
+  .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .plan{border:2px solid var(--line);border-radius:14px;padding:32px 28px;text-align:center;background:#fff}
+  .plan.featured{border-color:var(--teal);background:var(--mint-light)}
+  .plan h3{font-size:20px;margin-bottom:6px}
+  .plan .per{color:var(--muted);font-size:14px;margin-bottom:14px}
+  .plan .price{font-family:'Montserrat',sans-serif;font-size:40px;font-weight:800;color:var(--teal)}
+  .plan p{color:var(--muted);font-size:15px;margin-top:10px}
+
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .review{border:1px solid var(--line);border-radius:12px;padding:30px 26px;background:#fff}
+  .stars{color:#e8a13a;letter-spacing:2px;font-size:17px;margin-bottom:14px}
+  .review blockquote{font-size:16.5px;margin-bottom:18px}
+  .review cite{font-style:normal;font-weight:700}
+  .review cite span{display:block;font-weight:400;font-size:14px;color:var(--muted)}
+
+  .visit-section{background:var(--teal-dark);color:#cfe8e0}
+  .visit-section .section-title{color:#fff}
+  .visit-section .eyebrow{color:#a7e8d4}
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:44px}
+  .visit-block{margin-bottom:26px}
+  .visit-block h3{font-size:20px;color:#fff;margin-bottom:8px}
+  .visit-block a{color:#fff;font-weight:700}
+  .visit-block a:hover{color:#a7e8d4}
+  .hours-table{width:100%;border-collapse:collapse}
+  .hours-table td{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.14);color:#cfe8e0}
+  .hours-table td:last-child{text-align:right;color:#fff;font-weight:600}
+
+  .cta{text-align:center}
+  .cta h2{font-size:clamp(30px,4.5vw,42px);margin-bottom:14px}
+  .cta p{color:var(--muted);font-size:18px;max-width:580px;margin:0 auto 30px}
+  .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+  footer{background:#082f2a;color:#8fb5ab;padding:44px 0;text-align:center;font-size:15px}
+  footer .logo{color:#fff;font-size:20px;display:block;margin-bottom:12px}
+  footer a{color:#a7e8d4;font-weight:700}
+  footer a:hover{text-decoration:underline}
+
+  @media (max-width:900px){
+    .hero{grid-template-columns:1fr}
+    .hero-copy{padding:64px 24px}
+    .hero-img{min-height:300px;position:relative}
+    .hero-img img{position:relative}
+    .services-grid,.plans,.reviews-grid{grid-template-columns:1fr 1fr}
+    .intro-grid,.visit-grid{grid-template-columns:1fr;gap:32px}
+  }
+  @media (max-width:640px){
+    .nav-links{display:none}
+    .section{padding:64px 0}
+    .services-grid,.plans,.reviews-grid{grid-template-columns:1fr}
+    .intro-grid img{height:280px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M9 25c0-8 2-13 7-17 5 4 7 9 7 17H9Z" fill="#a7e8d4"/><path d="M16 8c-1.5-2.5-1-5 1-7 2 2 2.5 4.5 1 7" fill="#fff"/><path d="M12 21h8M13 17h6" stroke="#0b5c55" stroke-width="1.8" stroke-linecap="round"/></svg>Fresh<em>field</em></a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#plans">Plans</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="nav-phone" href="tel:+17165550166">(716) 555-0166</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">House Cleaning — Buffalo, NY</p>
+    <h1>Fresh, clean, <em>done right</em> — every time.</h1>
+    <p>Freshfield is Buffalo's trusted local cleaning team. We bring the supplies, the elbow grease, and the attention to detail — you just enjoy the clean house.</p>
+    <div class="hero-actions">
+      <a href="#plans" class="btn btn-teal">See Plans &amp; Prices</a>
+      <a href="tel:+17165550166" class="btn btn-outline">Call (716) 555-0166</a>
+    </div>
+    <div class="hero-stats">
+      <div><b>9 years</b><span>serving Buffalo</span></div>
+      <div><b>1,200+</b><span>homes cleaned</span></div>
+      <div><b>4.9</b><span>average rating</span></div>
+    </div>
+  </div>
+  <div class="hero-img">
+    <img src="https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?q=80&w=1400&auto=format&fit=crop" alt="Freshfield cleaner wiping down a bright living room">
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="wrap">
+    <div class="intro-grid">
+      <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1200&auto=format&fit=crop" alt="Professional cleaner with gloves cleaning a kitchen" loading="lazy">
+      <div class="intro-copy">
+        <p class="eyebrow">Why Freshfield</p>
+        <h2 class="section-title">Buffalo winters are messy. Your home doesn't have to be.</h2>
+        <p>Salt on the floors, mud in the entryway, dust from months of closed windows — Buffalo homes take a beating. Freshfield has been tackling it since 2017, with local cleaners who know exactly what a Western New York winter leaves behind.</p>
+        <p>We're fully insured, background-checked, and proud to be a local Buffalo business — not a franchise, not a gig app.</p>
+        <ul class="ticks">
+          <li>Local, vetted, background-checked cleaners</li>
+          <li>All supplies and equipment included</li>
+          <li>Pet-safe and eco-friendly products on request</li>
+          <li>24-hour re-clean guarantee — free</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section services-section">
+  <div class="wrap">
+    <p class="eyebrow">Services</p>
+    <h2 class="section-title">From quick refresh to full deep clean.</h2>
+    <div class="services-grid">
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?q=80&w=800&auto=format&fit=crop" alt="Windows being cleaned to a shine" loading="lazy">
+        <div class="service-body"><h3>Standard Cleaning</h3><p>Kitchens, bathrooms, floors, dusting, and tidying — the weekly or biweekly reset your home needs.</p><p class="price">from $109 / visit</p></div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?q=80&w=800&auto=format&fit=crop" alt="Cleaning supplies ready for a deep clean" loading="lazy">
+        <div class="service-body"><h3>Deep Cleaning</h3><p>Inside appliances, baseboards, grout, blinds, and light fixtures — the works, top to bottom.</p><p class="price">from $209 / visit</p></div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1600518464441-9154a4dea21b?q=80&w=800&auto=format&fit=crop" alt="Empty home ready for move-in cleaning" loading="lazy">
+        <div class="service-body"><h3>Move-In / Move-Out</h3><p>Empty-home cleaning for renters, buyers, and landlords — deposit-ready, every time.</p><p class="price">from $269 / visit</p></div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1603712725038-e9334ae8f39f?q=80&w=800&auto=format&fit=crop" alt="Post-renovation cleanup" loading="lazy">
+        <div class="service-body"><h3>Post-Renovation Cleaning</h3><p>Dust, debris, and paint splatter gone — so your newly renovated home is actually move-in ready.</p><p class="price">from $299 / visit</p></div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=800&auto=format&fit=crop" alt="Kitchen deep clean in progress" loading="lazy">
+        <div class="service-body"><h3>Kitchen &amp; Bath Focus</h3><p>Extra attention where it matters most — degreasing, descaling, and sanitizing done right.</p><p class="price">from $79 / visit</p></div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?q=80&w=800&auto=format&fit=crop" alt="Office cleaning service" loading="lazy">
+        <div class="service-body"><h3>Office Cleaning</h3><p>Recurring cleaning for small offices, clinics, and storefronts across the Buffalo area.</p><p class="price">from $89 / visit</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="plans" class="section">
+  <div class="wrap">
+    <p class="eyebrow">Recurring Plans</p>
+    <h2 class="section-title">Regular cleaning, better price.</h2>
+    <p class="section-sub">Prices for a typical 2-bedroom home. Set a schedule and save — pause or cancel anytime.</p>
+    <div class="plans">
+      <div class="plan">
+        <h3>Weekly</h3>
+        <p class="per">Best for busy households &amp; pets</p>
+        <p class="price">$99</p>
+        <p>per visit &middot; save 15%<br>Same team, same day, every week.</p>
+      </div>
+      <div class="plan featured">
+        <h3>Biweekly</h3>
+        <p class="per">Our most popular plan</p>
+        <p class="price">$109</p>
+        <p>per visit &middot; save 10%<br>The sweet spot for most homes.</p>
+      </div>
+      <div class="plan">
+        <h3>Monthly</h3>
+        <p class="per">A regular refresh, once a month</p>
+        <p class="price">$119</p>
+        <p>per visit<br>Great for smaller homes &amp; apartments.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="section" style="background:var(--sand)">
+  <div class="wrap">
+    <p class="eyebrow">Reviews</p>
+    <h2 class="section-title">Buffalo trusts Freshfield.</h2>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"After a long Buffalo winter, the deep clean felt like moving into a new house. They got the salt stains off the floors and the dust out of everywhere."</blockquote>
+        <cite>Heather <span>Elmwood Village &middot; Deep clean</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"Reliable every two weeks for over a year. Same two cleaners, they text when they're on the way, and the house is always perfect when I get home."</blockquote>
+        <cite>Rob <span>North Buffalo &middot; Biweekly plan</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"They cleaned our place after the kitchen remodel — dust everywhere, and they handled all of it. Worth every penny to come home to a finished, clean house."</blockquote>
+        <cite>Anita <span>Williamsville &middot; Post-renovation clean</span></cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="section visit-section">
+  <div class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h2 class="section-title">Get your free quote today.</h2>
+    <div class="visit-grid">
+      <div>
+        <div class="visit-block">
+          <h3>Office</h3>
+          <p>745 Elmwood Avenue<br>Buffalo, NY 14222</p>
+        </div>
+        <div class="visit-block">
+          <h3>Contact</h3>
+          <p><a href="tel:+17165550166">(716) 555-0166</a><br><a href="mailto:hello@freshfieldcleaning.com">hello@freshfieldcleaning.com</a></p>
+        </div>
+        <div class="visit-block">
+          <h3>Service Area</h3>
+          <p>Buffalo, Amherst, Williamsville, Tonawanda, Kenmore, Cheektowaga, and West Seneca.</p>
+        </div>
+      </div>
+      <div>
+        <div class="visit-block">
+          <h3>Hours</h3>
+          <table class="hours-table">
+            <tr><td>Monday – Friday</td><td>8:00 AM – 6:00 PM</td></tr>
+            <tr><td>Saturday</td><td>9:00 AM – 4:00 PM</td></tr>
+            <tr><td>Sunday</td><td>Closed</td></tr>
+          </table>
+          <p style="margin-top:16px;color:#cfe8e0">Quotes are free and take about five minutes by phone. Most first cleans are scheduled within 3–4 days.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section cta">
+  <div class="wrap">
+    <p class="eyebrow">First Clean, 20% Off</p>
+    <h2>Life's too short to spend it scrubbing.</h2>
+    <p>Call today for a free quote and 20% off your first cleaning. If you're not happy, we come back and make it right — free.</p>
+    <div class="cta-actions">
+      <a href="tel:+17165550166" class="btn btn-teal">Call (716) 555-0166</a>
+      <a href="mailto:hello@freshfieldcleaning.com" class="btn btn-dark">Email Us to Book</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="logo"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M9 25c0-8 2-13 7-17 5 4 7 9 7 17H9Z" fill="#a7e8d4"/><path d="M16 8c-1.5-2.5-1-5 1-7 2 2 2.5 4.5 1 7" fill="#fff"/><path d="M12 21h8M13 17h6" stroke="#0b5c55" stroke-width="1.8" stroke-linecap="round"/></svg> Fresh<em>field</em></span>
+    <p>745 Elmwood Avenue, Buffalo, NY 14222 &middot; (716) 555-0166 &middot; hello@freshfieldcleaning.com</p>
+    <p style="margin-top:12px">&copy; 2026 Freshfield Cleaning Co. All rights reserved.</p>
+    <p style="margin-top:8px">Website designed &amp; built by <a href="https://weblodge.agency">Weblodge Agency</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

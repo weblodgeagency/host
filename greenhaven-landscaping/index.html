@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Greenhaven Landscaping — Lawn Care &amp; Garden Design in Boston, MA</title>
+<meta name="description" content="Greenhaven Landscaping designs, builds, and maintains beautiful yards across Boston. Weekly lawn care, garden design, patios, and seasonal cleanups — free estimates.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --forest:#1d4a35; --forest-dark:#143324; --moss:#4d7c5f; --lime:#8fbc5a;
+    --cream:#f7f5ee; --sand:#efe9da; --ink:#24281f; --muted:#5f6657; --line:#ddd6c2; --white:#fff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'DM Sans',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;font-size:17px}
+  h1,h2,h3{font-family:'DM Serif Display',Georgia,serif;font-weight:400;line-height:1.15}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .section{padding:92px 0}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--moss);margin-bottom:12px}
+  .section-title{font-size:clamp(30px,4.5vw,44px);color:var(--forest);margin-bottom:14px}
+  .section-sub{color:var(--muted);max-width:640px;font-size:18px}
+  .btn{display:inline-block;padding:14px 28px;border-radius:8px;font-weight:700;font-size:16px;transition:.2s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-green{background:var(--forest);color:#fff}
+  .btn-green:hover{background:var(--forest-dark)}
+  .btn-lime{background:var(--lime);color:var(--forest-dark)}
+  .btn-lime:hover{background:#7da84d}
+  .btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.8)}
+  .btn-ghost:hover{background:rgba(255,255,255,.14)}
+
+  .nav{position:sticky;top:0;z-index:100;background:rgba(29,74,53,.98);box-shadow:0 2px 14px rgba(0,0,0,.18)}
+  .nav-inner{max-width:1120px;margin:0 auto;padding:0 24px;height:70px;display:flex;align-items:center;justify-content:space-between}
+  .logo{display:inline-flex;align-items:center;gap:10px;font-family:'DM Serif Display',Georgia,serif;font-size:24px;color:#fff}
+  .logo svg{flex-shrink:0}
+  .logo em{font-style:normal;color:var(--lime)}
+  .nav-links{display:flex;gap:30px;list-style:none}
+  .nav-links a{color:#dfe8dc;font-weight:500;font-size:15px}
+  .nav-links a:hover{color:#fff}
+  .nav-phone{color:#fff;font-weight:700;font-size:15px}
+  .nav-phone small{display:block;font-weight:500;color:#b9cdb2;font-size:12px;text-align:right}
+
+  .hero{position:relative;min-height:86vh;display:flex;align-items:center;color:#fff;background:var(--forest-dark) url('https://images.unsplash.com/photo-1558904541-efa843a96f01?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,51,36,.55),rgba(20,51,36,.78))}
+  .hero-inner{position:relative;max-width:1120px;margin:0 auto;padding:110px 24px;width:100%}
+  .hero-copy{max-width:640px}
+  .hero h1{font-size:clamp(42px,6.5vw,68px);margin-bottom:18px}
+  .hero h1 em{font-style:normal;color:var(--lime)}
+  .hero p{font-size:19px;color:#e6ecdf;margin-bottom:32px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-badges{display:flex;gap:28px;flex-wrap:wrap;margin-top:40px;font-size:14px;color:#d5e0cd}
+  .hero-badges strong{display:block;color:#fff;font-size:18px}
+
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .about-imgs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .about-imgs img{border-radius:12px;width:100%;height:230px;object-fit:cover}
+  .about-imgs img:first-child{grid-column:1/3;height:260px}
+  .about-copy p{color:var(--muted);margin-bottom:14px;font-size:18px}
+  .checklist{list-style:none;margin-top:22px}
+  .checklist li{padding:8px 0 8px 32px;position:relative;font-weight:500}
+  .checklist li::before{content:"";position:absolute;left:0;top:13px;width:18px;height:18px;border-radius:50%;background:var(--lime) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"><path d="M2 6.5 4.8 9 10 3" fill="none" stroke="%23143324" stroke-width="2" stroke-linecap="round"/></svg>') center/10px no-repeat}
+
+  .services-section{background:var(--sand)}
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .service{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 8px 24px rgba(29,74,53,.08)}
+  .service img{width:100%;height:180px;object-fit:cover}
+  .service-body{padding:24px}
+  .service-body h3{font-size:23px;color:var(--forest);margin-bottom:8px}
+  .service-body p{color:var(--muted);font-size:15.5px;margin-bottom:14px}
+  .service-price{font-weight:700;color:var(--forest);font-size:17px}
+  .service-price span{font-weight:500;color:var(--muted);font-size:14px}
+
+  .plan-strip{background:var(--forest);color:#e6ecdf;border-radius:16px;padding:44px;margin-top:56px;display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center}
+  .plan-strip h3{font-size:28px;color:#fff;margin-bottom:10px}
+  .plan-strip p{color:#cfdcc6}
+  .plan-price{text-align:right}
+  .plan-price b{display:block;font-family:'DM Serif Display',Georgia,serif;font-size:46px;color:var(--lime);line-height:1}
+  .plan-price span{font-size:15px;color:#cfdcc6}
+
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .review{background:#fff;border:1px solid var(--line);border-radius:14px;padding:30px 26px}
+  .stars{color:#d9a441;letter-spacing:2px;font-size:17px;margin-bottom:14px}
+  .review blockquote{font-size:16.5px;margin-bottom:18px}
+  .review cite{font-style:normal;font-weight:700;color:var(--forest)}
+  .review cite span{display:block;font-weight:400;font-size:14px;color:var(--muted)}
+
+  .visit-section{background:var(--forest-dark);color:#d5e0cd}
+  .visit-section .section-title{color:#fff}
+  .visit-section .eyebrow{color:var(--lime)}
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:44px}
+  .visit-block{margin-bottom:26px}
+  .visit-block h3{font-size:21px;color:#fff;margin-bottom:8px}
+  .visit-block a{color:#fff;font-weight:700}
+  .visit-block a:hover{color:var(--lime)}
+  .hours-table{width:100%;border-collapse:collapse}
+  .hours-table td{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.14);color:#cfdcc6}
+  .hours-table td:last-child{text-align:right;color:#fff;font-weight:600}
+  .service-area{columns:2;list-style:none}
+  .service-area li{padding:4px 0;color:#cfdcc6}
+  .service-area li::before{content:"— ";color:var(--lime)}
+
+  .cta{text-align:center}
+  .cta h2{font-size:clamp(30px,4.5vw,42px);color:var(--forest);margin-bottom:14px}
+  .cta p{color:var(--muted);font-size:18px;max-width:600px;margin:0 auto 30px}
+  .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+  footer{background:#0f2418;color:#9fb3a0;padding:44px 0;text-align:center;font-size:15px}
+  footer .logo{font-size:22px;display:block;margin-bottom:12px}
+  footer a{color:var(--lime);font-weight:700}
+  footer a:hover{text-decoration:underline}
+
+  @media (max-width:900px){
+    .services-grid,.reviews-grid{grid-template-columns:repeat(2,1fr)}
+    .about-grid,.visit-grid,.plan-strip{grid-template-columns:1fr;gap:32px}
+    .plan-price{text-align:left}
+  }
+  @media (max-width:640px){
+    .nav-links{display:none}
+    .nav-phone small{display:none}
+    .section{padding:64px 0}
+    .services-grid,.reviews-grid{grid-template-columns:1fr}
+    .hero-inner{padding:90px 24px}
+    .plan-strip{padding:32px 24px}
+    .about-imgs img{height:180px}
+    .about-imgs img:first-child{height:200px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 28C16 28 5 21.5 5 12.5 5 7.8 8.6 4 13 4c1.2 0 2.2.3 3 .8C16.8 4.3 17.8 4 19 4c4.4 0 8 3.8 8 8.5C27 21.5 16 28 16 28Z" fill="#8fbc5a"/><path d="M16 26V10" stroke="#143324" stroke-width="1.8" stroke-linecap="round"/><path d="M16 16c-2.5 0-4.5-1.6-5-4M16 13c2.5 0 4.5-1.6 5-4" stroke="#143324" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg>Green<em>haven</em></a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+    </nav>
+    <a class="nav-phone" href="tel:+16175550161"><small>Free estimates</small>(617) 555-0161</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow" style="color:#b7d68f">Landscaping &amp; Lawn Care — Boston, MA</p>
+      <h1>Your yard, <em>loved</em> all four seasons.</h1>
+      <p>From weekly mowing to full garden design, Greenhaven keeps Boston yards healthy, tidy, and beautiful — through snowy winters and every summer in between.</p>
+      <div class="hero-actions">
+        <a href="#services" class="btn btn-lime">See Services &amp; Prices</a>
+        <a href="tel:+16175550161" class="btn btn-ghost">Call (617) 555-0161</a>
+      </div>
+      <div class="hero-badges">
+        <div><strong>14 years</strong>serving Boston</div>
+        <div><strong>900+ yards</strong>maintained weekly</div>
+        <div><strong>4.9 rating</strong>from 480+ reviews</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-imgs">
+        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=1200&auto=format&fit=crop" alt="Greenhaven gardener tending a flower bed" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?q=80&w=800&auto=format&fit=crop" alt="Lush green garden plants" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=80&w=800&auto=format&fit=crop" alt="Healthy green leaves in a Boston garden" loading="lazy">
+      </div>
+      <div class="about-copy">
+        <p class="eyebrow">Who We Are</p>
+        <h2 class="section-title">Boston neighbors who know New England yards.</h2>
+        <p>Greenhaven started in 2012 with one truck, two brothers, and a simple promise: show up on time and leave the yard better than we found it. Today our crews care for homes across Boston and the surrounding towns — and the promise hasn't changed.</p>
+        <p>We know what grows here and what doesn't. We plant for New England winters, mow for New England summers, and clean up every leaf in between.</p>
+        <ul class="checklist">
+          <li>Licensed and insured, with background-checked crews</li>
+          <li>Same crew on your yard every week — they learn it by heart</li>
+          <li>Eco-friendly treatments safe for kids and pets</li>
+          <li>Free on-site estimates, answered within one business day</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section services-section">
+  <div class="wrap">
+    <p class="eyebrow">What We Do</p>
+    <h2 class="section-title">Services &amp; honest pricing</h2>
+    <p class="section-sub">Every job starts with a free walk-through and a written quote. No surprise charges, ever.</p>
+    <div class="services-grid">
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1589923188900-85dae523342b?q=80&w=800&auto=format&fit=crop" alt="Weekly lawn mowing in progress" loading="lazy">
+        <div class="service-body">
+          <h3>Weekly Lawn Care</h3>
+          <p>Mowing, edging, and blowing on a regular schedule, plus seasonal feeding to keep your grass thick and green.</p>
+          <p class="service-price">from $55 <span>/ visit</span></p>
+        </div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?q=80&w=800&auto=format&fit=crop" alt="Colorful garden beds designed by Greenhaven" loading="lazy">
+        <div class="service-body">
+          <h3>Garden Design &amp; Planting</h3>
+          <p>Custom beds, shrubs, and perennials chosen for your soil and sunlight — planted and mulched by our team.</p>
+          <p class="service-price">from $450 <span>/ project</span></p>
+        </div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=800&auto=format&fit=crop" alt="Home with a landscaped front yard and stone walkway" loading="lazy">
+        <div class="service-body">
+          <h3>Patios &amp; Walkways</h3>
+          <p>Stone and paver patios, walkways, and edging built to handle New England freeze-and-thaw cycles.</p>
+          <p class="service-price">from $1,800 <span>/ project</span></p>
+        </div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=800&auto=format&fit=crop" alt="Seasonal garden cleanup" loading="lazy">
+        <div class="service-body">
+          <h3>Spring &amp; Fall Cleanups</h3>
+          <p>Leaf removal, bed clearing, pruning, and mulching to put your yard to bed — or wake it up right.</p>
+          <p class="service-price">from $275 <span>/ cleanup</span></p>
+        </div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?q=80&w=800&auto=format&fit=crop" alt="Trimmed hedges and shrubs" loading="lazy">
+        <div class="service-body">
+          <h3>Hedge &amp; Tree Trimming</h3>
+          <p>Shaping, pruning, and safe removal of small trees and overgrown hedges, with all debris hauled away.</p>
+          <p class="service-price">from $120 <span>/ visit</span></p>
+        </div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=80&w=800&auto=format&fit=crop" alt="Irrigation keeping a lawn green" loading="lazy">
+        <div class="service-body">
+          <h3>Irrigation &amp; Drainage</h3>
+          <p>Smart sprinkler installs, drip systems, and drainage fixes that keep water where it belongs.</p>
+          <p class="service-price">from $650 <span>/ install</span></p>
+        </div>
+      </article>
+    </div>
+
+    <div class="plan-strip">
+      <div>
+        <h3>The Greenhaven Care Plan</h3>
+        <p>Weekly mowing, spring and fall cleanups, hedge trimming, and mulching — bundled into one simple plan, one monthly price, no contracts to lock you in.</p>
+      </div>
+      <div class="plan-price">
+        <b>$189/mo</b>
+        <span>Most homes &middot; Cancel anytime</span>
+        <p style="margin-top:14px"><a href="tel:+16175550161" class="btn btn-lime">Get My Free Estimate</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="section">
+  <div class="wrap">
+    <p class="eyebrow">What Boston Says</p>
+    <h2 class="section-title">Yards our neighbors are proud of.</h2>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"Our lawn went from patchy to the best on the block in one summer. The crew is friendly, on time every Tuesday, and they always close the gate behind them."</blockquote>
+        <cite>Daniel <span>Jamaica Plain &middot; Weekly lawn care</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"They redesigned our front beds and built a stone walkway. The quote was clear, the work was clean, and they finished a day early. Couldn't ask for more."</blockquote>
+        <cite>Margaret <span>Brookline &middot; Garden design</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"I've used the Care Plan for three years. One call in spring and everything is handled — mowing, leaves, mulch. It's the easiest bill I pay."</blockquote>
+        <cite>Tom <span>Newton &middot; Care Plan member</span></cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="section visit-section">
+  <div class="wrap">
+    <p class="eyebrow">Find Us</p>
+    <h2 class="section-title">Serving Boston and the surrounding towns.</h2>
+    <div class="visit-grid">
+      <div>
+        <div class="visit-block">
+          <h3>Office</h3>
+          <p>148 Beacon Street<br>Boston, MA 02116</p>
+        </div>
+        <div class="visit-block">
+          <h3>Contact</h3>
+          <p><a href="tel:+16175550161">(617) 555-0161</a><br><a href="mailto:hello@greenhavenlandscaping.com">hello@greenhavenlandscaping.com</a></p>
+        </div>
+        <div class="visit-block">
+          <h3>Service Area</h3>
+          <ul class="service-area">
+            <li>Boston</li><li>Brookline</li><li>Newton</li><li>Cambridge</li>
+            <li>Somerville</li><li>Quincy</li><li>Arlington</li><li>Medford</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="visit-block">
+          <h3>Office Hours</h3>
+          <table class="hours-table">
+            <tr><td>Monday – Friday</td><td>7:00 AM – 6:00 PM</td></tr>
+            <tr><td>Saturday</td><td>8:00 AM – 4:00 PM</td></tr>
+            <tr><td>Sunday</td><td>Closed</td></tr>
+          </table>
+          <p style="margin-top:16px;color:#cfdcc6">Crews work Monday through Saturday, weather permitting. Estimates are free and usually scheduled within two days.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section cta">
+  <div class="wrap">
+    <p class="eyebrow">Free Estimates</p>
+    <h2>Let's make your yard the one people notice.</h2>
+    <p>Call today or send us an email — we'll walk your yard, listen to what you want, and send a clear written quote. No pressure, no obligation.</p>
+    <div class="cta-actions">
+      <a href="tel:+16175550161" class="btn btn-green">Call (617) 555-0161</a>
+      <a href="mailto:hello@greenhavenlandscaping.com" class="btn btn-lime">Request a Free Estimate</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="logo"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 28C16 28 5 21.5 5 12.5 5 7.8 8.6 4 13 4c1.2 0 2.2.3 3 .8C16.8 4.3 17.8 4 19 4c4.4 0 8 3.8 8 8.5C27 21.5 16 28 16 28Z" fill="#8fbc5a"/><path d="M16 26V10" stroke="#143324" stroke-width="1.8" stroke-linecap="round"/><path d="M16 16c-2.5 0-4.5-1.6-5-4M16 13c2.5 0 4.5-1.6 5-4" stroke="#143324" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg> Green<em>haven</em></span>
+    <p>148 Beacon Street, Boston, MA 02116 &middot; (617) 555-0161 &middot; hello@greenhavenlandscaping.com</p>
+    <p style="margin-top:12px">&copy; 2026 Greenhaven Landscaping. All rights reserved.</p>
+    <p style="margin-top:8px">Website designed &amp; built by <a href="https://weblodge.agency">Weblodge Agency</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

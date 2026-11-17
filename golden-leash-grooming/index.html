@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Golden Leash — Pet Grooming &amp; Spa in San Diego, California</title>
+<meta name="description" content="The Golden Leash is a boutique pet grooming spa in San Diego's North Park. Luxury baths, stylish cuts, and gentle care for dogs and cats of all sizes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#12263a;
+    --navy-2:#1b354e;
+    --gold:#f2b705;
+    --gold-dark:#d99e04;
+    --gold-light:#fef6dc;
+    --sky:#e8f2f7;
+    --cream:#fffdf7;
+    --ink:#22333f;
+    --muted:#64798a;
+    --line:#e3e9ec;
+    --radius:18px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Poppins',sans-serif;line-height:1.18;font-weight:700}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .section{padding:88px 0}
+  .eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:12px}
+  .section-title{font-size:clamp(30px,4.5vw,42px);color:var(--navy);margin-bottom:14px}
+  .section-sub{color:var(--muted);max-width:640px;font-size:18px}
+  .btn{display:inline-block;padding:14px 28px;border-radius:999px;font-weight:700;font-size:16px;transition:.2s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-gold{background:var(--gold);color:var(--navy)}
+  .btn-gold:hover{background:var(--gold-dark);color:#fff}
+  .btn-navy{background:var(--navy);color:#fff}
+  .btn-navy:hover{background:var(--navy-2)}
+  .btn-outline{background:transparent;color:var(--navy);border:2px solid var(--navy)}
+  .btn-outline:hover{background:var(--navy);color:#fff}
+
+  /* Nav */
+  .nav{position:sticky;top:0;z-index:100;background:var(--navy);box-shadow:0 2px 14px rgba(0,0,0,.2)}
+  .nav-inner{max-width:1120px;margin:0 auto;padding:0 24px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .logo{display:inline-flex;align-items:center;gap:10px;font-family:'Poppins',sans-serif;font-size:22px;font-weight:700;color:#fff}
+  .logo span{color:var(--gold)}
+  .logo svg{flex-shrink:0}
+  .nav-links{display:flex;gap:30px;list-style:none;font-weight:600;font-size:15px;color:#c7d6e2}
+  .nav-links a:hover{color:var(--gold)}
+  .nav-cta{padding:11px 22px;font-size:15px}
+
+  /* Hero */
+  .hero{background:var(--sky);overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;max-width:1120px;margin:0 auto;padding:72px 24px}
+  .hero h1{font-size:clamp(40px,5.5vw,60px);color:var(--navy);margin-bottom:18px}
+  .hero h1 em{font-style:normal;color:var(--gold-dark)}
+  .hero p{font-size:19px;color:var(--muted);margin-bottom:30px;max-width:520px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:32px}
+  .badge{background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-size:14px;font-weight:600;color:var(--navy);box-shadow:0 2px 8px rgba(18,38,58,.05)}
+  .hero-photo{position:relative}
+  .hero-photo img{width:100%;height:520px;object-fit:cover;border-radius:24px;box-shadow:0 20px 44px rgba(18,38,58,.18)}
+  .hero-card{position:absolute;left:-24px;bottom:28px;background:#fff;border-radius:14px;padding:16px 20px;box-shadow:0 12px 30px rgba(18,38,58,.18);display:flex;align-items:center;gap:14px}
+  .hero-card b{font-family:'Poppins',sans-serif;font-size:26px;color:var(--navy);line-height:1}
+  .hero-card span{font-size:13.5px;color:var(--muted);display:block}
+  .hero-card .stars{color:var(--gold-dark);letter-spacing:1px;font-size:14px}
+
+  /* Perks strip */
+  .perks{background:var(--navy);color:#c7d6e2}
+  .perks-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:34px 0}
+  .perk{display:flex;gap:14px;align-items:flex-start}
+  .perk-icon{width:44px;height:44px;flex-shrink:0;border-radius:12px;background:rgba(242,183,5,.16);display:grid;place-items:center}
+  .perk b{display:block;color:#fff;font-size:15.5px}
+  .perk span{font-size:14px;line-height:1.5}
+
+  /* Services */
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .service{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;transition:.2s;position:relative}
+  .service:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(18,38,58,.1)}
+  .service.featured{border:2px solid var(--gold);background:var(--gold-light)}
+  .tag{position:absolute;top:-12px;right:20px;background:var(--gold);color:var(--navy);font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:999px}
+  .service h3{font-size:21px;color:var(--navy);margin-bottom:8px}
+  .service p{color:var(--muted);font-size:15.5px;margin-bottom:16px}
+  .service ul{list-style:none;font-size:14.5px;display:flex;flex-direction:column;gap:6px;margin-bottom:20px}
+  .service li::before{content:"\2713  ";color:var(--gold-dark);font-weight:800}
+  .service-foot{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding-top:16px}
+  .price{font-family:'Poppins',sans-serif;font-size:26px;font-weight:700;color:var(--navy)}
+  .price small{font-size:13px;color:var(--muted);font-weight:500}
+  .dur{font-size:13px;font-weight:600;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+  .services-note{text-align:center;margin-top:28px;color:var(--muted)}
+  .services-note a{color:var(--gold-dark);font-weight:700}
+
+  /* About split */
+  .about-section{background:var(--sky)}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .about-grid img{border-radius:var(--radius);width:100%;height:440px;object-fit:cover}
+  .about-copy p{color:var(--muted);margin-bottom:16px;font-size:18px}
+  .stats{display:flex;gap:40px;margin-top:28px}
+  .stat b{display:block;font-family:'Poppins',sans-serif;font-size:34px;color:var(--navy);line-height:1}
+  .stat span{font-size:14px;color:var(--muted)}
+
+  /* Reviews */
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .review{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px}
+  .stars{color:var(--gold-dark);letter-spacing:2px;font-size:17px;margin-bottom:14px}
+  .review p{font-size:16.5px;margin-bottom:18px}
+  .review cite{font-style:normal;font-weight:700;color:var(--navy)}
+  .review cite span{display:block;font-weight:400;font-size:14px;color:var(--muted)}
+
+  /* Visit */
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:48px}
+  .visit-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px 30px}
+  .visit-card h3{font-size:21px;color:var(--navy);margin-bottom:14px}
+  .visit-card p{color:var(--muted);margin-bottom:8px}
+  .visit-card a{font-weight:600;color:var(--gold-dark)}
+  .hours{width:100%;border-collapse:collapse}
+  .hours td{padding:9px 0;border-bottom:1px solid var(--line);color:var(--muted)}
+  .hours td:last-child{text-align:right;font-weight:600;color:var(--navy)}
+  .hours tr:last-child td{border-bottom:none}
+
+  /* CTA */
+  .cta{background:linear-gradient(120deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;text-align:center}
+  .cta h2{font-size:clamp(30px,4.5vw,42px);margin-bottom:14px}
+  .cta p{color:#c7d6e2;font-size:18px;max-width:560px;margin:0 auto 30px}
+  .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .cta small{display:block;margin-top:20px;color:#9fb4c4}
+
+  footer{background:#0b1a28;color:#9fb4c4;padding:48px 0 30px;font-size:15px}
+  .footer-inner{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.1)}
+  .footer-brand .logo{font-size:20px}
+  .footer-brand p{margin-top:10px;max-width:340px}
+  .footer-col h4{color:#fff;font-family:'Poppins',sans-serif;font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px}
+  .footer-col a{display:block;margin-bottom:8px}
+  .footer-col a:hover{color:var(--gold)}
+  .footer-bottom{padding-top:22px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .footer-bottom a{color:var(--gold);font-weight:600}
+
+  @media (max-width:900px){
+    .hero-grid,.about-grid,.visit-grid{grid-template-columns:1fr;gap:36px}
+    .hero-photo img{height:380px}
+    .hero-card{left:12px}
+    .perks-grid{grid-template-columns:1fr 1fr}
+    .services-grid,.reviews-grid{grid-template-columns:1fr 1fr}
+    .section{padding:66px 0}
+  }
+  @media (max-width:640px){
+    .nav-links{display:none}
+    .services-grid,.reviews-grid,.perks-grid{grid-template-columns:1fr}
+    .hero-photo img{height:300px}
+    .stats{gap:24px;flex-wrap:wrap}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="10" r="6.5" stroke="#f2b705" stroke-width="2.5"/><path d="M12 15.5 8 27M20 15.5 24 27" stroke="#f2b705" stroke-width="2.5" stroke-linecap="round"/><circle cx="8" cy="28.5" r="1.8" fill="#fff"/><circle cx="24" cy="28.5" r="1.8" fill="#fff"/><circle cx="16" cy="10" r="2.2" fill="#fff"/></svg>The Golden <span>Leash</span></a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+    </nav>
+    <a href="#book" class="btn btn-gold nav-cta">Book Now</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-grid">
+    <div>
+      <p class="eyebrow">Pet Grooming &amp; Spa &middot; North Park, San Diego</p>
+      <h1>Sunshine, suds &amp; <em>very good dogs.</em></h1>
+      <p>A boutique grooming spa in North Park where every pet gets the royal treatment — warm baths, stylish cuts, and a whole lot of love. Dogs, cats, and everything in between.</p>
+      <div class="hero-actions">
+        <a href="#services" class="btn btn-navy">View Services</a>
+        <a href="#book" class="btn btn-gold">Book an Appointment</a>
+      </div>
+      <div class="hero-badges">
+        <span class="badge">Certified groomers</span>
+        <span class="badge">Same-week appointments</span>
+        <span class="badge">Dogs &amp; cats</span>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?q=80&w=1200&auto=format&fit=crop" alt="A happy golden retriever after a grooming session at The Golden Leash">
+      <div class="hero-card">
+        <div><b>4.9</b><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+        <div><strong style="color:var(--navy)">650+ happy reviews</strong><span>from San Diego pet parents</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="perks">
+  <div class="wrap">
+    <div class="perks-grid">
+      <div class="perk">
+        <span class="perk-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f2b705" stroke-width="2"><path d="M12 21s-7-4.5-7-11a7 7 0 0 1 14 0c0 6.5-7 11-7 11z"/></svg></span>
+        <div><b>One-on-one care</b><span>Your pet is groomed start to finish by one groomer, with no waiting in a kennel.</span></div>
+      </div>
+      <div class="perk">
+        <span class="perk-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f2b705" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg></span>
+        <div><b>Certified &amp; insured</b><span>NDGAA-certified groomers, fully insured, and pet first-aid trained.</span></div>
+      </div>
+      <div class="perk">
+        <span class="perk-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f2b705" stroke-width="2"><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/><circle cx="12" cy="12" r="4"/></svg></span>
+        <div><b>Natural products</b><span>Oatmeal and hypoallergenic shampoos, gentle on skin and coats.</span></div>
+      </div>
+      <div class="perk">
+        <span class="perk-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f2b705" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+        <div><b>Fast turnaround</b><span>Most grooms finished in under 2 hours — texted the moment your pet is ready.</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="services" class="section">
+  <div class="wrap">
+    <p class="eyebrow">Services &amp; Pricing</p>
+    <h2 class="section-title">Spa packages for every pet.</h2>
+    <p class="section-sub">Prices are starting rates for small dogs. Your groomer confirms the exact price before we begin — it depends on size, coat, and temperament.</p>
+    <div class="services-grid">
+      <article class="service">
+        <h3>The Classic Groom</h3>
+        <p>Our most popular package — a full bath, cut, and tidy-up that leaves your pet looking sharp.</p>
+        <ul><li>Warm bath &amp; fluff dry</li><li>Full haircut &amp; style</li><li>Nail trim &amp; ear cleaning</li><li>Teeth wipe &amp; spritz</li></ul>
+        <div class="service-foot"><span class="price">$70 <small>from</small></span><span class="dur">2 hrs</span></div>
+      </article>
+      <article class="service featured">
+        <span class="tag">Most Loved</span>
+        <h3>The Golden Spa Day</h3>
+        <p>The full luxury treatment. Everything in the Classic Groom, plus pampering extras your pet will adore.</p>
+        <ul><li>Everything in the Classic Groom</li><li>Blueberry facial &amp; paw balm</li><li>De-shedding treatment</li><li>Bandana &amp; treat bag to take home</li></ul>
+        <div class="service-foot"><span class="price">$95 <small>from</small></span><span class="dur">2.5 hrs</span></div>
+      </article>
+      <article class="service">
+        <h3>Bath &amp; Brush</h3>
+        <p>A thorough wash and brush-out for pets who don't need a cut — ideal between full grooms.</p>
+        <ul><li>Oatmeal shampoo &amp; rinse</li><li>Full brush-out</li><li>Nail trim included</li><li>Blow-dry &amp; spritz</li></ul>
+        <div class="service-foot"><span class="price">$45 <small>from</small></span><span class="dur">1 hr</span></div>
+      </article>
+      <article class="service">
+        <h3>Cat Grooming</h3>
+        <p>Patient, low-stress grooming for cats in a quiet, separate room — bath, brush, nails, and de-matting.</p>
+        <ul><li>Low-stress handling</li><li>Bath &amp; brush-out</li><li>Nail trim &amp; sanitary trim</li><li>De-matting as needed</li></ul>
+        <div class="service-foot"><span class="price">$65 <small>from</small></span><span class="dur">1.5 hrs</span></div>
+      </article>
+      <article class="service">
+        <h3>Puppy's First Groom</h3>
+        <p>A gentle first visit for puppies under 6 months — slow, positive, and full of treats and praise.</p>
+        <ul><li>Warm bath &amp; gentle dry</li><li>Face, feet &amp; tail tidy</li><li>Nail trim &amp; ear check</li><li>Plenty of breaks &amp; play</li></ul>
+        <div class="service-foot"><span class="price">$40 <small>flat</small></span><span class="dur">1 hr</span></div>
+      </article>
+      <article class="service">
+        <h3>Nail Trim &amp; Grind</h3>
+        <p>A quick, careful nail trim with a smooth grind finish. Walk-ins welcome — in and out in 15 minutes.</p>
+        <ul><li>Trim &amp; smooth grind</li><li>Paw balm finish</li><li>Walk-ins welcome</li><li>No appointment needed</li></ul>
+        <div class="service-foot"><span class="price">$20 <small>flat</small></span><span class="dur">15 min</span></div>
+      </article>
+    </div>
+    <p class="services-note">Large breeds and long coats may cost a little more — <a href="tel:+16195550123">call (619) 555-0123</a> for an exact quote.</p>
+  </div>
+</section>
+
+<section id="about" class="section about-section">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-copy">
+        <p class="eyebrow">Our Story</p>
+        <h2 class="section-title">A spa, not a production line.</h2>
+        <p>The Golden Leash opened in 2018 in a sunny little shop on University Avenue. We wanted a grooming studio that felt like a spa — calm music, warm towels, and groomers who take the time to know each pet by name.</p>
+        <p>Seven years on, we groom more than 200 pets a week, and most of them come back every month. Many of our clients have been with us since the beginning — and we like to think that's because we treat every pet like our own.</p>
+        <div class="stats">
+          <div class="stat"><b>7 yrs</b><span>in North Park</span></div>
+          <div class="stat"><b>200+</b><span>pets groomed weekly</span></div>
+          <div class="stat"><b>4.9</b><span>average rating</span></div>
+        </div>
+      </div>
+      <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?q=80&w=1200&auto=format&fit=crop" alt="A freshly groomed puppy at The Golden Leash" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="section">
+  <div class="wrap">
+    <p class="eyebrow">Pet Parent Reviews</p>
+    <h2 class="section-title">San Diego's pets love it here.</h2>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;Our doodle comes home from the Golden Spa Day looking like a show dog every single time. The bandana is a lovely touch — and the text when he's ready makes pickup so easy.&rdquo;</p>
+        <cite>Lauren <span>Waffles the goldendoodle &middot; North Park</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;My senior cat is nervous around strangers, but they handle her so gently. She actually purrs when we pull into the parking lot now. I never thought I'd say that about a groomer.&rdquo;</p>
+        <cite>David <span>Luna the cat &middot; South Park</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;Booked online in two minutes, dropped off our husky, and got a photo text an hour later. The de-shedding treatment is worth every penny — our couch thanks them.&rdquo;</p>
+        <cite>Maria <span>Koda the husky &middot; Normal Heights</span></cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="section" style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow">Visit Us</p>
+    <h2 class="section-title">Find us on University Avenue.</h2>
+    <div class="visit-grid">
+      <div class="visit-card">
+        <h3>Location &amp; Contact</h3>
+        <p><strong style="color:var(--navy)">The Golden Leash</strong><br>3045 University Avenue<br>San Diego, CA 92104</p>
+        <p style="margin-top:12px"><a href="tel:+16195550123">(619) 555-0123</a><br><a href="mailto:hello@thegoldenleash.com">hello@thegoldenleash.com</a></p>
+        <p style="margin-top:12px">Free 2-hour parking in the lot behind the shop. We're next to the North Park farmers' market site.</p>
+      </div>
+      <div class="visit-card">
+        <h3>Opening Hours</h3>
+        <table class="hours">
+          <tr><td>Monday – Friday</td><td>8:00 AM – 6:00 PM</td></tr>
+          <tr><td>Saturday</td><td>9:00 AM – 5:00 PM</td></tr>
+          <tr><td>Sunday</td><td>10:00 AM – 4:00 PM</td></tr>
+        </table>
+        <p style="margin-top:14px">Nail trims are walk-in only. Full grooms are by appointment — same-week slots are usually available.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="book" class="section cta">
+  <div class="wrap">
+    <h2>Ready for a spa day?</h2>
+    <p>Book by phone or email and we'll find a time that suits your pet. First-time clients get 15% off their first full groom.</p>
+    <div class="cta-actions">
+      <a href="tel:+16195550123" class="btn btn-gold">Call (619) 555-0123</a>
+      <a href="mailto:hello@thegoldenleash.com" class="btn btn-outline" style="color:#fff;border-color:#fff">Email to Book</a>
+    </div>
+    <small>Please bring vaccination records for your pet's first visit. We groom dogs and cats of all sizes and temperaments.</small>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="10" r="6.5" stroke="#f2b705" stroke-width="2.5"/><path d="M12 15.5 8 27M20 15.5 24 27" stroke="#f2b705" stroke-width="2.5" stroke-linecap="round"/><circle cx="8" cy="28.5" r="1.8" fill="#fff"/><circle cx="24" cy="28.5" r="1.8" fill="#fff"/><circle cx="16" cy="10" r="2.2" fill="#fff"/></svg>The Golden <span>Leash</span></span>
+        <p>A boutique pet grooming spa in San Diego's North Park. Sunshine, suds, and very good dogs.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#visit">Visit</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+16195550123">(619) 555-0123</a>
+        <a href="mailto:hello@thegoldenleash.com">hello@thegoldenleash.com</a>
+        <a href="#visit">3045 University Ave, San Diego, CA 92104</a>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <a href="#visit">Mon – Fri: 8 AM – 6 PM</a>
+        <a href="#visit">Saturday: 9 AM – 5 PM</a>
+        <a href="#visit">Sunday: 10 AM – 4 PM</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 The Golden Leash Pet Grooming &amp; Spa, San Diego CA. All rights reserved.</span>
+      <span>Website designed &amp; built by <a href="https://weblodge.agency" target="_blank" rel="noopener">Weblodge Agency</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

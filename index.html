@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Selected Work — Weblodge Agency</title>
-<meta name="description" content="Recent websites built by Weblodge Agency for local businesses.">
+<meta name="description" content="60 recent websites built by Weblodge Agency for local businesses across 20 industries.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -39,7 +39,7 @@
   .brand a.site:hover{color:var(--ink);border-color:#cfc9bd}
 
   /* Hero */
-  .hero{text-align:center;padding:64px 0 48px}
+  .hero{text-align:center;padding:64px 0 40px}
   .hero .eyebrow{
     display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
     color:var(--accent);margin-bottom:16px;
@@ -48,11 +48,25 @@
     font-family:'Fraunces',serif;font-size:clamp(2.2rem,5vw,3.4rem);font-weight:700;
     line-height:1.12;letter-spacing:-.02em;max-width:720px;margin:0 auto 18px;
   }
-  .hero p{font-size:1.1rem;color:var(--muted);max-width:620px;margin:0 auto}
+  .hero p{font-size:1.1rem;color:var(--muted);max-width:640px;margin:0 auto}
   .hero p strong{color:var(--ink)}
 
+  /* Category nav */
+  .cat-nav{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:0 auto 56px;max-width:900px}
+  .cat-nav a{
+    font-size:.85rem;font-weight:600;color:var(--muted);text-decoration:none;
+    border:1px solid var(--line);background:#fff;padding:7px 14px;border-radius:999px;transition:.2s;
+  }
+  .cat-nav a:hover{color:var(--ink);border-color:#cfc9bd}
+
+  /* Category sections */
+  .cat-heading{
+    font-family:'Fraunces',serif;font-size:1.7rem;font-weight:700;letter-spacing:-.01em;
+    margin:8px 0 20px;scroll-margin-top:24px;
+  }
+
   /* Cards */
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:16px 0 72px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:8px 0 56px}
   .card{
     background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;
     display:flex;flex-direction:column;text-decoration:none;
@@ -127,32 +141,103 @@
   <section class="hero">
     <span class="eyebrow">Selected work · Weblodge Agency</span>
     <h1>Websites we've built for local businesses.</h1>
-    <p>Every project below is a complete website for a local business — <strong>menus, prices, bookings, reviews, and contact details</strong>, all in one page. Click any project to explore it.</p>
+    <p>Every project below is a complete website for a local business — <strong>menus, prices, bookings, reviews, and contact details</strong>, all in one page. Browse all <strong>60 projects across 20 business types</strong>.</p>
   </section>
 
-  <section class="grid">
+  <nav class="cat-nav" aria-label="Browse by business type">
+    <a href="#restaurants">Restaurants</a>
+    <a href="#hair-salons-barbershops">Hair Salons &amp; Barbershops</a>
+    <a href="#auto-repair">Auto Repair</a>
+    <a href="#bakeries">Bakeries</a>
+    <a href="#landscaping">Landscaping</a>
+    <a href="#cleaning-services">Cleaning Services</a>
+    <a href="#plumbers">Plumbers</a>
+    <a href="#electricians">Electricians</a>
+    <a href="#dental-clinics">Dental Clinics</a>
+    <a href="#fitness-centers-gyms">Fitness Centers &amp; Gyms</a>
+    <a href="#photographers">Photographers</a>
+    <a href="#law-firms-attorneys">Law Firms &amp; Attorneys</a>
+    <a href="#real-estate-agents">Real Estate Agents</a>
+    <a href="#florists">Florists</a>
+    <a href="#pet-grooming">Pet Grooming</a>
+    <a href="#tutors-coaching">Tutors &amp; Coaching</a>
+    <a href="#event-planners">Event Planners</a>
+    <a href="#roofers">Roofers</a>
+    <a href="#hvac-services">HVAC Services</a>
+    <a href="#moving-companies">Moving Companies</a>
+  </nav>
+
+  <section id="restaurants">
+    <h2 class="cat-heading">Restaurants</h2>
+    <div class="grid">
     <a class="card" href="restaurant/">
-      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop" alt="Warm restaurant dining room" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1600&auto=format&fit=crop" alt="The Copper Skillet" loading="lazy">
       <div class="card-body">
-        <span class="tag">Restaurant · Austin, TX</span>
+        <span class="tag">Restaurants · Austin, TX</span>
         <h2>The Copper Skillet</h2>
         <p>A warm, appetizing site for a local restaurant — menu highlights with prices, reviews, opening hours, and online reservations.</p>
         <span class="link">View website</span>
       </div>
     </a>
-
-    <a class="card" href="salon/">
-      <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1200&auto=format&fit=crop" alt="Modern hair salon interior" loading="lazy">
+    <a class="card" href="osteria-lume/">
+      <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=1600&auto=format&fit=crop" alt="Osteria Lume" loading="lazy">
       <div class="card-body">
-        <span class="tag">Salon &amp; Barbershop · Dallas, TX</span>
+        <span class="tag">Restaurants · Charleston, SC</span>
+        <h2>Osteria Lume</h2>
+        <p>An elegant Italian restaurant site — handmade pasta, a wine list, and reservations with a warm, old-world feel.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    <a class="card" href="smoky-ridge-smokehouse/">
+      <img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?q=80&w=1600&auto=format&fit=crop" alt="Smoky Ridge Smokehouse" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Restaurants · Nashville, TN</span>
+        <h2>Smoky Ridge Smokehouse</h2>
+        <p>A bold BBQ joint site — slow-smoked meats, a menu with prices, catering, and easy online ordering.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    </div>
+  </section>
+
+  <section id="hair-salons-barbershops">
+    <h2 class="cat-heading">Hair Salons &amp; Barbershops</h2>
+    <div class="grid">
+    <a class="card" href="salon/">
+      <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1600&auto=format&fit=crop" alt="The Velvet Strand" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Hair Salons &amp; Barbershops · Dallas, TX</span>
         <h2>The Velvet Strand</h2>
         <p>An elegant site for a salon — services with prices, stylist profiles, client reviews, and easy appointment booking.</p>
         <span class="link">View website</span>
       </div>
     </a>
+    <a class="card" href="shear-stone-salon/">
+      <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1400&auto=format&fit=crop" alt="Shear &amp; Stone" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Hair Salons &amp; Barbershops · Portland, OR</span>
+        <h2>Shear &amp; Stone</h2>
+        <p>A modern salon site — cuts and color with clear prices, stylist profiles, and online booking.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    <a class="card" href="bearded-oak-barbershop/">
+      <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=1600&auto=format&fit=crop" alt="The Bearded Oak" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Hair Salons &amp; Barbershops · Boise, ID</span>
+        <h2>The Bearded Oak</h2>
+        <p>A classic barbershop site — fades, beard trims, and hot-towel shaves with prices and easy booking.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    </div>
+  </section>
 
+  <section id="auto-repair">
+    <h2 class="cat-heading">Auto Repair</h2>
+    <div class="grid">
     <a class="card" href="auto-repair/">
-      <img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?q=80&w=1200&auto=format&fit=crop" alt="Mechanic working on a car" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?q=80&w=1600&auto=format&fit=crop" alt="Ironline Auto Care" loading="lazy">
       <div class="card-body">
         <span class="tag">Auto Repair · Houston, TX</span>
         <h2>Ironline Auto Care</h2>
@@ -160,6 +245,586 @@
         <span class="link">View website</span>
       </div>
     </a>
+    <a class="card" href="lakefront-auto-care/">
+      <img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?q=80&w=1600&auto=format&fit=crop" alt="Lakefront Auto Care" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Auto Repair · Chicago, IL</span>
+        <h2>Lakefront Auto Care</h2>
+        <p>A friendly auto shop site — honest pricing, service menus, and same-day appointment booking.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    <a class="card" href="buckeye-motor-works/">
+      <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=1200&auto=format&fit=crop" alt="Buckeye Motor Works" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Auto Repair · Columbus, OH</span>
+        <h2>Buckeye Motor Works</h2>
+        <p>A no-nonsense repair shop site — clear service prices, reviews, and online appointment requests.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    </div>
+  </section>
+
+  <section id="bakeries">
+    <h2 class="cat-heading">Bakeries</h2>
+    <div class="grid">
+    <a class="card" href="sugar-magnolia-bakery/">
+      <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1600&auto=format&fit=crop" alt="The Sugar Magnolia Bakery" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Bakeries · Decatur, GA</span>
+        <h2>The Sugar Magnolia Bakery</h2>
+        <p>A sweet neighborhood bakery site — cakes, pastries, and custom orders with prices and a daily menu.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    <a class="card" href="crumb-craft-bakery/">
+      <img src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?q=80&w=1600&auto=format&fit=crop" alt="Crumb &amp; Craft Bakery" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Bakeries · Richmond, VA</span>
+        <h2>Crumb &amp; Craft Bakery</h2>
+        <p>An artisan bakery site — sourdough, viennoiserie, and wholesale orders with a warm, craft feel.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    <a class="card" href="sweetwater-bakehouse/">
+      <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?q=80&w=1600&auto=format&fit=crop" alt="Sweetwater Bakehouse" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Bakeries · Tampa, FL</span>
+        <h2>Sweetwater Bakehouse</h2>
+        <p>A bright bakehouse site — fresh breads, morning pastries, and custom cakes with online ordering.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    </div>
+  </section>
+
+  <section id="landscaping">
+    <h2 class="cat-heading">Landscaping</h2>
+    <div class="grid">
+    <a class="card" href="greenhaven-landscaping/">
+      <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?q=80&w=1600&auto=format&fit=crop" alt="Greenhaven Landscaping" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Landscaping · Boston, MA</span>
+        <h2>Greenhaven Landscaping</h2>
+        <p>A landscape design site — lawn care, garden design, and seasonal cleanups with clear service pricing.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    <a class="card" href="stone-and-sprout-landscaping/">
+      <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=1400&auto=format&fit=crop" alt="Stone &amp; Sprout Landscaping" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Landscaping · Pittsburgh, PA</span>
+        <h2>Stone &amp; Sprout Landscaping</h2>
+        <p>A landscaping site — patios, plantings, and lawn care with project photos and free estimate requests.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    <a class="card" href="harborview-lawn-garden/">
+      <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=80&w=1600&auto=format&fit=crop" alt="Harborview Lawn &amp; Garden" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Landscaping · Portland, ME</span>
+        <h2>Harborview Lawn &amp; Garden</h2>
+        <p>A coastal lawn and garden site — mowing plans, garden beds, and fall cleanups with simple pricing.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    </div>
+  </section>
+
+  <section id="cleaning-services">
+    <h2 class="cat-heading">Cleaning Services</h2>
+    <div class="grid">
+    <a class="card" href="brightline-cleaning/">
+      <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1200&auto=format&fit=crop" alt="Brightline Cleaning Co." loading="lazy">
+      <div class="card-body">
+        <span class="tag">Cleaning Services · Philadelphia, PA</span>
+        <h2>Brightline Cleaning Co.</h2>
+        <p>A cleaning company site — home and office cleaning plans with upfront prices and online booking.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    <a class="card" href="sparrow-and-shine-cleaning/">
+      <img src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?q=80&w=1600&auto=format&fit=crop" alt="Sparrow &amp; Shine Cleaning" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Cleaning Services · Providence, RI</span>
+        <h2>Sparrow &amp; Shine Cleaning</h2>
+        <p>A friendly home-cleaning site — regular cleans, deep cleans, and move-out services with clear pricing.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    <a class="card" href="freshfield-cleaning/">
+      <img src="https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?q=80&w=1400&auto=format&fit=crop" alt="Freshfield Cleaning Co." loading="lazy">
+      <div class="card-body">
+        <span class="tag">Cleaning Services · Buffalo, NY</span>
+        <h2>Freshfield Cleaning Co.</h2>
+        <p>A professional cleaning site — recurring plans, one-time deep cleans, and easy online quotes.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    </div>
+  </section>
+
+  <section id="plumbers">
+    <h2 class="cat-heading">Plumbers</h2>
+    <div class="grid">
+    <a class="card" href="clearflow-plumbing/">
+      <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?q=80&w=1200&auto=format&fit=crop" alt="ClearFlow Plumbing" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Plumbers · Oklahoma City, OK</span>
+        <h2>ClearFlow Plumbing</h2>
+        <p>A plumbing site — repairs, installs, and 24/7 emergency calls with upfront pricing.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    <a class="card" href="red-rock-plumbing/">
+      <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?q=80&w=1600&auto=format&fit=crop" alt="Red Rock Plumbing" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Plumbers · Albuquerque, NM</span>
+        <h2>Red Rock Plumbing</h2>
+        <p>A trusted plumber site — drain cleaning, water heaters, and repiping with honest prices.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    <a class="card" href="bayou-drain-plumbing/">
+      <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?q=80&w=1600&auto=format&fit=crop" alt="Bayou Drain &amp; Plumbing" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Plumbers · New Orleans, LA</span>
+        <h2>Bayou Drain &amp; Plumbing</h2>
+        <p>A local plumbing site — drain service, leak repair, and emergency calls with same-day booking.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    </div>
+  </section>
+
+  <section id="electricians">
+    <h2 class="cat-heading">Electricians</h2>
+    <div class="grid">
+    <a class="card" href="high-volt-electric/">
+      <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1600&auto=format&fit=crop" alt="High Volt Electric" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Electricians · Tulsa, OK</span>
+        <h2>High Volt Electric</h2>
+        <p>An electrician site — panel upgrades, lighting, and repairs with clear prices and fast booking.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    <a class="card" href="desert-current-electric/">
+      <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1200&auto=format&fit=crop" alt="Desert Current Electric" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Electricians · Tucson, AZ</span>
+        <h2>Desert Current Electric</h2>
+        <p>An electrical services site — home wiring, EV chargers, and safety inspections with upfront quotes.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    <a class="card" href="magnolia-electric/">
+      <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?q=80&w=1600&auto=format&fit=crop" alt="Magnolia Electric Co." loading="lazy">
+      <div class="card-body">
+        <span class="tag">Electricians · Jackson, MS</span>
+        <h2>Magnolia Electric Co.</h2>
+        <p>A family electrician site — repairs, rewiring, and lighting design with honest, upfront pricing.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    </div>
+  </section>
+
+  <section id="dental-clinics">
+    <h2 class="cat-heading">Dental Clinics</h2>
+    <div class="grid">
+    <a class="card" href="brightpath-dental/">
+      <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1200&auto=format&fit=crop" alt="BrightPath Dental" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Dental Clinics · Little Rock, AR</span>
+        <h2>BrightPath Dental</h2>
+        <p>A modern dental site — checkups, whitening, and family care with online appointment booking.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    <a class="card" href="canyon-view-dental/">
+      <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1600&auto=format&fit=crop" alt="Canyon View Dental" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Dental Clinics · Santa Fe, NM</span>
+        <h2>Canyon View Dental</h2>
+        <p>A calm, welcoming dental site — cleanings, implants, and cosmetic care with easy booking.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    <a class="card" href="riverbend-dental/">
+      <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1200&auto=format&fit=crop" alt="Riverbend Dental Studio" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Dental Clinics · Memphis, TN</span>
+        <h2>Riverbend Dental Studio</h2>
+        <p>A dental studio site — preventive care, smile makeovers, and new-patient specials.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    </div>
+  </section>
+
+  <section id="fitness-centers-gyms">
+    <h2 class="cat-heading">Fitness Centers &amp; Gyms</h2>
+    <div class="grid">
+    <a class="card" href="forge-fitness-studio/">
+      <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1800&auto=format&fit=crop" alt="Forge Fitness Studio" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Fitness Centers &amp; Gyms · Orlando, FL</span>
+        <h2>Forge Fitness Studio</h2>
+        <p>A strength-training gym site — classes, coaching, and membership plans with prices.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    <a class="card" href="pacific-strength/">
+      <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1800&auto=format&fit=crop" alt="Pacific Strength &amp; Conditioning" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Fitness Centers &amp; Gyms · Long Beach, CA</span>
+        <h2>Pacific Strength &amp; Conditioning</h2>
+        <p>A conditioning gym site — group training, class schedules, and membership options.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    <a class="card" href="red-rock-fitness/">
+      <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1800&auto=format&fit=crop" alt="Red Rock Fitness Co." loading="lazy">
+      <div class="card-body">
+        <span class="tag">Fitness Centers &amp; Gyms · San Antonio, TX</span>
+        <h2>Red Rock Fitness Co.</h2>
+        <p>A family-friendly gym site — classes, kids&#x27; club, and memberships with clear pricing.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    </div>
+  </section>
+
+  <section id="photographers">
+    <h2 class="cat-heading">Photographers</h2>
+    <div class="grid">
+    <a class="card" href="ember-oak-photography/">
+      <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1800&auto=format&fit=crop" alt="Ember &amp; Oak Photography" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Photographers · Phoenix, AZ</span>
+        <h2>Ember &amp; Oak Photography</h2>
+        <p>A warm, editorial photography site — weddings, portraits, and sessions with package prices.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    <a class="card" href="harbor-light-photography/">
+      <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1800&auto=format&fit=crop" alt="Harbor Light Photography" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Photographers · Seattle, WA</span>
+        <h2>Harbor Light Photography</h2>
+        <p>A coastal photography site — weddings, engagements, and family sessions with packages.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    <a class="card" href="golden-hour-studio/">
+      <img src="https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?q=80&w=1800&auto=format&fit=crop" alt="Golden Hour Studio" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Photographers · Sacramento, CA</span>
+        <h2>Golden Hour Studio</h2>
+        <p>A portrait studio site — golden-hour sessions, weddings, and prints with package pricing.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    </div>
+  </section>
+
+  <section id="law-firms-attorneys">
+    <h2 class="cat-heading">Law Firms &amp; Attorneys</h2>
+    <div class="grid">
+    <a class="card" href="harrington-cole-law/">
+      <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=1800&auto=format&fit=crop" alt="Harrington &amp; Cole Law Firm" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Law Firms &amp; Attorneys · Tampa, FL</span>
+        <h2>Harrington &amp; Cole Law Firm</h2>
+        <p>A classic law firm site — practice areas, attorney profiles, and free consultations.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    <a class="card" href="beacon-legal-group/">
+      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1800&auto=format&fit=crop" alt="Beacon Legal Group" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Law Firms &amp; Attorneys · San Jose, CA</span>
+        <h2>Beacon Legal Group</h2>
+        <p>A modern legal site — business law and estate planning with flat-fee pricing.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    <a class="card" href="westgate-law-firm/">
+      <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1800&auto=format&fit=crop" alt="Westgate Law Firm" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Law Firms &amp; Attorneys · Fort Worth, TX</span>
+        <h2>Westgate Law Firm</h2>
+        <p>A trusted law firm site — family law, injury cases, and free case reviews.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    </div>
+  </section>
+
+  <section id="real-estate-agents">
+    <h2 class="cat-heading">Real Estate Agents</h2>
+    <div class="grid">
+    <a class="card" href="harbor-pine-realty/">
+      <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=1800&auto=format&fit=crop" alt="Harbor &amp; Pine Realty" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Real Estate Agents · Jacksonville, FL</span>
+        <h2>Harbor &amp; Pine Realty</h2>
+        <p>A coastal realty site — listings, neighborhood guides, and home-buying help.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    <a class="card" href="valley-oak-realty/">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1800&auto=format&fit=crop" alt="Valley Oak Realty" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Real Estate Agents · Fresno, CA</span>
+        <h2>Valley Oak Realty</h2>
+        <p>A friendly realty site — homes for sale, buyer guides, and local neighborhood tours.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    <a class="card" href="bluebonnet-realty-group/">
+      <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1800&auto=format&fit=crop" alt="Bluebonnet Realty Group" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Real Estate Agents · Corpus Christi, TX</span>
+        <h2>Bluebonnet Realty Group</h2>
+        <p>A Texas realty site — coastal homes, listings, and buyer and seller guides.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    </div>
+  </section>
+
+  <section id="florists">
+    <h2 class="cat-heading">Florists</h2>
+    <div class="grid">
+    <a class="card" href="wild-fern-floral/">
+      <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=1600&auto=format&fit=crop" alt="Wild Fern Floral Co." loading="lazy">
+      <div class="card-body">
+        <span class="tag">Florists · Raleigh, NC</span>
+        <h2>Wild Fern Floral Co.</h2>
+        <p>A wild, natural florist site — bouquets, weddings, and subscriptions with delivery.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    <a class="card" href="petal-and-stem/">
+      <img src="https://images.unsplash.com/photo-1494972308805-463bc619d34e?q=80&w=1600&auto=format&fit=crop" alt="Petal &amp; Stem" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Florists · Savannah, GA</span>
+        <h2>Petal &amp; Stem</h2>
+        <p>An elegant florist site — fresh bouquets, wedding flowers, and same-day delivery.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    <a class="card" href="blooming-branch/">
+      <img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?q=80&w=1600&auto=format&fit=crop" alt="The Blooming Branch" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Florists · New Orleans, LA</span>
+        <h2>The Blooming Branch</h2>
+        <p>A charming flower shop site — seasonal arrangements, weddings, and local delivery.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    </div>
+  </section>
+
+  <section id="pet-grooming">
+    <h2 class="cat-heading">Pet Grooming</h2>
+    <div class="grid">
+    <a class="card" href="paws-pine-grooming/">
+      <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=1600&auto=format&fit=crop" alt="Paws &amp; Pine" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Pet Grooming · Denver, CO</span>
+        <h2>Paws &amp; Pine</h2>
+        <p>A cozy pet grooming site — baths, cuts, and spa packages with prices and booking.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    <a class="card" href="golden-leash-grooming/">
+      <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?q=80&w=1200&auto=format&fit=crop" alt="The Golden Leash" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Pet Grooming · San Diego, CA</span>
+        <h2>The Golden Leash</h2>
+        <p>A premium grooming spa site — full grooms, nail care, and add-on treatments.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    <a class="card" href="suds-whiskers-grooming/">
+      <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=80&w=1200&auto=format&fit=crop" alt="Suds &amp; Whiskers" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Pet Grooming · Salt Lake City, UT</span>
+        <h2>Suds &amp; Whiskers</h2>
+        <p>A playful pet grooming site — baths, haircuts, and de-shedding with easy booking.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    </div>
+  </section>
+
+  <section id="tutors-coaching">
+    <h2 class="cat-heading">Tutors &amp; Coaching</h2>
+    <div class="grid">
+    <a class="card" href="bright-path-tutoring/">
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop" alt="Bright Path Tutoring" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Tutors &amp; Coaching · Charlotte, NC</span>
+        <h2>Bright Path Tutoring</h2>
+        <p>A tutoring site — math, reading, and test prep with tutor profiles and session prices.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    <a class="card" href="keystone-tutors/">
+      <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1600&auto=format&fit=crop" alt="Keystone Tutors" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Tutors &amp; Coaching · Winter Park, FL</span>
+        <h2>Keystone Tutors</h2>
+        <p>A tutoring site — one-on-one lessons, SAT/ACT prep, and online sessions.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    <a class="card" href="compass-coaching/">
+      <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=1600&auto=format&fit=crop" alt="Compass Coaching &amp; Tutoring" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Tutors &amp; Coaching · Homewood, AL</span>
+        <h2>Compass Coaching &amp; Tutoring</h2>
+        <p>A coaching site — academic tutoring, study skills, and college prep guidance.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    </div>
+  </section>
+
+  <section id="event-planners">
+    <h2 class="cat-heading">Event Planners</h2>
+    <div class="grid">
+    <a class="card" href="gather-gold-events/">
+      <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=1800&auto=format&fit=crop" alt="Gather &amp; Gold Events" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Event Planners · Las Vegas, NV</span>
+        <h2>Gather &amp; Gold Events</h2>
+        <p>A luxury event planning site — weddings, galas, and celebrations with packages.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    <a class="card" href="sage-cedar-events/">
+      <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=1400&auto=format&fit=crop" alt="Sage &amp; Cedar Events" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Event Planners · Tucson, AZ</span>
+        <h2>Sage &amp; Cedar Events</h2>
+        <p>An earthy event planning site — weddings and gatherings with full-service packages.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    <a class="card" href="high-desert-celebrations/">
+      <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=1800&auto=format&fit=crop" alt="High Desert Celebrations" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Event Planners · Albuquerque, NM</span>
+        <h2>High Desert Celebrations</h2>
+        <p>A Southwestern events site — weddings, quinceañeras, and parties with planning packages.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    </div>
+  </section>
+
+  <section id="roofers">
+    <h2 class="cat-heading">Roofers</h2>
+    <div class="grid">
+    <a class="card" href="north-peak-roofing/">
+      <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=1600&auto=format&fit=crop" alt="North Peak Roofing" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Roofers · Minneapolis, MN</span>
+        <h2>North Peak Roofing</h2>
+        <p>A roofing site — replacements, repairs, and storm damage help with free inspections.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    <a class="card" href="heartland-roofing/">
+      <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1600&auto=format&fit=crop" alt="Heartland Roofing Co." loading="lazy">
+      <div class="card-body">
+        <span class="tag">Roofers · Kansas City, MO</span>
+        <h2>Heartland Roofing Co.</h2>
+        <p>A family roofing site — new roofs, repairs, and free estimates with honest pricing.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    <a class="card" href="cream-city-roofing/">
+      <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=1600&auto=format&fit=crop" alt="Cream City Roofing" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Roofers · Milwaukee, WI</span>
+        <h2>Cream City Roofing</h2>
+        <p>A roofing company site — roof replacement, repairs, and free estimates.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    </div>
+  </section>
+
+  <section id="hvac-services">
+    <h2 class="cat-heading">HVAC Services</h2>
+    <div class="grid">
+    <a class="card" href="circle-city-comfort/">
+      <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1200&auto=format&fit=crop" alt="Circle City Comfort" loading="lazy">
+      <div class="card-body">
+        <span class="tag">HVAC Services · Indianapolis, IN</span>
+        <h2>Circle City Comfort</h2>
+        <p>An HVAC site — heating, cooling, and maintenance plans with clear pricing.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    <a class="card" href="motor-city-heating-cooling/">
+      <img src="https://images.unsplash.com/photo-1418985991508-e47386d96a71?q=80&w=1600&auto=format&fit=crop" alt="Motor City Heating &amp; Cooling" loading="lazy">
+      <div class="card-body">
+        <span class="tag">HVAC Services · Detroit, MI</span>
+        <h2>Motor City Heating &amp; Cooling</h2>
+        <p>A heating and cooling site — repairs, installs, and financing with upfront quotes.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    <a class="card" href="gateway-air-heat/">
+      <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?q=80&w=1200&auto=format&fit=crop" alt="Gateway Air &amp; Heat" loading="lazy">
+      <div class="card-body">
+        <span class="tag">HVAC Services · St. Louis, MO</span>
+        <h2>Gateway Air &amp; Heat</h2>
+        <p>An HVAC company site — AC repair, furnace installs, and maintenance plans.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    </div>
+  </section>
+
+  <section id="moving-companies">
+    <h2 class="cat-heading">Moving Companies</h2>
+    <div class="grid">
+    <a class="card" href="keystone-city-movers/">
+      <img src="https://images.unsplash.com/photo-1600518464441-9154a4dea21b?q=80&w=1600&auto=format&fit=crop" alt="Keystone City Movers" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Moving Companies · Baltimore, MD</span>
+        <h2>Keystone City Movers</h2>
+        <p>A moving company site — local and long-distance moves with upfront rates.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    <a class="card" href="northstar-moving/">
+      <img src="https://images.unsplash.com/photo-1600518464441-9154a4dea21b?q=80&w=1400&auto=format&fit=crop" alt="Northstar Moving Co." loading="lazy">
+      <div class="card-body">
+        <span class="tag">Moving Companies · Hartford, CT</span>
+        <h2>Northstar Moving Co.</h2>
+        <p>A reliable moving site — home and office moves with clear pricing and booking.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    <a class="card" href="liberty-line-movers/">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop" alt="Liberty Line Movers" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Moving Companies · Washington, DC</span>
+        <h2>Liberty Line Movers</h2>
+        <p>A professional moving site — local moves, packing, and storage with free quotes.</p>
+        <span class="link">View website</span>
+      </div>
+    </a>
+    </div>
   </section>
 
   <section class="agency">

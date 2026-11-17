@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gateway Air &amp; Heat | Heating &amp; Air Conditioning in St. Louis, MO</title>
+<meta name="description" content="Gateway Air & Heat provides heating and air conditioning service in St. Louis, MO. AC repair, furnace repair, new system installation and maintenance — 24/7 emergency service.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#0f766e;
+    --teal-dark:#0b5e57;
+    --teal-light:#e6f4f2;
+    --ink:#1c2420;
+    --warm:#f7f4ef;
+    --sand:#efe9dd;
+    --amber:#e8a33d;
+    --amber-dark:#c9851f;
+    --muted:#5f6a64;
+    --line:#e2ddd2;
+    --white:#fff;
+    --radius:16px;
+    --shadow:0 14px 34px rgba(15,118,110,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--warm);line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Sora',sans-serif;line-height:1.15;color:var(--ink)}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+  .section{padding:88px 0}
+  .eyebrow{font-size:13px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--teal)}
+  .section-head{max-width:680px;margin-bottom:46px}
+  .section-head h2{font-size:clamp(30px,4.4vw,44px);margin:10px 0 12px}
+  .section-head p{color:var(--muted);font-size:18px}
+  .btn{display:inline-block;padding:15px 30px;border-radius:999px;font-weight:700;font-size:16px;transition:.2s;cursor:pointer;text-align:center}
+  .btn-teal{background:var(--teal);color:#fff}
+  .btn-teal:hover{background:var(--teal-dark)}
+  .btn-amber{background:var(--amber);color:#241a05}
+  .btn-amber:hover{background:var(--amber-dark);color:#fff}
+  .btn-outline{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+  .btn-outline:hover{background:var(--ink);color:#fff}
+
+  /* Nav */
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;height:76px}
+  .logo{display:flex;align-items:center;gap:12px}
+  .logo-mark{width:48px;height:48px;border-radius:50%;background:var(--teal);display:grid;place-items:center;flex-shrink:0}
+  .logo-text{line-height:1.05}
+  .logo-text strong{display:block;font-family:'Sora',sans-serif;font-size:21px;color:var(--ink)}
+  .logo-text small{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .nav-links{display:flex;gap:30px;list-style:none;font-weight:600;font-size:15px}
+  .nav-links a{color:var(--ink)}
+  .nav-links a:hover{color:var(--teal)}
+
+  /* Hero */
+  .hero{background:var(--warm)}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding:72px 0 80px}
+  .hero h1{font-size:clamp(38px,5.4vw,58px);margin:14px 0 18px}
+  .hero h1 em{font-style:normal;color:var(--teal)}
+  .hero p{font-size:18px;color:var(--muted);margin-bottom:28px;max-width:520px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-meta{display:flex;gap:30px;flex-wrap:wrap;margin-top:32px;padding-top:24px;border-top:1px solid var(--line)}
+  .hero-meta strong{display:block;font-family:'Sora',sans-serif;font-size:24px;line-height:1.1}
+  .hero-meta span{font-size:13.5px;color:var(--muted)}
+  .hero-img{position:relative}
+  .hero-img img{width:100%;height:520px;object-fit:cover;border-radius:24px 24px 24px 120px;box-shadow:var(--shadow)}
+  .hero-card{position:absolute;left:-24px;bottom:32px;background:#fff;border-radius:14px;box-shadow:var(--shadow);padding:18px 22px;display:flex;gap:14px;align-items:center;max-width:320px;border-left:5px solid var(--amber)}
+  .hero-card b{display:block;font-size:15px}
+  .hero-card span{font-size:13.5px;color:var(--muted)}
+
+  /* Services */
+  .services{background:#fff}
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .service{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--warm);transition:.2s}
+  .service:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .service img{width:100%;height:180px;object-fit:cover}
+  .service-body{padding:24px}
+  .service-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:8px}
+  .service h3{font-size:21px}
+  .price{font-family:'Sora',sans-serif;font-weight:800;font-size:21px;color:var(--teal);white-space:nowrap}
+  .price small{display:block;font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);font-weight:600;text-align:right;text-transform:uppercase}
+  .service p{font-size:15px;color:var(--muted)}
+
+  /* How it works */
+  .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px}
+  .step-num{display:inline-grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--teal-light);color:var(--teal);font-family:'Sora',sans-serif;font-weight:800;font-size:19px;margin-bottom:16px}
+  .step h3{font-size:21px;margin-bottom:8px}
+  .step p{font-size:15.5px;color:var(--muted)}
+
+  /* About */
+  .about{background:var(--teal);color:#e6f4f2}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .about-grid img{border-radius:20px;width:100%;height:420px;object-fit:cover;box-shadow:0 20px 50px rgba(0,0,0,.3)}
+  .about .eyebrow{color:var(--amber)}
+  .about h2{color:#fff;font-size:clamp(30px,4vw,42px);margin:10px 0 16px}
+  .about-copy p{color:#cde8e4;font-size:17px;margin-bottom:16px}
+  .about-stats{display:flex;gap:36px;margin-top:26px;flex-wrap:wrap}
+  .stat b{display:block;font-family:'Sora',sans-serif;font-size:38px;color:#fff;line-height:1}
+  .stat span{font-size:14px;color:#a9d8d2}
+
+  /* Reviews */
+  .reviews{background:#fff}
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .review{background:var(--warm);border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px}
+  .stars{color:var(--amber-dark);letter-spacing:3px;font-size:17px;margin-bottom:14px}
+  .review p{font-size:16px;margin-bottom:18px}
+  .reviewer{font-weight:700}
+  .reviewer small{display:block;color:var(--muted);font-weight:400}
+
+  /* Visit */
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
+  .visit-card{border:1px solid var(--line);border-radius:var(--radius);padding:32px;background:#fff}
+  .visit-card h3{font-size:23px;margin-bottom:16px}
+  .hours{width:100%;border-collapse:collapse;font-size:16px}
+  .hours td{padding:9px 0;border-bottom:1px solid #f0ead9}
+  .hours td:last-child{text-align:right;font-weight:700}
+  .hours tr:last-child td{border-bottom:none}
+  .contact-line{margin-bottom:16px;color:var(--ink);font-size:16px}
+  .contact-line strong{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:2px}
+  .contact-line a{font-weight:700}
+  .contact-line a:hover{color:var(--teal)}
+  .areas{margin-top:20px;font-size:15px;color:var(--muted);line-height:1.8}
+  .areas strong{color:var(--ink)}
+
+  /* CTA */
+  .cta-band{margin-top:28px;background:var(--ink);border-radius:var(--radius);padding:48px 36px;color:#fff;text-align:center}
+  .cta-band h2{color:#fff;font-size:clamp(28px,4vw,38px);margin-bottom:10px}
+  .cta-band p{color:#c9d4cd;font-size:17px;max-width:560px;margin:0 auto 26px}
+  .cta-band .btn{margin:0 6px 10px}
+  .cta-band small{display:block;color:#9fb0a6;font-size:14px}
+
+  footer{background:var(--ink);color:#9fb0a6;padding:52px 0 28px;font-size:15px}
+  .footer-grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .footer-brand{max-width:360px}
+  .footer-brand .logo-text strong{color:#fff}
+  .footer-brand .logo-text small{color:#9fb0a6}
+  .footer-brand p{margin-top:12px}
+  .footer-col h4{color:#fff;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+  .footer-col a{display:block;margin-bottom:9px}
+  .footer-col a:hover{color:#fff}
+  .footer-bottom{padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px}
+  .footer-bottom a{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+
+  @media (max-width:900px){
+    .section{padding:64px 0}
+    .nav-links{display:none}
+    .hero-grid{grid-template-columns:1fr;gap:36px;padding:56px 0}
+    .hero-img img{height:360px;border-radius:24px}
+    .hero-card{left:16px}
+    .services-grid,.steps-grid{grid-template-columns:1fr 1fr}
+    .about-grid{grid-template-columns:1fr;gap:32px}
+    .about-grid img{height:320px}
+    .reviews-grid{grid-template-columns:1fr}
+    .visit-grid{grid-template-columns:1fr}
+  }
+  @media (max-width:600px){
+    .services-grid,.steps-grid{grid-template-columns:1fr}
+    .hero-actions .btn{width:100%}
+    .hero-card{position:static;margin-top:16px;max-width:none}
+    .footer-bottom{justify-content:center;text-align:center}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="logo" aria-label="Gateway Air & Heat — home">
+      <span class="logo-mark"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M6 26C6 14 11 6 16 6c5 0 10 8 10 20" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/><path d="M16 12v12M11.5 15.5l9 5M20.5 15.5l-9 5" stroke="#e8a33d" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="18" r="2.6" fill="#e8a33d"/></svg></span>
+      <span class="logo-text"><strong>Gateway Air &amp; Heat</strong><small>St. Louis · Missouri</small></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-teal" href="tel:+13145550147" style="padding:11px 22px;font-size:15px">Call (314) 555-0147</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">Heating &amp; Air Conditioning — St. Louis, Missouri</p>
+          <h1>St. Louis weather is wild. <em>Your home doesn't have to be.</em></h1>
+          <p>Humid summers, icy winters, and everything in between — Gateway Air &amp; Heat keeps St. Louis homes comfortable year-round, with honest pricing and technicians who treat your home like their own.</p>
+          <div class="hero-actions">
+            <a class="btn btn-teal" href="#services">See Services &amp; Prices</a>
+            <a class="btn btn-outline" href="#visit">Find Us Downtown</a>
+          </div>
+          <div class="hero-meta">
+            <div><strong>4.9 ★</strong><span>470+ Google reviews</span></div>
+            <div><strong>Since 2013</strong><span>Locally owned &amp; operated</span></div>
+            <div><strong>24/7</strong><span>Emergency service</span></div>
+          </div>
+        </div>
+        <div class="hero-img">
+          <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?q=80&w=1200&auto=format&fit=crop" alt="Comfortable St. Louis home interior with reliable heating and cooling">
+          <div class="hero-card">
+            <div><b>Same-day appointments</b><span>Call before noon and we will usually have a tech at your door today.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section services" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Services &amp; Pricing</p>
+        <h2>Heating &amp; cooling for every St. Louis home</h2>
+        <p>Upfront, flat-rate pricing on every job. Your technician explains the problem and the price before any work begins — and the price does not change at the end.</p>
+      </div>
+      <div class="services-grid">
+        <article class="service">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1615873968403-89e068629265?q=80&w=1200&auto=format&fit=crop" alt="Cool living room on a humid St. Louis summer day">
+          <div class="service-body">
+            <div class="service-top"><h3>AC Repair</h3><span class="price">$89<small>diagnostic</small></span></div>
+            <p>Warm air, weak airflow, or a unit that quits on the hottest day of the year — fixed fast, usually the same day.</p>
+          </div>
+        </article>
+        <article class="service">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1200&auto=format&fit=crop" alt="Technician repairing a furnace">
+          <div class="service-body">
+            <div class="service-top"><h3>Furnace Repair</h3><span class="price">$89<small>diagnostic</small></span></div>
+            <p>No heat is an emergency in a St. Louis winter. We answer 24/7 and carry parts for most major brands.</p>
+          </div>
+        </article>
+        <article class="service">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1200&auto=format&fit=crop" alt="Technician installing a new HVAC system">
+          <div class="service-body">
+            <div class="service-top"><h3>New System Install</h3><span class="price">$5,800<small>from</small></span></div>
+            <p>High-efficiency furnaces and air conditioners, sized right for your home, installed by our own certified crew.</p>
+          </div>
+        </article>
+        <article class="service">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1200&auto=format&fit=crop" alt="Comfortable home after a seasonal tune-up">
+          <div class="service-body">
+            <div class="service-top"><h3>Seasonal Tune-Up</h3><span class="price">$99<small>per visit</small></span></div>
+            <p>A full cleaning and safety check before summer and winter — the best way to avoid a breakdown on the worst day of the year.</p>
+          </div>
+        </article>
+        <article class="service">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200&auto=format&fit=crop" alt="Ductless mini-split keeping a home comfortable">
+          <div class="service-body">
+            <div class="service-top"><h3>Ductless Mini-Splits</h3><span class="price">$3,800<small>from</small></span></div>
+            <p>Heating and cooling without ductwork — perfect for additions, sunrooms, and older St. Louis brick homes.</p>
+          </div>
+        </article>
+        <article class="service">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop" alt="Home with clean indoor air and balanced humidity">
+          <div class="service-body">
+            <div class="service-top"><h3>Air Quality &amp; Humidity</h3><span class="price">$249<small>from</small></span></div>
+            <p>Whole-home humidifiers, dehumidifiers, and air purifiers — because St. Louis humidity needs managing, not just tolerating.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="how-it-works">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">How It Works</p>
+        <h2>Simple, from first call to fixed</h2>
+        <p>No runaround, no mystery pricing, no waiting all day for a technician who never shows.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step">
+          <span class="step-num">1</span>
+          <h3>Call or book online</h3>
+          <p>Tell us what is going on. We will give you a real arrival window — two hours, not all day — and text you when your tech is on the way.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <h3>Diagnose &amp; quote</h3>
+          <p>Your technician finds the problem, explains it in plain English, and shows you the flat-rate price before any work begins.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <h3>Fixed &amp; guaranteed</h3>
+          <p>Most repairs finish the same visit. Every repair is backed for 2 years, and new systems carry a 10-year warranty.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section about">
+    <div class="wrap">
+      <div class="about-grid">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1200&auto=format&fit=crop" alt="Gateway Air & Heat technician servicing a system in St. Louis">
+        <div class="about-copy">
+          <p class="eyebrow">About Gateway Air &amp; Heat</p>
+          <h2>Locally owned, St. Louis proud</h2>
+          <p>Gateway Air &amp; Heat started in 2013 with two vans and a belief that HVAC companies should be as reliable as the systems they install. Today we run ten trucks across the metro — but we still answer our own phones, and the owner still checks in on every install.</p>
+          <p>Our technicians are NATE-certified, background-checked, and paid by the job, not by commission. They will never sell you something you do not need.</p>
+          <div class="about-stats">
+            <div class="stat"><b>13</b><span>Years in St. Louis</span></div>
+            <div class="stat"><b>8,000+</b><span>Homes served</span></div>
+            <div class="stat"><b>4.9</b><span>Average rating</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reviews" id="reviews">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Customer Reviews</p>
+        <h2>What St. Louis says about us</h2>
+        <p>Rated 4.9 out of 5 from more than 470 reviews on Google.</p>
+      </div>
+      <div class="reviews-grid">
+        <article class="review">
+          <p class="stars" aria-label="5 out of 5 stars">★★★★★</p>
+          <p>“Our AC died during the July heat wave. They had a tech here the same afternoon, fixed it in an hour, and the bill was exactly what they quoted on the phone.”</p>
+          <p class="reviewer">Angela<small>AC repair · Tower Grove</small></p>
+        </article>
+        <article class="review">
+          <p class="stars" aria-label="5 out of 5 stars">★★★★★</p>
+          <p>“They installed a mini-split in our third-floor attic office and it changed everything — finally comfortable up there in both summer and winter.”</p>
+          <p class="reviewer">Chris<small>Mini-split install · Shaw</small></p>
+        </article>
+        <article class="review">
+          <p class="stars" aria-label="5 out of 5 stars">★★★★★</p>
+          <p>“The technician showed me the cracked heat exchanger with a camera, explained the safety risk clearly, and helped us get a new furnace installed the next day. True professionals.”</p>
+          <p class="reviewer">Patricia<small>New furnace · Kirkwood</small></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="visit">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Contact &amp; Hours</p>
+        <h2>Downtown St. Louis, serving the whole metro</h2>
+        <p>Our office is on Washington Avenue. Our trucks cover the city and county every day.</p>
+      </div>
+      <div class="visit-grid">
+        <div class="visit-card">
+          <h3>Office Hours</h3>
+          <table class="hours">
+            <tr><td>Monday – Friday</td><td>7:00 AM – 7:00 PM</td></tr>
+            <tr><td>Saturday</td><td>8:00 AM – 4:00 PM</td></tr>
+            <tr><td>Sunday</td><td>Emergency only</td></tr>
+          </table>
+          <p style="margin-top:18px;color:var(--muted);font-size:15px">Emergency service runs 24/7, every day of the year — with no overtime fees, ever.</p>
+        </div>
+        <div class="visit-card">
+          <h3>Location &amp; Contact</h3>
+          <p class="contact-line"><strong>Address</strong>3200 Washington Avenue<br>St. Louis, MO 63103</p>
+          <p class="contact-line"><strong>Phone</strong><a href="tel:+13145550147">(314) 555-0147</a></p>
+          <p class="contact-line"><strong>Email</strong><a href="mailto:hello@gatewayairheat.com">hello@gatewayairheat.com</a></p>
+          <p class="areas"><strong>Serving:</strong> St. Louis, Clayton, Kirkwood, Webster Groves, Chesterfield, Florissant, Brentwood, and the metro area.</p>
+        </div>
+      </div>
+      <div class="cta-band">
+        <h2>Too hot, too cold, or just time for a checkup?</h2>
+        <p>Call today for a same-day appointment — or a free in-home estimate on a new system.</p>
+        <a class="btn btn-teal" href="tel:+13145550147">Call (314) 555-0147</a>
+        <a class="btn btn-amber" href="#services">View Services</a>
+        <small>24/7 emergency service · Flat-rate pricing · 10-year warranty on new systems</small>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <span class="logo-mark"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M6 26C6 14 11 6 16 6c5 0 10 8 10 20" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/><path d="M16 12v12M11.5 15.5l9 5M20.5 15.5l-9 5" stroke="#e8a33d" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="18" r="2.6" fill="#e8a33d"/></svg></span>
+          <span class="logo-text"><strong>Gateway Air &amp; Heat</strong><small>St. Louis · Missouri</small></span>
+        </a>
+        <p>Heating and air conditioning in St. Louis since 2013. Honest pricing, certified technicians, and 24/7 emergency service with no overtime fees.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#services">AC Repair — $89 diagnostic</a>
+        <a href="#services">Furnace Repair — $89 diagnostic</a>
+        <a href="#services">New System Install — from $5,800</a>
+        <a href="#services">Seasonal Tune-Up — $99</a>
+        <a href="#services">Ductless Mini-Splits — from $3,800</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="#visit">3200 Washington Ave, St. Louis, MO 63103</a>
+        <a href="tel:+13145550147">(314) 555-0147</a>
+        <a href="#visit">Mon–Fri: 7 AM – 7 PM</a>
+        <a href="#visit">24/7 emergency service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Gateway Air &amp; Heat, St. Louis MO. All rights reserved.</span>
+      <span>Website designed &amp; built by <a href="https://weblodge.agency" target="_blank" rel="noopener">Weblodge Agency</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

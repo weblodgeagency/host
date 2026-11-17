@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Golden Hour Studio — Wedding &amp; Portrait Photography in Sacramento, California</title>
+<meta name="description" content="Golden Hour Studio is a Sacramento photography studio for weddings, portraits, seniors and families. Warm golden light, natural posing, and photos you'll treasure.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --gold:#c68b3c;
+    --gold-dark:#a06f2a;
+    --gold-light:#f8eeda;
+    --charcoal:#2b2b2b;
+    --charcoal-2:#3d3d3d;
+    --cream:#fdfaf3;
+    --sand:#f4ecdd;
+    --ink:#33302b;
+    --muted:#766f63;
+    --line:#e8ddc8;
+    --radius:12px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Jost',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Marcellus',Georgia,serif;line-height:1.18;font-weight:400}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+  .section{padding:90px 0}
+  .eyebrow{font-size:12.5px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:12px}
+  .section-title{font-size:clamp(31px,4.5vw,45px);color:var(--charcoal);margin-bottom:14px}
+  .section-sub{color:var(--muted);max-width:640px;font-size:18px}
+  .center{text-align:center}
+  .center .section-sub{margin-left:auto;margin-right:auto}
+  .btn{display:inline-block;padding:15px 32px;border-radius:999px;font-weight:600;font-size:16px;transition:.2s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-gold{background:var(--gold);color:#fff}
+  .btn-gold:hover{background:var(--gold-dark)}
+  .btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.85)}
+  .btn-outline:hover{background:rgba(255,255,255,.15)}
+  .btn-dark{background:var(--charcoal);color:#fff}
+  .btn-dark:hover{background:var(--charcoal-2)}
+
+  /* Nav */
+  .nav{position:sticky;top:0;z-index:100;background:var(--charcoal);box-shadow:0 2px 14px rgba(0,0,0,.2)}
+  .nav-inner{max-width:1140px;margin:0 auto;padding:0 24px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .logo{display:inline-flex;align-items:center;gap:11px;font-family:'Marcellus',Georgia,serif;font-size:24px;color:#fff}
+  .logo span{color:var(--gold)}
+  .logo svg{flex-shrink:0}
+  .nav-links{display:flex;gap:30px;list-style:none;font-weight:500;font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#d8d0c0}
+  .nav-links a:hover{color:var(--gold)}
+  .nav-cta{padding:11px 22px;font-size:14.5px}
+
+  /* Hero */
+  .hero{position:relative;color:#fff;text-align:center;background:var(--charcoal) url('https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?q=80&w=1800&auto=format&fit=crop') center/cover no-repeat}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(43,43,43,.5),rgba(43,43,43,.68))}
+  .hero-inner{position:relative;max-width:820px;margin:0 auto;padding:150px 24px 140px}
+  .hero-inner .eyebrow{color:#ecd29a}
+  .hero h1{font-size:clamp(44px,7vw,74px);margin-bottom:20px}
+  .hero h1 em{font-style:normal;color:#ecd29a}
+  .hero p{font-size:19px;color:#efe6d2;margin-bottom:34px;max-width:620px;margin-left:auto;margin-right:auto}
+  .hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+  /* About */
+  .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+  .about-imgs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .about-imgs img{width:100%;height:230px;object-fit:cover;border-radius:var(--radius)}
+  .about-imgs img:first-child{grid-column:span 2;height:280px}
+  .about-copy p{color:var(--muted);margin-bottom:16px;font-size:18px}
+  .about-list{list-style:none;margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:12px 24px}
+  .about-list li{font-weight:500;font-size:16px;padding-left:26px;position:relative}
+  .about-list li::before{content:"";position:absolute;left:0;top:9px;width:11px;height:11px;border-radius:50%;background:var(--gold)}
+
+  /* Portfolio */
+  .portfolio-section{background:var(--sand)}
+  .portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+  .portfolio-grid figure{position:relative;border-radius:var(--radius);overflow:hidden}
+  .portfolio-grid img{width:100%;height:380px;object-fit:cover;transition:transform .4s}
+  .portfolio-grid figure:hover img{transform:scale(1.05)}
+  .portfolio-grid figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 20px 16px;background:linear-gradient(transparent,rgba(43,43,43,.85));color:#fff;font-family:'Marcellus',Georgia,serif;font-size:21px}
+  .portfolio-grid figcaption span{display:block;font-family:'Jost',sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#ecd29a}
+
+  /* Packages */
+  .packages-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+  .package{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:34px 30px;display:flex;flex-direction:column;transition:.2s}
+  .package:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(43,43,43,.1)}
+  .package.featured{border:2px solid var(--gold);background:var(--gold-light)}
+  .package h3{font-size:26px;color:var(--charcoal);margin-bottom:6px}
+  .price{font-family:'Marcellus',Georgia,serif;font-size:40px;color:var(--gold-dark);margin-bottom:4px}
+  .price-note{font-size:13.5px;color:var(--muted);margin-bottom:20px}
+  .package ul{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:28px;font-size:15.5px}
+  .package li::before{content:"\2713  ";color:var(--gold-dark);font-weight:700}
+  .package .btn{margin-top:auto;text-align:center}
+  .packages-note{text-align:center;margin-top:28px;color:var(--muted)}
+  .packages-note a{color:var(--gold-dark);font-weight:600}
+
+  /* Process */
+  .process-section{background:var(--charcoal);color:#d8d0c0}
+  .process-section .section-title{color:#fff}
+  .process-section .eyebrow{color:#ecd29a}
+  .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px}
+  .process-step{text-align:center}
+  .process-step .num{font-family:'Marcellus',Georgia,serif;font-size:44px;color:var(--gold);line-height:1;margin-bottom:12px}
+  .process-step h3{font-size:20px;color:#fff;margin-bottom:8px}
+  .process-step p{font-size:15px;color:#b8ad99}
+
+  /* Reviews */
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .review{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px}
+  .stars{color:var(--gold);letter-spacing:2px;font-size:17px;margin-bottom:14px}
+  .review p{font-size:16.5px;margin-bottom:18px}
+  .review cite{font-style:normal;font-weight:600;color:var(--charcoal)}
+  .review cite span{display:block;font-weight:400;font-size:14px;color:var(--muted)}
+
+  /* Visit */
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:48px}
+  .visit-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px 30px}
+  .visit-card h3{font-size:22px;color:var(--charcoal);margin-bottom:14px}
+  .visit-card p{color:var(--muted);margin-bottom:8px}
+  .visit-card a{font-weight:600;color:var(--gold-dark)}
+  .hours{width:100%;border-collapse:collapse}
+  .hours td{padding:9px 0;border-bottom:1px solid var(--line);color:var(--muted)}
+  .hours td:last-child{text-align:right;font-weight:600;color:var(--charcoal)}
+  .hours tr:last-child td{border-bottom:none}
+
+  /* CTA */
+  .cta{text-align:center}
+  .cta h2{font-size:clamp(31px,4.5vw,45px);color:var(--charcoal);margin-bottom:14px}
+  .cta p{color:var(--muted);font-size:18px;max-width:580px;margin:0 auto 30px}
+  .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .cta small{display:block;margin-top:20px;color:var(--muted)}
+
+  footer{background:#1f1f1f;color:#a89f8d;padding:48px 0 30px;font-size:15px}
+  .footer-inner{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .footer-brand .logo{font-size:22px}
+  .footer-brand p{margin-top:10px;max-width:340px}
+  .footer-col h4{color:#fff;font-family:'Jost',sans-serif;font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px}
+  .footer-col a{display:block;margin-bottom:8px}
+  .footer-col a:hover{color:#ecd29a}
+  .footer-bottom{padding-top:22px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .footer-bottom a{color:#ecd29a;font-weight:600}
+
+  @media (max-width:900px){
+    .about-grid,.visit-grid{grid-template-columns:1fr;gap:36px}
+    .portfolio-grid,.packages-grid,.reviews-grid{grid-template-columns:1fr 1fr}
+    .process-grid{grid-template-columns:1fr 1fr}
+    .section{padding:68px 0}
+  }
+  @media (max-width:640px){
+    .nav-links{display:none}
+    .portfolio-grid,.packages-grid,.reviews-grid,.process-grid{grid-template-columns:1fr}
+    .portfolio-grid img{height:300px}
+    .hero-inner{padding:110px 24px 100px}
+    .about-list{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="7" stroke="#c68b3c" stroke-width="2.5"/><circle cx="16" cy="16" r="2.5" fill="#c68b3c"/><path d="M16 2v4M16 26v4M2 16h4M26 16h4M5.5 5.5l2.8 2.8M23.7 23.7l2.8 2.8M26.5 5.5l-2.8 2.8M8.3 23.7l-2.8 2.8" stroke="#fdfaf3" stroke-width="2" stroke-linecap="round"/></svg>Golden Hour <span>Studio</span></a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="#book" class="btn btn-gold nav-cta">Book a Session</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Wedding &amp; Portrait Photography &middot; Sacramento, California</p>
+    <h1>That <em>golden light</em> makes all the difference.</h1>
+    <p>Golden Hour Studio is a Sacramento photography studio for weddings, portraits, seniors, and families — warm light, natural posing, and photos you'll treasure for years.</p>
+    <div class="hero-actions">
+      <a href="#portfolio" class="btn btn-gold">View Portfolio</a>
+      <a href="#book" class="btn btn-outline">Check Availability</a>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-imgs">
+        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1200&auto=format&fit=crop" alt="Camera ready for a golden hour photo session" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?q=80&w=600&auto=format&fit=crop" alt="Portrait in warm golden light" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop" alt="Portrait of a man in natural light" loading="lazy">
+      </div>
+      <div class="about-copy">
+        <p class="eyebrow">Meet Your Photographer</p>
+        <h2 class="section-title">Hi, I'm Daniel.</h2>
+        <p>I'm a Sacramento photographer who chases golden hour the way other people chase weekends. For six years I've photographed weddings in the Sierra foothills, senior portraits along the American River, and families who want photos that actually look like them.</p>
+        <p>I keep sessions relaxed and unhurried. No stiff poses, no awkward silences — just gentle direction, plenty of laughter, and the warmest light of the day.</p>
+        <ul class="about-list">
+          <li>6 years behind the camera</li>
+          <li>90+ weddings photographed</li>
+          <li>Gallery delivered in 2 weeks</li>
+          <li>Prints &amp; albums available</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio" class="section portfolio-section">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">Portfolio</p>
+      <h2 class="section-title">Recent work, warm light.</h2>
+      <p class="section-sub">A few favorites from recent weddings, portraits, and senior sessions around Sacramento and the foothills.</p>
+    </div>
+    <div class="portfolio-grid">
+      <figure>
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=900&auto=format&fit=crop" alt="Bride and groom celebrating at their wedding" loading="lazy">
+        <figcaption><span>Wedding</span>Olivia &amp; Ben, Auburn</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=900&auto=format&fit=crop" alt="Couple holding hands at their engagement session" loading="lazy">
+        <figcaption><span>Engagement</span>Grace &amp; Leo, Folsom Lake</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=900&auto=format&fit=crop" alt="Portrait of a young woman in golden light" loading="lazy">
+        <figcaption><span>Senior Portrait</span>Class of 2026</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?q=80&w=900&auto=format&fit=crop" alt="Wedding celebration with sparklers at dusk" loading="lazy">
+        <figcaption><span>Wedding</span>Nina &amp; Carlos, Napa</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=900&auto=format&fit=crop" alt="Bride in a sunlit landscape" loading="lazy">
+        <figcaption><span>Wedding</span>Sophia &amp; Ethan, Tahoe</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=900&auto=format&fit=crop" alt="Portrait of a man in warm natural light" loading="lazy">
+        <figcaption><span>Portrait</span>Golden hour session</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="packages" class="section">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">Packages &amp; Pricing</p>
+      <h2 class="section-title">Simple packages, honest prices.</h2>
+      <p class="section-sub">Every package includes an online gallery, high-resolution downloads, and printing rights. Custom packages are always available.</p>
+    </div>
+    <div class="packages-grid">
+      <article class="package">
+        <h3>Portrait Session</h3>
+        <div class="price">$275</div>
+        <p class="price-note">Individuals, seniors, couples &amp; families</p>
+        <ul>
+          <li>1-hour session, one location</li>
+          <li>40+ edited high-resolution photos</li>
+          <li>Online gallery to share &amp; download</li>
+          <li>Printing rights included</li>
+          <li>Gallery delivered in 7 days</li>
+        </ul>
+        <a href="#book" class="btn btn-dark">Book Portraits</a>
+      </article>
+      <article class="package featured">
+        <h3>Wedding Day</h3>
+        <div class="price">$2,200</div>
+        <p class="price-note">Full-day wedding coverage</p>
+        <ul>
+          <li>8 hours of coverage, getting ready to send-off</li>
+          <li>Second photographer included</li>
+          <li>600+ edited high-resolution photos</li>
+          <li>Complimentary engagement session</li>
+          <li>Online gallery &amp; printing rights</li>
+          <li>Sneak peek within 48 hours</li>
+        </ul>
+        <a href="#book" class="btn btn-gold">Book Your Wedding</a>
+      </article>
+      <article class="package">
+        <h3>Mini Session</h3>
+        <div class="price">$150</div>
+        <p class="price-note">A quick session, perfect for updates</p>
+        <ul>
+          <li>30-minute session, one location</li>
+          <li>20+ edited high-resolution photos</li>
+          <li>Online gallery to share &amp; download</li>
+          <li>Printing rights included</li>
+          <li>Ideal for holiday cards &amp; headshots</li>
+        </ul>
+        <a href="#book" class="btn btn-dark">Book a Mini</a>
+      </article>
+    </div>
+    <p class="packages-note">Elopements, events, and commercial work available — <a href="tel:+19165550127">call (916) 555-0127</a> for a quote.</p>
+  </div>
+</section>
+
+<section class="section process-section">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">How It Works</p>
+      <h2 class="section-title">From first hello to finished gallery.</h2>
+    </div>
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="num">01</div>
+        <h3>Say hello</h3>
+        <p>Tell me about your session — the occasion, the people, the vibe. I'll reply within a day.</p>
+      </div>
+      <div class="process-step">
+        <div class="num">02</div>
+        <h3>Plan together</h3>
+        <p>We pick a location, a time, and outfits. I'll send a simple prep guide so you feel ready.</p>
+      </div>
+      <div class="process-step">
+        <div class="num">03</div>
+        <h3>Shoot day</h3>
+        <p>Relaxed, unhurried, and fun. I guide you gently and catch the real moments in between.</p>
+      </div>
+      <div class="process-step">
+        <div class="num">04</div>
+        <h3>Your gallery</h3>
+        <p>Edited photos delivered in your online gallery within two weeks — ready to share and print.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="section">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">Client Reviews</p>
+      <h2 class="section-title">Kind words from happy clients.</h2>
+    </div>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;Daniel photographed our wedding in Auburn and the photos are pure magic. He caught moments we didn't even see happen — we're still finding new favorites.&rdquo;</p>
+        <cite>Olivia &amp; Ben <span>Wedding &middot; Auburn</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;My daughter was so nervous for senior portraits, but Daniel made her laugh the whole time. The photos are gorgeous — she actually loves them.&rdquo;</p>
+        <cite>Karen <span>Senior portraits &middot; East Sacramento</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;We booked a mini session for holiday cards and it was the easiest hour of our year. Great with the kids, quick gallery, beautiful photos.&rdquo;</p>
+        <cite>Mike &amp; Laura <span>Family mini session &middot; Land Park</span></cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="section" style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow">Studio &amp; Contact</p>
+    <h2 class="section-title">Let's talk about your session.</h2>
+    <div class="visit-grid">
+      <div class="visit-card">
+        <h3>Studio &amp; Contact</h3>
+        <p><strong style="color:var(--charcoal)">Golden Hour Studio</strong><br>2710 Capitol Avenue, Suite 102<br>Sacramento, CA 95816</p>
+        <p style="margin-top:12px"><a href="tel:+19165550127">(916) 555-0127</a><br><a href="mailto:hello@goldenhourstudio.com">hello@goldenhourstudio.com</a></p>
+        <p style="margin-top:12px">Midtown Sacramento — free street parking on Capitol Avenue after 6 PM.</p>
+      </div>
+      <div class="visit-card">
+        <h3>Studio Hours</h3>
+        <table class="hours">
+          <tr><td>Monday – Friday</td><td>9:00 AM – 5:00 PM</td></tr>
+          <tr><td>Saturday</td><td>By appointment</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+        </table>
+        <p style="margin-top:14px">Sessions run seven days a week, sunrise to sunset — studio hours are for meetings and consultations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="book" class="section cta">
+  <div class="wrap">
+    <h2>Your date is waiting.</h2>
+    <p>Wedding dates book 6–12 months ahead, and golden-hour slots fill fast in spring and fall. Reach out today — no obligation, just a friendly chat.</p>
+    <div class="cta-actions">
+      <a href="tel:+19165550127" class="btn btn-gold">Call (916) 555-0127</a>
+      <a href="mailto:hello@goldenhourstudio.com" class="btn btn-dark">Email to Book</a>
+    </div>
+    <small>Every inquiry gets a reply within one business day. Weekend weddings require a 30% retainer to reserve your date.</small>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="7" stroke="#c68b3c" stroke-width="2.5"/><circle cx="16" cy="16" r="2.5" fill="#c68b3c"/><path d="M16 2v4M16 26v4M2 16h4M26 16h4M5.5 5.5l2.8 2.8M23.7 23.7l2.8 2.8M26.5 5.5l-2.8 2.8M8.3 23.7l-2.8 2.8" stroke="#fdfaf3" stroke-width="2" stroke-linecap="round"/></svg>Golden Hour <span>Studio</span></span>
+        <p>Wedding and portrait photography in Sacramento, California. Warm light, natural posing, photos you'll treasure.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#packages">Packages</a>
+        <a href="#reviews">Reviews</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+19165550127">(916) 555-0127</a>
+        <a href="mailto:hello@goldenhourstudio.com">hello@goldenhourstudio.com</a>
+        <a href="#visit">2710 Capitol Ave, Sacramento, CA 95816</a>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <a href="#visit">Mon – Fri: 9 AM – 5 PM</a>
+        <a href="#visit">Saturday: By appointment</a>
+        <a href="#visit">Sunday: Closed</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Golden Hour Studio, Sacramento CA. All rights reserved.</span>
+      <span>Website designed &amp; built by <a href="https://weblodge.agency" target="_blank" rel="noopener">Weblodge Agency</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

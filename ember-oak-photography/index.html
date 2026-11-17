@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ember &amp; Oak Photography — Wedding &amp; Portrait Photographer in Phoenix, Arizona</title>
+<meta name="description" content="Ember & Oak Photography is a Phoenix wedding and portrait photographer. Warm, honest photos of weddings, engagements, families and portraits across Arizona.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ember:#b4502a;
+    --ember-dark:#8f3d1e;
+    --oak:#4a3b2f;
+    --sand:#f5ece0;
+    --sand-dark:#ecdfcb;
+    --cream:#fdf9f2;
+    --ink:#3a322a;
+    --muted:#7a6e60;
+    --line:#e6d9c3;
+    --radius:14px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Montserrat',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.7;font-size:16.5px;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;line-height:1.12;font-weight:600}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+  .section{padding:92px 0}
+  .eyebrow{font-size:12px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--ember);margin-bottom:12px}
+  .section-title{font-size:clamp(33px,4.5vw,48px);color:var(--oak);margin-bottom:14px}
+  .section-sub{color:var(--muted);max-width:640px;font-size:18px}
+  .center{text-align:center}
+  .center .section-sub{margin-left:auto;margin-right:auto}
+  .btn{display:inline-block;padding:15px 32px;border-radius:999px;font-weight:700;font-size:15px;letter-spacing:.04em;transition:.2s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-ember{background:var(--ember);color:#fff}
+  .btn-ember:hover{background:var(--ember-dark)}
+  .btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.85)}
+  .btn-outline:hover{background:rgba(255,255,255,.15)}
+  .btn-dark{background:var(--oak);color:#fff}
+  .btn-dark:hover{background:#352a20}
+
+  /* Nav */
+  .nav{position:sticky;top:0;z-index:100;background:rgba(253,249,242,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav-inner{max-width:1140px;margin:0 auto;padding:0 24px;height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .logo{display:inline-flex;align-items:center;gap:11px;font-family:'Cormorant Garamond',Georgia,serif;font-size:27px;font-weight:700;color:var(--oak)}
+  .logo em{font-style:italic;color:var(--ember)}
+  .logo svg{flex-shrink:0}
+  .nav-links{display:flex;gap:30px;list-style:none;font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--oak)}
+  .nav-links a:hover{color:var(--ember)}
+  .nav-cta{padding:11px 24px;font-size:14px}
+
+  /* Hero */
+  .hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;color:#fff;background:var(--oak) url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1800&auto=format&fit=crop') center/cover no-repeat}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(43,30,20,.78) 0%,rgba(43,30,20,.25) 55%,rgba(43,30,20,.15) 100%)}
+  .hero-inner{position:relative;max-width:1140px;margin:0 auto;padding:0 24px 90px;width:100%}
+  .hero-inner .eyebrow{color:#f2c29a}
+  .hero h1{font-size:clamp(44px,7vw,76px);max-width:780px;margin-bottom:18px}
+  .hero h1 em{font-style:italic;color:#f2c29a}
+  .hero p{font-size:19px;color:#f0e6d4;max-width:600px;margin-bottom:32px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+
+  /* Intro */
+  .intro-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center}
+  .intro-grid img{border-radius:var(--radius);width:100%;height:480px;object-fit:cover}
+  .intro-copy p{color:var(--muted);margin-bottom:16px;font-size:18px}
+  .intro-stats{display:flex;gap:40px;margin-top:28px;padding-top:26px;border-top:1px solid var(--line)}
+  .intro-stats b{display:block;font-family:'Cormorant Garamond',Georgia,serif;font-size:36px;color:var(--oak);line-height:1}
+  .intro-stats span{font-size:13.5px;color:var(--muted)}
+
+  /* Portfolio */
+  .portfolio-section{background:var(--sand)}
+  .portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+  .portfolio-grid figure{position:relative;border-radius:var(--radius);overflow:hidden}
+  .portfolio-grid img{width:100%;height:340px;object-fit:cover;transition:transform .4s}
+  .portfolio-grid figure:hover img{transform:scale(1.05)}
+  .portfolio-grid figcaption{position:absolute;left:0;right:0;bottom:0;padding:36px 20px 16px;background:linear-gradient(transparent,rgba(43,30,20,.8));color:#fff;font-family:'Cormorant Garamond',Georgia,serif;font-size:22px}
+  .portfolio-grid figcaption span{display:block;font-family:'Montserrat',sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#f2c29a}
+
+  /* Packages */
+  .packages-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;align-items:stretch}
+  .package{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:34px 30px;display:flex;flex-direction:column;transition:.2s}
+  .package:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(74,59,47,.1)}
+  .package.featured{border:2px solid var(--ember);background:var(--sand);position:relative}
+  .tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--ember);color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:6px 14px;border-radius:999px;white-space:nowrap}
+  .package h3{font-size:27px;color:var(--oak);margin-bottom:6px}
+  .package .price{font-family:'Cormorant Garamond',Georgia,serif;font-size:40px;font-weight:700;color:var(--ember);margin-bottom:4px}
+  .package .price-note{font-size:13.5px;color:var(--muted);margin-bottom:20px}
+  .package ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:28px;font-size:15.5px;color:var(--ink)}
+  .package li::before{content:"\2014  ";color:var(--ember);font-weight:700}
+  .package .btn{margin-top:auto;text-align:center}
+  .packages-note{text-align:center;margin-top:28px;color:var(--muted)}
+  .packages-note a{color:var(--ember);font-weight:700}
+
+  /* Reviews */
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+  .review{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px 28px}
+  .stars{color:var(--ember);letter-spacing:2px;font-size:17px;margin-bottom:16px}
+  .review blockquote{font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;line-height:1.4;color:var(--oak);margin-bottom:18px}
+  .review cite{font-style:normal;font-weight:700;color:var(--oak)}
+  .review cite span{display:block;font-weight:400;font-size:14px;color:var(--muted)}
+
+  /* Visit / contact */
+  .visit-section{background:var(--oak);color:#e6dcc8}
+  .visit-section .section-title{color:#fff}
+  .visit-section .eyebrow{color:#f2c29a}
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:48px;align-items:start}
+  .visit-block{margin-bottom:26px}
+  .visit-block h3{font-size:22px;color:#fff;margin-bottom:8px}
+  .visit-block p,.visit-block a{color:#d8cbb0}
+  .visit-block a{font-weight:600;color:#f2c29a}
+  .hours{width:100%;border-collapse:collapse}
+  .hours td{padding:9px 0;border-bottom:1px solid rgba(255,255,255,.14);color:#d8cbb0}
+  .hours td:last-child{text-align:right;color:#fff;font-weight:600}
+  .visit-img{border-radius:var(--radius);overflow:hidden}
+  .visit-img img{width:100%;height:380px;object-fit:cover}
+
+  /* CTA */
+  .cta{text-align:center}
+  .cta h2{font-size:clamp(33px,4.5vw,48px);color:var(--oak);margin-bottom:14px}
+  .cta p{color:var(--muted);font-size:18px;max-width:580px;margin:0 auto 30px}
+  .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .cta small{display:block;margin-top:20px;color:var(--muted)}
+
+  footer{background:#2e241b;color:#b3a48c;padding:48px 0 30px;font-size:15px}
+  .footer-inner{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .footer-brand .logo{color:#fff}
+  .footer-brand p{margin-top:10px;max-width:340px}
+  .footer-col h4{color:#fff;font-family:'Montserrat',sans-serif;font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px}
+  .footer-col a{display:block;margin-bottom:8px}
+  .footer-col a:hover{color:#f2c29a}
+  .footer-bottom{padding-top:22px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .footer-bottom a{color:#f2c29a;font-weight:600}
+
+  @media (max-width:900px){
+    .intro-grid,.visit-grid{grid-template-columns:1fr;gap:36px}
+    .intro-grid img{height:340px}
+    .portfolio-grid,.packages-grid,.reviews-grid{grid-template-columns:1fr 1fr}
+    .section{padding:68px 0}
+  }
+  @media (max-width:640px){
+    .nav-links{display:none}
+    .portfolio-grid,.packages-grid,.reviews-grid{grid-template-columns:1fr}
+    .portfolio-grid img{height:280px}
+    .intro-stats{gap:24px;flex-wrap:wrap}
+    .hero-inner{padding-bottom:64px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="3" y="8" width="26" height="19" rx="3" stroke="#b4502a" stroke-width="2"/><circle cx="16" cy="17.5" r="5.5" stroke="#4a3b2f" stroke-width="2"/><circle cx="16" cy="17.5" r="2" fill="#b4502a"/><path d="M10 8l2-4h8l2 4" stroke="#4a3b2f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="25" cy="12.5" r="1.2" fill="#b4502a"/></svg>Ember <em>&amp;</em> Oak</a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="#book" class="btn btn-ember nav-cta">Book a Session</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Wedding &amp; Portrait Photography &middot; Phoenix, Arizona</p>
+    <h1>Warm, honest photos of <em>your best days.</em></h1>
+    <p>Ember &amp; Oak is a Phoenix photography studio for weddings, engagements, families, and portraits — golden light, real moments, and photos you'll love for decades.</p>
+    <div class="hero-actions">
+      <a href="#portfolio" class="btn btn-ember">View Portfolio</a>
+      <a href="#book" class="btn btn-outline">Check Availability</a>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="wrap">
+    <div class="intro-grid">
+      <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=1200&auto=format&fit=crop" alt="Photographer at work during a golden hour session" loading="lazy">
+      <div class="intro-copy">
+        <p class="eyebrow">Meet Your Photographer</p>
+        <h2 class="section-title">Hi, I'm Hannah.</h2>
+        <p>I'm a Phoenix-based photographer who fell in love with desert light and never left. For eight years I've photographed weddings in the Sonoran Desert, engagements at golden hour, and families who just want beautiful photos without the awkward posing.</p>
+        <p>My style is warm, natural, and unposed — I guide you gently, then step back and let the real moments happen. The laugh, the tear, the look between you two: that's the photo.</p>
+        <div class="intro-stats">
+          <div><b>120+</b><span>weddings photographed</span></div>
+          <div><b>8 yrs</b><span>behind the camera</span></div>
+          <div><b>2 wks</b><span>average gallery delivery</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio" class="section portfolio-section">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">Portfolio</p>
+      <h2 class="section-title">Recent work, real moments.</h2>
+      <p class="section-sub">A few favorites from recent weddings, engagements, and portrait sessions across Arizona.</p>
+    </div>
+    <div class="portfolio-grid">
+      <figure>
+        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=900&auto=format&fit=crop" alt="Bride and groom walking together at their wedding" loading="lazy">
+        <figcaption><span>Wedding</span>Sarah &amp; James, Sedona</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=900&auto=format&fit=crop" alt="Couple holding hands at their engagement session" loading="lazy">
+        <figcaption><span>Engagement</span>Maya &amp; Daniel, Papago Park</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=900&auto=format&fit=crop" alt="Bride in a desert landscape" loading="lazy">
+        <figcaption><span>Wedding</span>Elena &amp; Marcus, Scottsdale</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?q=80&w=900&auto=format&fit=crop" alt="Portrait of a woman in warm golden light" loading="lazy">
+        <figcaption><span>Portrait</span>Golden hour portraits</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?q=80&w=900&auto=format&fit=crop" alt="Wedding celebration with sparklers at dusk" loading="lazy">
+        <figcaption><span>Wedding</span>Priya &amp; Tom, Tucson</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=900&auto=format&fit=crop" alt="Camera and photography equipment ready for a session" loading="lazy">
+        <figcaption><span>Behind the Scenes</span>The tools of the trade</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="packages" class="section">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">Packages &amp; Pricing</p>
+      <h2 class="section-title">Simple packages, no hidden fees.</h2>
+      <p class="section-sub">Every package includes an online gallery, high-resolution downloads, and printing rights. Custom packages are available — just ask.</p>
+    </div>
+    <div class="packages-grid">
+      <article class="package">
+        <h3>Portrait Session</h3>
+        <div class="price">$295</div>
+        <p class="price-note">Perfect for individuals, couples &amp; families</p>
+        <ul>
+          <li>1-hour session at a location of your choice</li>
+          <li>40+ edited high-resolution photos</li>
+          <li>Online gallery to share &amp; download</li>
+          <li>Printing rights included</li>
+          <li>Gallery delivered in 7 days</li>
+        </ul>
+        <a href="#book" class="btn btn-dark">Book Portraits</a>
+      </article>
+      <article class="package featured">
+        <span class="tag">Most Popular</span>
+        <h3>Wedding Day</h3>
+        <div class="price">$2,400</div>
+        <p class="price-note">Full-day coverage for your wedding</p>
+        <ul>
+          <li>8 hours of coverage, getting ready to send-off</li>
+          <li>Second photographer included</li>
+          <li>600+ edited high-resolution photos</li>
+          <li>Engagement session included</li>
+          <li>Online gallery &amp; printing rights</li>
+          <li>Sneak peek within 48 hours</li>
+        </ul>
+        <a href="#book" class="btn btn-ember">Book Your Wedding</a>
+      </article>
+      <article class="package">
+        <h3>Engagement Session</h3>
+        <div class="price">$450</div>
+        <p class="price-note">Celebrate the proposal in golden light</p>
+        <ul>
+          <li>90-minute session, two locations</li>
+          <li>75+ edited high-resolution photos</li>
+          <li>Online gallery to share &amp; download</li>
+          <li>Printing rights included</li>
+          <li>Perfect for save-the-dates</li>
+        </ul>
+        <a href="#book" class="btn btn-dark">Book Engagement</a>
+      </article>
+    </div>
+    <p class="packages-note">Elopements, events, and custom coverage available — <a href="tel:+16025550125">call (602) 555-0125</a> for a quote.</p>
+  </div>
+</section>
+
+<section id="reviews" class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">Client Reviews</p>
+      <h2 class="section-title">Kind words from happy couples.</h2>
+    </div>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>&ldquo;Hannah made us feel so comfortable that we forgot the camera was there. Our wedding photos are stunning — we cry every time we look at them.&rdquo;</blockquote>
+        <cite>Sarah &amp; James <span>Wedding &middot; Sedona</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>&ldquo;Our engagement photos at Papago Park are pure magic. She found the light, guided us gently, and captured us exactly as we are.&rdquo;</blockquote>
+        <cite>Maya &amp; Daniel <span>Engagement &middot; Phoenix</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>&ldquo;We booked Hannah for family portraits with three kids under six — chaos. She was patient, funny, and the photos are the best we've ever had.&rdquo;</blockquote>
+        <cite>Rebecca <span>Family portraits &middot; Scottsdale</span></cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="section visit-section">
+  <div class="wrap">
+    <p class="eyebrow">Studio &amp; Contact</p>
+    <h2 class="section-title">Let's talk about your day.</h2>
+    <div class="visit-grid">
+      <div>
+        <div class="visit-block">
+          <h3>Studio</h3>
+          <p>Ember &amp; Oak Photography<br>418 E Roosevelt Street, Suite 204<br>Phoenix, AZ 85004<br>Downtown Arts District — free parking in the lot on 5th Street.</p>
+        </div>
+        <div class="visit-block">
+          <h3>Contact</h3>
+          <p><a href="tel:+16025550125">(602) 555-0125</a><br><a href="mailto:hello@emberandoakphoto.com">hello@emberandoakphoto.com</a></p>
+        </div>
+        <div class="visit-block">
+          <h3>Studio Hours</h3>
+          <table class="hours">
+            <tr><td>Monday – Friday</td><td>9:00 AM – 5:00 PM</td></tr>
+            <tr><td>Saturday</td><td>By appointment</td></tr>
+            <tr><td>Sunday</td><td>Closed</td></tr>
+          </table>
+        </div>
+      </div>
+      <div class="visit-img">
+        <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?q=80&w=1200&auto=format&fit=crop" alt="Photographer holding a camera during a session" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="book" class="section cta">
+  <div class="wrap">
+    <h2>Your date is waiting.</h2>
+    <p>Wedding dates book 6–12 months ahead, and portrait sessions fill fast in spring and fall. Reach out today and let's save your date — no obligation, just a friendly chat.</p>
+    <div class="cta-actions">
+      <a href="tel:+16025550125" class="btn btn-ember">Call (602) 555-0125</a>
+      <a href="mailto:hello@emberandoakphoto.com" class="btn btn-dark">Email to Book</a>
+    </div>
+    <small>Every inquiry gets a reply within one business day. Weekend weddings require a 30% retainer to reserve your date.</small>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="3" y="8" width="26" height="19" rx="3" stroke="#f2c29a" stroke-width="2"/><circle cx="16" cy="17.5" r="5.5" stroke="#fdf9f2" stroke-width="2"/><circle cx="16" cy="17.5" r="2" fill="#f2c29a"/><path d="M10 8l2-4h8l2 4" stroke="#fdf9f2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="25" cy="12.5" r="1.2" fill="#f2c29a"/></svg>Ember <em>&amp;</em> Oak</span>
+        <p>Wedding and portrait photography in Phoenix, Arizona. Warm, honest photos of your best days.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#packages">Packages</a>
+        <a href="#reviews">Reviews</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+16025550125">(602) 555-0125</a>
+        <a href="mailto:hello@emberandoakphoto.com">hello@emberandoakphoto.com</a>
+        <a href="#visit">418 E Roosevelt St, Phoenix, AZ 85004</a>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <a href="#visit">Mon – Fri: 9 AM – 5 PM</a>
+        <a href="#visit">Saturday: By appointment</a>
+        <a href="#visit">Sunday: Closed</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Ember &amp; Oak Photography, Phoenix AZ. All rights reserved.</span>
+      <span>Website designed &amp; built by <a href="https://weblodge.agency" target="_blank" rel="noopener">Weblodge Agency</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

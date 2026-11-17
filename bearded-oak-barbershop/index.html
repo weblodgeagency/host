@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Bearded Oak — Barbershop in Boise, Idaho</title>
+<meta name="description" content="The Bearded Oak is a classic barbershop in downtown Boise. Sharp fades, straight-razor shaves, beard sculpting, and a hot towel every time.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --oak:#2b2118;
+    --oak-dark:#1d150e;
+    --oak-mid:#3d2f21;
+    --amber:#d99a3d;
+    --amber-dark:#b57a24;
+    --cream:#f7f1e6;
+    --cream-dark:#efe4d0;
+    --ink:#2b2118;
+    --muted:#6f6152;
+    --line:#e2d5bd;
+    --radius:12px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Work Sans',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Libre Baskerville',Georgia,serif;line-height:1.2}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .section{padding:88px 0}
+  .eyebrow{font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--amber-dark);margin-bottom:12px}
+  .section-title{font-size:clamp(29px,4vw,42px);color:var(--oak);margin-bottom:14px}
+  .section-sub{color:var(--muted);max-width:620px;font-size:18px}
+  .btn{display:inline-block;padding:14px 28px;border-radius:6px;font-weight:700;font-size:15px;letter-spacing:.03em;text-transform:uppercase;transition:.2s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-amber{background:var(--amber);color:var(--oak-dark)}
+  .btn-amber:hover{background:var(--amber-dark);color:#fff}
+  .btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.8)}
+  .btn-outline:hover{background:#fff;color:var(--oak-dark)}
+  .btn-dark{background:var(--oak);color:#fff}
+  .btn-dark:hover{background:var(--oak-dark)}
+
+  /* Top strip */
+  .topbar{background:var(--oak-dark);color:#cbbd9f;font-size:13.5px;text-align:center;padding:9px 16px;letter-spacing:.04em}
+  .topbar a{color:var(--amber);font-weight:600}
+
+  /* Nav */
+  .nav{position:sticky;top:0;z-index:100;background:var(--oak);box-shadow:0 2px 14px rgba(0,0,0,.25)}
+  .nav-inner{max-width:1120px;margin:0 auto;padding:0 24px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .logo{display:inline-flex;align-items:center;gap:12px;font-family:'Libre Baskerville',Georgia,serif;font-size:22px;font-weight:700;color:#fff}
+  .logo span{color:var(--amber)}
+  .logo svg{flex-shrink:0}
+  .nav-links{display:flex;gap:30px;list-style:none;font-weight:600;font-size:14.5px;letter-spacing:.05em;text-transform:uppercase;color:#d8cbb0}
+  .nav-links a:hover{color:var(--amber)}
+  .nav-cta{padding:11px 20px;font-size:13.5px}
+
+  /* Hero */
+  .hero{position:relative;min-height:86vh;display:flex;align-items:center;color:#fff;text-align:center;background:var(--oak-dark) url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(29,21,14,.72),rgba(29,21,14,.82))}
+  .hero-inner{position:relative;max-width:760px;margin:0 auto;padding:110px 24px}
+  .hero-badge{display:inline-block;border:1px solid rgba(217,154,61,.7);color:var(--amber);padding:7px 18px;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:24px}
+  .hero h1{font-size:clamp(40px,6.5vw,66px);margin-bottom:20px}
+  .hero h1 em{font-style:italic;color:var(--amber)}
+  .hero p{font-size:19px;color:#e6dcc4;margin-bottom:34px;max-width:600px;margin-left:auto;margin-right:auto}
+  .hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .hero-note{margin-top:26px;font-size:14.5px;color:#cbbd9f;letter-spacing:.06em;text-transform:uppercase}
+
+  /* About */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .about-grid img{border-radius:var(--radius);width:100%;height:460px;object-fit:cover;box-shadow:0 16px 40px rgba(43,33,24,.18)}
+  .about-copy p{color:var(--muted);margin-bottom:16px;font-size:18px}
+  .about-points{margin-top:26px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .point{border-left:3px solid var(--amber);padding-left:16px}
+  .point b{display:block;color:var(--oak);font-size:16px}
+  .point span{color:var(--muted);font-size:15px}
+
+  /* Services */
+  .services-section{background:var(--oak);color:#e6dcc4}
+  .services-section .section-title{color:#fff}
+  .services-section .eyebrow{color:var(--amber)}
+  .services-section .section-sub{color:#cbbd9f}
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .service{background:var(--oak-mid);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:30px 26px;transition:.2s}
+  .service:hover{border-color:var(--amber);transform:translateY(-3px)}
+  .service-icon{width:52px;height:52px;border-radius:50%;background:rgba(217,154,61,.16);display:grid;place-items:center;margin-bottom:18px}
+  .service h3{font-size:20px;color:#fff;margin-bottom:8px}
+  .service p{font-size:15.5px;color:#cbbd9f;margin-bottom:16px}
+  .service-foot{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(255,255,255,.12);padding-top:14px}
+  .price{font-family:'Libre Baskerville',Georgia,serif;font-size:24px;font-weight:700;color:var(--amber)}
+  .dur{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#a89a7c;font-weight:600}
+  .services-note{text-align:center;margin-top:30px;color:#cbbd9f;font-size:15.5px}
+  .services-note a{color:var(--amber);font-weight:600}
+
+  /* Barbers */
+  .barber-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:48px}
+  .barber{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  .barber img{width:100%;height:320px;object-fit:cover}
+  .barber-body{padding:24px}
+  .barber-body h3{font-size:21px;color:var(--oak);margin-bottom:4px}
+  .barber-body .role{color:var(--amber-dark);font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px}
+  .barber-body p{color:var(--muted);font-size:15.5px}
+
+  /* Reviews */
+  .reviews-section{background:var(--cream-dark)}
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+  .review{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;position:relative}
+  .review::before{content:"\201C";position:absolute;top:8px;right:22px;font-family:'Libre Baskerville',Georgia,serif;font-size:72px;color:var(--cream-dark);line-height:1}
+  .stars{color:var(--amber-dark);letter-spacing:2px;font-size:17px;margin-bottom:14px}
+  .review p{font-size:16.5px;color:var(--ink);margin-bottom:18px}
+  .review cite{font-style:normal;font-weight:700;color:var(--oak)}
+  .review cite span{display:block;font-weight:400;font-size:14px;color:var(--muted)}
+
+  /* Visit */
+  .visit-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;margin-top:48px;align-items:start}
+  .visit-block{margin-bottom:26px}
+  .visit-block h3{font-size:19px;color:var(--oak);margin-bottom:8px}
+  .visit-block p,.visit-block a{color:var(--muted)}
+  .visit-block a{font-weight:600;color:var(--amber-dark)}
+  .hours{width:100%;border-collapse:collapse}
+  .hours td{padding:9px 0;border-bottom:1px solid var(--line);color:var(--muted)}
+  .hours td:last-child{text-align:right;font-weight:600;color:var(--oak)}
+  .visit-img{border-radius:var(--radius);overflow:hidden}
+  .visit-img img{width:100%;height:360px;object-fit:cover}
+
+  /* CTA */
+  .cta{background:var(--oak-dark);color:#fff;text-align:center}
+  .cta h2{font-size:clamp(30px,4.5vw,44px);margin-bottom:14px}
+  .cta h2 em{font-style:italic;color:var(--amber)}
+  .cta p{color:#cbbd9f;font-size:18px;max-width:560px;margin:0 auto 30px}
+  .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .cta-phone{margin-top:22px;color:#a89a7c}
+  .cta-phone a{color:var(--amber);font-weight:700}
+
+  footer{background:#150f09;color:#a89a7c;padding:48px 0 30px;font-size:15px}
+  .footer-inner{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.1)}
+  .footer-brand .logo{font-size:20px}
+  .footer-brand p{margin-top:10px;max-width:340px}
+  .footer-col h4{color:#fff;font-family:'Work Sans',sans-serif;font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px}
+  .footer-col a{display:block;margin-bottom:8px}
+  .footer-col a:hover{color:var(--amber)}
+  .footer-bottom{padding-top:22px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .footer-bottom a{color:var(--amber);font-weight:600}
+
+  @media (max-width:900px){
+    .services-grid,.barber-grid,.reviews-grid{grid-template-columns:1fr 1fr}
+    .about-grid,.visit-grid{grid-template-columns:1fr;gap:36px}
+    .about-grid img{height:340px}
+    .section{padding:66px 0}
+  }
+  @media (max-width:640px){
+    .nav-links{display:none}
+    .services-grid,.barber-grid,.reviews-grid{grid-template-columns:1fr}
+    .about-points{grid-template-columns:1fr}
+    .hero-inner{padding:88px 24px}
+    .nav-cta{display:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">Walk-ins welcome &middot; Open Tue – Sat &middot; <a href="tel:+12085550121">Call (208) 555-0121</a></div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 3C10 8 7 12.5 7 17.5A9 9 0 0 0 25 17.5C25 12.5 22 8 16 3Z" fill="#d99a3d"/><path d="M16 21v7M12 28h8" stroke="#f7f1e6" stroke-width="2" stroke-linecap="round"/><path d="M16 10v7M12.5 13.5 16 17l3.5-3.5" stroke="#1d150e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>The Bearded <span>Oak</span></a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#barbers">Barbers</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+    </nav>
+    <a href="#book" class="btn btn-amber nav-cta">Book a Chair</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-inner">
+    <span class="hero-badge">Est. 2015 &middot; Downtown Boise</span>
+    <h1>Sharp cuts. <em>Honest</em> barbering.</h1>
+    <p>A classic barbershop in the heart of downtown Boise. Precision fades, straight-razor shaves, and beard work done right — with a hot towel, a cold drink, and zero rush.</p>
+    <div class="hero-actions">
+      <a href="#services" class="btn btn-amber">View Services</a>
+      <a href="#book" class="btn btn-outline">Book a Chair</a>
+    </div>
+    <p class="hero-note">4.9 stars &middot; 700+ reviews &middot; Walk-ins welcome</p>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="wrap">
+    <div class="about-grid">
+      <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=1200&auto=format&fit=crop" alt="Barber tools and chairs inside The Bearded Oak" loading="lazy">
+      <div class="about-copy">
+        <p class="eyebrow">Our Shop</p>
+        <h2 class="section-title">Old-school craft, zero pretension.</h2>
+        <p>The Bearded Oak started in 2015 with two chairs, a straight razor, and a simple rule: do the cut right or don't do it at all. Ten years later we have six chairs, the same rule, and a waiting list on Saturdays.</p>
+        <p>Every service ends with a hot towel and a proper neck shave. Coffee's on us, the conversation is free, and your barber will remember your cut next time you sit down.</p>
+        <div class="about-points">
+          <div class="point"><b>Hot towel finish</b><span>Every cut and shave, every time.</span></div>
+          <div class="point"><b>Online booking</b><span>Pick your barber, pick your time.</span></div>
+          <div class="point"><b>Straight-razor shaves</b><span>Old-school technique, modern hygiene.</span></div>
+          <div class="point"><b>Beard care products</b><span>Oils and balms made in Idaho.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section services-section">
+  <div class="wrap">
+    <p class="eyebrow">Services &amp; Pricing</p>
+    <h2 class="section-title">Straightforward prices, serious craft.</h2>
+    <p class="section-sub">Every service includes a consultation, a hot-towel finish, and a neck shave. No hidden fees, no surprises at the till.</p>
+    <div class="services-grid">
+      <article class="service">
+        <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#d99a3d" stroke-width="1.8" stroke-linecap="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.12 15.88M14.47 14.48 20 20M8.12 8.12 12 12"/></svg></div>
+        <h3>Signature Haircut</h3>
+        <p>A precision cut tailored to your head shape and hair type — fades, crops, classics, or something in between.</p>
+        <div class="service-foot"><span class="price">$38</span><span class="dur">45 min</span></div>
+      </article>
+      <article class="service">
+        <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#d99a3d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20c4-1 6-4 7-8l2-5 3 2c2 4 3 8 4 11H4z"/></svg></div>
+        <h3>Straight-Razor Shave</h3>
+        <p>The full old-school ritual: hot towels, pre-shave oil, a straight-razor pass, and a cold-towel finish.</p>
+        <div class="service-foot"><span class="price">$45</span><span class="dur">50 min</span></div>
+      </article>
+      <article class="service">
+        <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#d99a3d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-4 3-6 6.5-6 10a6 6 0 0 0 12 0c0-3.5-2-7-6-10z"/><path d="M9 21h6"/></svg></div>
+        <h3>Beard Sculpt &amp; Trim</h3>
+        <p>Clean lines, shaped beard, and a hot-towel finish with beard oil. The fastest way to look put together.</p>
+        <div class="service-foot"><span class="price">$25</span><span class="dur">30 min</span></div>
+      </article>
+      <article class="service">
+        <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#d99a3d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4L12 2z"/></svg></div>
+        <h3>The Full Works</h3>
+        <p>Haircut, straight-razor shave, beard sculpt, and a facial massage. Ninety minutes of being looked after properly.</p>
+        <div class="service-foot"><span class="price">$85</span><span class="dur">90 min</span></div>
+      </article>
+      <article class="service">
+        <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#d99a3d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></div>
+        <h3>Kids Cut (12 &amp; under)</h3>
+        <p>A patient cut for young gentlemen — first haircuts included, with a certificate and a lollipop to take home.</p>
+        <div class="service-foot"><span class="price">$28</span><span class="dur">30 min</span></div>
+      </article>
+      <article class="service">
+        <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#d99a3d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l4-8 4 5 3-4 3 4 4-6"/><path d="M3 21h18"/></svg></div>
+        <h3>Gray Blending</h3>
+        <p>A subtle color service that softens gray without looking dyed — natural, low maintenance, and discreet.</p>
+        <div class="service-foot"><span class="price">$40</span><span class="dur">40 min</span></div>
+      </article>
+    </div>
+    <p class="services-note">Not sure what you need? <a href="tel:+12085550121">Call (208) 555-0121</a> — we'll point you to the right chair.</p>
+  </div>
+</section>
+
+<section id="barbers" class="section">
+  <div class="wrap">
+    <p class="eyebrow">Meet the Barbers</p>
+    <h2 class="section-title">Six chairs. Six steady hands.</h2>
+    <p class="section-sub">Every barber here is licensed, experienced, and picky about their work. Book with whoever you like — you can't go wrong.</p>
+    <div class="barber-grid">
+      <article class="barber">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop" alt="Portrait of Jake, founder and master barber" loading="lazy">
+        <div class="barber-body">
+          <h3>Jake</h3>
+          <p class="role">Founder &middot; Master Barber</p>
+          <p>Fourteen years behind the chair and the founder of the shop. Jake's fades are the reason half of Boise knows our name.</p>
+        </div>
+      </article>
+      <article class="barber">
+        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop" alt="Portrait of Marcus, barber and shave specialist" loading="lazy">
+        <div class="barber-body">
+          <h3>Marcus</h3>
+          <p class="role">Shave Specialist &middot; Beards</p>
+          <p>The straight razor is Marcus's instrument of choice. If you want the closest shave of your life, book his chair.</p>
+        </div>
+      </article>
+      <article class="barber">
+        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=800&auto=format&fit=crop" alt="Portrait of Tyler, barber" loading="lazy">
+        <div class="barber-body">
+          <h3>Tyler</h3>
+          <p class="role">Barber &middot; Classic Cuts</p>
+          <p>Classic cuts, textured crops, and gray blending. Tyler is calm, precise, and great with first-timers and kids.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="section reviews-section">
+  <div class="wrap">
+    <p class="eyebrow">Client Reviews</p>
+    <h2 class="section-title">What Boise says about us.</h2>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;Jake has cut my hair for five years and it has never once been off. The hot towel at the end is the best part of my month.&rdquo;</p>
+        <cite>Ryan <span>Signature cut &middot; North End</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;Got the straight-razor shave before my wedding and I have never felt more put together. Marcus is a true craftsman.&rdquo;</p>
+        <cite>Daniel <span>Straight-razor shave &middot; Downtown</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;Walked in without an appointment on a Saturday and they still fit me in. Fair price, great cut, and a proper coffee while I waited.&rdquo;</p>
+        <cite>Chris <span>Beard sculpt &middot; Bench</span></cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="section">
+  <div class="wrap">
+    <p class="eyebrow">Find Us</p>
+    <h2 class="section-title">Right on 8th Street.</h2>
+    <div class="visit-grid">
+      <div>
+        <div class="visit-block">
+          <h3>Location</h3>
+          <p>512 W Bannock Street<br>Boise, ID 83702<br>Downtown, between 8th and 9th — look for the oak sign.</p>
+        </div>
+        <div class="visit-block">
+          <h3>Contact</h3>
+          <p><a href="tel:+12085550121">(208) 555-0121</a><br><a href="mailto:hello@thebeardedoak.com">hello@thebeardedoak.com</a></p>
+        </div>
+        <div class="visit-block">
+          <h3>Opening Hours</h3>
+          <table class="hours">
+            <tr><td>Tuesday – Friday</td><td>9:00 AM – 7:00 PM</td></tr>
+            <tr><td>Saturday</td><td>9:00 AM – 5:00 PM</td></tr>
+            <tr><td>Sunday – Monday</td><td>Closed</td></tr>
+          </table>
+        </div>
+      </div>
+      <div class="visit-img">
+        <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=1200&auto=format&fit=crop" alt="Barber giving a client a precise haircut at The Bearded Oak" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="book" class="section cta">
+  <div class="wrap">
+    <h2>Your chair is <em>waiting.</em></h2>
+    <p>Book online in under a minute, or walk in and take the next free chair. Saturdays fill fast — booking ahead is the smart move.</p>
+    <div class="cta-actions">
+      <a href="tel:+12085550121" class="btn btn-amber">Call (208) 555-0121</a>
+      <a href="#visit" class="btn btn-outline">Get Directions</a>
+    </div>
+    <p class="cta-phone">Prefer to book online? Call us and we'll set it up — or just walk in.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 3C10 8 7 12.5 7 17.5A9 9 0 0 0 25 17.5C25 12.5 22 8 16 3Z" fill="#d99a3d"/><path d="M16 21v7M12 28h8" stroke="#f7f1e6" stroke-width="2" stroke-linecap="round"/><path d="M16 10v7M12.5 13.5 16 17l3.5-3.5" stroke="#1d150e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>The Bearded <span>Oak</span></span>
+        <p>A classic barbershop in downtown Boise. Sharp cuts, honest barbering, and a hot towel every time.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#barbers">Barbers</a>
+        <a href="#reviews">Reviews</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+12085550121">(208) 555-0121</a>
+        <a href="mailto:hello@thebeardedoak.com">hello@thebeardedoak.com</a>
+        <a href="#visit">512 W Bannock St, Boise, ID 83702</a>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <a href="#visit">Tue – Fri: 9 AM – 7 PM</a>
+        <a href="#visit">Saturday: 9 AM – 5 PM</a>
+        <a href="#visit">Sun – Mon: Closed</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 The Bearded Oak Barbershop, Boise ID. All rights reserved.</span>
+      <span>Website designed &amp; built by <a href="https://weblodge.agency" target="_blank" rel="noopener">Weblodge Agency</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

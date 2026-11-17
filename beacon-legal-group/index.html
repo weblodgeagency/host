@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beacon Legal Group | Business &amp; Startup Attorneys in San Jose, CA</title>
+<meta name="description" content="Beacon Legal Group is a modern business law firm in San Jose, California. Startup law, contracts, intellectual property, and employment law — with flat-fee pricing and a free first call.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --slate:#101828;
+    --slate-2:#1d2939;
+    --amber:#f59e0b;
+    --amber-dark:#d97706;
+    --amber-light:#fef3e2;
+    --paper:#f8f7f5;
+    --text:#1d2939;
+    --muted:#667085;
+    --white:#fff;
+    --line:#e4e7ec;
+    --radius:14px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);line-height:1.65;background:#fff;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Space Grotesk',sans-serif;line-height:1.12;letter-spacing:-.02em}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .section{padding:88px 0}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--amber-dark);margin-bottom:12px}
+  .eyebrow::before{content:"";width:24px;height:2px;background:var(--amber);display:inline-block}
+  .section-head{max-width:660px;margin-bottom:48px}
+  .section-head h2{font-size:clamp(30px,4.2vw,44px);margin-bottom:12px}
+  .section-head p{color:var(--muted);font-size:17px}
+  .btn{display:inline-block;padding:14px 28px;border-radius:10px;font-weight:700;font-size:15px;transition:.2s;border:2px solid transparent;cursor:pointer;text-align:center}
+  .btn-amber{background:var(--amber);color:#101828}
+  .btn-amber:hover{background:var(--amber-dark);color:#fff}
+  .btn-slate{background:var(--slate);color:#fff}
+  .btn-slate:hover{background:var(--slate-2)}
+  .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+  .btn-outline:hover{background:#fff;color:var(--slate)}
+
+  /* Nav */
+  .nav{position:sticky;top:0;z-index:50;background:var(--slate)}
+  .nav-inner{max-width:1120px;margin:0 auto;padding:0 24px;height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .logo{display:inline-flex;align-items:center;gap:11px;color:#fff;font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:700;letter-spacing:-.02em}
+  .logo em{font-style:normal;color:var(--amber)}
+  .nav-links{display:flex;gap:30px;list-style:none;font-weight:600;font-size:15px}
+  .nav-links a{color:#d0d5dd}
+  .nav-links a:hover{color:#fff}
+  .nav-cta{padding:10px 20px;font-size:14px}
+
+  /* Hero */
+  .hero{position:relative;min-height:84vh;display:flex;align-items:center;color:#fff;background:var(--slate) url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1800&auto=format&fit=crop') center/cover no-repeat}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(16,24,40,.93) 0%,rgba(16,24,40,.72) 55%,rgba(16,24,40,.3) 100%)}
+  .hero-inner{position:relative;max-width:1120px;margin:0 auto;padding:110px 24px;width:100%}
+  .hero-copy{max-width:640px}
+  .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(245,158,11,.14);border:1px solid rgba(245,158,11,.4);color:#fcd34d;padding:8px 14px;border-radius:999px;font-size:13px;font-weight:600;margin-bottom:20px}
+  .hero-copy h1{font-size:clamp(40px,6vw,62px);margin-bottom:18px}
+  .hero-copy h1 em{font-style:normal;color:var(--amber)}
+  .hero-copy p{font-size:18px;color:#d0d5dd;margin-bottom:32px;max-width:560px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-proof{display:flex;gap:32px;flex-wrap:wrap;margin-top:40px;padding-top:26px;border-top:1px solid rgba(255,255,255,.16)}
+  .hero-proof strong{display:block;font-family:'Space Grotesk',sans-serif;font-size:22px}
+  .hero-proof span{font-size:13px;color:#98a2b3}
+
+  /* About */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .about-grid img{border-radius:var(--radius);width:100%;height:440px;object-fit:cover}
+  .about-copy p{color:var(--muted);font-size:17px;margin-bottom:14px}
+  .check-list{list-style:none;margin-top:22px;display:flex;flex-direction:column;gap:11px;font-weight:600;font-size:15px}
+  .check-list li::before{content:"✓";display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--amber-light);color:var(--amber-dark);font-weight:800;font-size:13px;margin-right:10px}
+
+  /* Services */
+  .services{background:var(--paper)}
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .service{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;transition:.2s}
+  .service:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(16,24,40,.08)}
+  .service-icon{width:48px;height:48px;border-radius:12px;background:var(--amber-light);display:grid;place-items:center;margin-bottom:18px}
+  .service h3{font-size:21px;margin-bottom:8px}
+  .service p{color:var(--muted);font-size:15px;margin-bottom:14px}
+  .service-price{font-weight:700;font-size:15px;color:var(--slate)}
+  .service-price span{font-weight:500;color:var(--muted);font-size:14px}
+
+  /* Pricing strip */
+  .flatfee{background:var(--slate);color:#fff}
+  .flatfee .section-head h2{color:#fff}
+  .flatfee .section-head p{color:#98a2b3}
+  .flatfee .eyebrow{color:#fcd34d}
+  .fee-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .fee-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:26px 22px}
+  .fee-card h3{font-size:18px;margin-bottom:6px}
+  .fee-card p{color:#98a2b3;font-size:14px;margin-bottom:14px}
+  .fee-price{font-family:'Space Grotesk',sans-serif;font-size:30px;font-weight:700;color:var(--amber)}
+
+  /* Team */
+  .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .member{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff}
+  .member img{width:100%;height:300px;object-fit:cover}
+  .member-body{padding:24px 22px 28px}
+  .member-body h3{font-size:21px;margin-bottom:4px}
+  .member-role{color:var(--amber-dark);font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+  .member-body p{color:var(--muted);font-size:15px}
+
+  /* Reviews */
+  .reviews{background:var(--paper)}
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .review{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px}
+  .stars{color:var(--amber);letter-spacing:3px;font-size:17px;margin-bottom:14px}
+  .review blockquote{font-size:16px;margin-bottom:18px}
+  .review cite{font-style:normal;font-weight:700}
+  .review cite span{display:block;font-weight:500;font-size:14px;color:var(--muted)}
+
+  /* CTA */
+  .cta{text-align:center}
+  .cta h2{font-size:clamp(30px,4.2vw,44px);margin-bottom:12px}
+  .cta p{color:var(--muted);font-size:18px;max-width:580px;margin:0 auto 30px}
+
+  /* Visit */
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px}
+  .visit-card{border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+  .visit-card h3{font-size:20px;margin-bottom:14px}
+  .visit-card p,.visit-card li{font-size:15px;color:var(--muted)}
+  .visit-card a{color:var(--amber-dark);font-weight:700}
+  .hours{list-style:none}
+  .hours li{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f0f1f3}
+  .hours li:last-child{border-bottom:none}
+  .hours li span:last-child{font-weight:700;color:var(--text)}
+
+  footer{background:var(--slate);color:#98a2b3;padding:52px 0 28px;font-size:15px}
+  .footer-grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .footer-brand{max-width:360px}
+  .footer-brand p{margin-top:10px}
+  .footer-col h4{color:#fff;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+  .footer-col a{display:block;margin-bottom:8px;color:#d0d5dd}
+  .footer-col a:hover{color:var(--amber)}
+  .footer-bottom{padding-top:22px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:13.5px}
+  .footer-bottom a{color:#fcd34d;font-weight:600}
+
+  @media (max-width:900px){
+    .services-grid,.team-grid,.reviews-grid{grid-template-columns:1fr 1fr}
+    .fee-grid{grid-template-columns:1fr 1fr}
+    .about-grid,.visit-grid{grid-template-columns:1fr}
+    .about-grid img{height:320px}
+    .section{padding:64px 0}
+  }
+  @media (max-width:640px){
+    .nav-links{display:none}
+    .services-grid,.team-grid,.reviews-grid,.fee-grid{grid-template-columns:1fr}
+    .hero-inner{padding:84px 24px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 2l4 5H12l4-5z" fill="#f59e0b"/><rect x="13.5" y="7" width="5" height="18" rx="1" fill="#fff"/><path d="M8 28h16" stroke="#f59e0b" stroke-width="2.4" stroke-linecap="round"/><path d="M20 12h7M20 17h7" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" opacity=".7"/><path d="M12 12H5M12 17H5" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" opacity=".7"/></svg>Beacon <em>Legal Group</em></a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#pricing">Flat Fees</a></li>
+        <li><a href="#team">Attorneys</a></li>
+        <li><a href="#visit">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="#consult" class="btn btn-amber nav-cta">Free First Call</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <span class="hero-badge">Now taking new clients for 2026</span>
+      <h1>Legal counsel that <em>moves at startup speed.</em></h1>
+      <p>Beacon Legal Group helps San Jose founders, startups, and growing companies handle the legal side — formation, contracts, IP, and employment — with flat fees, fast turnarounds, and plain English.</p>
+      <div class="hero-actions">
+        <a href="#consult" class="btn btn-amber">Book a Free First Call</a>
+        <a href="#services" class="btn btn-outline">What We Do</a>
+      </div>
+      <div class="hero-proof">
+        <div><strong>600+</strong><span>Companies advised</span></div>
+        <div><strong>$40M+</strong><span>In deals closed</span></div>
+        <div><strong>24 hrs</strong><span>Typical response time</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-copy">
+        <p class="eyebrow">About Beacon</p>
+        <h2 style="font-size:clamp(30px,4vw,42px);margin-bottom:16px">A law firm built for the way modern companies actually work.</h2>
+        <p>Beacon Legal Group was founded in 2014 by three Silicon Valley attorneys who were tired of the old model: slow replies, surprise bills, and contracts nobody could read. We built a firm around the opposite — clear flat fees, same-week turnarounds, and lawyers who answer their own email.</p>
+        <p>Today we advise more than 600 companies across the Bay Area, from two-person startups to established firms with hundreds of employees.</p>
+        <ul class="check-list">
+          <li>Flat-fee pricing on most services — quoted up front</li>
+          <li>Same-week turnaround on standard contracts</li>
+          <li>Secure client portal for documents and messaging</li>
+          <li>Video calls available — no need to come downtown</li>
+        </ul>
+      </div>
+      <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1200&auto=format&fit=crop" alt="Client signing documents at Beacon Legal Group" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section services">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Services</p>
+      <h2>Legal help for every stage of your business</h2>
+      <p>From your first incorporation to your first funding round — and everything in between.</p>
+    </div>
+    <div class="services-grid">
+      <article class="service">
+        <span class="service-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 5-9 5-9-5 9-5z"/><path d="M3 12l9 5 9-5"/><path d="M3 17l9 5 9-5"/></svg></span>
+        <h3>Startup Formation</h3>
+        <p>LLC or C-corp, founder agreements, equity splits, and 83(b) elections — set up right from day one, so nothing comes back to bite you later.</p>
+        <p class="service-price">From $950 <span>flat fee</span></p>
+      </article>
+      <article class="service">
+        <span class="service-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6"/></svg></span>
+        <h3>Contracts</h3>
+        <p>Customer agreements, vendor contracts, NDAs, and terms of service — drafted or reviewed in plain language, usually within a week.</p>
+        <p class="service-price">From $400 <span>per contract</span></p>
+      </article>
+      <article class="service">
+        <span class="service-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg></span>
+        <h3>Intellectual Property</h3>
+        <p>Trademark registration, copyright protection, and IP assignments — so the brand and the work you build stays yours.</p>
+        <p class="service-price">From $600 <span>per trademark</span></p>
+      </article>
+      <article class="service">
+        <span class="service-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14.6c2.4.3 4.2 2 4.8 4.9"/></svg></span>
+        <h3>Employment Law</h3>
+        <p>Offer letters, employee handbooks, contractor agreements, and guidance on California's ever-changing employment rules.</p>
+        <p class="service-price">From $500 <span>per matter</span></p>
+      </article>
+      <article class="service">
+        <span class="service-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+        <h3>Fundraising &amp; Deals</h3>
+        <p>SAFE notes, convertible notes, and seed rounds — we have helped founders close more than $40 million in funding.</p>
+        <p class="service-price">From $1,500 <span>per round</span></p>
+      </article>
+      <article class="service">
+        <span class="service-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg></span>
+        <h3>General Counsel Plan</h3>
+        <p>Ongoing legal support on a monthly plan — your own legal team, without hiring one. Priority response and a set monthly price.</p>
+        <p class="service-price">From $750 <span>/month</span></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="section flatfee">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Flat-Fee Pricing</p>
+      <h2>No hourly billing. No surprises.</h2>
+      <p>Most of our work is flat-fee. You know the price before we start, and the price never changes.</p>
+    </div>
+    <div class="fee-grid">
+      <div class="fee-card">
+        <h3>LLC Formation</h3>
+        <p>Articles, operating agreement, EIN filing</p>
+        <p class="fee-price">$950</p>
+      </div>
+      <div class="fee-card">
+        <h3>Contract Review</h3>
+        <p>Full review with tracked changes and notes</p>
+        <p class="fee-price">$400</p>
+      </div>
+      <div class="fee-card">
+        <h3>Trademark Filing</h3>
+        <p>Search, application, and USPTO follow-up</p>
+        <p class="fee-price">$600</p>
+      </div>
+      <div class="fee-card">
+        <h3>Employee Handbook</h3>
+        <p>California-compliant, tailored to your company</p>
+        <p class="fee-price">$1,200</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="team" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">The Team</p>
+      <h2>Attorneys who speak founder, not legalese</h2>
+      <p>Every Beacon attorney has worked with startups and growing companies — and it shows in how we work.</p>
+    </div>
+    <div class="team-grid">
+      <article class="member">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop" alt="Portrait of Andrew Reyes, managing partner" loading="lazy">
+        <div class="member-body">
+          <h3>Andrew Reyes</h3>
+          <p class="member-role">Managing Partner · Startups</p>
+          <p>Andrew has formed more than 400 companies and closed dozens of seed rounds. He previously practiced at a large Silicon Valley firm.</p>
+        </div>
+      </article>
+      <article class="member">
+        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=800&auto=format&fit=crop" alt="Portrait of Priya Nair, partner" loading="lazy">
+        <div class="member-body">
+          <h3>Priya Nair</h3>
+          <p class="member-role">Partner · Contracts &amp; IP</p>
+          <p>Priya handles contracts and intellectual property for tech and creative companies. She has filed over 300 trademarks.</p>
+        </div>
+      </article>
+      <article class="member">
+        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=800&auto=format&fit=crop" alt="Portrait of Daniel Kim, partner" loading="lazy">
+        <div class="member-body">
+          <h3>Daniel Kim</h3>
+          <p class="member-role">Partner · Employment Law</p>
+          <p>Daniel keeps growing companies compliant with California employment law — handbooks, hiring, and tricky terminations included.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section reviews">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Client Reviews</p>
+      <h2>Founders who recommend us</h2>
+      <p>Rated 4.9 out of 5 from more than 300 reviews on Google.</p>
+    </div>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>"Beacon handled our incorporation, founder agreements, and first SAFE round. Flat fees, fast replies, and they explained everything in words I actually understood."</blockquote>
+        <cite>Jessica <span>Founder, SaaS startup</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>"We switched from a big firm to Beacon and cut our legal spend in half. Priya reviews our contracts within days, not weeks."</blockquote>
+        <cite>Marcus <span>COO, e-commerce company</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>"Daniel rebuilt our employee handbook and caught three compliance issues our old lawyer had missed. Worth every penny."</blockquote>
+        <cite>Elena <span>HR director, 60-person firm</span></cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="consult" class="section cta">
+  <div class="wrap">
+    <h2>Start with a free 30-minute call.</h2>
+    <p>Tell us what you're working on. We'll give you honest advice on what you need — and what you don't — with no obligation.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a href="tel:+14085550204" class="btn btn-slate">Call (408) 555-0204</a>
+      <a href="mailto:hello@beaconlegalgroup.com" class="btn btn-amber">Email Us</a>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Visit Us</p>
+      <h2>Downtown San Jose</h2>
+      <p>Two blocks from San Pedro Square. Video consultations available for clients anywhere in California.</p>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-card">
+        <h3>Office Hours</h3>
+        <ul class="hours">
+          <li><span>Monday – Friday</span><span>9:00 AM – 6:00 PM</span></li>
+          <li><span>Saturday</span><span>By appointment</span></li>
+          <li><span>Sunday</span><span>Closed</span></li>
+        </ul>
+      </div>
+      <div class="visit-card">
+        <h3>Location</h3>
+        <p><strong style="color:var(--text)">Beacon Legal Group</strong><br>
+        75 East Santa Clara Street, Suite 800<br>
+        San Jose, CA 95113<br><br>
+        Validated parking in the Market Street garage.</p>
+      </div>
+      <div class="visit-card">
+        <h3>Contact</h3>
+        <p><a href="tel:+14085550204">(408) 555-0204</a><br>
+        <a href="mailto:hello@beaconlegalgroup.com">hello@beaconlegalgroup.com</a></p>
+        <p style="margin-top:12px">We reply to every inquiry within one business day — usually much faster.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 2l4 5H12l4-5z" fill="#f59e0b"/><rect x="13.5" y="7" width="5" height="18" rx="1" fill="#fff"/><path d="M8 28h16" stroke="#f59e0b" stroke-width="2.4" stroke-linecap="round"/><path d="M20 12h7M20 17h7" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" opacity=".7"/><path d="M12 12H5M12 17H5" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" opacity=".7"/></svg> Beacon <em>Legal Group</em></a>
+        <p>A modern business law firm in San Jose, CA. Startup law, contracts, intellectual property, and employment law — with flat fees and fast turnarounds.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#services">Startup Formation</a>
+        <a href="#services">Contracts</a>
+        <a href="#services">Intellectual Property</a>
+        <a href="#services">Employment Law</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+14085550204">(408) 555-0204</a>
+        <a href="mailto:hello@beaconlegalgroup.com">hello@beaconlegalgroup.com</a>
+        <a href="#visit">75 E Santa Clara St, Suite 800, San Jose, CA 95113</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Beacon Legal Group. All rights reserved. Attorney advertising.</span>
+      <span>Website designed &amp; built by <a href="https://weblodge.agency" target="_blank" rel="noopener">Weblodge Agency</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

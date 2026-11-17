@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BrightPath Dental | Family Dentist in Little Rock, AR</title>
+<meta name="description" content="BrightPath Dental is a friendly family dental practice in Little Rock, AR. Cleanings, whitening, Invisalign and same-day emergency appointments — most insurance accepted.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#0d9488; --teal-2:#0f766e; --teal-dark:#134e4a; --mint:#ccfbf1;
+    --sky:#e0f2fe; --ice:#f0fdfa; --ink:#1e293b; --muted:#64748b;
+    --line:#d9edea; --white:#fff; --radius:20px;
+    --shadow:0 14px 34px rgba(13,148,136,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Nunito Sans',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Poppins',sans-serif;line-height:1.18;color:var(--teal-dark)}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .section{padding:88px 0}
+  .eyebrow{display:inline-block;background:var(--mint);color:var(--teal-2);padding:7px 16px;border-radius:999px;font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px}
+  .section-head{max-width:640px;margin-bottom:48px}
+  .section-head h2{font-size:clamp(30px,4.2vw,42px);margin-bottom:12px}
+  .section-head p{color:var(--muted);font-size:17.5px}
+  .btn{display:inline-block;padding:14px 28px;border-radius:999px;font-weight:700;font-size:16px;transition:.2s;border:2px solid transparent;text-align:center}
+  .btn-teal{background:var(--teal);color:#fff}
+  .btn-teal:hover{background:var(--teal-2);transform:translateY(-1px)}
+  .btn-dark{background:var(--teal-dark);color:#fff}
+  .btn-dark:hover{background:#0f3d39}
+  .btn-outline{background:#fff;color:var(--teal-dark);border-color:var(--teal)}
+  .btn-outline:hover{background:var(--mint)}
+
+  .nav{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav-inner{max-width:1120px;margin:0 auto;padding:0 24px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .logo{display:inline-flex;align-items:center;gap:11px;font-family:'Poppins',sans-serif;font-size:23px;font-weight:700;color:var(--teal-dark)}
+  .logo svg{flex-shrink:0}
+  .logo span{color:var(--teal)}
+  .nav-links{display:flex;gap:30px;list-style:none;font-weight:700;font-size:15px}
+  .nav-links a{color:#334155}
+  .nav-links a:hover{color:var(--teal)}
+  .nav-cta{padding:11px 22px;font-size:15px}
+
+  .hero{background:linear-gradient(135deg,var(--ice) 0%,#e6f9f5 55%,#d9f4ee 100%);border-radius:0 0 48px 48px}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding:80px 0 96px}
+  .hero h1{font-size:clamp(38px,5.4vw,56px);margin-bottom:18px}
+  .hero h1 em{font-style:normal;color:var(--teal)}
+  .hero p{font-size:18.5px;color:var(--muted);max-width:520px;margin-bottom:30px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-note{margin-top:22px;font-size:14.5px;color:var(--muted);font-weight:600}
+  .hero-note strong{color:var(--teal-2)}
+  .hero-img{position:relative}
+  .hero-img img{width:100%;height:480px;object-fit:cover;border-radius:28px;box-shadow:var(--shadow)}
+  .hero-card{position:absolute;left:-14px;bottom:28px;background:#fff;border-radius:16px;padding:16px 20px;box-shadow:var(--shadow);display:flex;gap:12px;align-items:center}
+  .hero-card b{font-family:'Poppins',sans-serif;color:var(--teal-dark);display:block;font-size:15.5px;line-height:1.3}
+  .hero-card span{font-size:13px;color:var(--muted)}
+  .hero-card .stars{color:#f59e0b;font-size:15px;letter-spacing:1px}
+
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .service{border:1px solid var(--line);border-radius:var(--radius);padding:28px;background:var(--ice);transition:.2s}
+  .service:hover{transform:translateY(-4px);box-shadow:var(--shadow);background:#fff}
+  .service-icon{width:52px;height:52px;border-radius:16px;background:var(--teal);display:grid;place-items:center;margin-bottom:18px}
+  .service h3{font-size:20px;margin-bottom:8px}
+  .service p{color:var(--muted);font-size:15.5px;margin-bottom:16px}
+  .service-foot{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding-top:14px}
+  .price{font-family:'Poppins',sans-serif;font-weight:700;font-size:20px;color:var(--teal-2)}
+  .price small{font-family:'Nunito Sans',sans-serif;font-size:12px;color:var(--muted);font-weight:600}
+  .service-foot a{font-weight:700;font-size:14.5px;color:var(--teal-dark)}
+  .service-foot a:hover{color:var(--teal)}
+
+  .team{background:var(--ice)}
+  .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .member{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 6px 20px rgba(13,148,136,.08);text-align:center}
+  .member img{width:100%;height:300px;object-fit:cover}
+  .member-body{padding:24px 20px 28px}
+  .member-body h3{font-size:20px;margin-bottom:4px}
+  .role{color:var(--teal);font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+  .member-body p{color:var(--muted);font-size:15px}
+
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .review{border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;background:#fff}
+  .stars{color:#f59e0b;letter-spacing:2px;font-size:17px;margin-bottom:14px}
+  .review p{font-size:16px;margin-bottom:18px}
+  .review cite{font-style:normal;font-weight:700;color:var(--teal-dark)}
+  .review cite span{display:block;font-weight:500;font-size:14px;color:var(--muted)}
+
+  .visit{background:var(--ice)}
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .visit-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px 30px}
+  .visit-card h3{font-size:22px;margin-bottom:18px}
+  .hours{width:100%;border-collapse:collapse}
+  .hours td{padding:9px 0;border-bottom:1px solid #eef6f5}
+  .hours td:last-child{text-align:right;font-weight:700;color:var(--teal-dark)}
+  .hours tr:last-child td{border-bottom:none}
+  .contact-line{margin-bottom:16px;color:var(--muted)}
+  .contact-line strong{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:3px}
+  .contact-line a{color:var(--teal-dark);font-weight:700}
+  .contact-line a:hover{color:var(--teal)}
+
+  .cta{text-align:center}
+  .cta h2{font-size:clamp(30px,4.2vw,42px);margin-bottom:14px}
+  .cta p{color:var(--muted);font-size:18px;max-width:580px;margin:0 auto 30px}
+  .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .cta small{display:block;margin-top:20px;color:var(--muted)}
+
+  footer{background:var(--teal-dark);color:#99c9c3;padding:48px 0 30px;font-size:14.5px}
+  .footer-grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.14)}
+  .footer-brand{max-width:340px}
+  .footer-brand .logo{color:#fff}
+  .footer-brand p{margin-top:10px}
+  .footer-col h4{color:#fff;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
+  .footer-col a{display:block;margin-bottom:8px;color:#bfe6e0}
+  .footer-col a:hover{color:#fff}
+  .footer-bottom{padding-top:22px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  .footer-bottom a{color:#5eead4;font-weight:700}
+  .footer-bottom a:hover{text-decoration:underline}
+
+  @media (max-width: 900px){
+    .hero-grid,.visit-grid{grid-template-columns:1fr;gap:36px}
+    .services-grid,.team-grid,.reviews-grid{grid-template-columns:repeat(2,1fr)}
+    .hero-img img{height:340px}
+    .section{padding:64px 0}
+    .hero{border-radius:0 0 32px 32px}
+  }
+  @media (max-width: 620px){
+    .nav-links{display:none}
+    .services-grid,.team-grid,.reviews-grid{grid-template-columns:1fr}
+    .hero-card{left:12px;right:12px;bottom:12px}
+    .btn{width:100%}
+    .hero-actions .btn{width:auto;flex:1 1 auto}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="14.5" fill="#0d9488"/><path d="M10.2 8.2c2.4-1.2 4.4-.4 5.8.9 1.4-1.3 3.4-2.1 5.8-.9 2.6 1.3 3.4 4 2.8 6.6-.5 2.3-1.5 4.5-2.2 6.6-.6 1.8-1.2 4.3-2.7 4.3-1.9 0-1.6-3.6-2-5.5-.2-1-.7-1.8-1.7-1.8s-1.5.8-1.7 1.8c-.4 1.9-.1 5.5-2 5.5-1.5 0-2.1-2.5-2.7-4.3-.7-2.1-1.7-4.3-2.2-6.6-.6-2.6.2-5.3 2.8-6.6Z" fill="#fff"/></svg>Bright<span>Path</span> Dental</a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#team">Our Team</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+    </nav>
+    <a href="tel:+15015550188" class="btn btn-teal nav-cta">Book (501) 555-0188</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">Family Dentistry &middot; Little Rock, AR</p>
+        <h1>A healthier smile starts with a <em>dentist you actually like.</em></h1>
+        <p>BrightPath Dental is a calm, modern practice in the Heights — gentle cleanings, honest advice, and same-day appointments when something hurts. Most insurance accepted, and new patients are always welcome.</p>
+        <div class="hero-actions">
+          <a href="tel:+15015550188" class="btn btn-teal">Book an Appointment</a>
+          <a href="#services" class="btn btn-outline">See Services &amp; Prices</a>
+        </div>
+        <p class="hero-note"><strong>New patients:</strong> first cleaning &amp; exam just $99 &middot; <strong>Same-day</strong> emergency appointments</p>
+      </div>
+      <div class="hero-img">
+        <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1200&auto=format&fit=crop" alt="Bright, modern dental treatment room at BrightPath Dental" loading="lazy">
+        <div class="hero-card">
+          <div>
+            <div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <b>4.9 out of 5</b>
+            <span>from 750+ patient reviews</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Services &amp; Pricing</p>
+      <h2>Everything your smile needs, in one place.</h2>
+      <p>Clear pricing before treatment starts, and we'll always explain your options — including what can safely wait. No pressure, no surprises.</p>
+    </div>
+    <div class="services-grid">
+      <article class="service">
+        <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a7 7 0 0 1 7 7c0 2.4-1.2 4.6-2.2 6.6-.8 1.6-1.6 3.4-2.8 3.4-1.4 0-1.4-2.6-1.7-4-.2-1-.8-1.5-1.3-1.5s-1.1.5-1.3 1.5c-.3 1.4-.3 4-1.7 4-1.2 0-2-1.8-2.8-3.4C4.2 13.6 3 11.4 3 9a7 7 0 0 1 9-7Z"/></svg></div>
+        <h3>Cleaning &amp; Exam</h3>
+        <p>A gentle, thorough cleaning plus a full exam and digital X-rays — the foundation of a healthy smile, twice a year.</p>
+        <div class="service-foot"><span class="price">$99 <small>new patients</small></span><a href="tel:+15015550188">Book now &rarr;</a></div>
+      </article>
+      <article class="service">
+        <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="3.2"/></svg></div>
+        <h3>Teeth Whitening</h3>
+        <p>In-office whitening that lifts years of coffee and tea stains in a single visit — plus take-home trays to keep it bright.</p>
+        <div class="service-foot"><span class="price">$249 <small>per session</small></span><a href="tel:+15015550188">Book now &rarr;</a></div>
+      </article>
+      <article class="service">
+        <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21c4-1 5-4 5-7V9a3 3 0 0 1 6 0v5c0 3 1 6 5 7"/><path d="M8 9V7a4 4 0 0 1 8 0v2"/></svg></div>
+        <h3>Invisalign &amp; Clear Aligners</h3>
+        <p>Straighten your teeth without brackets or wires. Clear, comfortable aligners with a digital preview of your new smile.</p>
+        <div class="service-foot"><span class="price">$2,900 <small>starting</small></span><a href="tel:+15015550188">Free consult &rarr;</a></div>
+      </article>
+      <article class="service">
+        <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>Fillings &amp; Crowns</h3>
+        <p>Tooth-colored fillings and same-day ceramic crowns that look and feel like your natural teeth — done right, done once.</p>
+        <div class="service-foot"><span class="price">$175 <small>fillings from</small></span><a href="tel:+15015550188">Book now &rarr;</a></div>
+      </article>
+      <article class="service">
+        <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-3.5 4.5-5 8-5s6.5 1.5 8 5"/></svg></div>
+        <h3>Kids' Dentistry</h3>
+        <p>Patient, gentle visits for little ones — first checkups, sealants, and fluoride, with a prize box at the end of every visit.</p>
+        <div class="service-foot"><span class="price">$79 <small>kids' exam</small></span><a href="tel:+15015550188">Book now &rarr;</a></div>
+      </article>
+      <article class="service">
+        <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <h3>Emergency Dental Care</h3>
+        <p>Toothache, chipped tooth, or knocked-out tooth? Call in the morning and we'll see you the same day — usually within hours.</p>
+        <div class="service-foot"><span class="price">Same-day care</span><a href="tel:+15015550188">Call now &rarr;</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="team" class="section team">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Meet Your Dentists</p>
+      <h2>A small team that knows your name.</h2>
+      <p>You'll see the same faces at every visit. We take the time to listen, explain, and make sure you're comfortable — especially if the dentist isn't your favorite place.</p>
+    </div>
+    <div class="team-grid">
+      <article class="member">
+        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=800&auto=format&fit=crop" alt="Dr. Sarah Mitchell, lead dentist" loading="lazy">
+        <div class="member-body">
+          <h3>Dr. Sarah Mitchell</h3>
+          <p class="role">Lead Dentist &middot; DDS</p>
+          <p>Fourteen years in practice, with a gentle touch and a special interest in cosmetic and restorative dentistry.</p>
+        </div>
+      </article>
+      <article class="member">
+        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=800&auto=format&fit=crop" alt="Dr. James Carter, associate dentist" loading="lazy">
+        <div class="member-body">
+          <h3>Dr. James Carter</h3>
+          <p class="role">Associate Dentist &middot; DMD</p>
+          <p>Focused on family dentistry and clear aligners — and a favorite with nervous patients and kids alike.</p>
+        </div>
+      </article>
+      <article class="member">
+        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=800&auto=format&fit=crop" alt="Hannah, dental hygienist" loading="lazy">
+        <div class="member-body">
+          <h3>Hannah Brooks</h3>
+          <p class="role">Dental Hygienist &middot; RDH</p>
+          <p>Our lead hygienist for eight years — thorough, gentle cleanings and practical advice that actually sticks.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Patient Reviews</p>
+      <h2>Little Rock smiles a little brighter.</h2>
+      <p>Rated 4.9 out of 5 from more than 750 patient reviews across Google and Yelp.</p>
+    </div>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;I used to dread the dentist. Dr. Mitchell explained everything, never rushed me, and my cleaning was completely painless. I actually look forward to going now.&rdquo;</p>
+        <cite>Rachel <span>Heights &middot; Patient since 2021</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;My son lost a tooth at school and they saw him the same afternoon. Kind, calm, and wonderful with kids — we're patients for life.&rdquo;</p>
+        <cite>Michael <span>West Little Rock &middot; Emergency visit</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;Invisalign finished in 11 months and the result is amazing. They showed me the digital preview first, so I knew exactly what to expect.&rdquo;</p>
+        <cite>Jessica <span>Downtown &middot; Invisalign</span></cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="section visit">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Visit &amp; Contact</p>
+      <h2>Find us on Cantrell Road.</h2>
+      <p>Free parking in front of the building, wheelchair accessible, and a comfortable waiting room with coffee and Wi-Fi.</p>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-card">
+        <h3>Office Hours</h3>
+        <table class="hours">
+          <tr><td>Monday – Thursday</td><td>8:00 AM – 5:00 PM</td></tr>
+          <tr><td>Friday</td><td>8:00 AM – 3:00 PM</td></tr>
+          <tr><td>Saturday</td><td>9:00 AM – 1:00 PM</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+        </table>
+        <p style="margin-top:18px;color:var(--muted);font-size:15px">Same-day emergency appointments available — call as early as 7:30 AM and we'll fit you in.</p>
+      </div>
+      <div class="visit-card">
+        <h3>Location &amp; Contact</h3>
+        <p class="contact-line"><strong>Address</strong>6801 Cantrell Road, Suite 200<br>Little Rock, AR 72205</p>
+        <p class="contact-line"><strong>Phone</strong><a href="tel:+15015550188">(501) 555-0188</a></p>
+        <p class="contact-line"><strong>Email</strong><a href="mailto:hello@brightpathdental.com">hello@brightpathdental.com</a></p>
+        <p class="contact-line" style="margin-bottom:0"><strong>Insurance</strong>Most PPO plans accepted &middot; In-house membership plan from $29/mo</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section cta">
+  <div class="wrap">
+    <p class="eyebrow">New patients welcome</p>
+    <h2>Your best smile is one visit away.</h2>
+    <p>Book online by phone in under two minutes. First cleaning &amp; exam just $99 for new patients — and we'll see you the same day if you're in pain.</p>
+    <div class="cta-actions">
+      <a href="tel:+15015550188" class="btn btn-teal">Call (501) 555-0188</a>
+      <a href="mailto:hello@brightpathdental.com" class="btn btn-dark">Email Us</a>
+    </div>
+    <small>Most insurance accepted &middot; Flexible payment plans available</small>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="14.5" fill="#0d9488"/><path d="M10.2 8.2c2.4-1.2 4.4-.4 5.8.9 1.4-1.3 3.4-2.1 5.8-.9 2.6 1.3 3.4 4 2.8 6.6-.5 2.3-1.5 4.5-2.2 6.6-.6 1.8-1.2 4.3-2.7 4.3-1.9 0-1.6-3.6-2-5.5-.2-1-.7-1.8-1.7-1.8s-1.5.8-1.7 1.8c-.4 1.9-.1 5.5-2 5.5-1.5 0-2.1-2.5-2.7-4.3-.7-2.1-1.7-4.3-2.2-6.6-.6-2.6.2-5.3 2.8-6.6Z" fill="#fff"/></svg>Bright<span style="color:#5eead4">Path</span> Dental</a>
+        <p>Family dentistry in the Heights, Little Rock — gentle care, honest pricing, and same-day help when you need it most.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#services">Cleanings &amp; Exams</a>
+        <a href="#services">Whitening</a>
+        <a href="#services">Invisalign</a>
+        <a href="#services">Emergency Care</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+15015550188">(501) 555-0188</a>
+        <a href="mailto:hello@brightpathdental.com">hello@brightpathdental.com</a>
+        <a href="#visit">6801 Cantrell Rd, Little Rock</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 BrightPath Dental, Little Rock, AR. All rights reserved.</span>
+      <span>Website designed &amp; built by <a href="https://weblodge.agency" target="_blank" rel="noopener">Weblodge Agency</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

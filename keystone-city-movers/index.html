@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keystone City Movers — Moving Company in Baltimore, MD</title>
+<meta name="description" content="Keystone City Movers is Baltimore's trusted moving company: local and long-distance moves, packing, and storage. Licensed, insured, and honest flat-rate quotes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#12263f; --navy-dark:#0b1828; --orange:#e8722a; --orange-dark:#c95a1a;
+    --paper:#ffffff; --mist:#f2f5f8; --ink:#1c2733; --muted:#5b6b7a; --line:#dde5ec;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;font-size:17px}
+  h1,h2,h3{font-family:'Archivo',system-ui,sans-serif;line-height:1.15}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .section{padding:88px 0}
+  .eyebrow{font-size:13px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:10px}
+  .section-title{font-size:clamp(30px,4.5vw,42px);color:var(--navy);margin-bottom:14px}
+  .section-sub{color:var(--muted);max-width:620px;font-size:18px}
+  .btn{display:inline-block;padding:15px 30px;border-radius:6px;font-weight:800;font-size:16px;transition:.2s;font-family:'Archivo',sans-serif;letter-spacing:.02em}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-orange{background:var(--orange);color:#fff;box-shadow:0 10px 22px rgba(232,114,42,.35)}
+  .btn-orange:hover{background:var(--orange-dark)}
+  .btn-navy{background:var(--navy);color:#fff}
+  .btn-navy:hover{background:var(--navy-dark)}
+  .btn-white{background:#fff;color:var(--navy)}
+  .btn-white:hover{background:#eef2f6}
+  .btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.7)}
+  .btn-ghost:hover{background:rgba(255,255,255,.12)}
+
+  .nav{position:sticky;top:0;z-index:100;background:var(--navy);box-shadow:0 2px 14px rgba(0,0,0,.25)}
+  .nav-inner{max-width:1120px;margin:0 auto;padding:0 24px;height:70px;display:flex;align-items:center;justify-content:space-between}
+  .logo{display:inline-flex;align-items:center;gap:10px;font-family:'Archivo',sans-serif;font-size:21px;font-weight:900;color:#fff;letter-spacing:.01em}
+  .logo svg{flex-shrink:0}
+  .logo em{font-style:normal;color:var(--orange)}
+  .nav-links{display:flex;gap:30px;list-style:none}
+  .nav-links a{color:#c9d6e2;font-weight:600;font-size:15px}
+  .nav-links a:hover{color:#fff}
+  .nav-cta{padding:11px 20px;font-size:15px}
+
+  .hero{position:relative;color:#fff;background:var(--navy-dark) url('https://images.unsplash.com/photo-1600518464441-9154a4dea21b?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,24,40,.92) 0%,rgba(11,24,40,.72) 55%,rgba(11,24,40,.35) 100%)}
+  .hero-inner{position:relative;max-width:1120px;margin:0 auto;padding:120px 24px}
+  .hero-copy{max-width:640px}
+  .hero h1{font-size:clamp(40px,6vw,62px);font-weight:900;margin-bottom:18px;text-transform:uppercase;letter-spacing:-.01em}
+  .hero h1 em{font-style:normal;color:var(--orange)}
+  .hero p{font-size:19px;color:#d5e0ea;margin-bottom:32px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-badges{display:flex;gap:28px;flex-wrap:wrap;margin-top:42px;font-size:14px;color:#b9c8d6}
+  .hero-badges strong{display:block;color:#fff;font-size:19px;font-family:'Archivo',sans-serif}
+
+  .intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .intro-grid img{border-radius:10px;width:100%;height:400px;object-fit:cover}
+  .intro-copy p{color:var(--muted);margin-bottom:14px;font-size:18px}
+  .ticks{list-style:none;margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:6px 22px}
+  .ticks li{padding:7px 0 7px 28px;position:relative;font-weight:600;font-size:16px}
+  .ticks li::before{content:"\2713";position:absolute;left:0;color:var(--orange);font-weight:800}
+
+  .services-section{background:var(--mist)}
+  .services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:48px}
+  .service{background:#fff;border-radius:10px;padding:30px 28px;display:flex;gap:22px;align-items:flex-start;box-shadow:0 6px 18px rgba(18,38,63,.06)}
+  .service-num{font-family:'Archivo',sans-serif;font-size:44px;font-weight:900;color:var(--orange);line-height:1;flex-shrink:0}
+  .service h3{font-size:21px;color:var(--navy);margin-bottom:6px}
+  .service p{color:var(--muted);font-size:15.5px;margin-bottom:10px}
+  .service .price{font-weight:800;color:var(--navy);font-size:16px}
+
+  .rate-box{background:var(--navy);color:#d5e0ea;border-radius:12px;padding:40px 36px;margin-top:48px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px;text-align:center}
+  .rate-box h3{font-size:17px;color:#fff;margin-bottom:6px}
+  .rate-box .rate{font-family:'Archivo',sans-serif;font-size:34px;font-weight:900;color:var(--orange)}
+  .rate-box p{font-size:14px;color:#b9c8d6;margin-top:4px}
+
+  .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:48px}
+  .step{border:1px solid var(--line);border-radius:10px;padding:28px 24px}
+  .step b{display:block;font-family:'Archivo',sans-serif;font-size:14px;color:var(--orange);letter-spacing:.12em;margin-bottom:10px}
+  .step h3{font-size:19px;color:var(--navy);margin-bottom:8px}
+  .step p{color:var(--muted);font-size:15.5px}
+
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .review{background:var(--mist);border-radius:10px;padding:30px 26px}
+  .stars{color:var(--orange);letter-spacing:2px;font-size:17px;margin-bottom:14px}
+  .review blockquote{font-size:16.5px;margin-bottom:18px}
+  .review cite{font-style:normal;font-weight:700;color:var(--navy)}
+  .review cite span{display:block;font-weight:400;font-size:14px;color:var(--muted)}
+
+  .visit-section{background:var(--navy-dark);color:#b9c8d6}
+  .visit-section .section-title{color:#fff}
+  .visit-section .eyebrow{color:var(--orange)}
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:44px}
+  .visit-block{margin-bottom:26px}
+  .visit-block h3{font-size:20px;color:#fff;margin-bottom:8px}
+  .visit-block a{color:#fff;font-weight:700}
+  .visit-block a:hover{color:var(--orange)}
+  .hours-table{width:100%;border-collapse:collapse}
+  .hours-table td{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.12);color:#b9c8d6}
+  .hours-table td:last-child{text-align:right;color:#fff;font-weight:600}
+
+  .cta{text-align:center}
+  .cta h2{font-size:clamp(30px,4.5vw,42px);color:var(--navy);margin-bottom:14px}
+  .cta p{color:var(--muted);font-size:18px;max-width:580px;margin:0 auto 30px}
+  .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+  footer{background:#081220;color:#8fa1b3;padding:44px 0;text-align:center;font-size:15px}
+  footer .logo{color:#fff;font-size:20px;display:block;margin-bottom:12px}
+  footer a{color:var(--orange);font-weight:700}
+  footer a:hover{text-decoration:underline}
+
+  @media (max-width:900px){
+    .services-grid,.process-grid,.reviews-grid{grid-template-columns:1fr 1fr}
+    .intro-grid,.visit-grid{grid-template-columns:1fr;gap:32px}
+    .rate-box{grid-template-columns:1fr;gap:24px}
+    .ticks{grid-template-columns:1fr}
+  }
+  @media (max-width:640px){
+    .nav-links{display:none}
+    .section{padding:64px 0}
+    .services-grid,.process-grid,.reviews-grid{grid-template-columns:1fr}
+    .hero-inner{padding:90px 24px}
+    .intro-grid img{height:280px}
+    .service{flex-direction:column;gap:10px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo"><svg width="34" height="30" viewBox="0 0 36 30" fill="none" aria-hidden="true"><path d="M1 22V6a1 1 0 0 1 1-1h17a1 1 0 0 1 1 1v16H1Z" fill="#e8722a"/><path d="M20 10h6l6 6v6h-12V10Z" fill="#ffffff"/><circle cx="8" cy="24" r="3.4" fill="#12263f" stroke="#fff" stroke-width="1.6"/><circle cx="26" cy="24" r="3.4" fill="#12263f" stroke="#fff" stroke-width="1.6"/><path d="M5 12h10M5 16h10" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg>Keystone <em>City Movers</em></a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="tel:+14105550167" class="btn btn-orange nav-cta">Get a Quote</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">Moving Company — Baltimore, MD</p>
+      <h1>Moving day, <em>minus the stress.</em></h1>
+      <p>Keystone City Movers handles your move like it's our own furniture on the truck. Careful crews, honest flat-rate quotes, and on-time arrivals — across Baltimore and beyond.</p>
+      <div class="hero-actions">
+        <a href="tel:+14105550167" class="btn btn-orange">Call (410) 555-0167</a>
+        <a href="#services" class="btn btn-ghost">See Services &amp; Rates</a>
+      </div>
+      <div class="hero-badges">
+        <div><strong>12 years</strong>moving Baltimore</div>
+        <div><strong>8,000+</strong>moves completed</div>
+        <div><strong>4.9 rating</strong>from 700+ reviews</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="wrap">
+    <div class="intro-grid">
+      <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=1200&auto=format&fit=crop" alt="Baltimore home ready for moving day" loading="lazy">
+      <div class="intro-copy">
+        <p class="eyebrow">Why Keystone</p>
+        <h2 class="section-title">Baltimore's rowhouse experts.</h2>
+        <p>Moving in Baltimore means narrow rowhome staircases, tight Fells Point streets, and parking that fights back. We've been doing it since 2014, and our crews know every neighborhood — from Federal Hill to Hampden to Canton.</p>
+        <p>We're licensed and insured, our movers are full-time employees (never day labor), and every quote is binding: the price we give you is the price you pay.</p>
+        <ul class="ticks">
+          <li>Licensed &amp; fully insured</li>
+          <li>Binding flat-rate quotes</li>
+          <li>Full-time, trained crews</li>
+          <li>Furniture padding &amp; protection included</li>
+          <li>No hidden fees, ever</li>
+          <li>Same-week moves often available</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section services-section">
+  <div class="wrap">
+    <p class="eyebrow">Services &amp; Rates</p>
+    <h2 class="section-title">Every kind of move, handled right.</h2>
+    <p class="section-sub">Free in-home or video estimates. Every quote is binding and includes fuel, mileage within the metro area, and basic protection.</p>
+    <div class="services-grid">
+      <article class="service">
+        <span class="service-num">01</span>
+        <div><h3>Local Moves</h3><p>Across the street or across the city — apartments, rowhomes, and houses, handled by a crew that knows Baltimore's streets.</p><p class="price">from $119 / hour (2 movers + truck)</p></div>
+      </article>
+      <article class="service">
+        <span class="service-num">02</span>
+        <div><h3>Long-Distance Moves</h3><p>Moves anywhere in the Mid-Atlantic and up and down the East Coast, with dedicated trucks and guaranteed delivery windows.</p><p class="price">from $1,450 (flat rate, quoted per move)</p></div>
+      </article>
+      <article class="service">
+        <span class="service-num">03</span>
+        <div><h3>Packing &amp; Unpacking</h3><p>Full-service packing with quality materials — or partial packing for the kitchen and the fragile stuff only.</p><p class="price">from $280 / home</p></div>
+      </article>
+      <article class="service">
+        <span class="service-num">04</span>
+        <div><h3>Storage</h3><p>Climate-controlled storage in our Baltimore warehouse, by the week or the month, with easy access.</p><p class="price">from $95 / month</p></div>
+      </article>
+      <article class="service">
+        <span class="service-num">05</span>
+        <div><h3>Office Moves</h3><p>Weekend and after-hours office relocations that keep your business running — desks, tech, and files handled with care.</p><p class="price">Quoted per office — free walk-through</p></div>
+      </article>
+      <article class="service">
+        <span class="service-num">06</span>
+        <div><h3>Piano &amp; Specialty Items</h3><p>Pianos, safes, antiques, and oversized pieces moved with the right equipment and the right experience.</p><p class="price">from $220 / item</p></div>
+      </article>
+    </div>
+
+    <div class="rate-box">
+      <div><h3>2 Movers + Truck</h3><p class="rate">$119/hr</p><p>Studios &amp; 1-bedroom moves</p></div>
+      <div><h3>3 Movers + Truck</h3><p class="rate">$169/hr</p><p>2–3 bedroom homes — most popular</p></div>
+      <div><h3>4 Movers + Truck</h3><p class="rate">$219/hr</p><p>Large homes &amp; tight timelines</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="process" class="section">
+  <div class="wrap">
+    <p class="eyebrow">How It Works</p>
+    <h2 class="section-title">From first call to last box.</h2>
+    <div class="process-grid">
+      <div class="step"><b>Step 01</b><h3>Free estimate</h3><p>Call, email, or book a video walk-through. We give you a binding flat-rate quote — no surprises on moving day.</p></div>
+      <div class="step"><b>Step 02</b><h3>We plan the day</h3><p>We confirm parking, building access, and timing, and send you a simple moving-day checklist.</p></div>
+      <div class="step"><b>Step 03</b><h3>Moving day</h3><p>The crew arrives on time, pads and protects your furniture, and loads with care. You just point.</p></div>
+      <div class="step"><b>Step 04</b><h3>Settled in</h3><p>We place everything where you want it, reassemble beds and tables, and haul away the packing debris.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="section" style="background:var(--mist)">
+  <div class="wrap">
+    <p class="eyebrow">Reviews</p>
+    <h2 class="section-title">Baltimore moves with us — and tells their friends.</h2>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"They moved us out of a third-floor Fells Point walk-up in the rain and didn't scratch a thing. Fast, friendly, and the final bill matched the quote exactly."</blockquote>
+        <cite>Kevin <span>Fells Point &middot; Local move</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"The packing crew handled our whole house in a day — including my grandmother's china, which arrived in perfect condition. I can't recommend them enough."</blockquote>
+        <cite>Danielle <span>Roland Park &middot; Full-service move</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"Moved our office of 14 people over a single weekend. Monday morning, everyone sat down at their desk and worked. Zero downtime."</blockquote>
+        <cite>Chris <span>Downtown &middot; Office move</span></cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="section visit-section">
+  <div class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h2 class="section-title">Get your free moving quote.</h2>
+    <div class="visit-grid">
+      <div>
+        <div class="visit-block">
+          <h3>Office &amp; Warehouse</h3>
+          <p>1209 Eastern Avenue<br>Baltimore, MD 21231</p>
+        </div>
+        <div class="visit-block">
+          <h3>Contact</h3>
+          <p><a href="tel:+14105550167">(410) 555-0167</a><br><a href="mailto:hello@keystonecitymovers.com">hello@keystonecitymovers.com</a></p>
+        </div>
+        <div class="visit-block">
+          <h3>Service Area</h3>
+          <p>All of Baltimore City and County, plus Annapolis, Columbia, Towson, and long-distance moves along the East Coast.</p>
+        </div>
+      </div>
+      <div>
+        <div class="visit-block">
+          <h3>Hours</h3>
+          <table class="hours-table">
+            <tr><td>Monday – Friday</td><td>7:00 AM – 7:00 PM</td></tr>
+            <tr><td>Saturday</td><td>8:00 AM – 5:00 PM</td></tr>
+            <tr><td>Sunday</td><td>9:00 AM – 3:00 PM</td></tr>
+          </table>
+          <p style="margin-top:16px;color:#b9c8d6">Moves run 7 days a week. Call early for end-of-month dates — they go first.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section cta">
+  <div class="wrap">
+    <p class="eyebrow">Free Estimates</p>
+    <h2>Let's get you moved — the easy way.</h2>
+    <p>Call for a free, binding quote in about ten minutes. Or send us an email and we'll get back to you the same day.</p>
+    <div class="cta-actions">
+      <a href="tel:+14105550167" class="btn btn-orange">Call (410) 555-0167</a>
+      <a href="mailto:hello@keystonecitymovers.com" class="btn btn-navy">Email for a Quote</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="logo"><svg width="34" height="30" viewBox="0 0 36 30" fill="none" aria-hidden="true"><path d="M1 22V6a1 1 0 0 1 1-1h17a1 1 0 0 1 1 1v16H1Z" fill="#e8722a"/><path d="M20 10h6l6 6v6h-12V10Z" fill="#ffffff"/><circle cx="8" cy="24" r="3.4" fill="#12263f" stroke="#fff" stroke-width="1.6"/><circle cx="26" cy="24" r="3.4" fill="#12263f" stroke="#fff" stroke-width="1.6"/><path d="M5 12h10M5 16h10" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg> Keystone <em>City Movers</em></span>
+    <p>1209 Eastern Avenue, Baltimore, MD 21231 &middot; (410) 555-0167 &middot; hello@keystonecitymovers.com</p>
+    <p style="margin-top:12px">&copy; 2026 Keystone City Movers. All rights reserved. Licensed &amp; insured.</p>
+    <p style="margin-top:8px">Website designed &amp; built by <a href="https://weblodge.agency">Weblodge Agency</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

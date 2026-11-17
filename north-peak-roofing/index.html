@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>North Peak Roofing | Roofing Contractor in Minneapolis, MN</title>
+<meta name="description" content="North Peak Roofing is a roofing contractor in Minneapolis, MN. Roof replacement, repairs, storm damage restoration and gutters — free inspections, honest estimates, 25-year warranty.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1e3a5f;
+    --navy-dark:#152a45;
+    --slate:#33475e;
+    --amber:#f59e0b;
+    --amber-dark:#d97706;
+    --ice:#eef3f8;
+    --light:#f7f9fb;
+    --text:#1f2a36;
+    --muted:#5b6b7d;
+    --white:#fff;
+    --border:#dde5ed;
+    --radius:12px;
+    --shadow:0 14px 34px rgba(30,58,95,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Source Sans 3',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);line-height:1.65;background:#fff;-webkit-font-smoothing:antialiased;font-size:17px}
+  h1,h2,h3{font-family:'Oswald',sans-serif;line-height:1.12;text-transform:uppercase;letter-spacing:.02em;color:var(--navy)}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+  .section{padding:88px 0}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--amber-dark)}
+  .section-head{max-width:680px;margin-bottom:46px}
+  .section-head h2{font-size:clamp(32px,4.6vw,46px);margin:10px 0 12px}
+  .section-head p{color:var(--muted);font-size:18px}
+  .btn{display:inline-block;padding:15px 30px;border-radius:8px;font-weight:700;font-size:16px;transition:.2s;cursor:pointer;text-align:center}
+  .btn-amber{background:var(--amber);color:#1a1206}
+  .btn-amber:hover{background:var(--amber-dark);color:#fff}
+  .btn-navy{background:var(--navy);color:#fff}
+  .btn-navy:hover{background:var(--navy-dark)}
+  .btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.85)}
+  .btn-outline:hover{background:rgba(255,255,255,.14)}
+
+  /* Nav */
+  header{position:sticky;top:0;z-index:50;background:var(--navy);box-shadow:0 4px 18px rgba(0,0,0,.2)}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;height:74px}
+  .logo{display:flex;align-items:center;gap:12px;color:#fff}
+  .logo-name{font-family:'Oswald',sans-serif;font-size:25px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;line-height:1}
+  .logo-name span{color:var(--amber)}
+  .logo-sub{display:block;font-family:'Source Sans 3',sans-serif;font-size:11px;letter-spacing:.24em;color:#a9bdd4;font-weight:600}
+  .nav-links{display:flex;gap:30px;list-style:none;font-weight:600;font-size:15.5px}
+  .nav-links a{color:#dbe6f1}
+  .nav-links a:hover{color:#fff}
+  .nav-cta{display:flex;align-items:center;gap:18px}
+  .nav-phone{color:#fff;font-weight:700;font-size:17px;white-space:nowrap}
+  .nav-phone small{display:block;font-size:11px;color:#a9bdd4;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-align:right}
+
+  /* Hero */
+  .hero{position:relative;color:#fff;background:var(--navy-dark)}
+  .hero-bg{position:absolute;inset:0}
+  .hero-bg img{width:100%;height:100%;object-fit:cover}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,42,69,.62) 0%,rgba(21,42,69,.82) 100%)}
+  .hero-inner{position:relative;padding:120px 0 110px;text-align:center;max-width:800px;margin:0 auto}
+  .hero h1{color:#fff;font-size:clamp(44px,7vw,72px);margin:16px 0 20px}
+  .hero h1 em{font-style:normal;color:var(--amber)}
+  .hero p{font-size:20px;color:#dbe6f1;max-width:640px;margin:0 auto 32px}
+  .hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .hero-note{margin-top:26px;font-size:15px;color:#a9bdd4}
+
+  /* Stats band */
+  .stats{background:var(--amber)}
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding-top:30px;padding-bottom:30px;text-align:center}
+  .stat b{display:block;font-family:'Oswald',sans-serif;font-size:38px;color:#1a1206;line-height:1}
+  .stat span{font-size:14px;font-weight:600;color:#4a3205}
+
+  /* Services */
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .service{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;transition:.2s}
+  .service:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .service img{width:100%;height:190px;object-fit:cover}
+  .service-body{padding:24px}
+  .service-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:8px}
+  .service h3{font-size:23px}
+  .price{font-family:'Oswald',sans-serif;font-weight:700;font-size:23px;color:var(--amber-dark);white-space:nowrap}
+  .price small{display:block;font-family:'Source Sans 3',sans-serif;font-size:11px;color:var(--muted);font-weight:600;text-align:right;text-transform:uppercase;letter-spacing:.06em}
+  .service p{font-size:15.5px;color:var(--muted);margin-bottom:14px}
+  .service ul{list-style:none;font-size:14.5px;color:#3a4a5c}
+  .service li{padding:4px 0 4px 20px;position:relative}
+  .service li::before{content:"✓";position:absolute;left:0;color:var(--amber-dark);font-weight:700}
+
+  /* Process */
+  .process{background:var(--ice)}
+  .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .step{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:28px 24px;position:relative}
+  .step::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--amber);border-radius:12px 12px 0 0}
+  .step-num{font-family:'Oswald',sans-serif;font-size:44px;font-weight:700;color:var(--navy);line-height:1}
+  .step h3{font-size:21px;margin:12px 0 8px}
+  .step p{font-size:15px;color:var(--muted)}
+
+  /* About */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .about-grid img{border-radius:14px;width:100%;height:440px;object-fit:cover;box-shadow:var(--shadow)}
+  .about-copy p{color:var(--muted);font-size:17px;margin-bottom:16px}
+  .check-list{list-style:none;margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:10px 22px;font-weight:600;font-size:15.5px}
+  .check-list li{padding-left:26px;position:relative}
+  .check-list li::before{content:"✓";position:absolute;left:0;color:var(--amber-dark);font-weight:700}
+
+  /* Reviews */
+  .reviews{background:var(--light)}
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .review{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:30px 26px}
+  .stars{color:var(--amber);letter-spacing:3px;font-size:17px;margin-bottom:14px}
+  .review blockquote{font-size:16.5px;margin-bottom:20px}
+  .review cite{font-style:normal;font-weight:700}
+  .review cite span{display:block;font-weight:400;font-size:14px;color:var(--muted)}
+
+  /* Areas */
+  .areas{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+  .areas span{background:var(--ice);border:1px solid var(--border);padding:8px 16px;border-radius:999px;font-size:14.5px;font-weight:600}
+
+  /* Visit */
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px}
+  .visit-card{border:1px solid var(--border);border-radius:var(--radius);padding:28px;background:#fff}
+  .visit-card h3{font-size:21px;margin-bottom:14px}
+  .hours{list-style:none;font-size:15.5px}
+  .hours li{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #eef2f6}
+  .hours li:last-child{border-bottom:none}
+  .hours li span:last-child{font-weight:700;color:var(--navy)}
+  .visit-card p{font-size:15.5px;color:#3a4a5c}
+  .big-phone{font-family:'Oswald',sans-serif;font-size:27px;font-weight:700;color:var(--navy);display:block;margin:6px 0 10px}
+  .big-phone:hover{color:var(--amber-dark)}
+
+  /* CTA */
+  .cta{background:var(--navy);color:#fff;text-align:center}
+  .cta h2{color:#fff;font-size:clamp(32px,4.6vw,46px);margin-bottom:14px}
+  .cta p{color:#c6d5e5;font-size:18px;max-width:600px;margin:0 auto 30px}
+  .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .cta small{display:block;margin-top:20px;color:#a9bdd4;font-size:14px}
+
+  footer{background:var(--navy-dark);color:#9db1c6;padding:56px 0 30px;font-size:15px}
+  .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:36px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .footer-grid h4{color:#fff;font-family:'Oswald',sans-serif;font-size:19px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px}
+  .footer-grid ul{list-style:none}
+  .footer-grid li{margin-bottom:9px}
+  .footer-grid a:hover{color:#fff}
+  .footer-brand p{margin-top:12px;max-width:340px}
+  .footer-bottom{padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px}
+  .footer-bottom a{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+
+  @media (max-width:900px){
+    .section{padding:64px 0}
+    .nav-links,.nav-phone{display:none}
+    .stats .wrap{grid-template-columns:1fr 1fr}
+    .services-grid{grid-template-columns:1fr 1fr}
+    .process-grid{grid-template-columns:1fr 1fr}
+    .about-grid{grid-template-columns:1fr;gap:32px}
+    .about-grid img{height:320px}
+    .reviews-grid{grid-template-columns:1fr}
+    .visit-grid{grid-template-columns:1fr}
+    .footer-grid{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:560px){
+    .services-grid,.process-grid,.stats .wrap{grid-template-columns:1fr}
+    .hero-inner{padding:90px 0}
+    .hero-actions .btn{width:100%}
+    .check-list{grid-template-columns:1fr}
+    .footer-grid{grid-template-columns:1fr}
+    .footer-bottom{justify-content:center;text-align:center}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="logo" aria-label="North Peak Roofing — home">
+      <svg width="40" height="40" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M4 30 24 8l20 22" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 30v10h28V30" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 40v-7h8v7" stroke="#f59e0b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span><span class="logo-name">North <span>Peak</span> Roofing</span><span class="logo-sub">Minneapolis · Minnesota</span></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">Our Process</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a class="nav-phone" href="tel:+16125550142"><small>Free inspection</small>(612) 555-0142</a>
+      <a class="btn btn-amber" href="#visit" style="padding:11px 22px;font-size:15px">Get a Free Estimate</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=1600&auto=format&fit=crop" alt="A Minneapolis home with a new roof installed by North Peak Roofing">
+    </div>
+    <div class="wrap">
+      <div class="hero-inner">
+        <p class="eyebrow" style="color:var(--amber)">Roofing Contractor — Minneapolis, Minnesota</p>
+        <h1>A roof built for <em>Minnesota winters.</em></h1>
+        <p>From hail damage to full replacements, we install roofs that stand up to ice dams, heavy snow, and summer storms — with a free inspection and a written estimate before any work begins.</p>
+        <div class="hero-actions">
+          <a class="btn btn-amber" href="#visit">Get a Free Inspection</a>
+          <a class="btn btn-outline" href="#services">See Services &amp; Prices</a>
+        </div>
+        <p class="hero-note">Licensed &amp; insured in Minnesota &middot; 25-year workmanship warranty &middot; Storm damage specialists</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="stats">
+    <div class="wrap">
+      <div class="stat"><b>1,400+</b><span>Roofs installed &amp; repaired</span></div>
+      <div class="stat"><b>14 years</b><span>Serving the Twin Cities</span></div>
+      <div class="stat"><b>25-year</b><span>Workmanship warranty</span></div>
+      <div class="stat"><b>4.9 ★</b><span>From 380+ reviews</span></div>
+    </div>
+  </div>
+
+  <section class="section" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Services &amp; Pricing</p>
+        <h2>Roofing done right, priced up front</h2>
+        <p>Every project starts with a free, no-pressure inspection. We photograph what we find, explain your options, and give you a written estimate — the price we quote is the price you pay.</p>
+      </div>
+      <div class="services-grid">
+        <article class="service">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop" alt="Modern home with a new architectural shingle roof">
+          <div class="service-body">
+            <div class="service-top"><h3>Roof Replacement</h3><span class="price">$9,500<small>from</small></span></div>
+            <p>Full tear-off and replacement with architectural shingles, ice-and-water shield, and new flashing.</p>
+            <ul><li>Architectural or designer shingles</li><li>Ice-and-water shield included</li><li>Most homes done in 1–2 days</li></ul>
+          </div>
+        </article>
+        <article class="service">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1200&auto=format&fit=crop" alt="Roofing crew repairing a roof">
+          <div class="service-body">
+            <div class="service-top"><h3>Roof Repair</h3><span class="price">$350<small>from</small></span></div>
+            <p>Leaks, missing shingles, damaged flashing, and ice dam damage — fixed properly, not patched over.</p>
+            <ul><li>Leak detection &amp; repair</li><li>Shingle &amp; flashing replacement</li><li>Emergency tarping available</li></ul>
+          </div>
+        </article>
+        <article class="service">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=1200&auto=format&fit=crop" alt="Home restored after hail and storm damage">
+          <div class="service-body">
+            <div class="service-top"><h3>Storm Damage</h3><span class="price">Free<small>inspection</small></span></div>
+            <p>Hail and wind damage, handled start to finish — including help with your insurance claim.</p>
+            <ul><li>Free storm damage inspection</li><li>Insurance claim documentation</li><li>We meet your adjuster on site</li></ul>
+          </div>
+        </article>
+        <article class="service">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1200&auto=format&fit=crop" alt="Home with new gutters and clean roofline">
+          <div class="service-body">
+            <div class="service-top"><h3>Gutters &amp; Guards</h3><span class="price">$1,200<small>from</small></span></div>
+            <p>Seamless aluminum gutters and guards that keep water away from your foundation — and off your ladder.</p>
+            <ul><li>Seamless aluminum, custom fit</li><li>Leaf guards available</li><li>Downspout extensions</li></ul>
+          </div>
+        </article>
+        <article class="service">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1200&auto=format&fit=crop" alt="Home with a standing seam metal roof">
+          <div class="service-body">
+            <div class="service-top"><h3>Metal Roofing</h3><span class="price">$18,000<small>from</small></span></div>
+            <p>Standing seam metal roofs that shed snow, last 50+ years, and cut ice dam problems for good.</p>
+            <ul><li>Standing seam &amp; metal shingles</li><li>50-year material warranty</li><li>Great for steep and low slopes</li></ul>
+          </div>
+        </article>
+        <article class="service">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200&auto=format&fit=crop" alt="Commercial roofing project in progress">
+          <div class="service-body">
+            <div class="service-top"><h3>Commercial Roofing</h3><span class="price">Custom<small>quote</small></span></div>
+            <p>Flat and low-slope systems for businesses — TPO, EPDM, and built-up roofs, installed with minimal disruption.</p>
+            <ul><li>TPO, EPDM &amp; built-up systems</li><li>Maintenance plans available</li><li>Work scheduled around your hours</li></ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section process" id="process">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Our Process</p>
+        <h2>From first call to final cleanup</h2>
+        <p>A new roof is a big investment. Here is exactly how we make it simple — and how we leave your yard cleaner than we found it.</p>
+      </div>
+      <div class="process-grid">
+        <div class="step">
+          <div class="step-num">01</div>
+          <h3>Free inspection</h3>
+          <p>We climb up, photograph everything, and check the attic for leaks and ventilation problems.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <h3>Written estimate</h3>
+          <p>You get a clear, itemized quote — materials, labor, and warranty — with no hidden fees.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <h3>Fast install</h3>
+          <p>Most homes are done in one to two days by our own trained crew — never day labor.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <h3>Cleanup &amp; warranty</h3>
+          <p>We magnet-sweep your yard for nails, walk the roof with you, and register your 25-year warranty.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="about-grid">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?q=80&w=1200&auto=format&fit=crop" alt="Twin Cities home with a North Peak roof">
+        <div class="about-copy">
+          <p class="eyebrow">About North Peak</p>
+          <h2 style="font-size:clamp(30px,4vw,42px);margin:10px 0 16px">Local crew. Minnesota tough.</h2>
+          <p>North Peak Roofing started in 2012 with one truck and a simple idea: a roofing company that shows up when it says it will, charges what it quoted, and cleans up after itself. Fourteen years later, we have roofed more than 1,400 homes across the Twin Cities — and most of our new jobs still come from neighbors recommending us.</p>
+          <p>We know Minnesota roofs: ice dams, hail, freeze-thaw cycles, and the summer storms that roll in off the prairie. Every roof we install is built for all of it.</p>
+          <ul class="check-list">
+            <li>Licensed &amp; insured in MN</li>
+            <li>Own trained crew, no day labor</li>
+            <li>25-year workmanship warranty</li>
+            <li>Free inspections, always</li>
+            <li>Insurance claim help</li>
+            <li>Financing available</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reviews" id="reviews">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Customer Reviews</p>
+        <h2>Trusted across the Twin Cities</h2>
+        <p>Rated 4.9 out of 5 from more than 380 reviews on Google.</p>
+      </div>
+      <div class="reviews-grid">
+        <article class="review">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>“After the June hailstorm, they inspected our roof the same week, met our insurance adjuster, and had a new roof on in two days. Flawless from start to finish.”</blockquote>
+          <cite>David <span>Roof replacement · St. Louis Park</span></cite>
+        </article>
+        <article class="review">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>“Three other companies told me I needed a full replacement. North Peak found a flashing problem, fixed it for a few hundred dollars, and told me my roof had years left. That is honesty.”</blockquote>
+          <cite>Sarah <span>Roof repair · Northeast Minneapolis</span></cite>
+        </article>
+        <article class="review">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>“Crew showed up at 7 AM, worked hard all day, and the yard was spotless when they left — not a single nail. The new roof looks fantastic.”</blockquote>
+          <cite>Tom <span>Roof replacement · Edina</span></cite>
+        </article>
+      </div>
+      <div>
+        <p style="margin-top:40px;font-weight:700;color:var(--navy)">Proudly serving the Twin Cities metro:</p>
+        <div class="areas"><span>Minneapolis</span><span>St. Paul</span><span>Edina</span><span>St. Louis Park</span><span>Richfield</span><span>Bloomington</span><span>Golden Valley</span><span>Hopkins</span><span>Robbinsdale</span><span>Roseville</span><span>Maple Grove</span><span>Minnetonka</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="visit">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Contact &amp; Hours</p>
+        <h2>Get your free roof inspection</h2>
+        <p>Call, email, or stop by the office — we will schedule your free inspection within two business days.</p>
+      </div>
+      <div class="visit-grid">
+        <div class="visit-card">
+          <h3>Opening Hours</h3>
+          <ul class="hours">
+            <li><span>Monday – Friday</span><span>7:00 AM – 6:00 PM</span></li>
+            <li><span>Saturday</span><span>8:00 AM – 2:00 PM</span></li>
+            <li><span>Sunday</span><span>Closed</span></li>
+          </ul>
+          <p style="margin-top:14px;font-size:14.5px;color:var(--muted)">Storm damage? We answer emergency calls 24/7 and can tarp a damaged roof the same day.</p>
+        </div>
+        <div class="visit-card">
+          <h3>Office</h3>
+          <p><strong style="color:var(--navy)">North Peak Roofing</strong><br>
+          2210 E Lake Street<br>
+          Minneapolis, MN 55406<br><br>
+          Free parking in front.<br>
+          Two blocks east of Hiawatha Ave.</p>
+        </div>
+        <div class="visit-card">
+          <h3>Call or Write</h3>
+          <a class="big-phone" href="tel:+16125550142">(612) 555-0142</a>
+          <p><a href="mailto:hello@northpeakroofing.com" style="font-weight:700;color:var(--amber-dark)">hello@northpeakroofing.com</a><br><br>
+          Free inspections, honest estimates, and a crew that shows up on time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta">
+    <div class="wrap">
+      <p class="eyebrow" style="color:var(--amber)">Free inspection — no obligation</p>
+      <h2>Wondering how your roof is holding up?</h2>
+      <p>We will climb up, take photos, and tell you straight — whether that means a small repair, a replacement, or nothing at all.</p>
+      <div class="cta-actions">
+        <a class="btn btn-amber" href="tel:+16125550142">Call (612) 555-0142</a>
+        <a class="btn btn-outline" href="#services">View Services</a>
+      </div>
+      <small>Most inspections scheduled within 2 business days. Written estimate included.</small>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <svg width="40" height="40" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M4 30 24 8l20 22" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 30v10h28V30" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 40v-7h8v7" stroke="#f59e0b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span><span class="logo-name">North <span>Peak</span> Roofing</span><span class="logo-sub">Minneapolis · Minnesota</span></span>
+        </a>
+        <p>Roofing built for Minnesota weather since 2012. Free inspections, honest estimates, and a 25-year workmanship warranty.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Roof Replacement — from $9,500</a></li>
+          <li><a href="#services">Roof Repair — from $350</a></li>
+          <li><a href="#services">Storm Damage — free inspection</a></li>
+          <li><a href="#services">Gutters &amp; Guards — from $1,200</a></li>
+          <li><a href="#services">Metal Roofing — from $18,000</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>2210 E Lake St, Minneapolis, MN 55406</li>
+          <li><a href="tel:+16125550142">(612) 555-0142</a></li>
+          <li>Mon–Fri: 7:00 AM – 6:00 PM</li>
+          <li>Sat: 8:00 AM – 2:00 PM · Sun: Closed</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 North Peak Roofing, Minneapolis MN. All rights reserved.</span>
+      <span>Website designed &amp; built by <a href="https://weblodge.agency" target="_blank" rel="noopener">Weblodge Agency</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

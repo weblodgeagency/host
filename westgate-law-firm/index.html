@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Westgate Law Firm | Attorneys in Fort Worth, TX</title>
+<meta name="description" content="Westgate Law Firm is a trusted law firm in Fort Worth, Texas. Personal injury, criminal defense, family law, and wills — with a free consultation and honest, straight-talking counsel.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#1f4033;
+    --green-2:#2a5543;
+    --green-dark:#142b22;
+    --cream:#faf7f0;
+    --cream-dark:#f0ead9;
+    --tan:#c8a96a;
+    --tan-dark:#a98a4e;
+    --ink:#242a26;
+    --muted:#66706a;
+    --white:#fff;
+    --line:#e6e0d0;
+    --radius:12px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);line-height:1.7;background:#fff;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Lora',Georgia,serif;line-height:1.18;font-weight:600}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .section{padding:88px 0}
+  .eyebrow{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--tan-dark);margin-bottom:12px}
+  .section-head{max-width:660px;margin-bottom:48px}
+  .section-head.center{margin-left:auto;margin-right:auto;text-align:center}
+  .section-head h2{font-size:clamp(30px,4.2vw,42px);color:var(--green);margin-bottom:12px}
+  .section-head p{color:var(--muted);font-size:17px}
+  .btn{display:inline-block;padding:14px 28px;border-radius:999px;font-weight:700;font-size:15px;transition:.2s;border:2px solid transparent;cursor:pointer;text-align:center}
+  .btn-green{background:var(--green);color:#fff}
+  .btn-green:hover{background:var(--green-2)}
+  .btn-tan{background:var(--tan);color:#fff}
+  .btn-tan:hover{background:var(--tan-dark)}
+  .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.65)}
+  .btn-outline:hover{background:rgba(255,255,255,.14)}
+
+  /* Nav */
+  .nav{position:sticky;top:0;z-index:50;background:var(--green);box-shadow:0 2px 14px rgba(20,43,34,.25)}
+  .nav-inner{max-width:1120px;margin:0 auto;padding:0 24px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .logo{display:inline-flex;align-items:center;gap:11px;color:#fff;font-family:'Lora',Georgia,serif;font-size:25px;font-weight:700}
+  .logo span{color:var(--tan)}
+  .logo svg{flex-shrink:0}
+  .nav-links{display:flex;gap:30px;list-style:none;font-weight:600;font-size:15px}
+  .nav-links a{color:#dfe7e1}
+  .nav-links a:hover{color:#fff}
+  .nav-cta{padding:10px 20px;font-size:14px}
+
+  /* Hero */
+  .hero{position:relative;min-height:84vh;display:flex;align-items:center;color:#fff;background:var(--green-dark) url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1800&auto=format&fit=crop') center/cover no-repeat}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,43,34,.92) 0%,rgba(20,43,34,.7) 55%,rgba(20,43,34,.4) 100%)}
+  .hero-inner{position:relative;max-width:1120px;margin:0 auto;padding:110px 24px;width:100%}
+  .hero-copy{max-width:640px}
+  .hero-copy .eyebrow{color:var(--tan)}
+  .hero-copy h1{font-size:clamp(40px,6vw,62px);margin-bottom:18px}
+  .hero-copy h1 em{font-style:italic;color:var(--tan)}
+  .hero-copy p{font-size:19px;color:#e6ece8;margin-bottom:32px;max-width:560px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-trust{display:flex;gap:30px;flex-wrap:wrap;margin-top:40px;font-size:15px;color:#cdd8d2}
+  .hero-trust strong{color:#fff;display:block;font-family:'Lora',Georgia,serif;font-size:22px}
+
+  /* About */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .about-grid img{border-radius:var(--radius);width:100%;height:440px;object-fit:cover}
+  .about-copy p{color:var(--muted);font-size:17px;margin-bottom:14px}
+  .about-quote{font-family:'Lora',Georgia,serif;font-size:23px;font-style:italic;color:var(--green);border-left:3px solid var(--tan);padding-left:20px;margin:24px 0}
+
+  /* Practice */
+  .practice{background:var(--cream)}
+  .practice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  .area{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 4px 16px rgba(31,64,51,.06);display:flex;flex-direction:column}
+  .area img{width:100%;height:190px;object-fit:cover}
+  .area-body{padding:26px 26px 28px}
+  .area-body h3{font-size:24px;color:var(--green);margin-bottom:8px}
+  .area-body p{color:var(--muted);font-size:15px;margin-bottom:12px}
+  .area-fee{font-size:14px;font-weight:700;color:var(--tan-dark)}
+
+  /* Why us */
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .why-card{border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;text-align:center}
+  .why-icon{width:56px;height:56px;border-radius:50%;background:var(--cream-dark);display:grid;place-items:center;margin:0 auto 16px}
+  .why-card h3{font-size:21px;color:var(--green);margin-bottom:8px}
+  .why-card p{color:var(--muted);font-size:15px}
+
+  /* Team */
+  .team{background:var(--cream)}
+  .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .member{background:#fff;border-radius:var(--radius);overflow:hidden;text-align:center;box-shadow:0 4px 16px rgba(31,64,51,.05)}
+  .member img{width:100%;height:320px;object-fit:cover}
+  .member-body{padding:24px 22px 28px}
+  .member-body h3{font-size:23px;color:var(--green);margin-bottom:4px}
+  .member-role{color:var(--tan-dark);font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+  .member-body p{color:var(--muted);font-size:15px}
+
+  /* Reviews */
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .review{border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px}
+  .stars{color:var(--tan);letter-spacing:3px;font-size:17px;margin-bottom:14px}
+  .review blockquote{font-family:'Lora',Georgia,serif;font-size:20px;line-height:1.45;color:var(--green);margin-bottom:18px}
+  .review cite{font-style:normal;font-weight:700;font-size:15px}
+  .review cite span{display:block;font-weight:400;font-size:14px;color:var(--muted)}
+
+  /* CTA band */
+  .cta-band{background:var(--green);color:#fff;text-align:center}
+  .cta-band h2{font-size:clamp(30px,4.2vw,44px);margin-bottom:12px}
+  .cta-band p{color:#cdd8d2;font-size:18px;max-width:600px;margin:0 auto 30px}
+
+  /* Visit */
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+  .visit-card{border:1px solid var(--line);border-radius:var(--radius);padding:32px 30px}
+  .visit-card h3{font-size:23px;color:var(--green);margin-bottom:16px}
+  .hours{width:100%;border-collapse:collapse}
+  .hours td{padding:9px 0;border-bottom:1px solid #f0ebdd}
+  .hours td:last-child{text-align:right;font-weight:600}
+  .hours tr:last-child td{border-bottom:none}
+  .contact-line{margin-bottom:16px;color:var(--muted)}
+  .contact-line strong{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--tan-dark);margin-bottom:2px}
+  .contact-line a{font-weight:700;color:var(--green)}
+
+  footer{background:var(--green-dark);color:#a8b8ae;padding:48px 0 28px;font-size:15px;text-align:center}
+  footer .logo{font-size:23px;margin-bottom:10px}
+  footer a{color:var(--tan);font-weight:600}
+  footer a:hover{text-decoration:underline}
+  .footer-bottom{margin-top:22px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);font-size:14px;color:#8fa398}
+
+  @media (max-width:900px){
+    .practice-grid,.why-grid,.team-grid,.reviews-grid{grid-template-columns:1fr 1fr}
+    .about-grid,.visit-grid{grid-template-columns:1fr}
+    .about-grid img{height:320px}
+    .section{padding:64px 0}
+  }
+  @media (max-width:640px){
+    .nav-links{display:none}
+    .practice-grid,.why-grid,.team-grid,.reviews-grid{grid-template-columns:1fr}
+    .hero-inner{padding:84px 24px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 3l9 4v6c0 6.5-3.8 10.6-9 12-5.2-1.4-9-5.5-9-12V7l9-4z" fill="#c8a96a"/><path d="M16 8v14M11 12h10" stroke="#1f4033" stroke-width="2" stroke-linecap="round"/><path d="M16 22l-2.5 3h5L16 22z" fill="#1f4033"/></svg>Westgate <span>Law Firm</span></a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#practice">Practice Areas</a></li>
+        <li><a href="#team">Attorneys</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="#consult" class="btn btn-tan nav-cta">Free Consultation</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">Law Firm — Fort Worth, Texas</p>
+      <h1>Straight talk. <em>Strong advocacy.</em> Texas values.</h1>
+      <p>Westgate Law Firm has stood beside Fort Worth families for over 20 years. When life throws you a legal problem, you deserve a lawyer who listens first, explains clearly, and fights hard.</p>
+      <div class="hero-actions">
+        <a href="#consult" class="btn btn-tan">Book a Free Consultation</a>
+        <a href="tel:+18175550205" class="btn btn-outline">Call (817) 555-0205</a>
+      </div>
+      <div class="hero-trust">
+        <div><strong>20+ years</strong><span>Serving Fort Worth</span></div>
+        <div><strong>$95M+</strong><span>Recovered for clients</span></div>
+        <div><strong>4.9 ★</strong><span>430+ client reviews</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="about-grid">
+      <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop" alt="Westgate attorney meeting with a client" loading="lazy">
+      <div class="about-copy">
+        <p class="eyebrow">About Westgate</p>
+        <h2 style="font-size:clamp(30px,4vw,40px);color:var(--green);margin-bottom:16px">A Fort Worth firm built on handshake values.</h2>
+        <p>Westgate Law Firm was founded in 2004 by Tom Westgate, a Fort Worth native who believed legal help should feel like talking to a trusted neighbor — not a billing machine. That spirit still runs the firm today.</p>
+        <p class="about-quote">"We answer our own phones. We return calls the same day. And we never take a case we don't believe in."</p>
+        <p>From our office near Sundance Square, our team of seven attorneys serves families and small businesses across Tarrant County and beyond.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="practice" class="section practice">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Practice Areas</p>
+      <h2>Here when you need us most</h2>
+      <p>Your first consultation is free, and for injury cases you pay nothing unless we win.</p>
+    </div>
+    <div class="practice-grid">
+      <article class="area">
+        <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1200&auto=format&fit=crop" alt="Driver on the road in Texas" loading="lazy">
+        <div class="area-body">
+          <h3>Personal Injury</h3>
+          <p>Car and truck accidents, motorcycle crashes, and slip-and-fall injuries. We deal with the insurance companies and fight for the full compensation you deserve.</p>
+          <p class="area-fee">No fee unless we win &middot; Free consultation</p>
+        </div>
+      </article>
+      <article class="area">
+        <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=1200&auto=format&fit=crop" alt="Courthouse columns" loading="lazy">
+        <div class="area-body">
+          <h3>Criminal Defense</h3>
+          <p>DWI, drug charges, theft, and assault cases. If you or a loved one is facing charges, call us right away — early action makes a real difference.</p>
+          <p class="area-fee">Free case review &middot; 24/7 jail calls answered</p>
+        </div>
+      </article>
+      <article class="area">
+        <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=1200&auto=format&fit=crop" alt="Family spending time together at home" loading="lazy">
+        <div class="area-body">
+          <h3>Family Law</h3>
+          <p>Divorce, child custody, and child support. We work to protect your family and keep things as calm and fair as possible — especially for the kids.</p>
+          <p class="area-fee">Flat-fee uncontested divorce from $1,100</p>
+        </div>
+      </article>
+      <article class="area">
+        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1200&auto=format&fit=crop" alt="Signing estate planning documents" loading="lazy">
+        <div class="area-body">
+          <h3>Wills &amp; Estate Planning</h3>
+          <p>Wills, powers of attorney, and simple trusts. Make sure your family is protected and your wishes are clear — it takes less time than you think.</p>
+          <p class="area-fee">Simple will from $300 &middot; Couples package $500</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">Why Westgate</p>
+      <h2>The way a law firm should treat you</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <span class="why-icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#a98a4e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+        <h3>Real people answer</h3>
+        <p>A real person picks up the phone — not a call center, not a robot. And your attorney returns calls the same day.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#a98a4e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6"/></svg></span>
+        <h3>Written fees up front</h3>
+        <p>You get a clear, written fee agreement before any work begins. No hidden charges, no billing surprises.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#a98a4e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg></span>
+        <h3>Local, through and through</h3>
+        <p>We live here, our kids go to school here, and we know the Tarrant County courts inside and out.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="team" class="section team">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">Meet the Attorneys</p>
+      <h2>People you'd trust with your family</h2>
+    </div>
+    <div class="team-grid">
+      <article class="member">
+        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop" alt="Portrait of Tom Westgate, founding partner" loading="lazy">
+        <div class="member-body">
+          <h3>Tom Westgate</h3>
+          <p class="member-role">Founding Partner · Personal Injury</p>
+          <p>A Fort Worth native and TCU graduate. Tom has spent 22 years fighting insurance companies for injured Texans.</p>
+        </div>
+      </article>
+      <article class="member">
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop" alt="Portrait of Karen Doyle, partner" loading="lazy">
+        <div class="member-body">
+          <h3>Karen Doyle</h3>
+          <p class="member-role">Partner · Family Law</p>
+          <p>Karen has guided hundreds of families through divorce and custody with patience, honesty, and a steady hand.</p>
+        </div>
+      </article>
+      <article class="member">
+        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=800&auto=format&fit=crop" alt="Portrait of Marcus Bell, partner" loading="lazy">
+        <div class="member-body">
+          <h3>Marcus Bell</h3>
+          <p class="member-role">Partner · Criminal Defense</p>
+          <p>A former prosecutor who now defends the accused. Marcus knows how the other side thinks — and uses it for you.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="section">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">Client Reviews</p>
+      <h2>What Fort Worth says about Westgate</h2>
+      <p>Rated 4.9 out of 5 from more than 430 reviews on Google.</p>
+    </div>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>"After my truck accident, Tom handled everything — the insurance, the medical bills, all of it. I never had to worry about a thing, and the settlement was far more than I expected."</blockquote>
+        <cite>James <span>Personal injury client</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>"Karen got me through the hardest year of my life. She was honest about what to expect, always available, and kept my kids at the center of everything."</blockquote>
+        <cite>Stephanie <span>Family law client</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>"My son got in trouble and Marcus answered the phone at 10 PM on a Saturday. He had him out and a plan in place by Monday morning. I can't thank him enough."</blockquote>
+        <cite>Richard <span>Criminal defense client</span></cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="consult" class="section cta-band">
+  <div class="wrap">
+    <h2>Talk to a lawyer today — free.</h2>
+    <p>Your first consultation is free and confidential. Call now or send us a message, and we'll get back to you the same business day.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a href="tel:+18175550205" class="btn btn-tan">Call (817) 555-0205</a>
+      <a href="mailto:info@westgatelawfirm.com" class="btn btn-outline">Email the Firm</a>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Visit Us</p>
+      <h2>Near Sundance Square, downtown Fort Worth</h2>
+      <p>Free parking in the lot behind the building, and we're a short walk from the Sundance Square garages.</p>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-card">
+        <h3>Office Hours</h3>
+        <table class="hours">
+          <tr><td>Monday – Friday</td><td>8:00 AM – 5:30 PM</td></tr>
+          <tr><td>Saturday</td><td>9:00 AM – 12:00 PM</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+        </table>
+        <p style="margin-top:16px;color:var(--muted);font-size:15px">Criminal defense emergencies: our phone line is answered 24 hours a day, 7 days a week.</p>
+      </div>
+      <div class="visit-card">
+        <h3>Location &amp; Contact</h3>
+        <p class="contact-line"><strong>Address</strong>309 West 7th Street, Suite 200<br>Fort Worth, TX 76102</p>
+        <p class="contact-line"><strong>Phone</strong><a href="tel:+18175550205">(817) 555-0205</a></p>
+        <p class="contact-line"><strong>Email</strong><a href="mailto:info@westgatelawfirm.com">info@westgatelawfirm.com</a></p>
+        <p class="contact-line" style="margin-bottom:0"><strong>Parking</strong>Free lot behind the building on 7th Street.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="logo"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 3l9 4v6c0 6.5-3.8 10.6-9 12-5.2-1.4-9-5.5-9-12V7l9-4z" fill="#c8a96a"/><path d="M16 8v14M11 12h10" stroke="#1f4033" stroke-width="2" stroke-linecap="round"/><path d="M16 22l-2.5 3h5L16 22z" fill="#1f4033"/></svg> Westgate <span>Law Firm</span></span>
+    <p>309 West 7th Street, Suite 200, Fort Worth, TX 76102 &middot; (817) 555-0205</p>
+    <p class="footer-bottom">&copy; 2026 Westgate Law Firm. All rights reserved. Attorney advertising. Prior results do not guarantee a similar outcome. &middot; Website designed &amp; built by <a href="https://weblodge.agency" target="_blank" rel="noopener">Weblodge Agency</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

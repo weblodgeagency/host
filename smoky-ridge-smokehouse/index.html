@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smoky Ridge Smokehouse — Real BBQ in Nashville, TN</title>
+<meta name="description" content="Smoky Ridge Smokehouse serves slow-smoked brisket, pulled pork, and ribs in East Nashville. Oak-fired pits, scratch-made sides, and cold drinks since 2014.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --coal:#1c1917; --coal-2:#292524; --ember:#ea580c; --ember-dark:#c2410c; --amber:#f59e0b;
+    --cream:#faf7f0; --sand:#efe8db; --ink:#292524; --muted:#78716c; --line:#e7e0d2;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;font-size:17px}
+  h1,h2,h3{font-family:'Bebas Neue',Impact,sans-serif;font-weight:400;letter-spacing:.03em;line-height:1.05}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+  .section{padding:88px 0}
+  .eyebrow{font-size:13px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--ember);margin-bottom:12px}
+  .section-title{font-size:clamp(38px,5.5vw,58px);color:var(--coal);margin-bottom:14px}
+  .section-sub{color:var(--muted);max-width:640px;font-size:18px}
+  .btn{display:inline-block;padding:14px 30px;border-radius:8px;font-weight:700;font-size:16px;transition:.2s;letter-spacing:.01em}
+  .btn:hover{transform:translateY(-1px)}
+  .btn-primary{background:var(--ember);color:#fff}
+  .btn-primary:hover{background:var(--ember-dark)}
+  .btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.85)}
+  .btn-outline:hover{background:rgba(255,255,255,.14)}
+  .btn-dark{background:var(--coal);color:#fff}
+  .btn-dark:hover{background:var(--coal-2)}
+  .nav{position:sticky;top:0;z-index:100;background:var(--coal);box-shadow:0 2px 14px rgba(0,0,0,.3)}
+  .nav-inner{max-width:1140px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:72px}
+  .logo{display:inline-flex;align-items:center;gap:11px;font-family:'Bebas Neue',Impact,sans-serif;font-size:30px;letter-spacing:.04em;color:#fff}
+  .logo span{color:var(--amber)}
+  .nav-links{display:flex;gap:32px;list-style:none}
+  .nav-links a{color:#d6d3d1;font-weight:600;font-size:15px}
+  .nav-links a:hover{color:#fff}
+  .hero{position:relative;min-height:86vh;display:flex;align-items:center;color:#fff;background:var(--coal) url('https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(28,25,23,.9) 0%,rgba(28,25,23,.65) 55%,rgba(28,25,23,.25) 100%)}
+  .hero-inner{position:relative;max-width:1140px;margin:0 auto;padding:110px 24px;width:100%}
+  .hero-copy{max-width:620px}
+  .hero-copy .eyebrow{color:var(--amber)}
+  .hero h1{font-size:clamp(54px,8vw,96px);margin-bottom:18px}
+  .hero h1 em{font-style:normal;color:var(--amber)}
+  .hero p{font-size:clamp(17px,2.2vw,20px);color:#e7e5e4;margin-bottom:32px;max-width:540px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-meta{margin-top:36px;display:flex;gap:32px;flex-wrap:wrap;font-size:14px;color:#d6d3d1;border-top:1px solid rgba(255,255,255,.2);padding-top:20px;max-width:560px}
+  .hero-meta strong{display:block;color:#fff;font-size:17px}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .about-grid img{border-radius:14px;width:100%;height:440px;object-fit:cover}
+  .about-copy p{color:var(--muted);margin-bottom:16px;font-size:18px}
+  .about-stats{display:flex;gap:36px;margin-top:28px;flex-wrap:wrap}
+  .stat b{display:block;font-family:'Bebas Neue',Impact,sans-serif;font-size:44px;color:var(--coal);line-height:1}
+  .stat span{font-size:14px;color:var(--muted)}
+  .menu-section{background:var(--coal);color:#e7e5e4}
+  .menu-section .section-title{color:#fff}
+  .menu-section .eyebrow{color:var(--amber)}
+  .menu-section .section-sub{color:#a8a29e}
+  .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .dish{background:var(--coal-2);border:1px solid rgba(255,255,255,.1);border-radius:14px;overflow:hidden}
+  .dish img{width:100%;height:180px;object-fit:cover}
+  .dish-body{padding:22px}
+  .dish-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+  .dish h3{font-size:26px;color:#fff}
+  .price{font-family:'Bebas Neue',Impact,sans-serif;font-size:26px;color:var(--amber);white-space:nowrap}
+  .dish p{color:#a8a29e;font-size:15px;margin-top:8px}
+  .menu-note{text-align:center;margin-top:36px;color:#a8a29e}
+  .menu-note a{color:var(--amber);font-weight:600}
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .review{background:#fff;border:1px solid var(--line);border-radius:14px;padding:30px 26px}
+  .stars{color:var(--amber);letter-spacing:2px;font-size:18px;margin-bottom:14px}
+  .review blockquote{font-size:17px;margin-bottom:18px}
+  .review cite{font-style:normal;font-weight:700;color:var(--coal)}
+  .review cite span{display:block;font-weight:400;font-size:14px;color:var(--muted)}
+  .visit-section{background:var(--sand)}
+  .visit-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;margin-top:48px;align-items:start}
+  .visit-grid img{border-radius:14px;width:100%;height:340px;object-fit:cover}
+  .visit-block{margin-bottom:26px}
+  .visit-block h3{font-size:24px;color:var(--coal);margin-bottom:8px}
+  .visit-block p,.visit-block a{color:var(--muted)}
+  .visit-block a:hover{color:var(--ember)}
+  .hours-table{width:100%;border-collapse:collapse}
+  .hours-table td{padding:7px 0;border-bottom:1px solid var(--line);color:var(--muted)}
+  .hours-table td:last-child{text-align:right;color:var(--coal);font-weight:600}
+  .cta{text-align:center}
+  .cta h2{font-size:clamp(38px,5.5vw,58px);color:var(--coal);margin-bottom:14px}
+  .cta p{color:var(--muted);font-size:18px;max-width:560px;margin:0 auto 30px}
+  .cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+  .cta-phone{margin-top:22px;color:var(--muted)}
+  .cta-phone a{color:var(--ember);font-weight:700}
+  footer{background:var(--coal);color:#a8a29e;padding:44px 0;text-align:center;font-size:15px}
+  footer .logo{font-size:28px;display:block;margin-bottom:10px}
+  footer .logo svg{vertical-align:-6px}
+  footer a{color:var(--amber);font-weight:600}
+  footer a:hover{text-decoration:underline}
+  @media (max-width:900px){
+    .menu-grid{grid-template-columns:1fr 1fr}
+    .reviews-grid{grid-template-columns:1fr}
+  }
+  @media (max-width:820px){
+    .section{padding:64px 0}
+    .nav-links{display:none}
+    .about-grid,.visit-grid{grid-template-columns:1fr;gap:32px}
+    .about-grid img{height:300px}
+  }
+  @media (max-width:560px){
+    .menu-grid{grid-template-columns:1fr}
+    .hero-inner{padding:80px 24px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 2c1 5-2.5 7.5-2.5 11a5 5 0 0 0 10 0c0-2-1-3.5-2-5-.5 1.5-1.5 2.5-2.5 3C19.5 7.5 18.5 4.5 16 2Z" fill="#ea580c"/><path d="M16 15c.8 3.5-1.8 5-1.8 7.5a3.3 3.3 0 0 0 6.6 0c0-1.4-.7-2.4-1.4-3.4-.4 1-1 1.7-1.7 2.2.4-2.3-.3-4.6-1.7-6.3Z" fill="#f59e0b"/><path d="M4 28h24" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/></svg>Smoky <span>Ridge</span></a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+    </nav>
+    <a href="#order" class="btn btn-primary">Order Ahead</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">Smokehouse &amp; Bar — East Nashville</p>
+      <h1>Low &amp; slow, <em>over oak fire.</em></h1>
+      <p>Brisket smoked for 14 hours, ribs that fall off the bone, and scratch-made sides — all cooked over Tennessee white oak, the way it should be.</p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-primary">View Menu</a>
+        <a href="#order" class="btn btn-outline">Order Ahead</a>
+      </div>
+      <div class="hero-meta">
+        <div><strong>4.9 rating</strong>from 900+ reviews</div>
+        <div><strong>14-hour brisket</strong>smoked daily</div>
+        <div><strong>East Nashville</strong>1218 Gallatin Ave</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="wrap">
+    <div class="about-grid">
+      <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1200&auto=format&fit=crop" alt="Meat grilling over open flame at Smoky Ridge" loading="lazy">
+      <div class="about-copy">
+        <p class="eyebrow">Our Story</p>
+        <h2 class="section-title">One pit, one fire, no shortcuts.</h2>
+        <p>Smoky Ridge started in 2014 with a single offset smoker and a stubborn idea: real barbecue takes time. Our pitmaster still lights the oak fire at 4 AM, and nothing leaves the pit until it's ready — not when the clock says so.</p>
+        <p>Every sauce, slaw, and side is made in-house every morning. The beer is cold, the patio is big, and the brisket sells out most nights — so come hungry and come early.</p>
+        <div class="about-stats">
+          <div class="stat"><b>12</b><span>Years on the pit</span></div>
+          <div class="stat"><b>14 hrs</b><span>Brisket smoke time</span></div>
+          <div class="stat"><b>900+</b><span>Five-star reviews</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="menu" class="section menu-section">
+  <div class="wrap">
+    <p class="eyebrow">From the Pit</p>
+    <h2 class="section-title">The Lineup</h2>
+    <p class="section-sub">Everything is smoked over Tennessee white oak and served with your choice of two sides. When it's gone, it's gone.</p>
+    <div class="menu-grid">
+      <article class="dish">
+        <img src="https://images.unsplash.com/photo-1558030006-450675393462?q=80&w=800&auto=format&fit=crop" alt="Slow-smoked beef brisket" loading="lazy">
+        <div class="dish-body">
+          <div class="dish-head"><h3>Smoked Brisket</h3><span class="price">$19</span></div>
+          <p>14 hours over oak, salt and pepper only. Tender, smoky, with a bark worth the wait.</p>
+        </div>
+      </article>
+      <article class="dish">
+        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop" alt="St. Louis ribs with barbecue sauce" loading="lazy">
+        <div class="dish-body">
+          <div class="dish-head"><h3>St. Louis Ribs</h3><span class="price">$22</span></div>
+          <p>Half rack, dry-rubbed and finished with our house bourbon glaze. Fall-off-the-bone, every time.</p>
+        </div>
+      </article>
+      <article class="dish">
+        <img src="https://images.unsplash.com/photo-1594041680534-e8c8cdebd659?q=80&w=800&auto=format&fit=crop" alt="Pulled pork sandwich with slaw" loading="lazy">
+        <div class="dish-body">
+          <div class="dish-head"><h3>Pulled Pork Plate</h3><span class="price">$16</span></div>
+          <p>Boston butt smoked overnight, hand-pulled, served with slaw, pickles, and Texas toast.</p>
+        </div>
+      </article>
+      <article class="dish">
+        <img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?q=80&w=800&auto=format&fit=crop" alt="Smoked half chicken" loading="lazy">
+        <div class="dish-body">
+          <div class="dish-head"><h3>Smoked Half Chicken</h3><span class="price">$17</span></div>
+          <p>Brined overnight, smoked until juicy, finished over the coals for crispy skin.</p>
+        </div>
+      </article>
+      <article class="dish">
+        <img src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?q=80&w=800&auto=format&fit=crop" alt="Loaded fries with smoked meat" loading="lazy">
+        <div class="dish-body">
+          <div class="dish-head"><h3>Loaded Pit Fries</h3><span class="price">$13</span></div>
+          <p>Crispy fries piled with chopped brisket, cheese sauce, pickled jalapeños, and green onion.</p>
+        </div>
+      </article>
+      <article class="dish">
+        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?q=80&w=800&auto=format&fit=crop" alt="Banana pudding dessert" loading="lazy">
+        <div class="dish-body">
+          <div class="dish-head"><h3>Banana Pudding</h3><span class="price">$8</span></div>
+          <p>Layers of vanilla wafers, banana, and whipped cream. Made fresh daily — the perfect finish.</p>
+        </div>
+      </article>
+    </div>
+    <p class="menu-note">All plates include two sides: slaw, pit beans, mac &amp; cheese, collards, or fries &middot; <a href="#order">Order ahead for pickup</a></p>
+  </div>
+</section>
+
+<section id="reviews" class="section">
+  <div class="wrap">
+    <p class="eyebrow">What Folks Say</p>
+    <h2 class="section-title">Nashville keeps coming back.</h2>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"The brisket is the real deal — smoky, tender, and worth every minute of the line. Best barbecue I've had in Nashville, hands down."</blockquote>
+        <cite>Tyler <span>East Nashville</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"We bring every out-of-town guest here. The ribs, the collards, the banana pudding — it's the full Tennessee experience."</blockquote>
+        <cite>Jessica <span>Regular since 2016</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"Ordered ahead for a family cookout and the whole spread was a hit. The pit crew even threw in extra sauce. Great people."</blockquote>
+        <cite>Marcus <span>Donelson, TN</span></cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="section visit-section">
+  <div class="wrap">
+    <p class="eyebrow">Find Us</p>
+    <h2 class="section-title">Come hungry.</h2>
+    <div class="visit-grid">
+      <div>
+        <div class="visit-block">
+          <h3>Location</h3>
+          <p>1218 Gallatin Avenue<br>Nashville, TN 37206<br>Free lot parking, big covered patio</p>
+        </div>
+        <div class="visit-block">
+          <h3>Contact</h3>
+          <p><a href="tel:+16155550101">(615) 555-0101</a><br><a href="mailto:hello@smokyridgebbq.com">hello@smokyridgebbq.com</a></p>
+        </div>
+        <div class="visit-block">
+          <h3>Opening Hours</h3>
+          <table class="hours-table">
+            <tr><td>Tuesday – Thursday</td><td>11:00 AM – 9:00 PM</td></tr>
+            <tr><td>Friday – Saturday</td><td>11:00 AM – 10:00 PM</td></tr>
+            <tr><td>Sunday</td><td>11:00 AM – 8:00 PM</td></tr>
+            <tr><td>Monday</td><td>Closed (pit rest day)</td></tr>
+          </table>
+        </div>
+      </div>
+      <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=1200&auto=format&fit=crop" alt="The dining room at Smoky Ridge Smokehouse" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section id="order" class="section cta">
+  <div class="wrap">
+    <p class="eyebrow">Hungry Now?</p>
+    <h2>Order ahead, skip the line.</h2>
+    <p>Call ahead and your order will be hot and ready when you arrive. We also cater — ask about full spreads for parties and events.</p>
+    <div class="cta-actions">
+      <a href="tel:+16155550101" class="btn btn-primary">Call (615) 555-0101</a>
+      <a href="#visit" class="btn btn-dark">Get Directions</a>
+    </div>
+    <p class="cta-phone">Catering inquiries: <a href="mailto:hello@smokyridgebbq.com">hello@smokyridgebbq.com</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="logo"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 2c1 5-2.5 7.5-2.5 11a5 5 0 0 0 10 0c0-2-1-3.5-2-5-.5 1.5-1.5 2.5-2.5 3C19.5 7.5 18.5 4.5 16 2Z" fill="#ea580c"/><path d="M16 15c.8 3.5-1.8 5-1.8 7.5a3.3 3.3 0 0 0 6.6 0c0-1.4-.7-2.4-1.4-3.4-.4 1-1 1.7-1.7 2.2.4-2.3-.3-4.6-1.7-6.3Z" fill="#f59e0b"/><path d="M4 28h24" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/></svg> Smoky <span>Ridge</span></span>
+    <p>1218 Gallatin Avenue, Nashville, TN 37206 &middot; (615) 555-0101</p>
+    <p style="margin-top: 12px;">Website designed &amp; built by <a href="https://weblodge.agency">Weblodge Agency</a> &mdash; we build beautiful websites for small businesses.</p>
+  </div>
+</footer>
+
+</body>
+</html>

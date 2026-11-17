@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>High Volt Electric | Electricians in Tulsa, OK</title>
+<meta name="description" content="High Volt Electric is a licensed electrical contractor in Tulsa, OK. Panel upgrades, EV charger installation, rewiring and 24/7 emergency electricians with upfront pricing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --charcoal:#111827; --charcoal-2:#1f2937; --ink:#1f2937; --muted:#6b7280;
+    --yellow:#facc15; --yellow-dark:#eab308; --light:#f9fafb; --line:#e5e7eb;
+    --white:#fff; --radius:10px; --shadow:0 14px 32px rgba(17,24,39,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Oswald',sans-serif;line-height:1.12;color:var(--charcoal);text-transform:uppercase;letter-spacing:.01em}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+  .section{padding:88px 0}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.16em;font-size:12.5px;font-weight:700;color:#a16207;margin-bottom:12px}
+  .eyebrow::before{content:"";width:30px;height:3px;background:var(--yellow);display:inline-block}
+  .section-head{max-width:640px;margin-bottom:48px}
+  .section-head h2{font-size:clamp(30px,4.4vw,44px);margin-bottom:12px}
+  .section-head p{color:var(--muted);font-size:17.5px}
+  .btn{display:inline-block;padding:14px 28px;border-radius:6px;font-weight:700;font-size:16px;transition:.2s;border:2px solid transparent;text-align:center;text-transform:uppercase;letter-spacing:.04em}
+  .btn-yellow{background:var(--yellow);color:#111827}
+  .btn-yellow:hover{background:var(--yellow-dark);transform:translateY(-1px)}
+  .btn-dark{background:var(--charcoal);color:#fff}
+  .btn-dark:hover{background:var(--charcoal-2)}
+  .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.7)}
+  .btn-outline:hover{background:#fff;color:var(--charcoal)}
+
+  .topbar{background:var(--yellow);color:#111827;font-size:13.5px;font-weight:600}
+  .topbar .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+  .topbar a:hover{text-decoration:underline}
+
+  .nav{position:sticky;top:0;z-index:60;background:var(--charcoal);box-shadow:0 2px 14px rgba(0,0,0,.25)}
+  .nav-inner{max-width:1140px;margin:0 auto;padding:0 24px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .logo{display:inline-flex;align-items:center;gap:11px;font-family:'Oswald',sans-serif;font-size:24px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.03em}
+  .logo svg{flex-shrink:0}
+  .logo span{color:var(--yellow)}
+  .nav-links{display:flex;gap:30px;list-style:none;font-weight:600;font-size:15px}
+  .nav-links a{color:#d1d5db}
+  .nav-links a:hover{color:var(--yellow)}
+  .nav-cta{padding:11px 22px;font-size:14px}
+
+  .hero{position:relative;color:#fff;background:var(--charcoal)}
+  .hero-bg{position:absolute;inset:0}
+  .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.35}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(17,24,39,.92) 0%,rgba(17,24,39,.72) 55%,rgba(17,24,39,.35) 100%)}
+  .hero-inner{position:relative;max-width:1140px;margin:0 auto;padding:104px 24px}
+  .hero-copy{max-width:620px}
+  .hero h1{color:#fff;font-size:clamp(40px,6vw,66px);margin-bottom:18px}
+  .hero h1 em{font-style:normal;color:var(--yellow)}
+  .hero p{font-size:18.5px;color:#d1d5db;margin-bottom:30px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-trust{display:flex;gap:32px;flex-wrap:wrap;margin-top:38px;padding-top:26px;border-top:1px solid rgba(255,255,255,.2)}
+  .hero-trust div strong{display:block;font-family:'Oswald',sans-serif;font-size:24px;color:#fff}
+  .hero-trust div span{font-size:13.5px;color:#9ca3af}
+
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .service{border:2px solid var(--line);border-radius:var(--radius);padding:28px 26px;transition:.2s;background:#fff}
+  .service:hover{border-color:var(--yellow-dark);box-shadow:var(--shadow);transform:translateY(-3px)}
+  .service-icon{width:54px;height:54px;border-radius:8px;background:var(--charcoal);display:grid;place-items:center;margin-bottom:18px}
+  .service h3{font-size:21px;margin-bottom:8px}
+  .service p{color:var(--muted);font-size:15.5px;margin-bottom:16px}
+  .service-foot{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding-top:14px}
+  .price{font-family:'Oswald',sans-serif;font-weight:700;font-size:22px;color:var(--charcoal)}
+  .price small{font-family:'Inter',sans-serif;font-size:12px;color:var(--muted);font-weight:600}
+  .service-foot a{font-weight:700;font-size:14.5px;color:#a16207}
+  .service-foot a:hover{color:var(--charcoal)}
+
+  .why{background:var(--light);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .why-img{border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+  .why-img img{width:100%;height:420px;object-fit:cover}
+  .why-list{display:grid;gap:20px;margin-top:28px}
+  .why-item{display:flex;gap:16px}
+  .why-item .tick{width:30px;height:30px;border-radius:50%;background:var(--yellow);color:#111827;display:grid;place-items:center;font-weight:800;flex-shrink:0;margin-top:2px}
+  .why-item h3{font-size:18px;margin-bottom:3px}
+  .why-item p{font-size:15.5px;color:var(--muted)}
+
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .review{background:var(--light);border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px}
+  .stars{color:var(--yellow-dark);letter-spacing:2px;font-size:17px;margin-bottom:14px}
+  .review p{font-size:16px;margin-bottom:18px}
+  .review cite{font-style:normal;font-weight:700;color:var(--charcoal)}
+  .review cite span{display:block;font-weight:500;font-size:14px;color:var(--muted)}
+
+  .cta{background:var(--charcoal);color:#fff;text-align:center;position:relative;overflow:hidden}
+  .cta::before{content:"";position:absolute;top:-60px;right:-60px;width:280px;height:280px;border-radius:50%;background:rgba(250,204,21,.12)}
+  .cta h2{color:#fff;font-size:clamp(30px,4.4vw,44px);margin-bottom:14px;position:relative}
+  .cta p{color:#d1d5db;font-size:18px;max-width:580px;margin:0 auto 30px;position:relative}
+  .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative}
+  .cta small{display:block;margin-top:20px;color:#9ca3af;position:relative}
+
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .visit-card{border:2px solid var(--line);border-radius:var(--radius);padding:32px 30px;background:#fff}
+  .visit-card h3{font-size:22px;margin-bottom:18px}
+  .hours{width:100%;border-collapse:collapse}
+  .hours td{padding:9px 0;border-bottom:1px solid #f3f4f6}
+  .hours td:last-child{text-align:right;font-weight:600;color:var(--charcoal)}
+  .hours tr:last-child td{border-bottom:none}
+  .contact-line{margin-bottom:16px;color:var(--muted)}
+  .contact-line strong{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#a16207;margin-bottom:3px}
+  .contact-line a{color:var(--charcoal);font-weight:700}
+  .contact-line a:hover{color:#a16207}
+
+  footer{background:#0b0f16;color:#9ca3af;padding:48px 0 30px;font-size:14.5px}
+  .footer-grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .footer-brand{max-width:340px}
+  .footer-brand .logo{color:#fff}
+  .footer-brand p{margin-top:10px}
+  .footer-col h4{color:#fff;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
+  .footer-col a{display:block;margin-bottom:8px;color:#b6bdc9}
+  .footer-col a:hover{color:var(--yellow)}
+  .footer-bottom{padding-top:22px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  .footer-bottom a{color:var(--yellow);font-weight:700}
+  .footer-bottom a:hover{text-decoration:underline}
+
+  @media (max-width: 900px){
+    .services-grid,.reviews-grid{grid-template-columns:repeat(2,1fr)}
+    .why-grid,.visit-grid{grid-template-columns:1fr;gap:32px}
+    .why-img img{height:300px}
+    .section{padding:64px 0}
+  }
+  @media (max-width: 620px){
+    .nav-links{display:none}
+    .services-grid,.reviews-grid{grid-template-columns:1fr}
+    .hero-inner{padding:72px 24px}
+    .btn{width:100%}
+    .hero-actions .btn{width:auto;flex:1 1 auto}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>Licensed &amp; Insured &middot; OK Electrical Contractor #EC-10482</span>
+    <span>24/7 Emergency Service &middot; <a href="tel:+19185550185">(918) 555-0185</a></span>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="2" y="2" width="28" height="28" rx="7" fill="#facc15"/><path d="M17.5 6 9.5 18h5l-1.5 8 8-12h-5l1.5-8Z" fill="#111827"/></svg>High <span>Volt</span> Electric</a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="tel:+19185550185" class="btn btn-yellow nav-cta">Call (918) 555-0185</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"><img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1600&auto=format&fit=crop" alt="" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow" style="color:#fde68a">Licensed Electricians &middot; Tulsa, OK</p>
+      <h1>Power done right. <em>Done once.</em></h1>
+      <p>High Volt Electric handles everything from panel upgrades and EV chargers to full-home rewiring — with licensed journeymen, upfront flat-rate pricing, and work inspected to code.</p>
+      <div class="hero-actions">
+        <a href="tel:+19185550185" class="btn btn-yellow">Call (918) 555-0185</a>
+        <a href="#services" class="btn btn-outline">See Services &amp; Prices</a>
+      </div>
+      <div class="hero-trust">
+        <div><strong>16 yrs</strong><span>Serving Green Country</span></div>
+        <div><strong>4.9 rating</strong><span>850+ reviews</span></div>
+        <div><strong>Same-day</strong><span>Service, 7 days a week</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Services &amp; Upfront Pricing</p>
+      <h2>Straight answers, fair prices.</h2>
+      <p>Every job is quoted in writing before we start. No hourly billing, no surprise add-ons — and every install is backed by a 5-year workmanship warranty.</p>
+    </div>
+    <div class="services-grid">
+      <article class="service">
+        <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#facc15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h7l-1 8 11-13h-8l1-7Z"/></svg></div>
+        <h3>Panel Upgrades</h3>
+        <p>Old fuse box or a 100-amp panel that keeps tripping? We upgrade to 200-amp service, permitted and inspected, usually in one day.</p>
+        <div class="service-foot"><span class="price">$1,800 <small>starting</small></span><a href="tel:+19185550185">Book now &rarr;</a></div>
+      </article>
+      <article class="service">
+        <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#facc15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 9V5a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/><path d="M14 9h6l-3 4h4l-6 6v-6h-3l4-4Z"/></svg></div>
+        <h3>EV Charger Installation</h3>
+        <p>Level 2 home chargers for Tesla, Ford, Rivian, and every other EV — installed on a dedicated circuit with permit and inspection.</p>
+        <div class="service-foot"><span class="price">$899 <small>starting</small></span><a href="tel:+19185550185">Book now &rarr;</a></div>
+      </article>
+      <article class="service">
+        <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#facc15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></div>
+        <h3>Whole-Home Rewiring</h3>
+        <p>Knob-and-tube and aluminum wiring replaced with modern copper — safer, insurable, and ready for today's electrical loads.</p>
+        <div class="service-foot"><span class="price">$6,500 <small>starting</small></span><a href="tel:+19185550185">Get a quote &rarr;</a></div>
+      </article>
+      <article class="service">
+        <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#facc15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.4 1 2.3h6c0-.9.4-1.8 1-2.3A7 7 0 0 0 12 2Z"/></svg></div>
+        <h3>Lighting &amp; Ceiling Fans</h3>
+        <p>Recessed lighting, dimmers, under-cabinet LEDs, and ceiling fans installed cleanly — with switches exactly where you want them.</p>
+        <div class="service-foot"><span class="price">$145 <small>starting</small></span><a href="tel:+19185550185">Book now &rarr;</a></div>
+      </article>
+      <article class="service">
+        <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#facc15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>Generators &amp; Surge Protection</h3>
+        <p>Whole-home standby generators and surge protection that keep your family powered and your electronics safe through Oklahoma storms.</p>
+        <div class="service-foot"><span class="price">$3,900 <small>starting</small></span><a href="tel:+19185550185">Get a quote &rarr;</a></div>
+      </article>
+      <article class="service">
+        <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#facc15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <h3>24/7 Emergency Service</h3>
+        <p>Burning smell, sparking outlet, or power out in half the house? A licensed electrician answers day and night and dispatches fast.</p>
+        <div class="service-foot"><span class="price">No overtime fees</span><a href="tel:+19185550185">Call now &rarr;</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="section why">
+  <div class="wrap">
+    <div class="why-grid">
+      <div>
+        <p class="eyebrow">Why Tulsa Chooses High Volt</p>
+        <h2 style="font-size:clamp(28px,3.8vw,38px);margin-bottom:14px">Licensed pros. Honest quotes. Clean work.</h2>
+        <p style="color:var(--muted);font-size:17px">Electrical work is not the place to cut corners. Our crews are licensed journeymen and master electricians who pull permits, follow code, and treat your home with respect.</p>
+        <div class="why-list">
+          <div class="why-item"><span class="tick">&#10003;</span><div><h3>Flat-rate quotes, in writing</h3><p>You approve the exact price before work starts. If the job runs long, the price doesn't move.</p></div></div>
+          <div class="why-item"><span class="tick">&#10003;</span><div><h3>Permitted &amp; inspected</h3><p>We handle permits and inspections with the City of Tulsa, so your work is documented and code-compliant.</p></div></div>
+          <div class="why-item"><span class="tick">&#10003;</span><div><h3>5-year workmanship warranty</h3><p>If anything we installed fails because of our work, we come back and fix it free — for five full years.</p></div></div>
+          <div class="why-item"><span class="tick">&#10003;</span><div><h3>Background-checked techs</h3><p>Uniformed, drug-tested, and background-checked. We show up on time and clean up when we're done.</p></div></div>
+        </div>
+      </div>
+      <div class="why-img">
+        <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1200&auto=format&fit=crop" alt="High Volt electrician working on an electrical panel" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Customer Reviews</p>
+      <h2>Rated 4.9 by Tulsa homeowners.</h2>
+      <p>More than 850 five-star reviews across Google, Yelp, and Nextdoor.</p>
+    </div>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;Panel upgrade done in a single day, permit and inspection handled for me. The crew was professional and the price never changed.&rdquo;</p>
+        <cite>Brian <span>Broken Arrow &middot; Panel upgrade</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;They installed our Tesla charger the same week we got the car. Clean install, explained everything, and it passed inspection first time.&rdquo;</p>
+        <cite>Melissa <span>Midtown Tulsa &middot; EV charger</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;Half the house lost power at 10 PM and they had someone out within an hour. Found a bad breaker, fixed it, and charged a fair price.&rdquo;</p>
+        <cite>James <span>Owasso &middot; Emergency call</span></cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section cta">
+  <div class="wrap">
+    <p class="eyebrow" style="color:#fde68a">Need an electrician?</p>
+    <h2>Call High Volt today.</h2>
+    <p>Same-day appointments across Tulsa, Broken Arrow, Owasso, and Jenks. Emergencies answered around the clock — no overtime fees, ever.</p>
+    <div class="cta-actions">
+      <a href="tel:+19185550185" class="btn btn-yellow">Call (918) 555-0185</a>
+      <a href="mailto:hello@highvoltelectric.com" class="btn btn-outline">Email Us</a>
+    </div>
+    <small>Free estimates on panel upgrades, rewiring, and generator installs.</small>
+  </div>
+</section>
+
+<section id="visit" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Visit &amp; Contact</p>
+      <h2>Find us on East 31st Street.</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-card">
+        <h3>Office Hours</h3>
+        <table class="hours">
+          <tr><td>Monday – Friday</td><td>7:00 AM – 6:00 PM</td></tr>
+          <tr><td>Saturday</td><td>8:00 AM – 4:00 PM</td></tr>
+          <tr><td>Sunday</td><td>Emergency calls only</td></tr>
+          <tr><td>Emergencies</td><td>24 hours, 7 days</td></tr>
+        </table>
+        <p style="margin-top:18px;color:var(--muted);font-size:15px">Serving Tulsa, Broken Arrow, Owasso, Jenks, Bixby, and Sand Springs.</p>
+      </div>
+      <div class="visit-card">
+        <h3>Location &amp; Contact</h3>
+        <p class="contact-line"><strong>Address</strong>5520 East 31st Street<br>Tulsa, OK 74114</p>
+        <p class="contact-line"><strong>Phone</strong><a href="tel:+19185550185">(918) 555-0185</a></p>
+        <p class="contact-line"><strong>Email</strong><a href="mailto:hello@highvoltelectric.com">hello@highvoltelectric.com</a></p>
+        <p class="contact-line" style="margin-bottom:0"><strong>License</strong>OK Electrical Contractor #EC-10482 &middot; Fully insured</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="2" y="2" width="28" height="28" rx="7" fill="#facc15"/><path d="M17.5 6 9.5 18h5l-1.5 8 8-12h-5l1.5-8Z" fill="#111827"/></svg>High <span>Volt</span> Electric</a>
+        <p>Licensed electrical contractors serving Tulsa and Green Country since 2010 — safe, code-compliant work backed by a 5-year warranty.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#services">Panel Upgrades</a>
+        <a href="#services">EV Chargers</a>
+        <a href="#services">Rewiring</a>
+        <a href="#services">Generators</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+19185550185">(918) 555-0185</a>
+        <a href="mailto:hello@highvoltelectric.com">hello@highvoltelectric.com</a>
+        <a href="#visit">5520 E 31st St, Tulsa</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 High Volt Electric, Tulsa, OK. All rights reserved.</span>
+      <span>Website designed &amp; built by <a href="https://weblodge.agency" target="_blank" rel="noopener">Weblodge Agency</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

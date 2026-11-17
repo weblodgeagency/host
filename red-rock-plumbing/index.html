@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Red Rock Plumbing | Plumbers in Albuquerque, NM</title>
+<meta name="description" content="Red Rock Plumbing is a trusted plumbing company in Albuquerque, NM. Repiping, water softeners, sewer repair and same-day service with honest, upfront pricing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --clay:#9a3412; --clay-2:#7c2d12; --terracotta:#c2571b; --amber:#d97706;
+    --sand:#faf3e7; --sand-2:#f3e7d3; --ink:#2b211a; --muted:#6d5d50;
+    --line:#e7d9c3; --white:#fff; --radius:12px;
+    --shadow:0 14px 32px rgba(124,45,18,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--sand);line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Bitter',Georgia,serif;line-height:1.18;color:var(--clay-2)}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .section{padding:88px 0}
+  .eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:12.5px;font-weight:700;color:var(--terracotta);margin-bottom:10px}
+  .section-head{max-width:640px;margin:0 auto 48px;text-align:center}
+  .section-head h2{font-size:clamp(30px,4.2vw,42px);margin-bottom:12px}
+  .section-head p{color:var(--muted);font-size:17.5px}
+  .btn{display:inline-block;padding:14px 28px;border-radius:8px;font-weight:700;font-size:16px;transition:.2s;border:2px solid transparent;text-align:center}
+  .btn-clay{background:var(--clay);color:#fff}
+  .btn-clay:hover{background:var(--clay-2);transform:translateY(-1px)}
+  .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.8)}
+  .btn-outline:hover{background:rgba(255,255,255,.14)}
+  .btn-sand{background:#fff;color:var(--clay-2)}
+  .btn-sand:hover{background:var(--sand-2)}
+
+  .nav{position:sticky;top:0;z-index:60;background:rgba(250,243,231,.97);backdrop-filter:blur(8px);border-bottom:2px solid var(--line)}
+  .nav-inner{max-width:1120px;margin:0 auto;padding:0 24px;height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .logo{display:inline-flex;align-items:center;gap:11px;font-family:'Bitter',Georgia,serif;font-size:23px;font-weight:800;color:var(--clay-2)}
+  .logo svg{flex-shrink:0}
+  .logo span{color:var(--terracotta)}
+  .nav-links{display:flex;gap:30px;list-style:none;font-weight:600;font-size:15px}
+  .nav-links a{color:#4a3a2e}
+  .nav-links a:hover{color:var(--terracotta)}
+  .nav-cta{padding:11px 22px;font-size:15px}
+
+  .hero{position:relative;color:#fff;text-align:center;background:var(--clay-2) url('https://images.unsplash.com/photo-1585704032915-c3400ca199e7?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(60,24,8,.72),rgba(60,24,8,.82))}
+  .hero-inner{position:relative;max-width:780px;margin:0 auto;padding:120px 24px}
+  .hero .eyebrow{color:#fbbf24}
+  .hero h1{color:#fff;font-size:clamp(40px,6.4vw,64px);margin-bottom:18px}
+  .hero p{font-size:19px;color:#f5e6d3;margin-bottom:34px}
+  .hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .hero-note{margin-top:26px;font-size:14.5px;color:#e3cdb2}
+  .hero-note strong{color:#fff}
+
+  .strip{background:#fff;border-bottom:1px solid var(--line)}
+  .strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding-top:26px;padding-bottom:26px}
+  .strip-item{text-align:center}
+  .strip-item b{display:block;font-family:'Bitter',Georgia,serif;font-size:24px;color:var(--clay-2)}
+  .strip-item span{font-size:13.5px;color:var(--muted)}
+
+  .services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  .service{display:flex;gap:22px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:.2s}
+  .service:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
+  .service img{width:120px;height:120px;object-fit:cover;border-radius:10px;flex-shrink:0}
+  .service h3{font-size:21px;margin-bottom:6px}
+  .service p{color:var(--muted);font-size:15.5px;margin-bottom:10px}
+  .price{font-family:'Bitter',Georgia,serif;font-weight:800;font-size:19px;color:var(--terracotta)}
+  .price small{font-family:'Inter',sans-serif;font-size:12px;color:var(--muted);font-weight:600}
+
+  .about{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .about-grid img{border-radius:14px;width:100%;height:400px;object-fit:cover}
+  .about-copy p{color:var(--muted);margin-bottom:14px;font-size:17px}
+  .about-copy ul{list-style:none;margin-top:20px;display:grid;gap:10px;font-weight:600;font-size:16px}
+  .about-copy li::before{content:"\2713";color:var(--terracotta);font-weight:800;margin-right:10px}
+
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .review{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px}
+  .stars{color:var(--amber);letter-spacing:2px;font-size:17px;margin-bottom:14px}
+  .review p{font-size:16px;margin-bottom:18px}
+  .review cite{font-style:normal;font-weight:700;color:var(--clay-2)}
+  .review cite span{display:block;font-weight:500;font-size:14px;color:var(--muted)}
+
+  .cta{background:linear-gradient(135deg,var(--clay) 0%,var(--clay-2) 100%);color:#fff;text-align:center}
+  .cta h2{color:#fff;font-size:clamp(30px,4.2vw,42px);margin-bottom:14px}
+  .cta p{color:#f5e6d3;font-size:18px;max-width:580px;margin:0 auto 30px}
+  .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+  .visit-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
+  .visit-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px 30px}
+  .visit-card h3{font-size:22px;margin-bottom:18px}
+  .hours{width:100%;border-collapse:collapse}
+  .hours td{padding:9px 0;border-bottom:1px solid #f1e7d7}
+  .hours td:last-child{text-align:right;font-weight:600;color:var(--clay-2)}
+  .hours tr:last-child td{border-bottom:none}
+  .contact-line{margin-bottom:16px;color:var(--muted)}
+  .contact-line strong{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--terracotta);margin-bottom:3px}
+  .contact-line a{color:var(--clay-2);font-weight:700}
+  .contact-line a:hover{color:var(--terracotta)}
+
+  footer{background:#2b211a;color:#b8a795;padding:48px 0 30px;font-size:14.5px}
+  .footer-grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .footer-brand{max-width:340px}
+  .footer-brand .logo{color:#fff}
+  .footer-brand p{margin-top:10px}
+  .footer-col h4{color:#fff;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
+  .footer-col a{display:block;margin-bottom:8px;color:#c9b8a5}
+  .footer-col a:hover{color:#fff}
+  .footer-bottom{padding-top:22px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  .footer-bottom a{color:#fbbf24;font-weight:700}
+  .footer-bottom a:hover{text-decoration:underline}
+
+  @media (max-width: 900px){
+    .strip .wrap{grid-template-columns:repeat(2,1fr)}
+    .services-grid,.about-grid,.reviews-grid,.visit-grid{grid-template-columns:1fr;gap:28px}
+    .about-grid img{height:300px}
+    .section{padding:64px 0}
+  }
+  @media (max-width: 620px){
+    .nav-links{display:none}
+    .service{flex-direction:column}
+    .service img{width:100%;height:180px}
+    .hero-inner{padding:88px 24px}
+    .btn{width:100%}
+    .hero-actions .btn{width:auto;flex:1 1 auto}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="2" y="2" width="28" height="28" rx="8" fill="#9a3412"/><path d="M20.5 9.5a4.6 4.6 0 0 0-6.3 6.1L9 20.8a1.7 1.7 0 0 0 2.4 2.4l5.2-5.2a4.6 4.6 0 0 0 6.1-6.3l-2.8 2.8-2.2-2.2 2.8-2.8Z" fill="#fbbf24"/></svg>Red <span>Rock</span> Plumbing</a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="tel:+15055550182" class="btn btn-clay nav-cta">Call (505) 555-0182</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Plumbing &amp; Repiping &middot; Albuquerque, NM</p>
+    <h1>Built for the desert. Trusted in your home.</h1>
+    <p>Red Rock Plumbing has served Albuquerque homes for over 20 years — from hard-water fixes and repipes to same-day repairs, all with honest pricing and a crew that treats your home with respect.</p>
+    <div class="hero-actions">
+      <a href="tel:+15055550182" class="btn btn-sand">Call (505) 555-0182</a>
+      <a href="#services" class="btn btn-outline">View Services</a>
+    </div>
+    <p class="hero-note"><strong>Same-day service</strong> across Albuquerque &middot; Rio Rancho &middot; Bernalillo &middot; Los Ranchos</p>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <div class="strip-item"><b>22 yrs</b><span>In business since 2004</span></div>
+    <div class="strip-item"><b>14,000+</b><span>Jobs completed</span></div>
+    <div class="strip-item"><b>4.8 rating</b><span>700+ local reviews</span></div>
+    <div class="strip-item"><b>2-yr warranty</b><span>On all labor</span></div>
+  </div>
+</div>
+
+<section id="services" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Services &amp; Pricing</p>
+      <h2>Straightforward plumbing, fair prices.</h2>
+      <p>We quote every job up front and stick to it. No after-hours surcharges, no upselling — just solid work done right.</p>
+    </div>
+    <div class="services-grid">
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?q=80&w=400&auto=format&fit=crop" alt="Plumbing tools and fittings" loading="lazy">
+        <div>
+          <h3>Whole-Home Repiping</h3>
+          <p>Albuquerque's hard water wears out old pipes. We replace them with long-lasting PEX or copper — most homes done in 2 days.</p>
+          <span class="price">$2,900 <small>starting</small></span>
+        </div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?q=80&w=400&auto=format&fit=crop" alt="Plumber repairing a sink" loading="lazy">
+        <div>
+          <h3>Leak &amp; Pipe Repair</h3>
+          <p>Slab leaks, burst pipes, and dripping lines located with electronic detection and repaired the same day whenever possible.</p>
+          <span class="price">$95 <small>starting</small></span>
+        </div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?q=80&w=400&auto=format&fit=crop" alt="Modern bathroom with new fixtures" loading="lazy">
+        <div>
+          <h3>Water Softeners &amp; Filtration</h3>
+          <p>Tame Albuquerque's hard water with a softener or whole-home filter — softer skin, cleaner dishes, longer-lasting appliances.</p>
+          <span class="price">$1,150 <small>installed</small></span>
+        </div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?q=80&w=400&auto=format&fit=crop" alt="Bathroom sink and faucet" loading="lazy">
+        <div>
+          <h3>Drain &amp; Sewer Repair</h3>
+          <p>Camera inspections show you exactly what's wrong underground, and trenchless repair fixes it without tearing up your yard.</p>
+          <span class="price">$185 <small>starting</small></span>
+        </div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?q=80&w=400&auto=format&fit=crop" alt="Kitchen with new plumbing fixtures" loading="lazy">
+        <div>
+          <h3>Kitchen &amp; Bath Remodels</h3>
+          <p>Moving a sink, adding a shower, or a full remodel — our plumbers work with your contractor or handle the whole job.</p>
+          <span class="price">Free estimates</span>
+        </div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=400&auto=format&fit=crop" alt="Water heater installation" loading="lazy">
+        <div>
+          <h3>Water Heaters</h3>
+          <p>Tank and tankless replacements installed in a day, plus yearly maintenance that keeps your warranty valid and your water hot.</p>
+          <span class="price">$1,390 <small>installed</small></span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-copy">
+        <p class="eyebrow">Our Story</p>
+        <h2 style="font-size:clamp(28px,3.8vw,38px);margin-bottom:16px">A local crew that knows New Mexico homes.</h2>
+        <p>Red Rock started in 2004 with one truck and a simple promise: show up when we say we will, charge what we quoted, and leave the house cleaner than we found it. Twenty years later, that promise hasn't changed — we've just added more trucks.</p>
+        <p>Adobe walls, slab foundations, hard water, and old galvanized lines — we've seen what Albuquerque homes throw at plumbers, and we know how to fix it for good.</p>
+        <ul>
+          <li>Licensed NM journeyman &amp; master plumbers</li>
+          <li>Upfront flat-rate quotes, in writing</li>
+          <li>Background-checked, uniformed technicians</li>
+          <li>2-year warranty on labor, manufacturer warranty on parts</li>
+        </ul>
+      </div>
+      <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1200&auto=format&fit=crop" alt="Red Rock technician at work in a customer's home" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">What Neighbors Say</p>
+      <h2>Rated 4.8 by Albuquerque homeowners.</h2>
+    </div>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;They repiped our whole 1960s home in two days and left everything spotless. Water pressure is like a new house. Worth every penny.&rdquo;</p>
+        <cite>Robert <span>Nob Hill &middot; Repiping</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;Our water softener made a night-and-day difference — no more spots, no more dry skin. They explained everything and the price never moved.&rdquo;</p>
+        <cite>Marisol <span>Rio Rancho &middot; Water softener</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;Called at 8 AM with a slab leak, tech was here by 10, fixed by lunch. Honest, fast, and fair — I recommend them to everyone.&rdquo;</p>
+        <cite>Karen <span>North Valley &middot; Leak repair</span></cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section cta">
+  <div class="wrap">
+    <p class="eyebrow" style="color:#fbbf24">Need a plumber today?</p>
+    <h2>Call Red Rock — same-day service, honest price.</h2>
+    <p>Talk to a real person, get a straight answer, and book a tech who shows up on time. Emergencies answered around the clock.</p>
+    <div class="cta-actions">
+      <a href="tel:+15055550182" class="btn btn-sand">Call (505) 555-0182</a>
+      <a href="mailto:hello@redrockplumbingnm.com" class="btn btn-outline">Email Us</a>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Find Us</p>
+      <h2>Our shop is on Central Avenue.</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-card">
+        <h3>Office Hours</h3>
+        <table class="hours">
+          <tr><td>Monday – Friday</td><td>7:30 AM – 5:30 PM</td></tr>
+          <tr><td>Saturday</td><td>8:00 AM – 2:00 PM</td></tr>
+          <tr><td>Sunday</td><td>Emergency calls only</td></tr>
+          <tr><td>Emergencies</td><td>24 hours, 7 days</td></tr>
+        </table>
+        <p style="margin-top:18px;color:var(--muted);font-size:15px">Same-day service across the Albuquerque metro, including Rio Rancho, Bernalillo, and Los Ranchos de Albuquerque.</p>
+      </div>
+      <div class="visit-card">
+        <h3>Location &amp; Contact</h3>
+        <p class="contact-line"><strong>Address</strong>1800 Central Avenue SE<br>Albuquerque, NM 87106</p>
+        <p class="contact-line"><strong>Phone</strong><a href="tel:+15055550182">(505) 555-0182</a></p>
+        <p class="contact-line"><strong>Email</strong><a href="mailto:hello@redrockplumbingnm.com">hello@redrockplumbingnm.com</a></p>
+        <p class="contact-line" style="margin-bottom:0"><strong>License</strong>NM Licensed Plumber #JP-2214 &middot; Bonded &amp; insured</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="2" y="2" width="28" height="28" rx="8" fill="#9a3412"/><path d="M20.5 9.5a4.6 4.6 0 0 0-6.3 6.1L9 20.8a1.7 1.7 0 0 0 2.4 2.4l5.2-5.2a4.6 4.6 0 0 0 6.1-6.3l-2.8 2.8-2.2-2.2 2.8-2.8Z" fill="#fbbf24"/></svg>Red <span>Rock</span> Plumbing</a>
+        <p>Serving Albuquerque and the surrounding metro since 2004 — honest plumbing, fair prices, and work that lasts.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#services">Repiping</a>
+        <a href="#services">Leak Repair</a>
+        <a href="#services">Water Softeners</a>
+        <a href="#services">Sewer Repair</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+15055550182">(505) 555-0182</a>
+        <a href="mailto:hello@redrockplumbingnm.com">hello@redrockplumbingnm.com</a>
+        <a href="#visit">1800 Central Ave SE, Albuquerque</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Red Rock Plumbing, Albuquerque, NM. All rights reserved.</span>
+      <span>Website designed &amp; built by <a href="https://weblodge.agency" target="_blank" rel="noopener">Weblodge Agency</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

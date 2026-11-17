@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ClearFlow Plumbing | Plumbers in Oklahoma City, OK</title>
+<meta name="description" content="ClearFlow Plumbing is a family-owned plumbing company in Oklahoma City. Leak repair, drain cleaning, water heaters and 24/7 emergency service with upfront pricing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#0b3d3a; --teal-2:#0f4f4a; --aqua:#14b8a6; --aqua-dark:#0d9488;
+    --mist:#f0fdfa; --ice:#e6f7f4; --ink:#1f2937; --muted:#5b6b68;
+    --line:#d7ece8; --white:#fff; --radius:16px;
+    --shadow:0 14px 34px rgba(11,61,58,.10);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Sora',sans-serif;line-height:1.15;color:var(--teal)}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .section{padding:88px 0}
+  .eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:12.5px;font-weight:700;color:var(--aqua-dark);margin-bottom:10px}
+  .section-head{max-width:640px;margin-bottom:48px}
+  .section-head h2{font-size:clamp(30px,4.2vw,42px);margin-bottom:12px}
+  .section-head p{color:var(--muted);font-size:17.5px}
+  .btn{display:inline-block;padding:14px 28px;border-radius:999px;font-weight:700;font-size:16px;transition:.2s;border:2px solid transparent;text-align:center}
+  .btn-aqua{background:var(--aqua);color:#fff}
+  .btn-aqua:hover{background:var(--aqua-dark);transform:translateY(-1px)}
+  .btn-teal{background:var(--teal);color:#fff}
+  .btn-teal:hover{background:var(--teal-2)}
+  .btn-ghost{background:transparent;color:var(--teal);border-color:var(--teal)}
+  .btn-ghost:hover{background:var(--teal);color:#fff}
+
+  .topbar{background:var(--teal);color:#c9ece6;font-size:13.5px}
+  .topbar .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+  .topbar strong{color:#fff}
+  .topbar a:hover{color:#fff;text-decoration:underline}
+
+  .nav{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav-inner{max-width:1120px;margin:0 auto;padding:0 24px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .logo{display:inline-flex;align-items:center;gap:11px;font-family:'Sora',sans-serif;font-size:23px;font-weight:800;color:var(--teal)}
+  .logo svg{flex-shrink:0}
+  .logo span{color:var(--aqua-dark)}
+  .nav-links{display:flex;gap:30px;list-style:none;font-weight:600;font-size:15px}
+  .nav-links a{color:#37474a}
+  .nav-links a:hover{color:var(--aqua-dark)}
+  .nav-cta{padding:11px 22px;font-size:15px}
+
+  .hero{background:linear-gradient(120deg,var(--mist) 0%,#e0f5f1 55%,#d3eee9 100%);overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding:84px 0}
+  .hero h1{font-size:clamp(38px,5.4vw,58px);margin:14px 0 18px}
+  .hero h1 em{font-style:normal;color:var(--aqua-dark)}
+  .hero p{font-size:18.5px;color:var(--muted);max-width:520px;margin-bottom:30px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-badges{display:flex;gap:26px;flex-wrap:wrap;margin-top:34px;padding-top:26px;border-top:1px solid var(--line)}
+  .hero-badges div strong{display:block;font-family:'Sora',sans-serif;font-size:21px;color:var(--teal)}
+  .hero-badges div span{font-size:13.5px;color:var(--muted)}
+  .hero-img{border-radius:22px;overflow:hidden;box-shadow:var(--shadow);position:relative}
+  .hero-img img{width:100%;height:480px;object-fit:cover}
+  .hero-card{position:absolute;left:20px;bottom:20px;background:#fff;border-radius:14px;padding:16px 20px;box-shadow:var(--shadow);display:flex;gap:14px;align-items:center}
+  .hero-card b{font-family:'Sora',sans-serif;color:var(--teal);display:block;font-size:16px}
+  .hero-card span{font-size:13.5px;color:var(--muted)}
+  .hero-card .dot{width:12px;height:12px;border-radius:50%;background:#22c55e;flex-shrink:0;box-shadow:0 0 0 5px rgba(34,197,94,.18)}
+
+  .services{background:#fff}
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .service{border:1px solid var(--line);border-radius:var(--radius);padding:28px;background:var(--mist);transition:.2s}
+  .service:hover{transform:translateY(-4px);box-shadow:var(--shadow);background:#fff}
+  .service-icon{width:52px;height:52px;border-radius:14px;background:var(--teal);display:grid;place-items:center;margin-bottom:18px}
+  .service h3{font-size:20px;margin-bottom:8px}
+  .service p{color:var(--muted);font-size:15.5px;margin-bottom:16px}
+  .service-foot{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding-top:14px}
+  .price{font-family:'Sora',sans-serif;font-weight:800;font-size:20px;color:var(--aqua-dark)}
+  .price small{font-family:'Inter',sans-serif;font-size:12px;color:var(--muted);font-weight:600}
+  .service-foot a{font-weight:700;font-size:14.5px;color:var(--teal)}
+  .service-foot a:hover{color:var(--aqua-dark)}
+
+  .why{background:var(--teal);color:#d7ece8}
+  .why h2{color:#fff}
+  .why-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:center}
+  .why-img{border-radius:20px;overflow:hidden}
+  .why-img img{width:100%;height:420px;object-fit:cover}
+  .why-list{display:grid;gap:22px;margin-top:32px}
+  .why-item{display:flex;gap:16px}
+  .why-item .num{font-family:'Sora',sans-serif;font-weight:800;font-size:22px;color:var(--aqua);flex-shrink:0;width:36px}
+  .why-item h3{color:#fff;font-size:18.5px;margin-bottom:4px}
+  .why-item p{font-size:15.5px;color:#bcdcd6}
+
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .review{border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;background:#fff}
+  .stars{color:#f59e0b;letter-spacing:2px;font-size:17px;margin-bottom:14px}
+  .review p{font-size:16px;margin-bottom:18px}
+  .review cite{font-style:normal;font-weight:700;color:var(--teal)}
+  .review cite span{display:block;font-weight:500;font-size:14px;color:var(--muted)}
+
+  .visit{background:var(--mist)}
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .visit-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px 30px}
+  .visit-card h3{font-size:22px;margin-bottom:18px}
+  .hours{width:100%;border-collapse:collapse}
+  .hours td{padding:9px 0;border-bottom:1px solid #eef5f3}
+  .hours td:last-child{text-align:right;font-weight:600;color:var(--teal)}
+  .hours tr:last-child td{border-bottom:none}
+  .contact-line{margin-bottom:16px;color:var(--muted)}
+  .contact-line strong{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--aqua-dark);margin-bottom:3px}
+  .contact-line a{color:var(--teal);font-weight:700}
+  .contact-line a:hover{color:var(--aqua-dark)}
+
+  .cta{text-align:center}
+  .cta h2{font-size:clamp(30px,4.2vw,42px);margin-bottom:14px}
+  .cta p{color:var(--muted);font-size:18px;max-width:580px;margin:0 auto 30px}
+  .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .cta small{display:block;margin-top:20px;color:var(--muted)}
+
+  footer{background:var(--teal);color:#9fc6c0;padding:48px 0 30px;font-size:14.5px}
+  .footer-grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.14)}
+  .footer-brand{max-width:340px}
+  .footer-brand .logo{color:#fff}
+  .footer-brand p{margin-top:10px}
+  .footer-col h4{color:#fff;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
+  .footer-col a{display:block;margin-bottom:8px;color:#bcdcd6}
+  .footer-col a:hover{color:#fff}
+  .footer-bottom{padding-top:22px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  .footer-bottom a{color:#5eead4;font-weight:700}
+  .footer-bottom a:hover{text-decoration:underline}
+
+  @media (max-width: 900px){
+    .hero-grid,.why-grid,.visit-grid{grid-template-columns:1fr;gap:36px}
+    .services-grid,.reviews-grid{grid-template-columns:repeat(2,1fr)}
+    .hero-img img{height:340px}
+    .why-img img{height:300px}
+    .section{padding:64px 0}
+  }
+  @media (max-width: 620px){
+    .nav-links{display:none}
+    .services-grid,.reviews-grid{grid-template-columns:1fr}
+    .hero-grid{padding:56px 0}
+    .hero-card{left:12px;right:12px;bottom:12px}
+    .btn{width:100%}
+    .hero-actions .btn{width:auto;flex:1 1 auto}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span><strong>24/7 Emergency Service</strong> &mdash; burst pipes, major leaks, no hot water</span>
+    <span>Serving Oklahoma City &amp; the metro &middot; <a href="tel:+14055550181">(405) 555-0181</a></span>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 2.5C16 2.5 6.5 13.4 6.5 20a9.5 9.5 0 0 0 19 0C25.5 13.4 16 2.5 16 2.5Z" fill="#14b8a6"/><path d="M12.5 20.5a3.5 3.5 0 0 0 3.5 3.5" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>Clear<span>Flow</span></a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="tel:+14055550181" class="btn btn-aqua nav-cta">Call (405) 555-0181</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">Family-Owned Plumbing &middot; Oklahoma City</p>
+        <h1>Plumbing problems, fixed right the <em>first time.</em></h1>
+        <p>From a dripping faucet to a full repipe, ClearFlow sends licensed, background-checked plumbers who show up on time, explain the fix in plain English, and quote you a flat price before any work begins.</p>
+        <div class="hero-actions">
+          <a href="tel:+14055550181" class="btn btn-teal">Call Now — 24/7</a>
+          <a href="#services" class="btn btn-ghost">See Services &amp; Prices</a>
+        </div>
+        <div class="hero-badges">
+          <div><strong>18 yrs</strong><span>Serving OKC homes</span></div>
+          <div><strong>4.9 rating</strong><span>900+ Google reviews</span></div>
+          <div><strong>Same-day</strong><span>Service, 7 days a week</span></div>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?q=80&w=1200&auto=format&fit=crop" alt="ClearFlow plumber repairing a kitchen sink" loading="lazy">
+        <div class="hero-card">
+          <span class="dot" aria-hidden="true"></span>
+          <div><b>Technicians on call now</b><span>Average arrival time today: 47 minutes</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section services">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Services &amp; Upfront Pricing</p>
+      <h2>Every job quoted before we start.</h2>
+      <p>No hourly surprises and no mystery fees. The price we quote is the price you pay — and every repair is backed by our 2-year workmanship warranty.</p>
+    </div>
+    <div class="services-grid">
+      <article class="service">
+        <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.7s6.5 6.9 6.5 11.3a6.5 6.5 0 0 1-13 0C5.5 9.6 12 2.7 12 2.7Z"/><path d="M9.5 14a2.5 2.5 0 0 0 2.5 2.5"/></svg></div>
+        <h3>Leak Detection &amp; Repair</h3>
+        <p>Hidden leaks found fast with acoustic and thermal detection — then repaired cleanly, with drywall patched and painted.</p>
+        <div class="service-foot"><span class="price">$89 <small>starting</small></span><a href="tel:+14055550181">Book now &rarr;</a></div>
+      </article>
+      <article class="service">
+        <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21c4-1 5-4 5-7V9a3 3 0 0 1 6 0v5c0 3 1 6 5 7"/><path d="M8 9V7a4 4 0 0 1 8 0v2"/></svg></div>
+        <h3>Drain Cleaning</h3>
+        <p>Slow drains, backups, and stubborn clogs cleared with pro-grade augers and hydro-jetting — safe for your pipes.</p>
+        <div class="service-foot"><span class="price">$129 <small>starting</small></span><a href="tel:+14055550181">Book now &rarr;</a></div>
+      </article>
+      <article class="service">
+        <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0Z"/></svg></div>
+        <h3>Water Heaters</h3>
+        <p>Same-day replacement of tank and tankless water heaters, plus annual flushes that keep yours running for years longer.</p>
+        <div class="service-foot"><span class="price">$1,450 <small>installed</small></span><a href="tel:+14055550181">Book now &rarr;</a></div>
+      </article>
+      <article class="service">
+        <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <h3>Fixture Installation</h3>
+        <p>Faucets, toilets, showers, and garbage disposals installed neatly — we haul away the old ones and leave the space spotless.</p>
+        <div class="service-foot"><span class="price">$149 <small>starting</small></span><a href="tel:+14055550181">Book now &rarr;</a></div>
+      </article>
+      <article class="service">
+        <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></div>
+        <h3>Whole-Home Repiping</h3>
+        <p>Old galvanized or polybutylene lines replaced with durable PEX — most homes finished in two days, with water back on each night.</p>
+        <div class="service-foot"><span class="price">$3,900 <small>starting</small></span><a href="tel:+14055550181">Get a quote &rarr;</a></div>
+      </article>
+      <article class="service">
+        <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <h3>24/7 Emergency Service</h3>
+        <p>Burst pipe at 2 AM? A real plumber answers — day or night, weekends and holidays — and we dispatch within the hour.</p>
+        <div class="service-foot"><span class="price">No overtime fees</span><a href="tel:+14055550181">Call now &rarr;</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="section why">
+  <div class="wrap">
+    <div class="why-grid">
+      <div class="why-img">
+        <img src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?q=80&w=1200&auto=format&fit=crop" alt="Professional plumbing tools ready for a job" loading="lazy">
+      </div>
+      <div>
+        <p class="eyebrow" style="color:#5eead4">Why Oklahoma City Chooses ClearFlow</p>
+        <h2>Honest work, clean boots, fair prices.</h2>
+        <div class="why-list">
+          <div class="why-item"><span class="num">01</span><div><h3>Flat-rate pricing, in writing</h3><p>You approve the exact price before we touch a wrench. If the job takes longer than expected, that's on us — not you.</p></div></div>
+          <div class="why-item"><span class="num">02</span><div><h3>Licensed &amp; insured, every tech</h3><p>Every ClearFlow plumber is state-licensed, background-checked, and drug-tested. We treat your home like our own.</p></div></div>
+          <div class="why-item"><span class="num">03</span><div><h3>We clean up after ourselves</h3><p>Shoe covers on, drop cloths down, and a full cleanup when we're done. The only sign we were there is working plumbing.</p></div></div>
+          <div class="why-item"><span class="num">04</span><div><h3>2-year workmanship warranty</h3><p>If anything we repaired fails within two years, we come back and make it right — free. No fine print, no runaround.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Customer Reviews</p>
+      <h2>Neighbors who'd call us again.</h2>
+      <p>Rated 4.9 out of 5 from more than 900 reviews across Google, Yelp, and Nextdoor.</p>
+    </div>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;Pipe burst on a Sunday night and they were at our door in 40 minutes. Fixed it, cleaned up, and the bill matched the quote exactly.&rdquo;</p>
+        <cite>Danielle <span>Edmond &middot; Emergency repair</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;Two other companies told me I needed a full repipe. ClearFlow found the real problem — one bad fitting — and saved me thousands.&rdquo;</p>
+        <cite>Marcus <span>Midtown OKC &middot; Leak repair</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;Polite, on time, and they actually explained what they were doing. New water heater installed the same day I called.&rdquo;</p>
+        <cite>Angela <span>Norman &middot; Water heater install</span></cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="section visit">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Visit &amp; Contact</p>
+      <h2>We're right here in OKC.</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-card">
+        <h3>Office Hours</h3>
+        <table class="hours">
+          <tr><td>Monday – Friday</td><td>7:00 AM – 6:00 PM</td></tr>
+          <tr><td>Saturday</td><td>8:00 AM – 4:00 PM</td></tr>
+          <tr><td>Sunday</td><td>Emergency calls only</td></tr>
+          <tr><td>Emergencies</td><td>24 hours, 7 days</td></tr>
+        </table>
+        <p style="margin-top:18px;color:var(--muted);font-size:15px">Same-day appointments available across Oklahoma City, Edmond, Norman, Moore, and Yukon.</p>
+      </div>
+      <div class="visit-card">
+        <h3>Location &amp; Contact</h3>
+        <p class="contact-line"><strong>Address</strong>2420 NW Expressway<br>Oklahoma City, OK 73112</p>
+        <p class="contact-line"><strong>Phone</strong><a href="tel:+14055550181">(405) 555-0181</a></p>
+        <p class="contact-line"><strong>Email</strong><a href="mailto:hello@clearflowplumbing.com">hello@clearflowplumbing.com</a></p>
+        <p class="contact-line" style="margin-bottom:0"><strong>License</strong>OK Master Plumber #MP-4821 &middot; Fully insured</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section cta">
+  <div class="wrap">
+    <p class="eyebrow">Leak? Clog? No hot water?</p>
+    <h2>Call ClearFlow — we'll take it from here.</h2>
+    <p>A real person answers the phone, a licensed plumber shows up on time, and you get a flat price before any work starts.</p>
+    <div class="cta-actions">
+      <a href="tel:+14055550181" class="btn btn-aqua">Call (405) 555-0181</a>
+      <a href="mailto:hello@clearflowplumbing.com" class="btn btn-teal">Email Us</a>
+    </div>
+    <small>Emergencies answered 24/7 — including nights, weekends, and holidays.</small>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 2.5C16 2.5 6.5 13.4 6.5 20a9.5 9.5 0 0 0 19 0C25.5 13.4 16 2.5 16 2.5Z" fill="#14b8a6"/><path d="M12.5 20.5a3.5 3.5 0 0 0 3.5 3.5" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>Clear<span style="color:#5eead4">Flow</span></a>
+        <p>Family-owned plumbing for Oklahoma City and the metro — honest prices, licensed techs, and work we stand behind for two years.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#services">Leak Repair</a>
+        <a href="#services">Drain Cleaning</a>
+        <a href="#services">Water Heaters</a>
+        <a href="#services">Repiping</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+14055550181">(405) 555-0181</a>
+        <a href="mailto:hello@clearflowplumbing.com">hello@clearflowplumbing.com</a>
+        <a href="#visit">2420 NW Expressway, OKC</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 ClearFlow Plumbing, Oklahoma City, OK. All rights reserved.</span>
+      <span>Website designed &amp; built by <a href="https://weblodge.agency" target="_blank" rel="noopener">Weblodge Agency</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

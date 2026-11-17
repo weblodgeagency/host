@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnolia Electric Co. | Electricians in Jackson, MS</title>
+<meta name="description" content="Magnolia Electric Co. is a family-owned electrical contractor in Jackson, MS. Rewiring, generator installation, lighting design and 24/7 emergency service with upfront pricing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1e3a5f; --navy-2:#152c49; --blush:#f5e6e0; --blush-2:#f9f1ec;
+    --gold:#b08d4f; --gold-2:#8f6f38; --ink:#232a33; --muted:#5d6b7a;
+    --line:#e4dcd4; --white:#fff; --radius:14px;
+    --shadow:0 14px 34px rgba(30,58,95,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Work Sans',system-ui,sans-serif;color:var(--ink);background:var(--blush-2);line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;line-height:1.1;color:var(--navy-2);font-weight:600}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .section{padding:88px 0}
+  .eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:12.5px;font-weight:700;color:var(--gold-2);margin-bottom:12px}
+  .section-head{max-width:640px;margin-bottom:48px}
+  .section-head h2{font-size:clamp(32px,4.6vw,48px);margin-bottom:12px}
+  .section-head p{color:var(--muted);font-size:17.5px}
+  .btn{display:inline-block;padding:14px 28px;border-radius:4px;font-weight:600;font-size:16px;transition:.2s;border:2px solid transparent;text-align:center;letter-spacing:.02em}
+  .btn-navy{background:var(--navy);color:#fff}
+  .btn-navy:hover{background:var(--navy-2);transform:translateY(-1px)}
+  .btn-gold{background:var(--gold);color:#fff}
+  .btn-gold:hover{background:var(--gold-2)}
+  .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.85)}
+  .btn-outline:hover{background:rgba(255,255,255,.14)}
+
+  .nav{position:sticky;top:0;z-index:60;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 2px 10px rgba(30,58,95,.06)}
+  .nav-inner{max-width:1120px;margin:0 auto;padding:0 24px;height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .logo{display:inline-flex;align-items:center;gap:11px;font-family:'Cormorant Garamond',Georgia,serif;font-size:26px;font-weight:700;color:var(--navy-2)}
+  .logo svg{flex-shrink:0}
+  .logo span{color:var(--gold-2);font-style:italic}
+  .nav-links{display:flex;gap:30px;list-style:none;font-weight:500;font-size:15.5px}
+  .nav-links a{color:#3d4a59}
+  .nav-links a:hover{color:var(--gold-2)}
+  .nav-cta{padding:11px 22px;font-size:15px}
+
+  .hero{position:relative;color:#fff;text-align:center;background:var(--navy-2) url('https://images.unsplash.com/photo-1621905251918-48416bd8575a?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(21,44,73,.78),rgba(21,44,73,.88))}
+  .hero-inner{position:relative;max-width:760px;margin:0 auto;padding:124px 24px}
+  .hero .eyebrow{color:#d9c08a}
+  .hero h1{color:#fff;font-size:clamp(42px,6.6vw,68px);margin-bottom:18px}
+  .hero h1 em{font-style:italic;color:#d9c08a}
+  .hero p{font-size:19px;color:#dbe4ee;margin-bottom:34px}
+  .hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .hero-meta{margin-top:30px;display:flex;gap:28px;justify-content:center;flex-wrap:wrap;font-size:14.5px;color:#b9c6d6}
+  .hero-meta strong{color:#fff}
+
+  .services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  .service{display:flex;gap:22px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:.2s}
+  .service:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
+  .service-num{font-family:'Cormorant Garamond',Georgia,serif;font-size:44px;font-weight:700;color:var(--blush);line-height:1;flex-shrink:0}
+  .service h3{font-size:24px;margin-bottom:6px}
+  .service p{color:var(--muted);font-size:15.5px;margin-bottom:10px}
+  .price{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;font-size:22px;color:var(--navy)}
+  .price small{font-family:'Work Sans',sans-serif;font-size:12.5px;color:var(--muted);font-weight:500}
+
+  .about{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .about-grid img{border-radius:14px;width:100%;height:400px;object-fit:cover}
+  .about-copy p{color:var(--muted);margin-bottom:14px;font-size:17px}
+  .about-stats{display:flex;gap:36px;margin-top:26px;flex-wrap:wrap}
+  .about-stats div b{display:block;font-family:'Cormorant Garamond',Georgia,serif;font-size:36px;color:var(--navy)}
+  .about-stats div span{font-size:13.5px;color:var(--muted)}
+
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .review{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px}
+  .stars{color:var(--gold);letter-spacing:2px;font-size:17px;margin-bottom:14px}
+  .review p{font-size:16.5px;margin-bottom:18px;font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;line-height:1.5}
+  .review cite{font-style:normal;font-weight:600;color:var(--navy-2)}
+  .review cite span{display:block;font-weight:400;font-size:14px;color:var(--muted)}
+
+  .cta{background:var(--navy);color:#fff;text-align:center}
+  .cta h2{color:#fff;font-size:clamp(32px,4.6vw,48px);margin-bottom:14px}
+  .cta p{color:#dbe4ee;font-size:18px;max-width:580px;margin:0 auto 30px}
+  .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+  .visit-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
+  .visit-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px 30px}
+  .visit-card h3{font-size:26px;margin-bottom:18px}
+  .hours{width:100%;border-collapse:collapse}
+  .hours td{padding:9px 0;border-bottom:1px solid #f1ece6}
+  .hours td:last-child{text-align:right;font-weight:600;color:var(--navy-2)}
+  .hours tr:last-child td{border-bottom:none}
+  .contact-line{margin-bottom:16px;color:var(--muted)}
+  .contact-line strong{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-2);margin-bottom:3px}
+  .contact-line a{color:var(--navy-2);font-weight:600}
+  .contact-line a:hover{color:var(--gold-2)}
+
+  footer{background:var(--navy-2);color:#9fb0c3;padding:48px 0 30px;font-size:14.5px}
+  .footer-grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .footer-brand{max-width:340px}
+  .footer-brand .logo{color:#fff}
+  .footer-brand p{margin-top:10px}
+  .footer-col h4{color:#fff;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
+  .footer-col a{display:block;margin-bottom:8px;color:#c2cfe0}
+  .footer-col a:hover{color:#d9c08a}
+  .footer-bottom{padding-top:22px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  .footer-bottom a{color:#d9c08a;font-weight:600}
+  .footer-bottom a:hover{text-decoration:underline}
+
+  @media (max-width: 900px){
+    .services-grid,.about-grid,.reviews-grid,.visit-grid{grid-template-columns:1fr;gap:28px}
+    .about-grid img{height:300px}
+    .section{padding:64px 0}
+  }
+  @media (max-width: 620px){
+    .nav-links{display:none}
+    .hero-inner{padding:88px 24px}
+    .service{flex-direction:column;gap:10px}
+    .btn{width:100%}
+    .hero-actions .btn{width:auto;flex:1 1 auto}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="2" y="2" width="28" height="28" rx="14" fill="#1e3a5f"/><path d="M17.5 7 10.5 18h4.8l-1.3 7 7-11h-4.8l1.3-7Z" fill="#d9c08a"/></svg>Magnolia <span>Electric</span> Co.</a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="tel:+16015550187" class="btn btn-navy nav-cta">Call (601) 555-0187</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Family-Owned Electricians &middot; Jackson, MS</p>
+    <h1>Good wiring, honest work, <em>Southern courtesy.</em></h1>
+    <p>For three generations, the Magnolia Electric family has kept Jackson homes safe and bright — from rewiring historic houses to installing standby generators before storm season.</p>
+    <div class="hero-actions">
+      <a href="tel:+16015550187" class="btn btn-gold">Call (601) 555-0187</a>
+      <a href="#services" class="btn btn-outline">View Services</a>
+    </div>
+    <div class="hero-meta">
+      <span><strong>Since 1987</strong> &middot; Family-owned</span>
+      <span><strong>4.9 rating</strong> &middot; 700+ reviews</span>
+      <span><strong>24/7</strong> &middot; Emergency service</span>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Services &amp; Upfront Pricing</p>
+      <h2>Electrical work you can trust, priced up front.</h2>
+      <p>Every job is quoted in writing before we begin, and every install carries our 5-year workmanship warranty. No hourly billing, no fine print.</p>
+    </div>
+    <div class="services-grid">
+      <article class="service">
+        <span class="service-num">01</span>
+        <div>
+          <h3>Whole-Home Rewiring</h3>
+          <p>Jackson's older homes often hide knob-and-tube or aluminum wiring. We replace it with modern copper — carefully, with minimal disruption to plaster and trim.</p>
+          <span class="price">$5,800 <small>starting &middot; free estimate</small></span>
+        </div>
+      </article>
+      <article class="service">
+        <span class="service-num">02</span>
+        <div>
+          <h3>Standby Generators</h3>
+          <p>When storms knock out power, your home stays lit, cool, and running. Whole-home generators installed, permitted, and tested — before hurricane season, not after.</p>
+          <span class="price">$4,200 <small>starting &middot; installed</small></span>
+        </div>
+      </article>
+      <article class="service">
+        <span class="service-num">03</span>
+        <div>
+          <h3>Lighting Design &amp; Install</h3>
+          <p>Chandeliers, recessed lighting, porch and landscape lighting — designed to suit your home and installed with the care a historic house deserves.</p>
+          <span class="price">$195 <small>starting</small></span>
+        </div>
+      </article>
+      <article class="service">
+        <span class="service-num">04</span>
+        <div>
+          <h3>Panel Upgrades &amp; Circuits</h3>
+          <p>Breakers tripping every time the AC kicks on? We upgrade panels and add dedicated circuits for kitchens, workshops, and EV chargers.</p>
+          <span class="price">$1,650 <small>starting</small></span>
+        </div>
+      </article>
+      <article class="service">
+        <span class="service-num">05</span>
+        <div>
+          <h3>Ceiling Fans &amp; Fixtures</h3>
+          <p>Ceiling fans, dimmers, and new fixtures installed neatly — including proper bracing, so nothing wobbles or sags a year from now.</p>
+          <span class="price">$135 <small>starting</small></span>
+        </div>
+      </article>
+      <article class="service">
+        <span class="service-num">06</span>
+        <div>
+          <h3>24/7 Emergency Service</h3>
+          <p>Burning smell, sparking outlet, or no power at all — a licensed electrician answers around the clock and comes when you need us.</p>
+          <span class="price">No overtime fees</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-copy">
+        <p class="eyebrow">Our Story</p>
+        <h2 style="font-size:clamp(30px,4vw,42px);margin-bottom:16px">Three generations of Jackson electricians.</h2>
+        <p>Walter Hargrove started Magnolia Electric in 1987 with a pickup truck and a reputation for doing things right. Today his grandson runs the company the same way — licensed journeymen, honest quotes, and work we're proud to put our name on.</p>
+        <p>We specialize in the homes other electricians avoid: historic houses in Belhaven and Fondren, with plaster walls, old wiring, and details worth preserving. We rewire them carefully and leave them beautiful.</p>
+        <div class="about-stats">
+          <div><b>39</b><span>Years in business</span></div>
+          <div><b>11,000+</b><span>Jobs completed</span></div>
+          <div><b>5-yr</b><span>Workmanship warranty</span></div>
+        </div>
+      </div>
+      <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1200&auto=format&fit=crop" alt="Magnolia Electric technician at work" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">What Jackson Says</p>
+      <h2>Neighbors who've trusted us for decades.</h2>
+    </div>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;They rewired our 1928 Belhaven home without damaging a single piece of plaster. Patient, careful, and worth every penny.&rdquo;</p>
+        <cite>Elizabeth <span>Belhaven &middot; Rewiring</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;Our generator kicked in during the last big storm and we never lost power — not even a flicker. Best money we've spent on this house.&rdquo;</p>
+        <cite>Charles <span>Madison &middot; Generator install</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;Called on a Sunday with a sparking outlet and they came out the same day. Courteous, quick, and the bill was exactly what they quoted.&rdquo;</p>
+        <cite>Denise <span>Fondren &middot; Emergency call</span></cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section cta">
+  <div class="wrap">
+    <p class="eyebrow" style="color:#d9c08a">Need an electrician you can trust?</p>
+    <h2>Call the family Jackson has called since 1987.</h2>
+    <p>Free estimates on rewiring, generators, and panel upgrades. Same-day service across Jackson, Madison, Ridgeland, and Flowood.</p>
+    <div class="cta-actions">
+      <a href="tel:+16015550187" class="btn btn-gold">Call (601) 555-0187</a>
+      <a href="mailto:hello@magnoliaelectricms.com" class="btn btn-outline">Email Us</a>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Visit &amp; Contact</p>
+      <h2>Our shop is on North State Street.</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-card">
+        <h3>Office Hours</h3>
+        <table class="hours">
+          <tr><td>Monday – Friday</td><td>7:30 AM – 5:30 PM</td></tr>
+          <tr><td>Saturday</td><td>8:00 AM – 2:00 PM</td></tr>
+          <tr><td>Sunday</td><td>Emergency calls only</td></tr>
+          <tr><td>Emergencies</td><td>24 hours, 7 days</td></tr>
+        </table>
+        <p style="margin-top:18px;color:var(--muted);font-size:15px">Serving Jackson, Madison, Ridgeland, Flowood, Brandon, and Clinton.</p>
+      </div>
+      <div class="visit-card">
+        <h3>Location &amp; Contact</h3>
+        <p class="contact-line"><strong>Address</strong>1210 North State Street<br>Jackson, MS 39202</p>
+        <p class="contact-line"><strong>Phone</strong><a href="tel:+16015550187">(601) 555-0187</a></p>
+        <p class="contact-line"><strong>Email</strong><a href="mailto:hello@magnoliaelectricms.com">hello@magnoliaelectricms.com</a></p>
+        <p class="contact-line" style="margin-bottom:0"><strong>License</strong>MS Licensed Electrical Contractor #EC-0917 &middot; Fully insured</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="2" y="2" width="28" height="28" rx="14" fill="#1e3a5f"/><path d="M17.5 7 10.5 18h4.8l-1.3 7 7-11h-4.8l1.3-7Z" fill="#d9c08a"/></svg>Magnolia <span>Electric</span> Co.</a>
+        <p>Family-owned electricians serving Jackson and central Mississippi since 1987 — honest work, fair prices, and a 5-year warranty on every job.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#services">Rewiring</a>
+        <a href="#services">Generators</a>
+        <a href="#services">Lighting</a>
+        <a href="#services">Panel Upgrades</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+16015550187">(601) 555-0187</a>
+        <a href="mailto:hello@magnoliaelectricms.com">hello@magnoliaelectricms.com</a>
+        <a href="#visit">1210 N State St, Jackson</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Magnolia Electric Co., Jackson, MS. All rights reserved.</span>
+      <span>Website designed &amp; built by <a href="https://weblodge.agency" target="_blank" rel="noopener">Weblodge Agency</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

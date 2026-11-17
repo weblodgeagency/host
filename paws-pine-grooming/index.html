@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paws &amp; Pine — Pet Grooming in Denver, Colorado</title>
+<meta name="description" content="Paws & Pine is a calm, cage-free pet grooming studio in Denver. Baths, haircuts, nail trims and spa treatments for dogs and cats — gentle hands, happy pets.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pine:#1f4d3a;
+    --pine-dark:#143325;
+    --pine-light:#e8f0e8;
+    --gold:#e2a63d;
+    --cream:#faf7f0;
+    --ink:#26302a;
+    --muted:#66736a;
+    --line:#e2e6dd;
+    --radius:16px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'DM Sans',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'DM Serif Display',Georgia,serif;font-weight:400;line-height:1.15}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .section{padding:88px 0}
+  .eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--pine);margin-bottom:12px}
+  .section-title{font-size:clamp(31px,4.5vw,44px);color:var(--pine-dark);margin-bottom:14px}
+  .section-sub{color:var(--muted);max-width:640px;font-size:18px}
+  .btn{display:inline-block;padding:14px 28px;border-radius:999px;font-weight:700;font-size:16px;transition:.2s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-pine{background:var(--pine);color:#fff}
+  .btn-pine:hover{background:var(--pine-dark)}
+  .btn-gold{background:var(--gold);color:var(--pine-dark)}
+  .btn-gold:hover{background:#d1942a}
+  .btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.85)}
+  .btn-outline:hover{background:rgba(255,255,255,.15)}
+
+  /* Nav */
+  .nav{position:sticky;top:0;z-index:100;background:#fff;box-shadow:0 2px 12px rgba(20,51,37,.08)}
+  .nav-inner{max-width:1120px;margin:0 auto;padding:0 24px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .logo{display:inline-flex;align-items:center;gap:10px;font-family:'DM Serif Display',Georgia,serif;font-size:25px;color:var(--pine-dark)}
+  .logo span{color:var(--gold)}
+  .logo svg{flex-shrink:0}
+  .nav-links{display:flex;gap:30px;list-style:none;font-weight:600;font-size:15px;color:var(--ink)}
+  .nav-links a:hover{color:var(--pine)}
+  .nav-cta{padding:11px 22px;font-size:15px}
+
+  /* Hero */
+  .hero{position:relative;color:#fff;background:var(--pine-dark) url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,51,37,.88) 0%,rgba(20,51,37,.6) 55%,rgba(20,51,37,.25) 100%)}
+  .hero-inner{position:relative;max-width:1120px;margin:0 auto;padding:120px 24px;min-height:620px;display:flex;flex-direction:column;justify-content:center}
+  .hero-inner .eyebrow{color:var(--gold)}
+  .hero h1{font-size:clamp(42px,6vw,66px);max-width:620px;margin-bottom:18px}
+  .hero h1 em{font-style:italic;color:var(--gold)}
+  .hero p{font-size:19px;color:#dce8dc;max-width:540px;margin-bottom:32px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-chips{display:flex;gap:12px;flex-wrap:wrap;margin-top:36px}
+  .chip{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(4px);padding:8px 16px;border-radius:999px;font-size:14px;font-weight:600}
+
+  /* Intro */
+  .intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .intro-grid img{border-radius:var(--radius);width:100%;height:440px;object-fit:cover}
+  .intro-copy p{color:var(--muted);margin-bottom:16px;font-size:18px}
+  .values{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+  .value{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px}
+  .value b{display:block;color:var(--pine-dark);margin-bottom:4px}
+  .value span{color:var(--muted);font-size:15px}
+
+  /* Services */
+  .services-section{background:var(--pine-light)}
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .service{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 4px 16px rgba(20,51,37,.06);transition:.2s}
+  .service:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(20,51,37,.12)}
+  .service img{width:100%;height:190px;object-fit:cover}
+  .service-body{padding:24px}
+  .service-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:8px}
+  .service-top h3{font-size:22px;color:var(--pine-dark)}
+  .price{font-family:'DM Serif Display',Georgia,serif;font-size:23px;color:var(--pine);white-space:nowrap}
+  .service-body p{color:var(--muted);font-size:15.5px;margin-bottom:12px}
+  .service-body ul{list-style:none;font-size:14.5px;color:var(--ink);display:flex;flex-direction:column;gap:4px}
+  .service-body li::before{content:"\2713  ";color:var(--pine);font-weight:700}
+  .services-note{text-align:center;margin-top:28px;color:var(--muted)}
+  .services-note a{color:var(--pine);font-weight:700}
+
+  /* Gallery */
+  .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:48px}
+  .gallery-grid img{width:100%;height:230px;object-fit:cover;border-radius:12px}
+  .gallery-grid img:first-child{grid-column:span 2;grid-row:span 2;height:474px}
+
+  /* Reviews */
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .review{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px}
+  .stars{color:var(--gold);letter-spacing:2px;font-size:17px;margin-bottom:14px}
+  .review p{font-size:16.5px;margin-bottom:18px}
+  .reviewer{display:flex;align-items:center;gap:12px}
+  .avatar{width:46px;height:46px;border-radius:50%;background:var(--pine);color:#fff;display:grid;place-items:center;font-weight:700;font-family:'DM Serif Display',Georgia,serif;font-size:19px}
+  .reviewer strong{display:block;color:var(--pine-dark)}
+  .reviewer span{font-size:14px;color:var(--muted)}
+
+  /* Visit */
+  .visit-section{background:var(--pine-dark);color:#dce8dc}
+  .visit-section .section-title{color:#fff}
+  .visit-section .eyebrow{color:var(--gold)}
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;margin-top:48px}
+  .visit-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:28px}
+  .visit-card h3{font-size:21px;color:#fff;margin-bottom:12px}
+  .visit-card p{font-size:15.5px;color:#c4d6c4}
+  .visit-card a{color:var(--gold);font-weight:600}
+  .hours{width:100%;border-collapse:collapse}
+  .hours td{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.12);color:#c4d6c4}
+  .hours td:last-child{text-align:right;color:#fff;font-weight:600}
+
+  /* CTA */
+  .cta{text-align:center}
+  .cta h2{font-size:clamp(31px,4.5vw,44px);color:var(--pine-dark);margin-bottom:14px}
+  .cta p{color:var(--muted);font-size:18px;max-width:560px;margin:0 auto 30px}
+  .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .cta small{display:block;margin-top:20px;color:var(--muted)}
+
+  footer{background:#0f241a;color:#9db5a4;padding:48px 0 30px;font-size:15px}
+  .footer-inner{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.1)}
+  .footer-brand .logo{color:#fff}
+  .footer-brand p{margin-top:10px;max-width:340px}
+  .footer-col h4{color:#fff;font-family:'DM Sans',sans-serif;font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px}
+  .footer-col a{display:block;margin-bottom:8px}
+  .footer-col a:hover{color:var(--gold)}
+  .footer-bottom{padding-top:22px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .footer-bottom a{color:var(--gold);font-weight:600}
+
+  @media (max-width:900px){
+    .intro-grid{grid-template-columns:1fr;gap:36px}
+    .intro-grid img{height:320px}
+    .services-grid,.reviews-grid,.visit-grid{grid-template-columns:1fr 1fr}
+    .gallery-grid{grid-template-columns:1fr 1fr}
+    .gallery-grid img:first-child{grid-column:span 2;height:300px}
+    .section{padding:66px 0}
+  }
+  @media (max-width:640px){
+    .nav-links{display:none}
+    .services-grid,.reviews-grid,.visit-grid{grid-template-columns:1fr}
+    .values{grid-template-columns:1fr}
+    .hero-inner{padding:90px 24px;min-height:520px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><ellipse cx="16" cy="20" rx="8" ry="6.5" fill="#1f4d3a"/><circle cx="7.5" cy="12.5" r="3.2" fill="#e2a63d"/><circle cx="13" cy="9" r="3.2" fill="#e2a63d"/><circle cx="19" cy="9" r="3.2" fill="#e2a63d"/><circle cx="24.5" cy="12.5" r="3.2" fill="#e2a63d"/></svg>Paws <span>&amp;</span> Pine</a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Happy Pets</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+    </nav>
+    <a href="#book" class="btn btn-pine nav-cta">Book Grooming</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Pet Grooming &middot; Denver, Colorado</p>
+    <h1>Gentle grooming for <em>happy pets.</em></h1>
+    <p>A calm, cage-free grooming studio in Denver's Highlands neighborhood. One pet at a time, gentle hands, and a spa day your dog or cat will actually enjoy.</p>
+    <div class="hero-actions">
+      <a href="#services" class="btn btn-gold">View Services</a>
+      <a href="#book" class="btn btn-outline">Book an Appointment</a>
+    </div>
+    <div class="hero-chips">
+      <span class="chip">Cage-free studio</span>
+      <span class="chip">Dogs &amp; cats welcome</span>
+      <span class="chip">4.9 rating &middot; 500+ reviews</span>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="wrap">
+    <div class="intro-grid">
+      <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=1200&auto=format&fit=crop" alt="A happy pug after a grooming session at Paws and Pine" loading="lazy">
+      <div class="intro-copy">
+        <p class="eyebrow">Our Studio</p>
+        <h2 class="section-title">No cages. No rush. No stressed pets.</h2>
+        <p>Paws &amp; Pine opened in 2019 because we believed grooming could be calmer. Our studio is cage-free, softly lit, and quiet — one groomer, one pet, one unhurried appointment at a time.</p>
+        <p>We work with nervous dogs, senior pets, and cats who have strong opinions about baths. Every pet gets patience, treats, and plenty of breaks. If your pet needs extra time, they get it — no charge, no fuss.</p>
+        <div class="values">
+          <div class="value"><b>One pet at a time</b><span>Your pet is the only appointment in the room.</span></div>
+          <div class="value"><b>Certified groomers</b><span>NDGAA-certified, with pet first-aid training.</span></div>
+          <div class="value"><b>Gentle products</b><span>Oatmeal shampoos, hypoallergenic options.</span></div>
+          <div class="value"><b>Photo updates</b><span>We text you a photo when your pet is done.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section services-section">
+  <div class="wrap">
+    <p class="eyebrow">Services &amp; Pricing</p>
+    <h2 class="section-title">Spa days, priced by size.</h2>
+    <p class="section-sub">Prices below are starting rates for small dogs — your groomer will confirm the exact price based on your pet's size, coat, and temperament. Cats are always welcome.</p>
+    <div class="services-grid">
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?q=80&w=800&auto=format&fit=crop" alt="A freshly groomed puppy" loading="lazy">
+        <div class="service-body">
+          <div class="service-top"><h3>Full Groom</h3><span class="price">$75</span></div>
+          <p>The complete spa day: bath, haircut, nails, ears, and a spritz of finishing spray.</p>
+          <ul><li>Warm bath &amp; blow-dry</li><li>Breed-standard or custom cut</li><li>Nail trim &amp; ear cleaning</li></ul>
+        </div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?q=80&w=800&auto=format&fit=crop" alt="A golden retriever enjoying a bath" loading="lazy">
+        <div class="service-body">
+          <div class="service-top"><h3>Bath &amp; Brush</h3><span class="price">$45</span></div>
+          <p>A thorough wash, brush-out, and blow-dry for pets who don't need a cut — perfect between grooms.</p>
+          <ul><li>Oatmeal shampoo &amp; rinse</li><li>Full brush-out &amp; de-shedding</li><li>Nail trim included</li></ul>
+        </div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?q=80&w=800&auto=format&fit=crop" alt="A cat being gently groomed" loading="lazy">
+        <div class="service-body">
+          <div class="service-top"><h3>Cat Grooming</h3><span class="price">$65</span></div>
+          <p>Quiet, patient grooming for cats — bath, brush, nail trim, and mat removal by a cat-certified groomer.</p>
+          <ul><li>Low-stress handling</li><li>De-matting &amp; sanitary trim</li><li>Separate quiet cat room</li></ul>
+        </div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?q=80&w=800&auto=format&fit=crop" alt="A dog with a freshly trimmed coat" loading="lazy">
+        <div class="service-body">
+          <div class="service-top"><h3>Puppy's First Groom</h3><span class="price">$40</span></div>
+          <p>A gentle introduction for puppies under 6 months — bath, light trim, and lots of treats and praise.</p>
+          <ul><li>Slow, positive first visit</li><li>Bath &amp; face trim</li><li>Nail trim &amp; ear check</li></ul>
+        </div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=80&w=800&auto=format&fit=crop" alt="A dog getting a nail trim" loading="lazy">
+        <div class="service-body">
+          <div class="service-top"><h3>Nail Trim &amp; Grind</h3><span class="price">$20</span></div>
+          <p>A quick, careful nail trim with a smooth grind finish. Walk-ins welcome, no appointment needed.</p>
+          <ul><li>Trim &amp; smooth grind</li><li>Paw balm finish</li><li>Walk-ins welcome</li></ul>
+        </div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?q=80&w=800&auto=format&fit=crop" alt="A dog relaxing after a de-shedding treatment" loading="lazy">
+        <div class="service-body">
+          <div class="service-top"><h3>De-Shedding Treatment</h3><span class="price">$55</span></div>
+          <p>A deep de-shedding bath and high-velocity blow-out that cuts loose fur at home by up to 80%.</p>
+          <ul><li>De-shedding shampoo</li><li>Undercoat removal</li><li>Great for heavy shedders</li></ul>
+        </div>
+      </article>
+    </div>
+    <p class="services-note">Large breeds and long coats may cost a little more — <a href="tel:+13035550122">call (303) 555-0122</a> for an exact quote.</p>
+  </div>
+</section>
+
+<section id="gallery" class="section">
+  <div class="wrap">
+    <p class="eyebrow">Happy Pets</p>
+    <h2 class="section-title">Fresh from the studio.</h2>
+    <p class="section-sub">A few of our recent regulars, looking their very best after a spa day at Paws &amp; Pine.</p>
+    <div class="gallery-grid">
+      <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=1200&auto=format&fit=crop" alt="Two happy dogs running and playing" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=600&auto=format&fit=crop" alt="A freshly groomed cat" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?q=80&w=600&auto=format&fit=crop" alt="A happy dog outdoors after grooming" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?q=80&w=600&auto=format&fit=crop" alt="A smiling dog with a fresh haircut" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?q=80&w=600&auto=format&fit=crop" alt="A dog cuddling with its owner" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="section" style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow">Pet Parent Reviews</p>
+    <h2 class="section-title">Loved by Denver's pets — and their people.</h2>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;My rescue dog used to shake at the groomer's. Now she pulls me through the door at Paws &amp; Pine. They are patient, gentle, and she comes home happy every time.&rdquo;</p>
+        <div class="reviewer"><span class="avatar">J</span><div><strong>Jessica</strong><span>Maple the rescue mix &middot; Highlands</span></div></div>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;Our golden retriever sheds like crazy and the de-shedding treatment is a game changer. The house is cleaner and Bailey looks amazing for weeks.&rdquo;</p>
+        <div class="reviewer"><span class="avatar">T</span><div><strong>Tom</strong><span>Bailey the golden retriever &middot; Sloan's Lake</span></div></div>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;They groomed my very opinionated cat without a single scratch — on either side. The photo text when she's done is such a lovely touch.&rdquo;</p>
+        <div class="reviewer"><span class="avatar">A</span><div><strong>Angela</strong><span>Mochi the cat &middot; Berkeley</span></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="section visit-section">
+  <div class="wrap">
+    <p class="eyebrow">Visit Us</p>
+    <h2 class="section-title">Find us in the Highlands.</h2>
+    <div class="visit-grid">
+      <div class="visit-card">
+        <h3>Location</h3>
+        <p>Paws &amp; Pine Grooming Studio<br>3645 W 32nd Avenue<br>Denver, CO 80211<br><br>Free parking in the lot behind the studio.</p>
+      </div>
+      <div class="visit-card">
+        <h3>Contact</h3>
+        <p><a href="tel:+13035550122">(303) 555-0122</a><br><a href="mailto:hello@pawsandpine.com">hello@pawsandpine.com</a></p>
+        <p style="margin-top:12px">Text us photos of your pet for a quick price estimate — we reply within the hour during open hours.</p>
+      </div>
+      <div class="visit-card">
+        <h3>Opening Hours</h3>
+        <table class="hours">
+          <tr><td>Monday – Friday</td><td>8:00 AM – 6:00 PM</td></tr>
+          <tr><td>Saturday</td><td>9:00 AM – 5:00 PM</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+        </table>
+        <p style="margin-top:12px">Nail trims are walk-in only, no appointment needed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="book" class="section cta">
+  <div class="wrap">
+    <h2>Your pet's spa day is waiting.</h2>
+    <p>Book by phone or email and we'll find a time that suits your pet. First-time clients get a free nail trim with any full groom.</p>
+    <div class="cta-actions">
+      <a href="tel:+13035550122" class="btn btn-pine">Call (303) 555-0122</a>
+      <a href="mailto:hello@pawsandpine.com" class="btn btn-gold">Email to Book</a>
+    </div>
+    <small>Please bring vaccination records for your pet's first visit. We groom dogs and cats of all sizes and temperaments.</small>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><ellipse cx="16" cy="20" rx="8" ry="6.5" fill="#e2a63d"/><circle cx="7.5" cy="12.5" r="3.2" fill="#faf7f0"/><circle cx="13" cy="9" r="3.2" fill="#faf7f0"/><circle cx="19" cy="9" r="3.2" fill="#faf7f0"/><circle cx="24.5" cy="12.5" r="3.2" fill="#faf7f0"/></svg>Paws <span>&amp;</span> Pine</span>
+        <p>A calm, cage-free pet grooming studio in Denver's Highlands. Gentle hands, happy pets.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Happy Pets</a>
+        <a href="#reviews">Reviews</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+13035550122">(303) 555-0122</a>
+        <a href="mailto:hello@pawsandpine.com">hello@pawsandpine.com</a>
+        <a href="#visit">3645 W 32nd Ave, Denver, CO 80211</a>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <a href="#visit">Mon – Fri: 8 AM – 6 PM</a>
+        <a href="#visit">Saturday: 9 AM – 5 PM</a>
+        <a href="#visit">Sunday: Closed</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Paws &amp; Pine Grooming Studio, Denver CO. All rights reserved.</span>
+      <span>Website designed &amp; built by <a href="https://weblodge.agency" target="_blank" rel="noopener">Weblodge Agency</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

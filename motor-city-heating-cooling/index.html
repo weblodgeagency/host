@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Motor City Heating &amp; Cooling | HVAC in Detroit, MI</title>
+<meta name="description" content="Motor City Heating & Cooling serves Detroit, MI with furnace repair, AC repair, new system installation and maintenance — 24/7 emergency service, upfront pricing, 10-year warranty.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --charcoal:#171c22;
+    --charcoal-2:#222932;
+    --steel:#2c3540;
+    --ice:#38bdf8;
+    --ice-dark:#0284c7;
+    --flame:#f97316;
+    --flame-dark:#ea580c;
+    --light:#f4f7f9;
+    --text:#1e242c;
+    --muted:#5b6672;
+    --border:#dde4ea;
+    --white:#fff;
+    --radius:12px;
+    --shadow:0 14px 34px rgba(23,28,34,.14);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:#fff;line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Work Sans',sans-serif;line-height:1.12;color:var(--charcoal)}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+  .section{padding:88px 0}
+  .eyebrow{font-size:13px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--ice-dark)}
+  .section-head{max-width:680px;margin-bottom:46px}
+  .section-head h2{font-size:clamp(30px,4.4vw,44px);margin:10px 0 12px}
+  .section-head p{color:var(--muted);font-size:18px}
+  .btn{display:inline-block;padding:15px 30px;border-radius:8px;font-weight:700;font-size:16px;transition:.2s;cursor:pointer;text-align:center}
+  .btn-flame{background:var(--flame);color:#fff}
+  .btn-flame:hover{background:var(--flame-dark)}
+  .btn-ice{background:var(--ice-dark);color:#fff}
+  .btn-ice:hover{background:#0369a1}
+  .btn-dark{background:var(--charcoal);color:#fff}
+  .btn-dark:hover{background:var(--charcoal-2)}
+  .btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.85)}
+  .btn-outline:hover{background:rgba(255,255,255,.14)}
+
+  /* Nav */
+  header{position:sticky;top:0;z-index:50;background:var(--charcoal);box-shadow:0 4px 18px rgba(0,0,0,.3)}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;height:76px}
+  .logo{display:flex;align-items:center;gap:12px;color:#fff}
+  .logo-name{font-family:'Work Sans',sans-serif;font-size:22px;font-weight:800;line-height:1.05}
+  .logo-name .ice{color:var(--ice)}
+  .logo-name .flame{color:var(--flame)}
+  .logo-sub{display:block;font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.22em;color:#9aa7b4;font-weight:600}
+  .nav-links{display:flex;gap:30px;list-style:none;font-weight:600;font-size:15px}
+  .nav-links a{color:#d3dbe2}
+  .nav-links a:hover{color:#fff}
+  .nav-phone{color:#fff;font-weight:800;font-size:17px;white-space:nowrap}
+  .nav-phone small{display:block;font-size:11px;color:#9aa7b4;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-align:right}
+
+  /* Hero */
+  .hero{position:relative;color:#fff;background:var(--charcoal)}
+  .hero-bg{position:absolute;inset:0}
+  .hero-bg img{width:100%;height:100%;object-fit:cover}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,19,25,.94) 0%,rgba(15,19,25,.8) 50%,rgba(15,19,25,.45) 100%)}
+  .hero-inner{position:relative;padding:110px 0 104px;max-width:660px}
+  .hero h1{color:#fff;font-size:clamp(42px,6.4vw,66px);font-weight:900;margin:14px 0 18px}
+  .hero h1 .ice{color:var(--ice)}
+  .hero h1 .flame{color:var(--flame)}
+  .hero p{font-size:19px;color:#d3dbe2;max-width:580px;margin-bottom:30px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-trust{display:flex;gap:28px;flex-wrap:wrap;margin-top:36px;padding-top:28px;border-top:1px solid rgba(255,255,255,.18)}
+  .hero-trust strong{display:block;font-family:'Work Sans',sans-serif;font-size:23px;color:#fff;line-height:1.1}
+  .hero-trust span{font-size:13.5px;color:#9aa7b4}
+
+  /* Strip */
+  .strip{background:var(--flame)}
+  .strip .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding-top:20px;padding-bottom:20px;color:#fff}
+  .strip p{font-size:17px;font-weight:700}
+  .strip p span{font-weight:500;opacity:.92}
+  .strip .btn{background:#fff;color:var(--flame-dark)}
+  .strip .btn:hover{background:var(--light)}
+
+  /* Services */
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .service{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;transition:.2s}
+  .service:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .service img{width:100%;height:180px;object-fit:cover}
+  .service-body{padding:24px}
+  .service-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:8px}
+  .service h3{font-size:21px}
+  .price{font-family:'Work Sans',sans-serif;font-weight:800;font-size:22px;color:var(--ice-dark);white-space:nowrap}
+  .price.hot{color:var(--flame-dark)}
+  .price small{display:block;font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);font-weight:600;text-align:right;text-transform:uppercase}
+  .service p{font-size:15px;color:var(--muted);margin-bottom:14px}
+  .service ul{list-style:none;font-size:14px;color:#33414d}
+  .service li{padding:3px 0 3px 20px;position:relative}
+  .service li::before{content:"✓";position:absolute;left:0;color:var(--ice-dark);font-weight:800}
+  .service.hot li::before{color:var(--flame-dark)}
+
+  /* Why */
+  .why{background:var(--charcoal);color:#d3dbe2}
+  .why .section-head h2{color:#fff}
+  .why .section-head p{color:#9aa7b4}
+  .why-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+  .why-img{border-radius:16px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4)}
+  .why-img img{width:100%;height:460px;object-fit:cover}
+  .why-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .why-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:22px}
+  .why-card h3{color:#fff;font-size:18px;margin:12px 0 6px}
+  .why-card p{font-size:14px;color:#b6c1cb;line-height:1.55}
+  .why-icon{width:44px;height:44px;border-radius:11px;display:grid;place-items:center}
+  .why-icon.ice{background:var(--ice-dark)}
+  .why-icon.flame{background:var(--flame)}
+
+  /* Financing */
+  .finance-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;text-align:center}
+  .finance-card{border:1px solid var(--border);border-radius:var(--radius);padding:32px 24px;background:var(--light)}
+  .finance-card .big{font-family:'Work Sans',sans-serif;font-size:40px;font-weight:900;color:var(--charcoal);line-height:1}
+  .finance-card h3{font-size:18px;margin:12px 0 6px}
+  .finance-card p{font-size:15px;color:var(--muted)}
+
+  /* Reviews */
+  .reviews{background:var(--light)}
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .review{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:30px 26px}
+  .stars{color:var(--flame);letter-spacing:3px;font-size:17px;margin-bottom:14px}
+  .review blockquote{font-size:16.5px;margin-bottom:20px}
+  .review cite{font-style:normal;font-weight:700}
+  .review cite span{display:block;font-weight:400;font-size:14px;color:var(--muted)}
+
+  /* Visit */
+  .visit-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:stretch}
+  .visit-card{border:1px solid var(--border);border-radius:var(--radius);padding:32px;background:#fff}
+  .visit-card h3{font-size:23px;margin-bottom:16px}
+  .hours{width:100%;border-collapse:collapse;font-size:16px}
+  .hours td{padding:9px 0;border-bottom:1px solid #eef1f4}
+  .hours td:last-child{text-align:right;font-weight:700}
+  .hours tr:last-child td{border-bottom:none}
+  .contact-line{margin-bottom:16px;color:var(--text);font-size:16px}
+  .contact-line strong{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ice-dark);margin-bottom:2px}
+  .contact-line a{font-weight:700}
+  .contact-line a:hover{color:var(--ice-dark)}
+
+  /* CTA */
+  .cta{background:linear-gradient(120deg,var(--ice-dark),var(--flame-dark));color:#fff;text-align:center}
+  .cta h2{color:#fff;font-size:clamp(30px,4.4vw,44px);margin-bottom:14px}
+  .cta p{color:#eef6fb;font-size:18px;max-width:600px;margin:0 auto 30px}
+  .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .cta small{display:block;margin-top:20px;color:#dbe9f2;font-size:14px}
+
+  footer{background:var(--charcoal);color:#9aa7b4;padding:52px 0 28px;font-size:15px}
+  .footer-grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .footer-brand{max-width:360px}
+  .footer-brand p{margin-top:12px}
+  .footer-col h4{color:#fff;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+  .footer-col a{display:block;margin-bottom:9px}
+  .footer-col a:hover{color:#fff}
+  .footer-bottom{padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px}
+  .footer-bottom a{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+
+  @media (max-width:900px){
+    .section{padding:64px 0}
+    .nav-links,.nav-phone{display:none}
+    .services-grid{grid-template-columns:1fr 1fr}
+    .why-grid{grid-template-columns:1fr;gap:32px}
+    .why-img img{height:300px}
+    .finance-grid{grid-template-columns:1fr}
+    .reviews-grid{grid-template-columns:1fr}
+    .visit-grid{grid-template-columns:1fr}
+  }
+  @media (max-width:560px){
+    .services-grid,.why-cards{grid-template-columns:1fr}
+    .hero-inner{padding:80px 0}
+    .hero-actions .btn{width:100%}
+    .strip .wrap{justify-content:center;text-align:center}
+    .footer-bottom{justify-content:center;text-align:center}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="logo" aria-label="Motor City Heating & Cooling — home">
+      <svg width="42" height="42" viewBox="0 0 44 44" fill="none" aria-hidden="true"><rect x="2" y="2" width="40" height="40" rx="10" fill="#222932"/><path d="M22 8v28M14 12l16 20M30 12 14 32" stroke="#38bdf8" stroke-width="2.2" stroke-linecap="round"/><circle cx="22" cy="22" r="5" fill="#f97316"/><path d="M22 18.5c1.3 1.1 2.2 2.4 2.2 3.8a2.2 2.2 0 1 1-4.4 0c0-1.4.9-2.7 2.2-3.8z" fill="#fff"/></svg>
+      <span><span class="logo-name">Motor City <span class="ice">Heating</span> <span class="flame">&amp; Cooling</span></span><span class="logo-sub">Detroit · Michigan</span></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="nav-phone" href="tel:+13135550146"><small>24/7 emergency</small>(313) 555-0146</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1418985991508-e47386d96a71?q=80&w=1600&auto=format&fit=crop" alt="Snow-covered Detroit neighborhood in winter — Motor City Heating & Cooling keeps homes warm">
+    </div>
+    <div class="wrap">
+      <div class="hero-inner">
+        <p class="eyebrow" style="color:var(--ice)">Heating &amp; Air Conditioning — Detroit, Michigan</p>
+        <h1>Hot summers. <span class="flame">Bitter winters.</span> <span class="ice">We've got both covered.</span></h1>
+        <p>Detroit weather does not mess around, and neither do we. Furnace repair, AC repair, and new systems — installed by certified techs, priced up front, and backed by a 10-year warranty.</p>
+        <div class="hero-actions">
+          <a class="btn btn-flame" href="#services">See Services &amp; Prices</a>
+          <a class="btn btn-outline" href="tel:+13135550146">Call (313) 555-0146</a>
+        </div>
+        <div class="hero-trust">
+          <div><strong>4.8 ★</strong><span>620+ Google reviews</span></div>
+          <div><strong>24/7</strong><span>Emergency service</span></div>
+          <div><strong>10-year</strong><span>Warranty on new systems</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="wrap">
+      <p>No heat or no cooling right now? <span>We answer 24/7 and dispatch a tech around the clock — no overtime fees.</span></p>
+      <a class="btn" href="tel:+13135550146">Call (313) 555-0146</a>
+    </div>
+  </div>
+
+  <section class="section" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Services &amp; Pricing</p>
+        <h2>Flat-rate pricing, in writing, before we start</h2>
+        <p>No hourly meters running, no surprise charges at the end. Your technician shows you the price, explains the work, and gets your approval first.</p>
+      </div>
+      <div class="services-grid">
+        <article class="service hot">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1200&auto=format&fit=crop" alt="Technician repairing a furnace in a Detroit home">
+          <div class="service-body">
+            <div class="service-top"><h3>Furnace Repair</h3><span class="price hot">$89<small>diagnostic</small></span></div>
+            <p>No heat in a Michigan winter is an emergency. We answer 24/7 and carry parts for most major brands on the truck.</p>
+            <ul><li>24/7 emergency response</li><li>All major brands serviced</li><li>Carbon monoxide safety check</li></ul>
+          </div>
+        </article>
+        <article class="service">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1615873968403-89e068629265?q=80&w=1200&auto=format&fit=crop" alt="Cool, comfortable living room in summer">
+          <div class="service-body">
+            <div class="service-top"><h3>AC Repair</h3><span class="price">$89<small>diagnostic</small></span></div>
+            <p>Warm air, weak airflow, or a unit that will not start — diagnosed and fixed the same day whenever possible.</p>
+            <ul><li>Full system diagnostic</li><li>Refrigerant &amp; leak checks</li><li>Most repairs done same-day</li></ul>
+          </div>
+        </article>
+        <article class="service">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1200&auto=format&fit=crop" alt="Technician installing a new high-efficiency HVAC system">
+          <div class="service-body">
+            <div class="service-top"><h3>New System Install</h3><span class="price">$5,700<small>from</small></span></div>
+            <p>High-efficiency furnaces and air conditioners, sized right for your home, installed by our own certified crew.</p>
+            <ul><li>Free in-home estimate</li><li>10-year parts warranty</li><li>Financing from $89/month</li></ul>
+          </div>
+        </article>
+        <article class="service hot">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?q=80&w=1200&auto=format&fit=crop" alt="Snowy Michigan winter — a tuned furnace matters">
+          <div class="service-body">
+            <div class="service-top"><h3>Furnace Tune-Up</h3><span class="price hot">$99<small>per visit</small></span></div>
+            <p>A full cleaning and safety check before winter hits — the best way to avoid a breakdown on the coldest night of the year.</p>
+            <ul><li>28-point inspection</li><li>Burner &amp; heat exchanger check</li><li>Carbon monoxide test</li></ul>
+          </div>
+        </article>
+        <article class="service">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1200&auto=format&fit=crop" alt="Comfortable home interior with zoned heating and cooling">
+          <div class="service-body">
+            <div class="service-top"><h3>Ductless Mini-Splits</h3><span class="price">$3,900<small>from</small></span></div>
+            <p>Heating and cooling without ductwork — perfect for additions, converted attics, and older Detroit homes.</p>
+            <ul><li>Single &amp; multi-zone systems</li><li>Whisper-quiet operation</li><li>Rebate help included</li></ul>
+          </div>
+        </article>
+        <article class="service">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200&auto=format&fit=crop" alt="Clean indoor air in a Detroit apartment">
+          <div class="service-body">
+            <div class="service-top"><h3>Air Quality &amp; Ducts</h3><span class="price">$249<small>from</small></span></div>
+            <p>Whole-home humidifiers, air purifiers, and duct cleaning for cleaner air and fewer allergy days.</p>
+            <ul><li>Whole-home humidifiers</li><li>HEPA &amp; UV purification</li><li>Professional duct cleaning</li></ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section why" id="why-us">
+    <div class="wrap">
+      <div class="why-grid">
+        <div>
+          <div class="section-head" style="margin-bottom:28px">
+            <p class="eyebrow" style="color:var(--ice)">Why Motor City</p>
+            <h2>Built in Detroit, for Detroit weather</h2>
+            <p>We have been keeping Detroit homes comfortable since 2009. Our techs live here, they know the housing stock — from Corktown brick to the suburbs — and they know what Michigan winters demand from a furnace.</p>
+          </div>
+          <div class="why-cards">
+            <div class="why-card">
+              <span class="why-icon flame" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+              <h3>24/7, no overtime fees</h3>
+              <p>Emergencies do not wait for business hours. Neither do we — and we never charge extra for nights or weekends.</p>
+            </div>
+            <div class="why-card">
+              <span class="why-icon ice" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg></span>
+              <h3>Certified, background-checked</h3>
+              <p>NATE-certified technicians, background-checked, and paid by the job — never by commission.</p>
+            </div>
+            <div class="why-card">
+              <span class="why-icon ice" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></span>
+              <h3>Flat-rate pricing</h3>
+              <p>You approve the price before we start. The bill at the end matches the quote — every time.</p>
+            </div>
+            <div class="why-card">
+              <span class="why-icon flame" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/></svg></span>
+              <h3>10-year warranty</h3>
+              <p>New systems carry a 10-year parts warranty, and every repair is backed for 2 years.</p>
+            </div>
+          </div>
+        </div>
+        <div class="why-img">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1200&auto=format&fit=crop" alt="Motor City technician at work on a home heating system">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Financing</p>
+        <h2>A new system should not break the bank</h2>
+        <p>Most systems qualify for flexible financing, and Michigan homeowners may be eligible for energy rebates. We handle the paperwork.</p>
+      </div>
+      <div class="finance-grid">
+        <div class="finance-card">
+          <div class="big">$89/mo</div>
+          <h3>Payments from $89/month</h3>
+          <p>Flexible terms on approved credit, with no prepayment penalty.</p>
+        </div>
+        <div class="finance-card">
+          <div class="big">0% APR</div>
+          <h3>12 months, 0% APR</h3>
+          <p>Pay it off within a year and pay no interest at all, on approved credit.</p>
+        </div>
+        <div class="finance-card">
+          <div class="big">$2,000</div>
+          <h3>Up to $2,000 in rebates</h3>
+          <p>High-efficiency systems may qualify for utility and manufacturer rebates — we file them for you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reviews" id="reviews">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Customer Reviews</p>
+        <h2>What Detroit says about us</h2>
+        <p>Rated 4.8 out of 5 from more than 620 reviews on Google.</p>
+      </div>
+      <div class="reviews-grid">
+        <article class="review">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>“Furnace died on a Sunday in January. They answered, came out the same day, and had heat back by dinner — at the regular price, not some emergency markup.”</blockquote>
+          <cite>Andre <span>Furnace repair · Midtown</span></cite>
+        </article>
+        <article class="review">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>“They replaced our furnace and AC in one day. The crew was professional, the house was clean when they left, and the new system is so quiet I forget it is running.”</blockquote>
+          <cite>Keisha <span>New system install · Royal Oak</span></cite>
+        </article>
+        <article class="review">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>“Two other companies told me I needed a new furnace. Motor City found a bad ignitor, fixed it for under $300, and told me the furnace had years left. That is integrity.”</blockquote>
+          <cite>Robert <span>Furnace repair · Dearborn</span></cite>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="visit">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Contact &amp; Hours</p>
+        <h2>Downtown Detroit, serving the whole metro</h2>
+        <p>Our office is on Woodward Avenue. Our trucks cover Detroit and the surrounding suburbs every day.</p>
+      </div>
+      <div class="visit-grid">
+        <div class="visit-card">
+          <h3>Office Hours</h3>
+          <table class="hours">
+            <tr><td>Monday – Friday</td><td>7:00 AM – 7:00 PM</td></tr>
+            <tr><td>Saturday</td><td>8:00 AM – 4:00 PM</td></tr>
+            <tr><td>Sunday</td><td>Emergency only</td></tr>
+          </table>
+          <p style="margin-top:18px;color:var(--muted);font-size:15px">Emergency service runs 24/7, every day of the year — with no overtime fees, ever.</p>
+        </div>
+        <div class="visit-card">
+          <h3>Location &amp; Contact</h3>
+          <p class="contact-line"><strong>Address</strong>1180 Woodward Avenue<br>Detroit, MI 48226</p>
+          <p class="contact-line"><strong>Phone</strong><a href="tel:+13135550146">(313) 555-0146</a></p>
+          <p class="contact-line"><strong>Email</strong><a href="mailto:hello@motorcityhvac.com">hello@motorcityhvac.com</a></p>
+          <p class="contact-line" style="margin-bottom:0"><strong>Serving</strong>Detroit, Dearborn, Royal Oak, Ferndale, Troy, Warren, Southfield, and the metro area.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta">
+    <div class="wrap">
+      <p class="eyebrow" style="color:#fff">Same-day appointments available</p>
+      <h2>Too hot, too cold, or just time for an upgrade?</h2>
+      <p>Call today for a free in-home estimate on a new system — or a same-day repair that gets your comfort back fast.</p>
+      <div class="cta-actions">
+        <a class="btn btn-dark" href="tel:+13135550146">Call (313) 555-0146</a>
+        <a class="btn btn-outline" href="#services">View Services</a>
+      </div>
+      <small>24/7 emergency service · Flat-rate pricing · 10-year warranty on new systems</small>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <svg width="42" height="42" viewBox="0 0 44 44" fill="none" aria-hidden="true"><rect x="2" y="2" width="40" height="40" rx="10" fill="#222932"/><path d="M22 8v28M14 12l16 20M30 12 14 32" stroke="#38bdf8" stroke-width="2.2" stroke-linecap="round"/><circle cx="22" cy="22" r="5" fill="#f97316"/><path d="M22 18.5c1.3 1.1 2.2 2.4 2.2 3.8a2.2 2.2 0 1 1-4.4 0c0-1.4.9-2.7 2.2-3.8z" fill="#fff"/></svg>
+          <span><span class="logo-name">Motor City <span class="ice">Heating</span> <span class="flame">&amp; Cooling</span></span><span class="logo-sub">Detroit · Michigan</span></span>
+        </a>
+        <p>Heating and cooling in Detroit since 2009. Flat-rate pricing, certified technicians, and 24/7 emergency service with no overtime fees.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#services">Furnace Repair — $89 diagnostic</a>
+        <a href="#services">AC Repair — $89 diagnostic</a>
+        <a href="#services">New System Install — from $5,700</a>
+        <a href="#services">Furnace Tune-Up — $99</a>
+        <a href="#services">Ductless Mini-Splits — from $3,900</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="#visit">1180 Woodward Ave, Detroit, MI 48226</a>
+        <a href="tel:+13135550146">(313) 555-0146</a>
+        <a href="#visit">Mon–Fri: 7 AM – 7 PM</a>
+        <a href="#visit">24/7 emergency service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Motor City Heating &amp; Cooling, Detroit MI. All rights reserved.</span>
+      <span>Website designed &amp; built by <a href="https://weblodge.agency" target="_blank" rel="noopener">Weblodge Agency</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

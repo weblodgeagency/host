@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liberty Line Movers — Moving Company in Washington, DC</title>
+<meta name="description" content="Liberty Line Movers serves Washington, DC: local and long-distance moves, packing, and storage. Careful crews, honest quotes, and on-time service across the DMV.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1b2f4a; --navy-dark:#12203a; --red:#b23a3a; --red-dark:#93302f;
+    --cream:#faf7f1; --sand:#f0e9dc; --ink:#26262a; --muted:#63636b; --line:#e4dccd; --gold:#c8a24a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Work Sans',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;font-size:17px}
+  h1,h2,h3{font-family:'Libre Caslon Text',Georgia,serif;line-height:1.2}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .section{padding:88px 0}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:12px}
+  .section-title{font-size:clamp(30px,4.5vw,42px);color:var(--navy);margin-bottom:14px}
+  .section-sub{color:var(--muted);max-width:620px;font-size:18px}
+  .center{text-align:center}
+  .center .section-sub{margin:0 auto}
+  .btn{display:inline-block;padding:14px 28px;border-radius:999px;font-weight:700;font-size:16px;transition:.2s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-red{background:var(--red);color:#fff}
+  .btn-red:hover{background:var(--red-dark)}
+  .btn-navy{background:var(--navy);color:#fff}
+  .btn-navy:hover{background:var(--navy-dark)}
+  .btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.8)}
+  .btn-ghost:hover{background:rgba(255,255,255,.14)}
+  .btn-outline{background:transparent;color:var(--navy);border:2px solid var(--navy)}
+  .btn-outline:hover{background:var(--navy);color:#fff}
+
+  .nav{position:sticky;top:0;z-index:100;background:rgba(27,47,74,.98);box-shadow:0 2px 14px rgba(0,0,0,.2)}
+  .nav-inner{max-width:1120px;margin:0 auto;padding:0 24px;height:70px;display:flex;align-items:center;justify-content:space-between}
+  .logo{display:inline-flex;align-items:center;gap:10px;font-family:'Libre Caslon Text',Georgia,serif;font-size:22px;font-weight:700;color:#fff}
+  .logo svg{flex-shrink:0}
+  .logo em{font-style:italic;color:#e8b4b4}
+  .nav-links{display:flex;gap:30px;list-style:none}
+  .nav-links a{color:#d4dce6;font-weight:500;font-size:15px}
+  .nav-links a:hover{color:#fff}
+  .nav-cta{padding:10px 20px;font-size:15px}
+
+  .hero{position:relative;min-height:86vh;display:flex;align-items:center;color:#fff;text-align:center;background:var(--navy-dark) url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(18,32,58,.68),rgba(18,32,58,.82))}
+  .hero-inner{position:relative;max-width:780px;margin:0 auto;padding:110px 24px}
+  .hero h1{font-size:clamp(40px,6.5vw,66px);margin-bottom:18px}
+  .hero h1 em{font-style:italic;color:#e8b4b4}
+  .hero p{font-size:19px;color:#e6e2d8;margin-bottom:32px}
+  .hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .hero-note{margin-top:28px;font-size:15px;color:#c9c2b2}
+
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .about-grid img{border-radius:16px;width:100%;height:420px;object-fit:cover}
+  .about-copy p{color:var(--muted);margin-bottom:14px;font-size:18px}
+  .about-stats{display:flex;gap:36px;margin-top:26px;flex-wrap:wrap}
+  .stat b{display:block;font-family:'Libre Caslon Text',Georgia,serif;font-size:32px;color:var(--red)}
+  .stat span{font-size:14px;color:var(--muted)}
+
+  .services-section{background:var(--sand)}
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .service{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 8px 22px rgba(27,47,74,.08)}
+  .service img{width:100%;height:170px;object-fit:cover}
+  .service-body{padding:24px}
+  .service-body h3{font-size:21px;color:var(--navy);margin-bottom:8px}
+  .service-body p{color:var(--muted);font-size:15.5px;margin-bottom:12px}
+  .service-body .price{font-weight:700;color:var(--red);font-size:16px}
+
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:48px}
+  .why{border:1px solid var(--line);border-radius:12px;padding:28px 24px;background:#fff}
+  .why-icon{font-size:30px;margin-bottom:12px}
+  .why h3{font-size:19px;color:var(--navy);margin-bottom:8px}
+  .why p{color:var(--muted);font-size:15.5px}
+
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .review{background:#fff;border:1px solid var(--line);border-radius:14px;padding:30px 26px}
+  .stars{color:var(--gold);letter-spacing:2px;font-size:17px;margin-bottom:14px}
+  .review blockquote{font-size:16.5px;margin-bottom:18px}
+  .review cite{font-style:normal;font-weight:700;color:var(--navy)}
+  .review cite span{display:block;font-weight:400;font-size:14px;color:var(--muted)}
+
+  .visit-section{background:var(--navy);color:#d4dce6}
+  .visit-section .section-title{color:#fff}
+  .visit-section .eyebrow{color:#e8b4b4}
+  .visit-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;margin-top:44px;align-items:start}
+  .visit-grid img{border-radius:14px;width:100%;height:320px;object-fit:cover}
+  .visit-block{margin-bottom:26px}
+  .visit-block h3{font-size:20px;color:#fff;margin-bottom:8px}
+  .visit-block a{color:#fff;font-weight:700}
+  .visit-block a:hover{color:#e8b4b4}
+  .hours-table{width:100%;border-collapse:collapse}
+  .hours-table td{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.12);color:#c3ccd8}
+  .hours-table td:last-child{text-align:right;color:#fff;font-weight:600}
+
+  .cta{text-align:center}
+  .cta h2{font-size:clamp(30px,4.5vw,42px);color:var(--navy);margin-bottom:14px}
+  .cta p{color:var(--muted);font-size:18px;max-width:580px;margin:0 auto 30px}
+  .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+  footer{background:var(--navy-dark);color:#9aa8ba;padding:44px 0;text-align:center;font-size:15px}
+  footer .logo{color:#fff;font-size:21px;display:block;margin-bottom:12px}
+  footer a{color:#e8b4b4;font-weight:700}
+  footer a:hover{text-decoration:underline}
+
+  @media (max-width:900px){
+    .services-grid,.reviews-grid{grid-template-columns:1fr 1fr}
+    .why-grid{grid-template-columns:1fr 1fr}
+    .about-grid,.visit-grid{grid-template-columns:1fr;gap:32px}
+  }
+  @media (max-width:640px){
+    .nav-links{display:none}
+    .section{padding:64px 0}
+    .services-grid,.reviews-grid,.why-grid{grid-template-columns:1fr}
+    .hero-inner{padding:90px 24px}
+    .about-grid img{height:300px}
+    .visit-grid img{height:240px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo"><svg width="32" height="30" viewBox="0 0 34 30" fill="none" aria-hidden="true"><path d="M2 21V7a1 1 0 0 1 1-1h15a1 1 0 0 1 1 1v14H2Z" fill="#b23a3a"/><path d="M19 11h5l6 5v5H19v-10Z" fill="#ffffff"/><circle cx="8.5" cy="23.5" r="3.2" fill="#1b2f4a" stroke="#fff" stroke-width="1.5"/><circle cx="25" cy="23.5" r="3.2" fill="#1b2f4a" stroke="#fff" stroke-width="1.5"/><path d="M10.5 8l1 2.6 2.7.4-2 1.9.5 2.7-2.2-1.2-2.2 1.2.5-2.7-2-1.9 2.7-.4 1-2.6Z" fill="#fff"/></svg>Liberty <em>Line</em> Movers</a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="tel:+12025550169" class="btn btn-red nav-cta">Free Quote</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow" style="color:#e8b4b4">Moving Company — Washington, DC</p>
+    <h1>Moving across the <em>capital,</em> made simple.</h1>
+    <p>Liberty Line Movers has served the DC area since 2015 — from Capitol Hill rowhomes to Arlington high-rises. Careful crews, honest pricing, and moves that finish on time.</p>
+    <div class="hero-actions">
+      <a href="#services" class="btn btn-red">See Services &amp; Rates</a>
+      <a href="tel:+12025550169" class="btn btn-ghost">Call (202) 555-0169</a>
+    </div>
+    <p class="hero-note">Licensed &amp; insured &middot; Serving DC, Maryland &amp; Virginia &middot; Free estimates, 7 days a week</p>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="wrap">
+    <div class="about-grid">
+      <img src="https://images.unsplash.com/photo-1600518464441-9154a4dea21b?q=80&w=1200&auto=format&fit=crop" alt="Boxes packed and labeled for a DC move" loading="lazy">
+      <div class="about-copy">
+        <p class="eyebrow">About Liberty Line</p>
+        <h2 class="section-title">We know the District — every block of it.</h2>
+        <p>DC moves are their own kind of puzzle: narrow rowhome stairs, loading-dock reservations, parking permits, and elevators booked by the hour. We've solved that puzzle thousands of times, and we handle the logistics so you don't have to.</p>
+        <p>Our movers are full-time professionals, trained in-house and background-checked. And every quote is binding — the number we give you is the number on your bill.</p>
+        <div class="about-stats">
+          <div class="stat"><b>11 yrs</b><span>serving the DMV</span></div>
+          <div class="stat"><b>7,200+</b><span>moves completed</span></div>
+          <div class="stat"><b>4.9</b><span>average rating</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section services-section">
+  <div class="wrap center">
+    <p class="eyebrow">Services &amp; Rates</p>
+    <h2 class="section-title">Every move, handled with care.</h2>
+    <p class="section-sub">Free estimates by phone, video, or in person. Every quote includes the truck, fuel, padding, and basic protection.</p>
+    <div class="services-grid" style="text-align:left">
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=800&auto=format&fit=crop" alt="DC home ready for moving day" loading="lazy">
+        <div class="service-body"><h3>Local Moves</h3><p>Homes, condos, and apartments across DC, Maryland, and Virginia — including high-rise and rowhome specialists.</p><p class="price">from $129 / hour (2 movers + truck)</p></div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?q=80&w=800&auto=format&fit=crop" alt="Furniture prepared for a long-distance move" loading="lazy">
+        <div class="service-body"><h3>Long-Distance Moves</h3><p>Relocations anywhere in the US with dedicated trucks, guaranteed windows, and real-time updates.</p><p class="price">from $1,550 flat rate</p></div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1600518464441-9154a4dea21b?q=80&w=800&auto=format&fit=crop" alt="Professional packing with quality materials" loading="lazy">
+        <div class="service-body"><h3>Packing &amp; Unpacking</h3><p>Full-service packing, fragile-only packing, or unpacking and setup at your new place.</p><p class="price">from $290 / home</p></div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=800&auto=format&fit=crop" alt="Office relocation in progress" loading="lazy">
+        <div class="service-body"><h3>Office &amp; Commercial</h3><p>After-hours and weekend office moves across the DMV — desks, IT, and files, with minimal downtime.</p><p class="price">Free on-site estimate</p></div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" alt="Secure storage facility" loading="lazy">
+        <div class="service-body"><h3>Storage</h3><p>Climate-controlled storage in our DC warehouse — short-term between moves or long-term, your call.</p><p class="price">from $110 / month</p></div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=800&auto=format&fit=crop" alt="Happy customer after a smooth move" loading="lazy">
+        <div class="service-body"><h3>White-Glove Service</h3><p>Art, antiques, pianos, and delicate pieces — crated, padded, and moved by our most experienced crew.</p><p class="price">from $240 / item</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="section">
+  <div class="wrap">
+    <p class="eyebrow">Why Liberty Line</p>
+    <h2 class="section-title">The details that make moving day easy.</h2>
+    <div class="why-grid">
+      <div class="why"><div class="why-icon" aria-hidden="true">&#128221;</div><h3>Binding Quotes</h3><p>The price we quote is the price you pay. No hourly creep, no mystery fees at the end of the day.</p></div>
+      <div class="why"><div class="why-icon" aria-hidden="true">&#128663;</div><h3>Modern Fleet</h3><p>Clean, well-maintained trucks in three sizes — so we send the right truck, not the biggest one.</p></div>
+      <div class="why"><div class="why-icon" aria-hidden="true">&#128100;</div><h3>Trained Crews</h3><p>Full-time, background-checked movers trained in-house. The same faces you'll see at your door.</p></div>
+      <div class="why"><div class="why-icon" aria-hidden="true">&#128274;</div><h3>Fully Protected</h3><p>Licensed and insured, with furniture padding and floor protection included on every move.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="section" style="background:var(--sand)">
+  <div class="wrap">
+    <p class="eyebrow">Reviews</p>
+    <h2 class="section-title">Trusted across the DMV.</h2>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"They handled our Capitol Hill move — narrow stairs, street parking, the works — and made it look easy. Final bill matched the quote to the dollar."</blockquote>
+        <cite>Andrew <span>Capitol Hill &middot; Local move</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"Moved us from DC to Richmond with a dedicated truck and a guaranteed delivery window. Everything arrived on time and in perfect shape."</blockquote>
+        <cite>Lauren <span>Logan Circle &middot; Long-distance move</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"The white-glove crew moved our piano and a collection of framed art. They crated everything, and it all arrived flawless. True professionals."</blockquote>
+        <cite>Michael <span>Georgetown &middot; White-glove move</span></cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="section visit-section">
+  <div class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h2 class="section-title">Get your free moving quote.</h2>
+    <div class="visit-grid">
+      <div>
+        <div class="visit-block">
+          <h3>Office</h3>
+          <p>1710 Connecticut Avenue NW<br>Washington, DC 20009</p>
+        </div>
+        <div class="visit-block">
+          <h3>Contact</h3>
+          <p><a href="tel:+12025550169">(202) 555-0169</a><br><a href="mailto:hello@libertylinemovers.com">hello@libertylinemovers.com</a></p>
+        </div>
+        <div class="visit-block">
+          <h3>Service Area</h3>
+          <p>Washington, DC, Arlington, Alexandria, Bethesda, Silver Spring, and long-distance moves nationwide.</p>
+        </div>
+        <div class="visit-block">
+          <h3>Hours</h3>
+          <table class="hours-table">
+            <tr><td>Monday – Friday</td><td>7:00 AM – 7:00 PM</td></tr>
+            <tr><td>Saturday</td><td>8:00 AM – 5:00 PM</td></tr>
+            <tr><td>Sunday</td><td>9:00 AM – 3:00 PM</td></tr>
+          </table>
+        </div>
+      </div>
+      <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=1200&auto=format&fit=crop" alt="Home in Washington DC ready for moving day" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="section cta">
+  <div class="wrap">
+    <p class="eyebrow">Free Estimates</p>
+    <h2>Ready to move? Let's make it easy.</h2>
+    <p>Call for a free, binding quote in about ten minutes — or email us and we'll reply the same day.</p>
+    <div class="cta-actions">
+      <a href="tel:+12025550169" class="btn btn-red">Call (202) 555-0169</a>
+      <a href="mailto:hello@libertylinemovers.com" class="btn btn-navy">Email for a Quote</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="logo"><svg width="32" height="30" viewBox="0 0 34 30" fill="none" aria-hidden="true"><path d="M2 21V7a1 1 0 0 1 1-1h15a1 1 0 0 1 1 1v14H2Z" fill="#b23a3a"/><path d="M19 11h5l6 5v5H19v-10Z" fill="#ffffff"/><circle cx="8.5" cy="23.5" r="3.2" fill="#1b2f4a" stroke="#fff" stroke-width="1.5"/><circle cx="25" cy="23.5" r="3.2" fill="#1b2f4a" stroke="#fff" stroke-width="1.5"/><path d="M10.5 8l1 2.6 2.7.4-2 1.9.5 2.7-2.2-1.2-2.2 1.2.5-2.7-2-1.9 2.7-.4 1-2.6Z" fill="#fff"/></svg> Liberty <em>Line</em> Movers</span>
+    <p>1710 Connecticut Avenue NW, Washington, DC 20009 &middot; (202) 555-0169 &middot; hello@libertylinemovers.com</p>
+    <p style="margin-top:12px">&copy; 2026 Liberty Line Movers. All rights reserved. Licensed &amp; insured.</p>
+    <p style="margin-top:8px">Website designed &amp; built by <a href="https://weblodge.agency">Weblodge Agency</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

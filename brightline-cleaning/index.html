@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brightline Cleaning Co. — House Cleaning in Philadelphia, PA</title>
+<meta name="description" content="Brightline Cleaning Co. delivers spotless homes across Philadelphia: recurring cleaning, deep cleans, and move-in/move-out service. Book online in 60 seconds.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#1d6fd1; --blue-dark:#145aab; --blue-light:#e8f2fc; --sky:#5aa9e6;
+    --ink:#1c2530; --muted:#5b6b7a; --paper:#ffffff; --mist:#f4f8fb; --line:#dbe6ef; --gold:#f2b234;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;font-size:17px}
+  h1,h2,h3{font-family:'Sora',system-ui,sans-serif;line-height:1.2}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .section{padding:88px 0}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
+  .section-title{font-size:clamp(30px,4.5vw,42px);color:var(--ink);margin-bottom:14px}
+  .section-sub{color:var(--muted);max-width:620px;font-size:18px}
+  .center{text-align:center}
+  .center .section-sub{margin:0 auto}
+  .btn{display:inline-block;padding:14px 28px;border-radius:10px;font-weight:700;font-size:16px;transition:.2s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-blue{background:var(--blue);color:#fff;box-shadow:0 8px 20px rgba(29,111,209,.3)}
+  .btn-blue:hover{background:var(--blue-dark)}
+  .btn-white{background:#fff;color:var(--blue)}
+  .btn-white:hover{background:var(--blue-light)}
+  .btn-outline{background:transparent;color:var(--ink);border:2px solid var(--line)}
+  .btn-outline:hover{border-color:var(--blue);color:var(--blue)}
+
+  .nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav-inner{max-width:1120px;margin:0 auto;padding:0 24px;height:70px;display:flex;align-items:center;justify-content:space-between}
+  .logo{display:inline-flex;align-items:center;gap:10px;font-family:'Sora',sans-serif;font-size:22px;font-weight:800;color:var(--ink)}
+  .logo svg{flex-shrink:0}
+  .logo em{font-style:normal;color:var(--blue)}
+  .nav-links{display:flex;gap:30px;list-style:none}
+  .nav-links a{color:var(--muted);font-weight:600;font-size:15px}
+  .nav-links a:hover{color:var(--blue)}
+  .nav-cta{padding:10px 20px;font-size:15px}
+
+  .hero{background:linear-gradient(135deg,var(--blue-dark) 0%,var(--blue) 55%,var(--sky) 100%);color:#fff;overflow:hidden}
+  .hero-inner{max-width:1120px;margin:0 auto;padding:96px 24px;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  .hero h1{font-size:clamp(38px,5.5vw,58px);margin-bottom:18px}
+  .hero h1 em{font-style:normal;color:#ffe08a}
+  .hero p{font-size:18.5px;color:#d9eafb;margin-bottom:30px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-trust{margin-top:28px;display:flex;gap:24px;flex-wrap:wrap;font-size:14px;color:#cfe3f8}
+  .hero-trust span::before{content:"\2713  ";color:#ffe08a;font-weight:700}
+  .hero-img{border-radius:18px;overflow:hidden;box-shadow:0 24px 48px rgba(0,0,0,.25)}
+  .hero-img img{width:100%;height:420px;object-fit:cover}
+
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .step{background:var(--mist);border-radius:14px;padding:30px 26px;text-align:center}
+  .step-num{width:52px;height:52px;margin:0 auto 16px;border-radius:50%;background:var(--blue);color:#fff;font-family:'Sora',sans-serif;font-weight:800;font-size:22px;display:flex;align-items:center;justify-content:center}
+  .step h3{font-size:20px;margin-bottom:8px}
+  .step p{color:var(--muted);font-size:15.5px}
+
+  .pricing-section{background:var(--mist)}
+  .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px;align-items:stretch}
+  .plan{background:#fff;border:2px solid var(--line);border-radius:16px;padding:36px 30px;display:flex;flex-direction:column}
+  .plan.featured{border-color:var(--blue);box-shadow:0 16px 40px rgba(29,111,209,.16);position:relative}
+  .plan-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--blue);color:#fff;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 16px;border-radius:999px;white-space:nowrap}
+  .plan h3{font-size:22px;margin-bottom:6px}
+  .plan .tagline{color:var(--muted);font-size:15px;margin-bottom:20px}
+  .plan .price{font-family:'Sora',sans-serif;font-size:42px;font-weight:800;color:var(--ink);margin-bottom:4px}
+  .plan .price span{font-size:16px;font-weight:600;color:var(--muted)}
+  .plan ul{list-style:none;margin:22px 0 28px;flex:1}
+  .plan li{padding:7px 0 7px 28px;position:relative;color:var(--muted);font-size:15.5px}
+  .plan li::before{content:"\2713";position:absolute;left:0;color:var(--blue);font-weight:700}
+  .plan .btn{width:100%;text-align:center}
+
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .service{border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .service img{width:100%;height:180px;object-fit:cover}
+  .service-body{padding:22px}
+  .service-body h3{font-size:19px;margin-bottom:6px}
+  .service-body p{color:var(--muted);font-size:15.5px;margin-bottom:10px}
+  .service-body .price{font-weight:700;color:var(--blue)}
+
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .review{background:var(--mist);border-radius:14px;padding:30px 26px}
+  .stars{color:var(--gold);letter-spacing:2px;font-size:17px;margin-bottom:14px}
+  .review blockquote{font-size:16.5px;margin-bottom:18px}
+  .review cite{font-style:normal;font-weight:700}
+  .review cite span{display:block;font-weight:400;font-size:14px;color:var(--muted)}
+
+  .visit-section{background:var(--ink);color:#c8d4de}
+  .visit-section .section-title{color:#fff}
+  .visit-section .eyebrow{color:var(--sky)}
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:44px}
+  .visit-block{margin-bottom:26px}
+  .visit-block h3{font-size:20px;color:#fff;margin-bottom:8px}
+  .visit-block a{color:#fff;font-weight:700}
+  .visit-block a:hover{color:var(--sky)}
+  .hours-table{width:100%;border-collapse:collapse}
+  .hours-table td{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.12);color:#b9c7d2}
+  .hours-table td:last-child{text-align:right;color:#fff;font-weight:600}
+
+  .cta{text-align:center}
+  .cta h2{font-size:clamp(30px,4.5vw,42px);margin-bottom:14px}
+  .cta p{color:var(--muted);font-size:18px;max-width:580px;margin:0 auto 30px}
+  .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+  footer{background:#12181f;color:#8fa1af;padding:44px 0;text-align:center;font-size:15px}
+  footer .logo{color:#fff;font-size:21px;display:block;margin-bottom:12px}
+  footer a{color:var(--sky);font-weight:700}
+  footer a:hover{text-decoration:underline}
+
+  @media (max-width:900px){
+    .hero-inner{grid-template-columns:1fr;gap:36px;padding:72px 24px}
+    .hero-img img{height:300px}
+    .pricing-grid,.services-grid,.reviews-grid,.steps{grid-template-columns:1fr 1fr}
+    .visit-grid{grid-template-columns:1fr;gap:32px}
+  }
+  @media (max-width:640px){
+    .nav-links{display:none}
+    .section{padding:64px 0}
+    .pricing-grid,.services-grid,.reviews-grid,.steps{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 3l2.2 6.2L25 11l-6.8 1.8L16 19l-2.2-6.2L7 11l6.8-1.8L16 3Z" fill="#1d6fd1"/><path d="M25 19l1.4 3.9 3.9 1.4-3.9 1.4L25 29.6l-1.4-3.9-3.9-1.4 3.9-1.4L25 19Z" fill="#5aa9e6"/><path d="M7 20l1.1 3 3 1.1-3 1.1L7 28.2l-1.1-3-3-1.1 3-1.1L7 20Z" fill="#f2b234"/></svg>Bright<em>line</em></a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="#pricing" class="btn btn-blue nav-cta">Book a Cleaning</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <p class="eyebrow" style="color:#ffe08a">House Cleaning — Philadelphia, PA</p>
+      <h1>A spotless home, <em>without lifting a finger.</em></h1>
+      <p>Brightline's trained, background-checked cleaners bring their own supplies and leave your home gleaming — on your schedule, at a price you know upfront.</p>
+      <div class="hero-actions">
+        <a href="#pricing" class="btn btn-white">See Plans &amp; Prices</a>
+        <a href="tel:+12155550164" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.6)">Call (215) 555-0164</a>
+      </div>
+      <div class="hero-trust">
+        <span>Background-checked cleaners</span>
+        <span>Supplies included</span>
+        <span>100% happiness guarantee</span>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1200&auto=format&fit=crop" alt="Professional cleaner wiping a bright kitchen counter">
+    </div>
+  </div>
+</section>
+
+<section id="how" class="section">
+  <div class="wrap center">
+    <p class="eyebrow">How It Works</p>
+    <h2 class="section-title">Booked in a minute. Sparkling by tonight.</h2>
+    <p class="section-sub">No walk-throughs, no phone tag, no surprises. Just a clean home, on your terms.</p>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><h3>Pick your plan</h3><p>Choose a one-time deep clean or a recurring plan. Prices are fixed by home size — you see the exact cost before you book.</p></div>
+      <div class="step"><div class="step-num">2</div><h3>We show up on time</h3><p>Your vetted cleaning team arrives with professional supplies and a 60-point checklist, and gets straight to work.</p></div>
+      <div class="step"><div class="step-num">3</div><h3>Come home to clean</h3><p>Walk into a fresh, gleaming home. Not thrilled with something? We come back within 24 hours and make it right, free.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="section pricing-section">
+  <div class="wrap center">
+    <p class="eyebrow">Simple Pricing</p>
+    <h2 class="section-title">Pick the clean that fits your life.</h2>
+    <p class="section-sub">Prices shown for a typical 2-bedroom home. Every plan includes all supplies and equipment.</p>
+    <div class="pricing-grid">
+      <div class="plan">
+        <h3>Essential Clean</h3>
+        <p class="tagline">The weekly refresh — kitchens, baths, floors, dusting.</p>
+        <p class="price">$119 <span>/ visit</span></p>
+        <ul>
+          <li>Kitchen counters, sink &amp; stovetop</li>
+          <li>Bathrooms cleaned &amp; sanitized</li>
+          <li>All floors vacuumed &amp; mopped</li>
+          <li>Dusting of surfaces &amp; shelves</li>
+          <li>Trash emptied &amp; liners replaced</li>
+        </ul>
+        <a href="tel:+12155550164" class="btn btn-outline">Book Essential</a>
+      </div>
+      <div class="plan featured">
+        <span class="plan-badge">Most Popular</span>
+        <h3>Deep Clean</h3>
+        <p class="tagline">The full reset — every corner, baseboard, and appliance.</p>
+        <p class="price">$219 <span>/ visit</span></p>
+        <ul>
+          <li>Everything in Essential, plus:</li>
+          <li>Inside oven, fridge &amp; microwave</li>
+          <li>Baseboards, doors &amp; light switches</li>
+          <li>Interior windows &amp; blinds</li>
+          <li>Shower grout &amp; fixture detailing</li>
+          <li>Cabinet fronts inside &amp; out</li>
+        </ul>
+        <a href="tel:+12155550164" class="btn btn-blue">Book Deep Clean</a>
+      </div>
+      <div class="plan">
+        <h3>Move-In / Move-Out</h3>
+        <p class="tagline">Empty-home cleaning for a fresh start or a full deposit back.</p>
+        <p class="price">$289 <span>/ visit</span></p>
+        <ul>
+          <li>Everything in Deep Clean, plus:</li>
+          <li>Inside all closets &amp; cabinets</li>
+          <li>Wall spot-cleaning &amp; scuff removal</li>
+          <li>Garage &amp; basement sweep</li>
+          <li>Landlord-ready checklist included</li>
+        </ul>
+        <a href="tel:+12155550164" class="btn btn-outline">Book Move Clean</a>
+      </div>
+    </div>
+    <p style="margin-top:32px;color:var(--muted)">Recurring customers save 15% on weekly and 10% on biweekly plans. Larger homes quoted by phone — always free.</p>
+  </div>
+</section>
+
+<section id="services" class="section">
+  <div class="wrap">
+    <p class="eyebrow">More Ways We Help</p>
+    <h2 class="section-title">Extras, on your schedule.</h2>
+    <div class="services-grid">
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?q=80&w=800&auto=format&fit=crop" alt="Window cleaning in progress" loading="lazy">
+        <div class="service-body"><h3>Window Cleaning</h3><p>Interior and exterior glass, sills, and tracks — streak-free, guaranteed.</p><p class="price">from $89</p></div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?q=80&w=800&auto=format&fit=crop" alt="Eco-friendly cleaning supplies" loading="lazy">
+        <div class="service-body"><h3>Eco-Friendly Cleaning</h3><p>Plant-based, fragrance-free products safe for kids, pets, and sensitive noses.</p><p class="price">No extra charge</p></div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?q=80&w=800&auto=format&fit=crop" alt="Office cleaning after hours" loading="lazy">
+        <div class="service-body"><h3>Office &amp; Airbnb Cleaning</h3><p>Recurring office cleans and fast turnovers for short-term rentals.</p><p class="price">from $99 / visit</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="section" style="background:var(--mist)">
+  <div class="wrap">
+    <p class="eyebrow">Reviews</p>
+    <h2 class="section-title">Philadelphia homes, Brightline clean.</h2>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"I booked online at lunch and my house was spotless by dinner. The team was polite, fast, and my kitchen has never looked this good."</blockquote>
+        <cite>Jessica <span>Fishtown &middot; Deep Clean</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"They've cleaned our rowhome every two weeks for a year. Same friendly crew, same great result, every single time. Worth every dollar."</blockquote>
+        <cite>Marcus <span>South Philly &middot; Biweekly plan</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"The move-out clean got us our full deposit back. The landlord actually asked who cleaned the place — that's how good it was."</blockquote>
+        <cite>Priya <span>University City &middot; Move-out clean</span></cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="section visit-section">
+  <div class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h2 class="section-title">Questions? We're a call away.</h2>
+    <div class="visit-grid">
+      <div>
+        <div class="visit-block">
+          <h3>Office</h3>
+          <p>1508 Walnut Street, Suite 400<br>Philadelphia, PA 19102</p>
+        </div>
+        <div class="visit-block">
+          <h3>Contact</h3>
+          <p><a href="tel:+12155550164">(215) 555-0164</a><br><a href="mailto:hello@brightlinecleaning.com">hello@brightlinecleaning.com</a></p>
+        </div>
+        <div class="visit-block">
+          <h3>Service Area</h3>
+          <p>All Philadelphia neighborhoods, plus Bala Cynwyd, Ardmore, Cherry Hill, and Camden.</p>
+        </div>
+      </div>
+      <div>
+        <div class="visit-block">
+          <h3>Hours</h3>
+          <table class="hours-table">
+            <tr><td>Monday – Friday</td><td>8:00 AM – 7:00 PM</td></tr>
+            <tr><td>Saturday</td><td>9:00 AM – 5:00 PM</td></tr>
+            <tr><td>Sunday</td><td>10:00 AM – 3:00 PM</td></tr>
+          </table>
+          <p style="margin-top:16px;color:#b9c7d2">Cleanings run 7 days a week. Same-day slots are often available — call before noon to check.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section cta">
+  <div class="wrap">
+    <p class="eyebrow">Ready When You Are</p>
+    <h2>Your weekend is for living, not scrubbing.</h2>
+    <p>Book your first clean today and get 20% off. If you're not happy with the result, we come back and fix it free — that's the Brightline promise.</p>
+    <div class="cta-actions">
+      <a href="tel:+12155550164" class="btn btn-blue">Call (215) 555-0164</a>
+      <a href="mailto:hello@brightlinecleaning.com" class="btn btn-outline">Email Us to Book</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="logo"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 3l2.2 6.2L25 11l-6.8 1.8L16 19l-2.2-6.2L7 11l6.8-1.8L16 3Z" fill="#5aa9e6"/><path d="M25 19l1.4 3.9 3.9 1.4-3.9 1.4L25 29.6l-1.4-3.9-3.9-1.4 3.9-1.4L25 19Z" fill="#5aa9e6"/><path d="M7 20l1.1 3 3 1.1-3 1.1L7 28.2l-1.1-3-3-1.1 3-1.1L7 20Z" fill="#f2b234"/></svg> Bright<em>line</em></span>
+    <p>1508 Walnut Street, Suite 400, Philadelphia, PA 19102 &middot; (215) 555-0164 &middot; hello@brightlinecleaning.com</p>
+    <p style="margin-top:12px">&copy; 2026 Brightline Cleaning Co. All rights reserved.</p>
+    <p style="margin-top:8px">Website designed &amp; built by <a href="https://weblodge.agency">Weblodge Agency</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

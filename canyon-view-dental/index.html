@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Canyon View Dental | Family Dentist in Santa Fe, NM</title>
+<meta name="description" content="Canyon View Dental is a warm, modern dental practice in Santa Fe, NM. Family dentistry, crowns, implants and emergency care — most insurance accepted, new patients welcome.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --clay:#c2410c; --clay-2:#9a3412; --adobe:#7c2d12; --sage:#4d7c0f;
+    --cream:#fdf6ee; --cream-2:#f7ead9; --ink:#292524; --muted:#78716c;
+    --line:#ead9c4; --white:#fff; --radius:12px;
+    --shadow:0 14px 34px rgba(124,45,18,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Lora',Georgia,serif;line-height:1.15;color:var(--adobe)}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .section{padding:88px 0}
+  .eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:12.5px;font-weight:700;color:var(--clay);margin-bottom:10px}
+  .section-head{max-width:640px;margin:0 auto 48px;text-align:center}
+  .section-head h2{font-size:clamp(30px,4.2vw,42px);margin-bottom:12px}
+  .section-head p{color:var(--muted);font-size:17.5px}
+  .btn{display:inline-block;padding:14px 28px;border-radius:8px;font-weight:700;font-size:16px;transition:.2s;border:2px solid transparent;text-align:center}
+  .btn-clay{background:var(--clay);color:#fff}
+  .btn-clay:hover{background:var(--clay-2);transform:translateY(-1px)}
+  .btn-adobe{background:var(--adobe);color:#fff}
+  .btn-adobe:hover{background:#5f220c}
+  .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.85)}
+  .btn-outline:hover{background:rgba(255,255,255,.15)}
+
+  .nav{position:sticky;top:0;z-index:60;background:rgba(253,246,238,.97);backdrop-filter:blur(8px);border-bottom:2px solid var(--line)}
+  .nav-inner{max-width:1120px;margin:0 auto;padding:0 24px;height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .logo{display:inline-flex;align-items:center;gap:11px;font-family:'Lora',Georgia,serif;font-size:23px;font-weight:700;color:var(--adobe)}
+  .logo svg{flex-shrink:0}
+  .logo span{color:var(--clay)}
+  .nav-links{display:flex;gap:30px;list-style:none;font-weight:600;font-size:15px}
+  .nav-links a{color:#44403c}
+  .nav-links a:hover{color:var(--clay)}
+  .nav-cta{padding:11px 22px;font-size:15px}
+
+  .hero{position:relative;color:#fff;text-align:center;background:var(--adobe) url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(60,24,8,.68),rgba(60,24,8,.82))}
+  .hero-inner{position:relative;max-width:780px;margin:0 auto;padding:124px 24px}
+  .hero .eyebrow{color:#fdba74}
+  .hero h1{color:#fff;font-size:clamp(40px,6.2vw,62px);margin-bottom:18px}
+  .hero p{font-size:19px;color:#f5e6d3;margin-bottom:34px}
+  .hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .hero-note{margin-top:26px;font-size:14.5px;color:#e3cdb2}
+  .hero-note strong{color:#fff}
+
+  .strip{background:#fff;border-bottom:1px solid var(--line)}
+  .strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding-top:26px;padding-bottom:26px}
+  .strip-item{text-align:center}
+  .strip-item b{display:block;font-family:'Lora',Georgia,serif;font-size:24px;color:var(--adobe)}
+  .strip-item span{font-size:13.5px;color:var(--muted)}
+
+  .services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  .service{display:flex;gap:22px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:.2s}
+  .service:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
+  .service img{width:120px;height:120px;object-fit:cover;border-radius:10px;flex-shrink:0}
+  .service h3{font-size:21px;margin-bottom:6px}
+  .service p{color:var(--muted);font-size:15.5px;margin-bottom:10px}
+  .price{font-family:'Lora',Georgia,serif;font-weight:700;font-size:19px;color:var(--clay)}
+  .price small{font-family:'Inter',sans-serif;font-size:12px;color:var(--muted);font-weight:600}
+
+  .comfort{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .comfort-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .comfort-grid img{border-radius:14px;width:100%;height:400px;object-fit:cover}
+  .comfort-copy p{color:var(--muted);margin-bottom:14px;font-size:17px}
+  .comfort-list{margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:10px 22px;font-weight:600;font-size:15.5px}
+  .comfort-list span::before{content:"\2713  ";color:var(--sage)}
+
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .review{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px}
+  .stars{color:var(--clay);letter-spacing:2px;font-size:17px;margin-bottom:14px}
+  .review p{font-size:16px;margin-bottom:18px}
+  .review cite{font-style:normal;font-weight:700;color:var(--adobe)}
+  .review cite span{display:block;font-weight:500;font-size:14px;color:var(--muted)}
+
+  .cta{background:linear-gradient(135deg,var(--clay) 0%,var(--adobe) 100%);color:#fff;text-align:center}
+  .cta h2{color:#fff;font-size:clamp(30px,4.2vw,42px);margin-bottom:14px}
+  .cta p{color:#f5e6d3;font-size:18px;max-width:580px;margin:0 auto 30px}
+  .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+  .visit-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
+  .visit-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px 30px}
+  .visit-card h3{font-size:22px;margin-bottom:18px}
+  .hours{width:100%;border-collapse:collapse}
+  .hours td{padding:9px 0;border-bottom:1px solid #f1e7d7}
+  .hours td:last-child{text-align:right;font-weight:600;color:var(--adobe)}
+  .hours tr:last-child td{border-bottom:none}
+  .contact-line{margin-bottom:16px;color:var(--muted)}
+  .contact-line strong{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--clay);margin-bottom:3px}
+  .contact-line a{color:var(--adobe);font-weight:700}
+  .contact-line a:hover{color:var(--clay)}
+
+  footer{background:#292524;color:#a8a29e;padding:48px 0 30px;font-size:14.5px}
+  .footer-grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .footer-brand{max-width:340px}
+  .footer-brand .logo{color:#fff}
+  .footer-brand p{margin-top:10px}
+  .footer-col h4{color:#fff;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
+  .footer-col a{display:block;margin-bottom:8px;color:#d6d3d1}
+  .footer-col a:hover{color:#fdba74}
+  .footer-bottom{padding-top:22px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  .footer-bottom a{color:#fdba74;font-weight:700}
+  .footer-bottom a:hover{text-decoration:underline}
+
+  @media (max-width: 900px){
+    .strip .wrap{grid-template-columns:repeat(2,1fr)}
+    .services-grid,.comfort-grid,.reviews-grid,.visit-grid{grid-template-columns:1fr;gap:28px}
+    .comfort-grid img{height:300px}
+    .section{padding:64px 0}
+  }
+  @media (max-width: 620px){
+    .nav-links{display:none}
+    .service{flex-direction:column}
+    .service img{width:100%;height:180px}
+    .hero-inner{padding:88px 24px}
+    .comfort-list{grid-template-columns:1fr}
+    .btn{width:100%}
+    .hero-actions .btn{width:auto;flex:1 1 auto}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="2" y="2" width="28" height="28" rx="9" fill="#c2410c"/><path d="M10.5 8.6c2.3-1.1 4.1-.4 5.5.9 1.4-1.3 3.2-2 5.5-.9 2.4 1.2 3.1 3.8 2.6 6.2-.5 2.2-1.4 4.2-2.1 6.2-.5 1.7-1.1 4-2.5 4-1.8 0-1.5-3.4-1.9-5.1-.2-1-.6-1.7-1.6-1.7s-1.4.7-1.6 1.7c-.4 1.7-.1 5.1-1.9 5.1-1.4 0-2-2.3-2.5-4-.7-2-1.6-4-2.1-6.2-.5-2.4.2-5 2.6-6.2Z" fill="#fdf6ee"/></svg>Canyon <span>View</span> Dental</a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#comfort">Comfort</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+    </nav>
+    <a href="tel:+15055550189" class="btn btn-clay nav-cta">Book (505) 555-0189</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Family Dentistry &middot; Santa Fe, NM</p>
+    <h1>Calm, caring dentistry in the heart of Santa Fe.</h1>
+    <p>Canyon View Dental is a warm, unhurried practice on Cerrillos Road — modern dentistry, honest pricing, and a team that treats you like a neighbor, because you probably are one.</p>
+    <div class="hero-actions">
+      <a href="tel:+15055550189" class="btn btn-clay" style="background:#fff;color:var(--adobe)">Book an Appointment</a>
+      <a href="#services" class="btn btn-outline">See Services &amp; Prices</a>
+    </div>
+    <p class="hero-note"><strong>New patients welcome</strong> &middot; Most insurance accepted &middot; Same-day emergency care</p>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <div class="strip-item"><b>19 yrs</b><span>Serving Santa Fe</span></div>
+    <div class="strip-item"><b>4.9 rating</b><span>650+ patient reviews</span></div>
+    <div class="strip-item"><b>Same-day</b><span>Emergency appointments</span></div>
+    <div class="strip-item"><b>All ages</b><span>Kids to grandparents</span></div>
+  </div>
+</div>
+
+<section id="services" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Services &amp; Pricing</p>
+      <h2>Complete care for the whole family.</h2>
+      <p>From first checkups to full smile restorations, everything happens right here — with clear pricing before treatment and payment plans when you need them.</p>
+    </div>
+    <div class="services-grid">
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=400&auto=format&fit=crop" alt="Dental exam and cleaning" loading="lazy">
+        <div>
+          <h3>Exams &amp; Cleanings</h3>
+          <p>Gentle cleanings, digital X-rays, and a full exam — with time to ask questions and a plan that fits your budget.</p>
+          <span class="price">$109 <small>new patient exam &amp; cleaning</small></span>
+        </div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=400&auto=format&fit=crop" alt="Dental crown treatment" loading="lazy">
+        <div>
+          <h3>Crowns &amp; Bridges</h3>
+          <p>Natural-looking ceramic crowns that protect damaged teeth — designed and fitted in-house, usually in two visits.</p>
+          <span class="price">$950 <small>per crown</small></span>
+        </div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?q=80&w=400&auto=format&fit=crop" alt="Dental implant consultation" loading="lazy">
+        <div>
+          <h3>Dental Implants</h3>
+          <p>A permanent, natural-feeling replacement for missing teeth — from single implants to full-arch restorations.</p>
+          <span class="price">$2,400 <small>starting, per implant</small></span>
+        </div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=400&auto=format&fit=crop" alt="Teeth whitening treatment" loading="lazy">
+        <div>
+          <h3>Whitening &amp; Veneers</h3>
+          <p>Professional whitening and hand-crafted porcelain veneers for a brighter, more even smile — with a preview before you commit.</p>
+          <span class="price">$275 <small>whitening</small></span>
+        </div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1588776813677-77aaf5595b83?q=80&w=400&auto=format&fit=crop" alt="Child at a dental checkup" loading="lazy">
+        <div>
+          <h3>Children's Dentistry</h3>
+          <p>Easy first visits, sealants, and fluoride for kids — our team is patient, playful, and great at turning nervous kids into happy patients.</p>
+          <span class="price">$85 <small>kids' exam &amp; cleaning</small></span>
+        </div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=400&auto=format&fit=crop" alt="Emergency dental care" loading="lazy">
+        <div>
+          <h3>Emergency Dental Care</h3>
+          <p>Toothache, broken tooth, or lost crown — call in the morning and we'll get you seen the same day, pain relief first.</p>
+          <span class="price">Same-day care</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="comfort" class="section comfort">
+  <div class="wrap">
+    <div class="comfort-grid">
+      <div class="comfort-copy">
+        <p class="eyebrow">A Different Kind of Dental Visit</p>
+        <h2 style="font-size:clamp(28px,3.8vw,38px);margin-bottom:16px">Relaxed visits, honest advice, no judgment.</h2>
+        <p>We know plenty of people put off the dentist — sometimes for years. At Canyon View, you'll never get a lecture. You'll get a clear picture of your oral health, honest options with real prices, and a team that makes the whole visit easy.</p>
+        <p>Our office is calm and comfortable, with natural light, soft music, and time built into every appointment so you're never rushed out the door.</p>
+        <div class="comfort-list">
+          <span>Noise-canceling headphones</span>
+          <span>Warm blankets &amp; neck pillows</span>
+          <span>Gentle, low-dose digital X-rays</span>
+          <span>Sedation options available</span>
+          <span>Transparent written estimates</span>
+          <span>Flexible payment plans</span>
+        </div>
+      </div>
+      <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?q=80&w=1200&auto=format&fit=crop" alt="Comfortable dental treatment room at Canyon View Dental" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Patient Reviews</p>
+      <h2>Santa Fe smiles with us.</h2>
+    </div>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;I hadn't been to a dentist in six years and I was dreading it. They were kind, never judged, and laid out a plan I could actually afford.&rdquo;</p>
+        <cite>Anita <span>Santa Fe &middot; Patient since 2022</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;My implant looks and feels completely natural — even I forget which tooth it is. The whole process was smooth and clearly explained.&rdquo;</p>
+        <cite>George <span>Eldorado &middot; Dental implant</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;Our kids actually ask when their next dentist visit is. That tells you everything about how this office treats families.&rdquo;</p>
+        <cite>Laura <span>South Capitol &middot; Family patient</span></cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section cta">
+  <div class="wrap">
+    <p class="eyebrow" style="color:#fdba74">New patients welcome</p>
+    <h2>Ready for a dentist you'll actually enjoy visiting?</h2>
+    <p>Call today to book your first visit — new patient exam and cleaning is just $109, and we'll see you the same day if you're in pain.</p>
+    <div class="cta-actions">
+      <a href="tel:+15055550189" class="btn btn-clay" style="background:#fff;color:var(--adobe)">Call (505) 555-0189</a>
+      <a href="mailto:hello@canyonviewdental.com" class="btn btn-outline">Email Us</a>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Visit &amp; Contact</p>
+      <h2>Find us on Cerrillos Road.</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-card">
+        <h3>Office Hours</h3>
+        <table class="hours">
+          <tr><td>Monday – Thursday</td><td>8:00 AM – 5:00 PM</td></tr>
+          <tr><td>Friday</td><td>8:00 AM – 2:00 PM</td></tr>
+          <tr><td>Saturday – Sunday</td><td>Closed</td></tr>
+          <tr><td>Emergencies</td><td>Call — we fit you in</td></tr>
+        </table>
+        <p style="margin-top:18px;color:var(--muted);font-size:15px">Free parking in front of the office. Serving Santa Fe, Eldorado, Tesuque, and the surrounding area.</p>
+      </div>
+      <div class="visit-card">
+        <h3>Location &amp; Contact</h3>
+        <p class="contact-line"><strong>Address</strong>1420 Cerrillos Road, Suite 8<br>Santa Fe, NM 87505</p>
+        <p class="contact-line"><strong>Phone</strong><a href="tel:+15055550189">(505) 555-0189</a></p>
+        <p class="contact-line"><strong>Email</strong><a href="mailto:hello@canyonviewdental.com">hello@canyonviewdental.com</a></p>
+        <p class="contact-line" style="margin-bottom:0"><strong>Insurance</strong>Most PPO plans accepted &middot; In-house savings plan from $25/mo</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="2" y="2" width="28" height="28" rx="9" fill="#c2410c"/><path d="M10.5 8.6c2.3-1.1 4.1-.4 5.5.9 1.4-1.3 3.2-2 5.5-.9 2.4 1.2 3.1 3.8 2.6 6.2-.5 2.2-1.4 4.2-2.1 6.2-.5 1.7-1.1 4-2.5 4-1.8 0-1.5-3.4-1.9-5.1-.2-1-.6-1.7-1.6-1.7s-1.4.7-1.6 1.7c-.4 1.7-.1 5.1-1.9 5.1-1.4 0-2-2.3-2.5-4-.7-2-1.6-4-2.1-6.2-.5-2.4.2-5 2.6-6.2Z" fill="#fdf6ee"/></svg>Canyon <span>View</span> Dental</a>
+        <p>Warm, modern family dentistry in Santa Fe since 2007 — honest pricing, gentle care, and a team that treats you like a neighbor.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#services">Exams &amp; Cleanings</a>
+        <a href="#services">Crowns &amp; Implants</a>
+        <a href="#services">Whitening</a>
+        <a href="#services">Emergency Care</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+15055550189">(505) 555-0189</a>
+        <a href="mailto:hello@canyonviewdental.com">hello@canyonviewdental.com</a>
+        <a href="#visit">1420 Cerrillos Rd, Santa Fe</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Canyon View Dental, Santa Fe, NM. All rights reserved.</span>
+      <span>Website designed &amp; built by <a href="https://weblodge.agency" target="_blank" rel="noopener">Weblodge Agency</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

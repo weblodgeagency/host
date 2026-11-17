@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desert Current Electric | Electricians in Tucson, AZ</title>
+<meta name="description" content="Desert Current Electric is a licensed electrical contractor in Tucson, AZ. Solar-ready panels, smart home wiring, outdoor lighting and same-day service with honest pricing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --copper:#b45309; --copper-2:#92400e; --clay:#78350f; --sand:#fdf8f0;
+    --sand-2:#f7ead9; --ink:#292524; --muted:#78716c; --line:#eadfd0;
+    --white:#fff; --radius:18px; --shadow:0 14px 34px rgba(120,53,15,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'DM Sans',system-ui,sans-serif;color:var(--ink);background:var(--sand);line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'DM Serif Display',Georgia,serif;line-height:1.15;color:var(--clay);font-weight:400}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .section{padding:88px 0}
+  .eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:12.5px;font-weight:700;color:var(--copper);margin-bottom:12px}
+  .section-head{max-width:640px;margin:0 auto 48px;text-align:center}
+  .section-head h2{font-size:clamp(30px,4.4vw,44px);margin-bottom:12px}
+  .section-head p{color:var(--muted);font-size:17.5px}
+  .btn{display:inline-block;padding:14px 28px;border-radius:999px;font-weight:700;font-size:16px;transition:.2s;border:2px solid transparent;text-align:center}
+  .btn-copper{background:var(--copper);color:#fff}
+  .btn-copper:hover{background:var(--copper-2);transform:translateY(-1px)}
+  .btn-dark{background:var(--ink);color:#fff}
+  .btn-dark:hover{background:#44403c}
+  .btn-outline{background:transparent;color:var(--clay);border-color:var(--clay)}
+  .btn-outline:hover{background:var(--clay);color:#fff}
+
+  .nav{position:sticky;top:0;z-index:60;background:rgba(253,248,240,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav-inner{max-width:1120px;margin:0 auto;padding:0 24px;height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .logo{display:inline-flex;align-items:center;gap:11px;font-family:'DM Serif Display',Georgia,serif;font-size:24px;color:var(--clay)}
+  .logo svg{flex-shrink:0}
+  .logo span{color:var(--copper)}
+  .nav-links{display:flex;gap:30px;list-style:none;font-weight:500;font-size:15.5px}
+  .nav-links a{color:#44403c}
+  .nav-links a:hover{color:var(--copper)}
+  .nav-cta{padding:11px 22px;font-size:15px}
+
+  .hero{overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding:84px 0}
+  .hero h1{font-size:clamp(40px,5.6vw,60px);margin-bottom:18px}
+  .hero h1 em{font-style:normal;color:var(--copper)}
+  .hero p{font-size:18.5px;color:var(--muted);margin-bottom:30px;max-width:520px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-stats{display:flex;gap:30px;flex-wrap:wrap;margin-top:34px}
+  .hero-stats div strong{display:block;font-family:'DM Serif Display',Georgia,serif;font-size:26px;color:var(--clay)}
+  .hero-stats div span{font-size:13.5px;color:var(--muted)}
+  .hero-img{position:relative}
+  .hero-img img{width:100%;height:500px;object-fit:cover;border-radius:24px;box-shadow:var(--shadow)}
+  .hero-badge{position:absolute;top:24px;right:-8px;background:#fff;border-radius:14px;padding:14px 20px;box-shadow:var(--shadow);text-align:center}
+  .hero-badge b{font-family:'DM Serif Display',Georgia,serif;font-size:22px;color:var(--clay);display:block;line-height:1.1}
+  .hero-badge span{font-size:12.5px;color:var(--muted);font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .service{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;transition:.2s}
+  .service:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .service-icon{width:52px;height:52px;border-radius:50%;background:var(--sand-2);display:grid;place-items:center;margin-bottom:18px}
+  .service h3{font-size:21px;margin-bottom:8px}
+  .service p{color:var(--muted);font-size:15.5px;margin-bottom:16px}
+  .price{font-family:'DM Serif Display',Georgia,serif;font-size:22px;color:var(--copper)}
+  .price small{font-family:'DM Sans',sans-serif;font-size:12.5px;color:var(--muted);font-weight:500}
+
+  .feature{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .feature-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:center}
+  .feature-img{border-radius:20px;overflow:hidden}
+  .feature-img img{width:100%;height:400px;object-fit:cover}
+  .feature-copy p{color:var(--muted);margin-bottom:14px;font-size:17px}
+  .feature-list{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:12px 24px;font-weight:700;font-size:15.5px}
+  .feature-list span::before{content:"\2713  ";color:var(--copper)}
+
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .review{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px}
+  .stars{color:var(--copper);letter-spacing:2px;font-size:17px;margin-bottom:14px}
+  .review p{font-size:16px;margin-bottom:18px}
+  .review cite{font-style:normal;font-weight:700;color:var(--clay)}
+  .review cite span{display:block;font-weight:500;font-size:14px;color:var(--muted)}
+
+  .cta{background:linear-gradient(135deg,var(--clay) 0%,#451a03 100%);color:#fff;text-align:center;border-radius:24px}
+  .cta .wrap{padding-top:72px;padding-bottom:72px}
+  .cta h2{color:#fff;font-size:clamp(30px,4.4vw,44px);margin-bottom:14px}
+  .cta p{color:#f7ead9;font-size:18px;max-width:580px;margin:0 auto 30px}
+  .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .cta .btn-outline{color:#fff;border-color:rgba(255,255,255,.8)}
+  .cta .btn-outline:hover{background:rgba(255,255,255,.14)}
+
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .visit-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px 30px}
+  .visit-card h3{font-size:23px;margin-bottom:18px}
+  .hours{width:100%;border-collapse:collapse}
+  .hours td{padding:9px 0;border-bottom:1px solid #f5efe4}
+  .hours td:last-child{text-align:right;font-weight:700;color:var(--clay)}
+  .hours tr:last-child td{border-bottom:none}
+  .contact-line{margin-bottom:16px;color:var(--muted)}
+  .contact-line strong{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--copper);margin-bottom:3px}
+  .contact-line a{color:var(--clay);font-weight:700}
+  .contact-line a:hover{color:var(--copper)}
+
+  footer{background:var(--ink);color:#a8a29e;padding:48px 0 30px;font-size:14.5px}
+  .footer-grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .footer-brand{max-width:340px}
+  .footer-brand .logo{color:#fff}
+  .footer-brand p{margin-top:10px}
+  .footer-col h4{color:#fff;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
+  .footer-col a{display:block;margin-bottom:8px;color:#d6d3d1}
+  .footer-col a:hover{color:#fbbf24}
+  .footer-bottom{padding-top:22px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  .footer-bottom a{color:#fbbf24;font-weight:700}
+  .footer-bottom a:hover{text-decoration:underline}
+
+  @media (max-width: 900px){
+    .hero-grid,.feature-grid,.visit-grid{grid-template-columns:1fr;gap:36px}
+    .services-grid,.reviews-grid{grid-template-columns:repeat(2,1fr)}
+    .hero-img img{height:360px}
+    .feature-img img{height:300px}
+    .section{padding:64px 0}
+    .hero-grid{padding:56px 0}
+  }
+  @media (max-width: 620px){
+    .nav-links{display:none}
+    .services-grid,.reviews-grid,.feature-list{grid-template-columns:1fr}
+    .hero-badge{right:8px}
+    .btn{width:100%}
+    .hero-actions .btn{width:auto;flex:1 1 auto}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="14.5" fill="#b45309"/><path d="M17.6 6.5 10 17.5h4.6l-1.2 8 7.6-11h-4.6l1.2-8Z" fill="#fdf8f0"/><circle cx="16" cy="16" r="14.5" stroke="#78350f" stroke-width="1.5"/></svg>Desert <span>Current</span></a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="tel:+15205550186" class="btn btn-copper nav-cta">Call (520) 555-0186</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">Licensed Electricians &middot; Tucson, AZ</p>
+        <h1>Bright, safe, and ready for the desert sun.</h1>
+        <p>Desert Current Electric powers Tucson homes — from solar-ready panels and smart home wiring to outdoor lighting that makes summer evenings worth staying outside for.</p>
+        <div class="hero-actions">
+          <a href="tel:+15205550186" class="btn btn-copper">Call (520) 555-0186</a>
+          <a href="#services" class="btn btn-outline">See Services &amp; Prices</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>12 yrs</strong><span>Serving Tucson</span></div>
+          <div><strong>4.9 rating</strong><span>600+ reviews</span></div>
+          <div><strong>Same-day</strong><span>Service available</span></div>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1200&auto=format&fit=crop" alt="Desert Current electrician installing a new electrical panel" loading="lazy">
+        <div class="hero-badge"><b>ROC #324117</b><span>Licensed &middot; Bonded &middot; Insured</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section" style="padding-top:40px">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Services &amp; Upfront Pricing</p>
+      <h2>Honest work, quoted before we start.</h2>
+      <p>Flat-rate pricing in writing, permits handled for you, and a 3-year warranty on every install. No surprises, ever.</p>
+    </div>
+    <div class="services-grid">
+      <article class="service">
+        <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h7l-1 8 11-13h-8l1-7Z"/></svg></div>
+        <h3>Solar-Ready Panel Upgrades</h3>
+        <p>Tucson sun means solar — and solar needs a panel that can handle it. We upgrade to 200-amp solar-ready service, permitted and inspected.</p>
+        <span class="price">$1,950 <small>starting</small></span>
+      </article>
+      <article class="service">
+        <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></div>
+        <h3>Smart Home Wiring</h3>
+        <p>Smart switches, thermostats, doorbells, and whole-home automation — wired cleanly and set up so everything just works.</p>
+        <span class="price">$175 <small>starting</small></span>
+      </article>
+      <article class="service">
+        <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.4 1 2.3h6c0-.9.4-1.8 1-2.3A7 7 0 0 0 12 2Z"/></svg></div>
+        <h3>Outdoor &amp; Landscape Lighting</h3>
+        <p>Path lights, patio lighting, and security floods that stand up to desert heat — and make your yard usable after dark.</p>
+        <span class="price">$650 <small>starting</small></span>
+      </article>
+      <article class="service">
+        <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></svg></div>
+        <h3>Ceiling Fans &amp; Cooling Circuits</h3>
+        <p>Ceiling fans in every room, dedicated circuits for mini-splits and swamp coolers — installed to keep your home comfortable all summer.</p>
+        <span class="price">$185 <small>starting</small></span>
+      </article>
+      <article class="service">
+        <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 9V5a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/><path d="M14 9h6l-3 4h4l-6 6v-6h-3l4-4Z"/></svg></div>
+        <h3>EV Charger Installation</h3>
+        <p>Level 2 chargers for every EV make, on a dedicated circuit with permit and inspection — most installs finished in half a day.</p>
+        <span class="price">$850 <small>starting</small></span>
+      </article>
+      <article class="service">
+        <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>Safety Inspections &amp; Repairs</h3>
+        <p>Buying a home or worried about old wiring? Our full electrical inspection checks every circuit, outlet, and panel — with a written report.</p>
+        <span class="price">$129 <small>flat rate</small></span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section feature">
+  <div class="wrap">
+    <div class="feature-grid">
+      <div class="feature-img">
+        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1200&auto=format&fit=crop" alt="Solar panels under the Arizona sun" loading="lazy">
+      </div>
+      <div class="feature-copy">
+        <p class="eyebrow">About Desert Current</p>
+        <h2 style="font-size:clamp(28px,3.8vw,38px);margin-bottom:16px">Tucson electricians who plan for the sun.</h2>
+        <p>We started Desert Current in 2014 because Tucson homes deserve electricians who understand the desert — the heat, the monsoon storms, and the solar panels on half the roofs in town.</p>
+        <p>Every job is done by a licensed journeyman, permitted where required, and backed by a 3-year warranty. We show up on time, explain the work in plain English, and clean up before we leave.</p>
+        <div class="feature-list">
+          <span>Licensed AZ electricians</span>
+          <span>Flat-rate written quotes</span>
+          <span>Solar-ready expertise</span>
+          <span>3-year warranty</span>
+          <span>Same-day service</span>
+          <span>Background-checked crew</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Customer Reviews</p>
+      <h2>Tucson homeowners trust Desert Current.</h2>
+      <p>Rated 4.9 out of 5 from more than 600 reviews across Google and Yelp.</p>
+    </div>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;They upgraded our panel and pre-wired for solar in one day. When the solar company arrived, everything was ready. Brilliant planning.&rdquo;</p>
+        <cite>David <span>Oro Valley &middot; Panel upgrade</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;Landscape lighting transformed our backyard — we eat outside almost every night now. The crew was careful, tidy, and fast.&rdquo;</p>
+        <cite>Sofia <span>Catalina Foothills &middot; Outdoor lighting</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;Honest inspection before we bought our house — they found two real issues and told us the rest was fine. No upselling at all.&rdquo;</p>
+        <cite>Tom <span>Sam Hughes &middot; Safety inspection</span></cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="cta">
+      <div class="wrap">
+        <p class="eyebrow" style="color:#fcd34d">Ready to get started?</p>
+        <h2>Let's power your home right.</h2>
+        <p>Call for a free estimate on panel upgrades, EV chargers, and lighting projects — or book a same-day repair across the Tucson metro.</p>
+        <div class="cta-actions">
+          <a href="tel:+15205550186" class="btn btn-copper">Call (520) 555-0186</a>
+          <a href="mailto:hello@desertcurrent.com" class="btn btn-outline">Email Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Visit &amp; Contact</p>
+      <h2>Find us on Speedway Boulevard.</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-card">
+        <h3>Office Hours</h3>
+        <table class="hours">
+          <tr><td>Monday – Friday</td><td>7:30 AM – 5:30 PM</td></tr>
+          <tr><td>Saturday</td><td>8:00 AM – 3:00 PM</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+          <tr><td>Emergencies</td><td>24 hours, 7 days</td></tr>
+        </table>
+        <p style="margin-top:18px;color:var(--muted);font-size:15px">Serving Tucson, Oro Valley, Marana, Catalina Foothills, and Vail.</p>
+      </div>
+      <div class="visit-card">
+        <h3>Location &amp; Contact</h3>
+        <p class="contact-line"><strong>Address</strong>4020 East Speedway Boulevard<br>Tucson, AZ 85716</p>
+        <p class="contact-line"><strong>Phone</strong><a href="tel:+15205550186">(520) 555-0186</a></p>
+        <p class="contact-line"><strong>Email</strong><a href="mailto:hello@desertcurrent.com">hello@desertcurrent.com</a></p>
+        <p class="contact-line" style="margin-bottom:0"><strong>License</strong>AZ ROC #324117 &middot; Bonded &amp; insured</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="14.5" fill="#b45309"/><path d="M17.6 6.5 10 17.5h4.6l-1.2 8 7.6-11h-4.6l1.2-8Z" fill="#fdf8f0"/></svg>Desert <span>Current</span></a>
+        <p>Licensed electricians serving Tucson and the surrounding desert since 2014 — solar-ready, smart-home savvy, and honest about price.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#services">Panel Upgrades</a>
+        <a href="#services">EV Chargers</a>
+        <a href="#services">Smart Home</a>
+        <a href="#services">Outdoor Lighting</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+15205550186">(520) 555-0186</a>
+        <a href="mailto:hello@desertcurrent.com">hello@desertcurrent.com</a>
+        <a href="#visit">4020 E Speedway Blvd, Tucson</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Desert Current Electric, Tucson, AZ. All rights reserved.</span>
+      <span>Website designed &amp; built by <a href="https://weblodge.agency" target="_blank" rel="noopener">Weblodge Agency</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

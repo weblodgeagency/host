@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Circle City Comfort | Heating &amp; Air Conditioning in Indianapolis, IN</title>
+<meta name="description" content="Circle City Comfort provides heating and air conditioning service in Indianapolis, IN. AC repair, furnace repair, new system installation and maintenance plans — 24/7 emergency service.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#0b6fa8;
+    --blue-dark:#085a8a;
+    --blue-light:#e8f4fb;
+    --navy:#102a3a;
+    --orange:#f26d21;
+    --orange-dark:#d9540f;
+    --light:#f6f9fb;
+    --text:#1d2a33;
+    --muted:#5a6b76;
+    --border:#dfe8ee;
+    --white:#fff;
+    --radius:14px;
+    --shadow:0 14px 34px rgba(11,111,168,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:#fff;line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Poppins',sans-serif;line-height:1.15;color:var(--navy)}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+  .section{padding:88px 0}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--blue)}
+  .section-head{max-width:680px;margin-bottom:46px}
+  .section-head h2{font-size:clamp(30px,4.4vw,44px);margin:10px 0 12px}
+  .section-head p{color:var(--muted);font-size:18px}
+  .btn{display:inline-block;padding:15px 30px;border-radius:999px;font-weight:700;font-size:16px;transition:.2s;cursor:pointer;text-align:center}
+  .btn-blue{background:var(--blue);color:#fff}
+  .btn-blue:hover{background:var(--blue-dark)}
+  .btn-orange{background:var(--orange);color:#fff}
+  .btn-orange:hover{background:var(--orange-dark)}
+  .btn-outline{background:transparent;color:var(--navy);border:2px solid var(--navy)}
+  .btn-outline:hover{background:var(--navy);color:#fff}
+
+  /* Emergency bar */
+  .emergency{background:var(--orange);color:#fff;font-size:14.5px;font-weight:600}
+  .emergency .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+  .emergency a{font-weight:800;text-decoration:underline;text-underline-offset:3px}
+
+  /* Nav */
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;height:76px}
+  .logo{display:flex;align-items:center;gap:12px}
+  .logo-mark{width:48px;height:48px;border-radius:50%;background:var(--blue-light);display:grid;place-items:center;flex-shrink:0}
+  .logo-text{line-height:1.05}
+  .logo-text strong{display:block;font-family:'Poppins',sans-serif;font-size:21px;color:var(--navy)}
+  .logo-text small{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .nav-links{display:flex;gap:30px;list-style:none;font-weight:600;font-size:15px}
+  .nav-links a{color:var(--text)}
+  .nav-links a:hover{color:var(--blue)}
+
+  /* Hero */
+  .hero{background:var(--blue-light);overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding:72px 0}
+  .hero h1{font-size:clamp(38px,5.4vw,58px);margin:14px 0 18px}
+  .hero h1 em{font-style:normal;color:var(--blue)}
+  .hero p{font-size:18px;color:var(--muted);margin-bottom:28px;max-width:520px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-badges{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+  .hero-badges span{background:#fff;border:1px solid var(--border);padding:9px 16px;border-radius:999px;font-size:14px;font-weight:600;box-shadow:0 2px 8px rgba(16,42,58,.05)}
+  .hero-img{position:relative}
+  .hero-img img{width:100%;height:520px;object-fit:cover;border-radius:20px;box-shadow:var(--shadow)}
+  .hero-card{position:absolute;left:-20px;bottom:28px;background:var(--navy);color:#fff;border-radius:14px;padding:18px 22px;box-shadow:var(--shadow);max-width:300px}
+  .hero-card b{display:block;font-size:15px}
+  .hero-card span{font-size:13.5px;color:#b9cdd9}
+
+  /* Services */
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .service{border:1px solid var(--border);border-radius:var(--radius);padding:28px;background:#fff;transition:.2s}
+  .service:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#bcd9ea}
+  .service-icon{width:56px;height:56px;border-radius:14px;background:var(--blue-light);display:grid;place-items:center;margin-bottom:18px}
+  .service-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:8px}
+  .service h3{font-size:21px}
+  .price{font-family:'Poppins',sans-serif;font-weight:700;font-size:21px;color:var(--blue);white-space:nowrap}
+  .price small{display:block;font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);font-weight:600;text-align:right;text-transform:uppercase}
+  .service p{font-size:15px;color:var(--muted);margin-bottom:14px}
+  .service ul{list-style:none;font-size:14px;color:#33454f}
+  .service li{padding:3px 0 3px 20px;position:relative}
+  .service li::before{content:"✓";position:absolute;left:0;color:var(--blue);font-weight:700}
+
+  /* Plans */
+  .plans{background:var(--light)}
+  .plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+  .plan{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:32px 28px;display:flex;flex-direction:column}
+  .plan.featured{border:2px solid var(--blue);box-shadow:var(--shadow);position:relative}
+  .plan-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--orange);color:#fff;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:6px 16px;border-radius:999px;white-space:nowrap}
+  .plan h3{font-size:22px;margin-bottom:6px}
+  .plan .plan-price{font-family:'Poppins',sans-serif;font-size:38px;font-weight:800;color:var(--navy);margin:10px 0 4px}
+  .plan .plan-price span{font-size:15px;font-weight:600;color:var(--muted);font-family:'Inter',sans-serif}
+  .plan>p{font-size:15px;color:var(--muted);margin-bottom:18px}
+  .plan ul{list-style:none;font-size:15px;color:#33454f;display:flex;flex-direction:column;gap:9px;margin-bottom:24px;flex:1}
+  .plan li{padding-left:24px;position:relative}
+  .plan li::before{content:"✓";position:absolute;left:0;color:var(--blue);font-weight:800}
+  .plan .btn{width:100%}
+
+  /* About */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .about-grid img{border-radius:14px;width:100%;height:420px;object-fit:cover;box-shadow:var(--shadow)}
+  .about-copy p{color:var(--muted);font-size:17px;margin-bottom:16px}
+  .about-stats{display:flex;gap:36px;margin-top:26px;flex-wrap:wrap}
+  .stat b{display:block;font-family:'Poppins',sans-serif;font-size:38px;color:var(--navy);line-height:1}
+  .stat span{font-size:14px;color:var(--muted)}
+
+  /* Reviews */
+  .reviews{background:var(--light)}
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .review{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:30px 26px;border-top:4px solid var(--blue)}
+  .stars{color:#f59e0b;letter-spacing:3px;font-size:17px;margin-bottom:14px}
+  .review blockquote{font-size:16.5px;margin-bottom:20px}
+  .review cite{font-style:normal;font-weight:700}
+  .review cite span{display:block;font-weight:400;font-size:14px;color:var(--muted)}
+
+  /* Visit */
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px}
+  .visit-card{border:1px solid var(--border);border-radius:var(--radius);padding:28px;background:#fff}
+  .visit-card h3{font-size:20px;margin-bottom:14px}
+  .hours{list-style:none;font-size:15.5px}
+  .hours li{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #eef3f6}
+  .hours li:last-child{border-bottom:none}
+  .hours li span:last-child{font-weight:700;color:var(--navy)}
+  .visit-card p{font-size:15.5px;color:#33454f}
+  .big-phone{font-family:'Poppins',sans-serif;font-size:26px;font-weight:700;color:var(--navy);display:block;margin:6px 0 10px}
+  .big-phone:hover{color:var(--blue)}
+
+  /* CTA */
+  .cta{background:var(--navy);color:#fff;text-align:center}
+  .cta h2{color:#fff;font-size:clamp(30px,4.4vw,44px);margin-bottom:14px}
+  .cta p{color:#b9cdd9;font-size:18px;max-width:600px;margin:0 auto 30px}
+  .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .cta small{display:block;margin-top:20px;color:#8fa8b8;font-size:14px}
+
+  footer{background:#0b1e29;color:#8fa8b8;padding:52px 0 28px;font-size:15px}
+  .footer-grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .footer-brand{max-width:360px}
+  .footer-brand .logo-text strong{color:#fff}
+  .footer-brand .logo-text small{color:#8fa8b8}
+  .footer-brand p{margin-top:12px}
+  .footer-col h4{color:#fff;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+  .footer-col a{display:block;margin-bottom:9px}
+  .footer-col a:hover{color:#fff}
+  .footer-bottom{padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px}
+  .footer-bottom a{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+
+  @media (max-width:900px){
+    .section{padding:64px 0}
+    .nav-links{display:none}
+    .hero-grid{grid-template-columns:1fr;gap:36px;padding:56px 0}
+    .hero-img img{height:360px}
+    .hero-card{left:16px}
+    .services-grid,.plans-grid{grid-template-columns:1fr 1fr}
+    .about-grid{grid-template-columns:1fr;gap:32px}
+    .about-grid img{height:320px}
+    .reviews-grid{grid-template-columns:1fr}
+    .visit-grid{grid-template-columns:1fr}
+  }
+  @media (max-width:600px){
+    .services-grid,.plans-grid{grid-template-columns:1fr}
+    .hero-actions .btn{width:100%}
+    .hero-card{position:static;margin-top:16px;max-width:none}
+    .footer-bottom{justify-content:center;text-align:center}
+  }
+</style>
+</head>
+<body>
+
+<div class="emergency">
+  <div class="wrap">
+    <span>24/7 emergency service — no heat or no cooling, we come out day or night.</span>
+    <span>Call now: <a href="tel:+13175550145">(317) 555-0145</a></span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="logo" aria-label="Circle City Comfort — home">
+      <span class="logo-mark"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 3v26M7 8l18 16M25 8 7 24" stroke="#0b6fa8" stroke-width="2.4" stroke-linecap="round"/><circle cx="16" cy="16" r="4" fill="#f26d21"/><path d="M16 12.5c1.2 1 2 2.2 2 3.5a2 2 0 1 1-4 0c0-1.3.8-2.5 2-3.5z" fill="#fff"/></svg></span>
+      <span class="logo-text"><strong>Circle City Comfort</strong><small>Indianapolis · Indiana</small></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#plans">Maintenance Plans</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-blue" href="tel:+13175550145" style="padding:11px 22px;font-size:15px">Call (317) 555-0145</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">Heating &amp; Air Conditioning — Indianapolis, Indiana</p>
+          <h1>Comfortable at home, <em>in every season.</em></h1>
+          <p>From sweltering July afternoons to January cold snaps, Circle City Comfort keeps Indianapolis homes at just the right temperature — with honest pricing and technicians who show up on time.</p>
+          <div class="hero-actions">
+            <a class="btn btn-blue" href="#services">See Services &amp; Prices</a>
+            <a class="btn btn-outline" href="#plans">Maintenance Plans</a>
+          </div>
+          <div class="hero-badges">
+            <span>★ 4.9 — 510+ reviews</span>
+            <span>24/7 emergency service</span>
+            <span>Same-day appointments</span>
+          </div>
+        </div>
+        <div class="hero-img">
+          <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1200&auto=format&fit=crop" alt="Comfortable Indianapolis living room with even heating and cooling">
+          <div class="hero-card">
+            <b>Furnace out in the middle of the night?</b>
+            <span>We answer 24/7 and dispatch a technician around the clock — no overtime fees, ever.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Services &amp; Pricing</p>
+        <h2>Heating &amp; cooling, done right</h2>
+        <p>Upfront, flat-rate pricing on every job. Your technician explains the problem and the price before any work begins — and the price does not change at the end.</p>
+      </div>
+      <div class="services-grid">
+        <article class="service">
+          <span class="service-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><path d="M16 3v26M7 8l18 16M25 8 7 24" stroke="#0b6fa8" stroke-width="2.4" stroke-linecap="round"/></svg></span>
+          <div class="service-top"><h3>AC Repair</h3><span class="price">$89<small>diagnostic</small></span></div>
+          <p>Warm air, strange noises, or a unit that will not start — we find the problem and fix it the same day whenever possible.</p>
+          <ul><li>Full system diagnostic</li><li>Refrigerant &amp; leak checks</li><li>Most repairs done same-day</li></ul>
+        </article>
+        <article class="service">
+          <span class="service-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f26d21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c1 3-2 4.5-2 7a4 4 0 0 0 8 0c0-1.5-.5-2.5-1.5-3.5C15.5 6.5 14 8 13 9c.5-2.5.5-5-1-7z"/><path d="M12 22a7 7 0 0 1-7-7c0-3 2-5.5 4-7"/></svg></span>
+          <div class="service-top"><h3>Furnace Repair</h3><span class="price">$89<small>diagnostic</small></span></div>
+          <p>No heat is an emergency in an Indiana winter. We answer around the clock and carry parts for most major brands.</p>
+          <ul><li>24/7 emergency response</li><li>All major brands serviced</li><li>Carbon monoxide safety check</li></ul>
+        </article>
+        <article class="service">
+          <span class="service-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0b6fa8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-6 9 6v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21V12h6v9"/></svg></span>
+          <div class="service-top"><h3>New System Install</h3><span class="price">$5,900<small>from</small></span></div>
+          <p>High-efficiency furnaces and air conditioners, sized right for your home and installed by our own certified crew.</p>
+          <ul><li>Free in-home estimate</li><li>10-year parts warranty</li><li>Financing from $99/month</li></ul>
+        </article>
+        <article class="service">
+          <span class="service-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0b6fa8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+          <div class="service-top"><h3>Seasonal Tune-Up</h3><span class="price">$99<small>per visit</small></span></div>
+          <p>A full cleaning and safety check before summer and winter — the best way to avoid a breakdown on the worst day of the year.</p>
+          <ul><li>26-point inspection</li><li>Filter &amp; coil cleaning</li><li>Safety &amp; efficiency check</li></ul>
+        </article>
+        <article class="service">
+          <span class="service-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0b6fa8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 2-1 4-2 5H7c-1-1-2-3-2-5a7 7 0 0 1 7-7z"/><path d="M9 20h6M10 22h4"/></svg></span>
+          <div class="service-top"><h3>Heat Pumps</h3><span class="price">$6,400<small>from</small></span></div>
+          <p>One system that heats in winter and cools in summer — efficient, quiet, and great for homes without ductwork too.</p>
+          <ul><li>Ducted &amp; ductless options</li><li>Rebate help included</li><li>10-year parts warranty</li></ul>
+        </article>
+        <article class="service">
+          <span class="service-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0b6fa8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h4l3-8 4 16 3-8h6"/></svg></span>
+          <div class="service-top"><h3>Indoor Air Quality</h3><span class="price">$249<small>from</small></span></div>
+          <p>Whole-home humidifiers, air purifiers, and upgraded filtration for cleaner air and fewer allergy days.</p>
+          <ul><li>Whole-home humidifiers</li><li>HEPA &amp; UV purification</li><li>Duct cleaning available</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section plans" id="plans">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Maintenance Plans</p>
+        <h2>Never think about your HVAC again</h2>
+        <p>Our Comfort Club plans cover your tune-ups, give you priority scheduling, and save you money on repairs — all for less than a dollar a day.</p>
+      </div>
+      <div class="plans-grid">
+        <div class="plan">
+          <h3>Essential</h3>
+          <div class="plan-price">$19<span>/month</span></div>
+          <p>For one system, kept in good shape year-round.</p>
+          <ul>
+            <li>Two tune-ups per year</li>
+            <li>Filter changes included</li>
+            <li>10% off repairs</li>
+            <li>Annual safety inspection</li>
+          </ul>
+          <a class="btn btn-outline" href="tel:+13175550145">Choose Essential</a>
+        </div>
+        <div class="plan featured">
+          <span class="plan-badge">Most Popular</span>
+          <h3>Comfort Plus</h3>
+          <div class="plan-price">$29<span>/month</span></div>
+          <p>Our best value — priority service and bigger savings.</p>
+          <ul>
+            <li>Two tune-ups per year</li>
+            <li>Filter changes included</li>
+            <li>15% off repairs, no overtime fees</li>
+            <li>Priority scheduling, same-day</li>
+            <li>Free diagnostic visits</li>
+          </ul>
+          <a class="btn btn-blue" href="tel:+13175550145">Choose Comfort Plus</a>
+        </div>
+        <div class="plan">
+          <h3>Whole Home</h3>
+          <div class="plan-price">$49<span>/month</span></div>
+          <p>For larger homes with two or more systems.</p>
+          <ul>
+            <li>Covers up to 3 systems</li>
+            <li>Two tune-ups per system, per year</li>
+            <li>20% off repairs, no overtime fees</li>
+            <li>Priority 24/7 emergency service</li>
+            <li>Free diagnostic visits</li>
+          </ul>
+          <a class="btn btn-outline" href="tel:+13175550145">Choose Whole Home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="about-grid">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1200&auto=format&fit=crop" alt="Circle City Comfort technician servicing a home heating system">
+        <div class="about-copy">
+          <p class="eyebrow">About Circle City Comfort</p>
+          <h2 style="font-size:clamp(30px,4vw,42px);margin:10px 0 16px">Local techs, honest work, since 2011</h2>
+          <p>We started with one van and a simple rule: charge a fair price, do the job right, and treat every home like our own. Fifteen years later, we have grown to twelve trucks — but the rule has not changed.</p>
+          <p>Our technicians are NATE-certified, background-checked, and paid by the job, not by commission — so they will never sell you something you do not need.</p>
+          <div class="about-stats">
+            <div class="stat"><b>15</b><span>Years in Indianapolis</span></div>
+            <div class="stat"><b>9,000+</b><span>Homes served</span></div>
+            <div class="stat"><b>4.9</b><span>Average rating</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reviews" id="reviews">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Customer Reviews</p>
+        <h2>What Indianapolis says about us</h2>
+        <p>Rated 4.9 out of 5 from more than 510 reviews on Google.</p>
+      </div>
+      <div class="reviews-grid">
+        <article class="review">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>“Our furnace quit on a 10-degree night. They answered at 11 PM, had a tech here by midnight, and the heat was back on before 1 AM. I cannot say enough good things.”</blockquote>
+          <cite>Jennifer <span>Furnace repair · Broad Ripple</span></cite>
+        </article>
+        <article class="review">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>“They replaced our 22-year-old AC with a new high-efficiency system. The crew was tidy, the price matched the quote exactly, and our summer electric bill dropped by a third.”</blockquote>
+          <cite>Mark <span>New AC install · Carmel</span></cite>
+        </article>
+        <article class="review">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>“The Comfort Plus plan is worth every penny. They remind us about tune-ups, show up on time, and the techs are always friendly and explain everything clearly.”</blockquote>
+          <cite>Denise <span>Comfort Plus member · Irvington</span></cite>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="visit">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Contact &amp; Hours</p>
+        <h2>We are here when you need us — 24/7</h2>
+        <p>Regular office hours below. For heating or cooling emergencies, we answer around the clock.</p>
+      </div>
+      <div class="visit-grid">
+        <div class="visit-card">
+          <h3>Office Hours</h3>
+          <ul class="hours">
+            <li><span>Monday – Friday</span><span>7:00 AM – 7:00 PM</span></li>
+            <li><span>Saturday</span><span>8:00 AM – 4:00 PM</span></li>
+            <li><span>Sunday</span><span>Emergency only</span></li>
+          </ul>
+          <p style="margin-top:14px;font-size:14.5px;color:var(--muted)">Emergency service is available 24 hours a day, 7 days a week, with no overtime fees.</p>
+        </div>
+        <div class="visit-card">
+          <h3>Office</h3>
+          <p><strong style="color:var(--navy)">Circle City Comfort</strong><br>
+          644 Massachusetts Avenue<br>
+          Indianapolis, IN 46204<br><br>
+          Serving Indianapolis and the surrounding metro: Carmel, Fishers, Greenwood, Noblesville, and Avon.</p>
+        </div>
+        <div class="visit-card">
+          <h3>Call or Write</h3>
+          <a class="big-phone" href="tel:+13175550145">(317) 555-0145</a>
+          <p><a href="mailto:hello@circlecitycomfort.com" style="font-weight:700;color:var(--blue)">hello@circlecitycomfort.com</a><br><br>
+          A real person answers — day or night.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta">
+    <div class="wrap">
+      <p class="eyebrow" style="color:#7cc4e8">Same-day appointments available</p>
+      <h2>Too hot? Too cold? Call us.</h2>
+      <p>We will get a certified technician to your door today — with upfront pricing and no overtime fees, ever.</p>
+      <div class="cta-actions">
+        <a class="btn btn-orange" href="tel:+13175550145">Call (317) 555-0145</a>
+        <a class="btn btn-blue" href="#plans">Join the Comfort Club</a>
+      </div>
+      <small>24/7 emergency service · Upfront flat-rate pricing · 10-year parts warranty on new systems</small>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <span class="logo-mark"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 3v26M7 8l18 16M25 8 7 24" stroke="#0b6fa8" stroke-width="2.4" stroke-linecap="round"/><circle cx="16" cy="16" r="4" fill="#f26d21"/><path d="M16 12.5c1.2 1 2 2.2 2 3.5a2 2 0 1 1-4 0c0-1.3.8-2.5 2-3.5z" fill="#fff"/></svg></span>
+          <span class="logo-text"><strong>Circle City Comfort</strong><small>Indianapolis · Indiana</small></span>
+        </a>
+        <p>Heating and air conditioning in Indianapolis since 2011. Honest pricing, certified technicians, and 24/7 emergency service with no overtime fees.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#services">AC Repair — $89 diagnostic</a>
+        <a href="#services">Furnace Repair — $89 diagnostic</a>
+        <a href="#services">New System Install — from $5,900</a>
+        <a href="#services">Seasonal Tune-Up — $99</a>
+        <a href="#services">Heat Pumps — from $6,400</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="#visit">644 Mass Ave, Indianapolis, IN 46204</a>
+        <a href="tel:+13175550145">(317) 555-0145</a>
+        <a href="#visit">Mon–Fri: 7 AM – 7 PM</a>
+        <a href="#visit">24/7 emergency service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Circle City Comfort, Indianapolis IN. All rights reserved.</span>
+      <span>Website designed &amp; built by <a href="https://weblodge.agency" target="_blank" rel="noopener">Weblodge Agency</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Northstar Moving Co. — Movers in Hartford, CT</title>
+<meta name="description" content="Northstar Moving Co. moves Hartford homes and businesses with care: local and long-distance moving, packing, and storage. Honest quotes, on-time crews.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --slate:#1f2b36; --slate-dark:#141d26; --red:#c8352c; --red-dark:#a52720;
+    --paper:#ffffff; --mist:#f4f5f6; --ink:#232d36; --muted:#5d6b76; --line:#dfe4e8; --gold:#e8a13a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Source Sans 3',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;font-size:17px}
+  h1,h2,h3{font-family:'Oswald',system-ui,sans-serif;line-height:1.15;text-transform:uppercase;letter-spacing:.02em}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .section{padding:88px 0}
+  .eyebrow{font-family:'Oswald',sans-serif;font-size:14px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--red);margin-bottom:10px}
+  .section-title{font-size:clamp(30px,4.5vw,42px);color:var(--slate);margin-bottom:14px}
+  .section-sub{color:var(--muted);max-width:620px;font-size:18px}
+  .btn{display:inline-block;padding:14px 28px;border-radius:4px;font-weight:700;font-size:16px;transition:.2s;font-family:'Oswald',sans-serif;letter-spacing:.08em;text-transform:uppercase}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-red{background:var(--red);color:#fff}
+  .btn-red:hover{background:var(--red-dark)}
+  .btn-slate{background:var(--slate);color:#fff}
+  .btn-slate:hover{background:var(--slate-dark)}
+  .btn-white{background:#fff;color:var(--slate)}
+  .btn-white:hover{background:#eef1f3}
+  .btn-outline{background:transparent;color:var(--slate);border:2px solid var(--slate)}
+  .btn-outline:hover{background:var(--slate);color:#fff}
+
+  .topbar{background:var(--red);color:#fff;font-size:14px;text-align:center;padding:9px 16px;font-weight:600;letter-spacing:.02em}
+  .topbar a{font-weight:700;text-decoration:underline}
+  .nav{position:sticky;top:0;z-index:100;background:var(--slate);box-shadow:0 2px 14px rgba(0,0,0,.25)}
+  .nav-inner{max-width:1120px;margin:0 auto;padding:0 24px;height:70px;display:flex;align-items:center;justify-content:space-between}
+  .logo{display:inline-flex;align-items:center;gap:10px;font-family:'Oswald',sans-serif;font-size:22px;font-weight:700;color:#fff;letter-spacing:.04em}
+  .logo svg{flex-shrink:0}
+  .logo em{font-style:normal;color:#ff6b5e}
+  .nav-links{display:flex;gap:30px;list-style:none}
+  .nav-links a{color:#c6d0d8;font-weight:600;font-size:15px;font-family:'Oswald',sans-serif;letter-spacing:.06em;text-transform:uppercase}
+  .nav-links a:hover{color:#fff}
+  .nav-cta{padding:10px 20px;font-size:14px}
+
+  .hero{display:grid;grid-template-columns:1.05fr .95fr;min-height:600px}
+  .hero-copy{background:var(--slate);color:#fff;padding:88px 48px 88px max(24px,calc((100vw - 1120px)/2 + 24px));display:flex;flex-direction:column;justify-content:center}
+  .hero h1{font-size:clamp(40px,5.5vw,60px);margin-bottom:18px}
+  .hero h1 em{font-style:normal;color:#ff6b5e}
+  .hero p{font-size:18px;color:#c6d0d8;margin-bottom:30px;max-width:500px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-note{margin-top:28px;font-size:14px;color:#93a3af;border-top:1px solid rgba(255,255,255,.15);padding-top:20px}
+  .hero-note strong{color:#fff}
+  .hero-img{position:relative;min-height:400px}
+  .hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+  .intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .intro-grid img{border-radius:8px;width:100%;height:400px;object-fit:cover}
+  .intro-copy p{color:var(--muted);margin-bottom:14px;font-size:18px}
+  .stats{display:flex;gap:36px;margin-top:26px;flex-wrap:wrap}
+  .stat b{display:block;font-family:'Oswald',sans-serif;font-size:34px;color:var(--red)}
+  .stat span{font-size:14px;color:var(--muted)}
+
+  .services-section{background:var(--mist)}
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .service{background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 6px 18px rgba(31,43,54,.08)}
+  .service img{width:100%;height:170px;object-fit:cover}
+  .service-body{padding:24px}
+  .service-body h3{font-size:20px;color:var(--slate);margin-bottom:8px}
+  .service-body p{color:var(--muted);font-size:15.5px;margin-bottom:12px}
+  .service-body .price{font-weight:700;color:var(--red);font-size:16px}
+
+  .rates{width:100%;border-collapse:collapse;margin-top:48px;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 6px 18px rgba(31,43,54,.08)}
+  .rates th{background:var(--slate);color:#fff;font-family:'Oswald',sans-serif;letter-spacing:.08em;text-transform:uppercase;font-size:15px;text-align:left;padding:16px 22px}
+  .rates td{padding:15px 22px;border-bottom:1px solid var(--line)}
+  .rates tr:last-child td{border-bottom:none}
+  .rates td:last-child{font-weight:700;color:var(--red);text-align:right;white-space:nowrap}
+  .rates td:first-child{font-weight:700}
+
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .review{border-left:4px solid var(--red);padding:6px 0 6px 22px}
+  .stars{color:var(--gold);letter-spacing:2px;font-size:17px;margin-bottom:12px}
+  .review blockquote{font-size:17px;margin-bottom:16px}
+  .review cite{font-style:normal;font-weight:700}
+  .review cite span{display:block;font-weight:400;font-size:14px;color:var(--muted)}
+
+  .visit-section{background:var(--slate-dark);color:#b9c5cd}
+  .visit-section .section-title{color:#fff}
+  .visit-section .eyebrow{color:#ff6b5e}
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:44px}
+  .visit-block{margin-bottom:26px}
+  .visit-block h3{font-size:19px;color:#fff;margin-bottom:8px}
+  .visit-block a{color:#fff;font-weight:700}
+  .visit-block a:hover{color:#ff6b5e}
+  .hours-table{width:100%;border-collapse:collapse}
+  .hours-table td{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.12);color:#b9c5cd}
+  .hours-table td:last-child{text-align:right;color:#fff;font-weight:600}
+
+  .cta{text-align:center}
+  .cta h2{font-size:clamp(30px,4.5vw,42px);color:var(--slate);margin-bottom:14px}
+  .cta p{color:var(--muted);font-size:18px;max-width:580px;margin:0 auto 30px}
+  .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+  footer{background:#0d1319;color:#8b9aa6;padding:44px 0;text-align:center;font-size:15px}
+  footer .logo{color:#fff;font-size:21px;display:block;margin-bottom:12px}
+  footer a{color:#ff6b5e;font-weight:700}
+  footer a:hover{text-decoration:underline}
+
+  @media (max-width:900px){
+    .hero{grid-template-columns:1fr}
+    .hero-copy{padding:64px 24px}
+    .hero-img{min-height:320px;position:relative}
+    .hero-img img{position:relative}
+    .services-grid,.reviews-grid{grid-template-columns:1fr 1fr}
+    .intro-grid,.visit-grid{grid-template-columns:1fr;gap:32px}
+  }
+  @media (max-width:640px){
+    .nav-links{display:none}
+    .section{padding:64px 0}
+    .services-grid,.reviews-grid{grid-template-columns:1fr}
+    .intro-grid img{height:280px}
+    .rates th,.rates td{padding:12px 14px;font-size:15px}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">Now booking summer moves — call <a href="tel:+18605550168">(860) 555-0168</a> for a free quote today.</div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 2l2.4 9.6L28 14l-9.6 2.4L16 26l-2.4-9.6L4 14l9.6-2.4L16 2Z" fill="#c8352c"/><path d="M25 22l1.1 4.4L30.5 27.5l-4.4 1.1L25 33l-1.1-4.4-4.4-1.1 4.4-1.1L25 22Z" fill="#e8a13a" transform="translate(0 -3)"/></svg>North<em>star</em> Moving Co.</a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#rates">Rates</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="tel:+18605550168" class="btn btn-red nav-cta">Free Quote</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">Moving Company — Hartford, Connecticut</p>
+    <h1>Point us <em>north.</em> We'll handle the rest.</h1>
+    <p>Northstar Moving Co. has moved Hartford families and businesses since 2013. Straightforward pricing, careful crews, and trucks that show up when we say they will.</p>
+    <div class="hero-actions">
+      <a href="#rates" class="btn btn-red">See Rates</a>
+      <a href="tel:+18605550168" class="btn btn-white">Call (860) 555-0168</a>
+    </div>
+    <p class="hero-note"><strong>Licensed &amp; insured.</strong> CT DOT registered &middot; Full-time, background-checked movers &middot; No hidden fees</p>
+  </div>
+  <div class="hero-img">
+    <img src="https://images.unsplash.com/photo-1600518464441-9154a4dea21b?q=80&w=1400&auto=format&fit=crop" alt="Packed moving boxes ready for the truck">
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="wrap">
+    <div class="intro-grid">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop" alt="Hartford home on moving day" loading="lazy">
+      <div class="intro-copy">
+        <p class="eyebrow">Who We Are</p>
+        <h2 class="section-title">A steady crew for a stressful day.</h2>
+        <p>Moving is one of life's most stressful days. Our job is to make it boring — in the best way. The truck arrives on time, the crew works carefully and quickly, and everything lands where it belongs.</p>
+        <p>We're a Connecticut company through and through. Our movers are full-time employees, trained in-house, and most of them have been with us for years. You'll meet them by name — and they'll treat your things like their own.</p>
+        <div class="stats">
+          <div class="stat"><b>13 yrs</b><span>in business</span></div>
+          <div class="stat"><b>6,500+</b><span>moves completed</span></div>
+          <div class="stat"><b>4.8</b><span>average rating</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section services-section">
+  <div class="wrap">
+    <p class="eyebrow">What We Do</p>
+    <h2 class="section-title">Moves of every size, done right.</h2>
+    <div class="services-grid">
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=800&auto=format&fit=crop" alt="Family home ready for a local move" loading="lazy">
+        <div class="service-body"><h3>Local Moves</h3><p>Homes and apartments across the Hartford area, from downtown condos to suburban colonials.</p><p class="price">from $115 / hour</p></div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?q=80&w=800&auto=format&fit=crop" alt="Living room furniture being packed" loading="lazy">
+        <div class="service-body"><h3>Long-Distance Moves</h3><p>Moves across New England and the East Coast with dedicated trucks and firm delivery dates.</p><p class="price">from $1,350 flat rate</p></div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1600518464441-9154a4dea21b?q=80&w=800&auto=format&fit=crop" alt="Professional packing service" loading="lazy">
+        <div class="service-body"><h3>Packing Services</h3><p>Full or partial packing with sturdy boxes, padding, and labels — so unpacking is painless.</p><p class="price">from $260 / home</p></div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=800&auto=format&fit=crop" alt="Modern office interior" loading="lazy">
+        <div class="service-body"><h3>Office Relocation</h3><p>Weekend and evening office moves that keep your team working — desks, servers, and files included.</p><p class="price">Free on-site estimate</p></div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=800&auto=format&fit=crop" alt="Friendly handover after a successful move" loading="lazy">
+        <div class="service-body"><h3>Senior Moves</h3><p>Patient, respectful downsizing and senior relocation — we take the time to do it gently.</p><p class="price">from $115 / hour</p></div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" alt="Home with secure storage nearby" loading="lazy">
+        <div class="service-body"><h3>Storage</h3><p>Clean, climate-controlled storage in Hartford, short or long term, with easy in-and-out access.</p><p class="price">from $89 / month</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="rates" class="section">
+  <div class="wrap">
+    <p class="eyebrow">Transparent Rates</p>
+    <h2 class="section-title">Know the price before moving day.</h2>
+    <p class="section-sub">Local moves are billed by the hour, with a 2-hour minimum. Every quote includes the truck, fuel, blankets, and basic protection — no surprise charges.</p>
+    <table class="rates">
+      <tr><th>Crew Size</th><th>Best For</th><th>Hourly Rate</th></tr>
+      <tr><td>2 movers + truck</td><td>Studio &amp; 1-bedroom apartments</td><td>$115 / hr</td></tr>
+      <tr><td>3 movers + truck</td><td>2–3 bedroom homes</td><td>$165 / hr</td></tr>
+      <tr><td>4 movers + truck</td><td>Large homes &amp; fast turnarounds</td><td>$215 / hr</td></tr>
+      <tr><td>Packing add-on</td><td>Full packing with materials</td><td>from $260</td></tr>
+      <tr><td>Storage</td><td>Climate-controlled, per month</td><td>from $89</td></tr>
+    </table>
+    <p style="margin-top:20px;color:var(--muted)">Long-distance moves are quoted flat-rate after a free video or in-home estimate. Ask about our weekday discount — moves Monday through Thursday save 10%.</p>
+  </div>
+</section>
+
+<section id="reviews" class="section" style="background:var(--mist)">
+  <div class="wrap">
+    <p class="eyebrow">Reviews</p>
+    <h2 class="section-title">Hartford moves with Northstar.</h2>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"From quote to last box, everything went exactly as promised. The crew was polite, quick, and careful with our antiques. Best moving experience we've ever had."</blockquote>
+        <cite>Rachel <span>West Hartford &middot; Local move</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"They moved my mother into her new apartment with real patience and kindness. They even hung her pictures. I can't thank them enough."</blockquote>
+        <cite>James <span>Glastonbury &middot; Senior move</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"Flat-rate quote for our move to Boston, and the final bill was the same number. On time both ends, nothing damaged, crew was great."</blockquote>
+        <cite>Sofia <span>Hartford &middot; Long-distance move</span></cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="section visit-section">
+  <div class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h2 class="section-title">Get your free quote.</h2>
+    <div class="visit-grid">
+      <div>
+        <div class="visit-block">
+          <h3>Office</h3>
+          <p>640 Farmington Avenue<br>Hartford, CT 06105</p>
+        </div>
+        <div class="visit-block">
+          <h3>Contact</h3>
+          <p><a href="tel:+18605550168">(860) 555-0168</a><br><a href="mailto:hello@northstarmovingco.com">hello@northstarmovingco.com</a></p>
+        </div>
+        <div class="visit-block">
+          <h3>Service Area</h3>
+          <p>Hartford, West Hartford, New Britain, Manchester, Glastonbury, Farmington, and long-distance moves across New England and the East Coast.</p>
+        </div>
+      </div>
+      <div>
+        <div class="visit-block">
+          <h3>Hours</h3>
+          <table class="hours-table">
+            <tr><td>Monday – Friday</td><td>7:00 AM – 7:00 PM</td></tr>
+            <tr><td>Saturday</td><td>8:00 AM – 5:00 PM</td></tr>
+            <tr><td>Sunday</td><td>9:00 AM – 3:00 PM</td></tr>
+          </table>
+          <p style="margin-top:16px;color:#b9c5cd">Moves run 7 days a week. End-of-month and summer weekends book out fast — call early to lock in your date.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section cta">
+  <div class="wrap">
+    <p class="eyebrow">Free Estimates</p>
+    <h2>Your next chapter starts with one call.</h2>
+    <p>Tell us where you're headed and we'll give you an honest, binding quote — usually within the hour.</p>
+    <div class="cta-actions">
+      <a href="tel:+18605550168" class="btn btn-red">Call (860) 555-0168</a>
+      <a href="mailto:hello@northstarmovingco.com" class="btn btn-slate">Email for a Quote</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="logo"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 2l2.4 9.6L28 14l-9.6 2.4L16 26l-2.4-9.6L4 14l9.6-2.4L16 2Z" fill="#c8352c"/><path d="M25 22l1.1 4.4L30.5 27.5l-4.4 1.1L25 33l-1.1-4.4-4.4-1.1 4.4-1.1L25 22Z" fill="#e8a13a" transform="translate(0 -3)"/></svg> North<em>star</em> Moving Co.</span>
+    <p>640 Farmington Avenue, Hartford, CT 06105 &middot; (860) 555-0168 &middot; hello@northstarmovingco.com</p>
+    <p style="margin-top:12px">&copy; 2026 Northstar Moving Co. All rights reserved. Licensed &amp; insured.</p>
+    <p style="margin-top:8px">Website designed &amp; built by <a href="https://weblodge.agency">Weblodge Agency</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pacific Strength &amp; Conditioning | Gym in Long Beach, CA</title>
+<meta name="description" content="Pacific Strength & Conditioning is a strength gym in Long Beach, California. Barbell training, Olympic lifting, and conditioning classes with expert coaches. Memberships from $45/month.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0c2233;
+    --navy-2:#123247;
+    --teal:#14b8a6;
+    --teal-dark:#0d9488;
+    --teal-light:#e6f7f4;
+    --sand:#f7f5f2;
+    --text:#1e2a32;
+    --muted:#5f707b;
+    --white:#fff;
+    --border:#e3e0da;
+    --radius:10px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);line-height:1.65;background:#fff;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;line-height:1.05;letter-spacing:.01em}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .section{padding:84px 0}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--teal-dark);margin-bottom:10px}
+  .section-head{margin-bottom:44px;max-width:660px}
+  .section-head h2{font-size:clamp(34px,4.6vw,50px);margin-bottom:12px}
+  .section-head p{color:var(--muted);font-size:17px}
+  .btn{display:inline-block;padding:14px 28px;border-radius:999px;font-weight:700;font-size:15px;transition:.2s;border:2px solid transparent;cursor:pointer;text-align:center}
+  .btn-teal{background:var(--teal);color:#fff}
+  .btn-teal:hover{background:var(--teal-dark)}
+  .btn-navy{background:var(--navy);color:#fff}
+  .btn-navy:hover{background:var(--navy-2)}
+  .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.7)}
+  .btn-ghost:hover{background:rgba(255,255,255,.14)}
+
+  /* Nav */
+  .nav{position:sticky;top:0;z-index:50;background:rgba(12,34,51,.97);backdrop-filter:blur(8px)}
+  .nav-inner{max-width:1120px;margin:0 auto;padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .logo{display:inline-flex;align-items:center;gap:11px;color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:25px;font-weight:800;letter-spacing:.02em;text-transform:uppercase}
+  .logo small{display:block;font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.28em;color:#8fdcd1;font-weight:700}
+  .logo-line{line-height:1}
+  .nav-links{display:flex;gap:30px;list-style:none;font-weight:600;font-size:15px}
+  .nav-links a{color:#cfdbe1}
+  .nav-links a:hover{color:#fff}
+  .nav-cta{padding:10px 20px;font-size:14px}
+
+  /* Hero */
+  .hero{position:relative;min-height:84vh;display:flex;align-items:flex-end;color:#fff;background:var(--navy) url('https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1800&auto=format&fit=crop') center/cover no-repeat}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,22,33,.92) 0%,rgba(8,22,33,.45) 55%,rgba(8,22,33,.3) 100%)}
+  .hero-inner{position:relative;max-width:1120px;margin:0 auto;padding:100px 24px 80px;width:100%}
+  .hero-inner .eyebrow{color:#5eead4}
+  .hero-inner h1{font-size:clamp(48px,7.5vw,84px);max-width:760px;margin-bottom:16px}
+  .hero-inner h1 em{font-style:normal;color:var(--teal)}
+  .hero-inner p{font-size:19px;color:#e2e8eb;max-width:560px;margin-bottom:30px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+
+  /* Strip */
+  .strip{background:var(--navy);color:#fff;border-top:1px solid rgba(255,255,255,.1)}
+  .strip-inner{max-width:1120px;margin:0 auto;padding:26px 24px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  .strip-item strong{display:block;font-family:'Barlow Condensed',sans-serif;font-size:30px;line-height:1}
+  .strip-item span{font-size:13px;color:#9fb3bd;text-transform:uppercase;letter-spacing:.08em}
+
+  /* About */
+  .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
+  .about-grid img{border-radius:var(--radius);width:100%;height:440px;object-fit:cover}
+  .about-copy p{color:var(--muted);font-size:17px;margin-bottom:14px}
+  .pill-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+  .pill{border:1px solid var(--border);border-radius:999px;padding:8px 16px;font-size:14px;font-weight:600;background:var(--sand)}
+
+  /* Classes */
+  .classes{background:var(--sand)}
+  .class-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  .class-card{background:#fff;border-radius:var(--radius);overflow:hidden;display:flex;box-shadow:0 4px 16px rgba(12,34,51,.06)}
+  .class-card img{width:220px;min-height:220px;object-fit:cover;flex-shrink:0}
+  .class-body{padding:26px 24px}
+  .class-body h3{font-size:24px;margin-bottom:8px}
+  .class-body p{color:var(--muted);font-size:15px;margin-bottom:12px}
+  .class-tag{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-dark)}
+
+  /* Schedule */
+  .schedule-table{width:100%;border-collapse:collapse;background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 4px 16px rgba(12,34,51,.06)}
+  .schedule-table th{background:var(--navy);color:#fff;text-align:left;padding:16px 20px;font-family:'Barlow Condensed',sans-serif;font-size:18px;text-transform:uppercase;letter-spacing:.04em}
+  .schedule-table td{padding:15px 20px;border-bottom:1px solid #f0ede8;font-size:15px}
+  .schedule-table tr:last-child td{border-bottom:none}
+  .schedule-table td:first-child{font-weight:700;color:var(--navy)}
+  .schedule-note{margin-top:18px;color:var(--muted);font-size:15px;text-align:center}
+
+  /* Pricing */
+  .pricing{background:var(--navy);color:#fff}
+  .pricing .section-head p{color:#b9c9d1}
+  .pricing .eyebrow{color:#5eead4}
+  .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .plan{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);padding:32px 28px;display:flex;flex-direction:column}
+  .plan.featured{background:#fff;color:var(--text);border-color:#fff}
+  .plan.featured .plan-price{color:var(--navy)}
+  .plan.featured p{color:var(--muted)}
+  .plan h3{font-size:24px;margin-bottom:6px}
+  .plan>p{color:#b9c9d1;font-size:15px;margin-bottom:18px}
+  .plan-price{font-family:'Barlow Condensed',sans-serif;font-size:52px;font-weight:800;line-height:1;margin-bottom:4px}
+  .plan-price span{font-size:16px;font-family:'Inter',sans-serif;font-weight:500;color:var(--muted)}
+  .plan ul{list-style:none;margin:20px 0 26px;display:flex;flex-direction:column;gap:9px;font-size:15px}
+  .plan li::before{content:"✓";color:var(--teal);font-weight:800;margin-right:10px}
+  .plan .btn{margin-top:auto}
+
+  /* Reviews */
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .review{border:1px solid var(--border);border-radius:var(--radius);padding:30px 26px}
+  .stars{color:var(--teal);letter-spacing:3px;font-size:17px;margin-bottom:14px}
+  .review blockquote{font-size:16px;margin-bottom:18px}
+  .review cite{font-style:normal;font-weight:700}
+  .review cite span{display:block;font-weight:500;font-size:14px;color:var(--muted)}
+
+  /* CTA */
+  .cta{text-align:center;background:var(--teal-light)}
+  .cta h2{font-size:clamp(34px,4.6vw,50px);margin-bottom:12px}
+  .cta p{color:var(--muted);font-size:18px;max-width:580px;margin:0 auto 30px}
+
+  /* Visit */
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px}
+  .visit-card{border:1px solid var(--border);border-radius:var(--radius);padding:28px}
+  .visit-card h3{font-size:22px;margin-bottom:14px}
+  .visit-card p,.visit-card li{font-size:15px;color:var(--muted)}
+  .visit-card a{color:var(--teal-dark);font-weight:700}
+  .hours{list-style:none}
+  .hours li{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f0ede8}
+  .hours li:last-child{border-bottom:none}
+  .hours li span:last-child{font-weight:700;color:var(--text)}
+
+  footer{background:var(--navy);color:#93a7b1;padding:48px 0 28px;font-size:15px}
+  .footer-grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .footer-brand{max-width:340px}
+  .footer-brand p{margin-top:10px}
+  .footer-col h4{color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:18px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px}
+  .footer-col a{display:block;margin-bottom:8px;color:#b9c9d1}
+  .footer-col a:hover{color:#fff}
+  .footer-bottom{padding-top:22px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:14px}
+  .footer-bottom a{color:#5eead4;font-weight:600}
+
+  @media (max-width:900px){
+    .strip-inner{grid-template-columns:1fr 1fr}
+    .class-grid,.pricing-grid,.reviews-grid,.visit-grid{grid-template-columns:1fr 1fr}
+    .about-grid{grid-template-columns:1fr}
+    .about-grid img{height:320px}
+    .section{padding:64px 0}
+  }
+  @media (max-width:640px){
+    .nav-links{display:none}
+    .class-grid,.pricing-grid,.reviews-grid,.visit-grid{grid-template-columns:1fr}
+    .class-card{flex-direction:column}
+    .class-card img{width:100%;height:200px;min-height:0}
+    .schedule-table th:nth-child(3),.schedule-table td:nth-child(3){display:none}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 3c3.2 2.6 6 5.6 6 9.4 0 4.5-2.7 7.6-6 7.6s-6-3.1-6-7.6C10 8.6 12.8 5.6 16 3z" fill="#14b8a6"/><path d="M4 24c2.4-2.2 4.8-2.2 7.2 0s4.8 2.2 7.2 0 4.8-2.2 7.2 0" stroke="#5eead4" stroke-width="2.2" stroke-linecap="round" fill="none"/><path d="M4 28.5c2.4-2.2 4.8-2.2 7.2 0s4.8 2.2 7.2 0 4.8-2.2 7.2 0" stroke="#5eead4" stroke-width="2.2" stroke-linecap="round" fill="none" opacity=".55"/></svg><span class="logo-line">Pacific Strength<small>Strength &amp; Conditioning</small></span></a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#pricing">Membership</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+    </nav>
+    <a href="#pricing" class="btn btn-teal nav-cta">Try a Free Class</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Strength Gym — Long Beach, California</p>
+    <h1>Built strong, <em>by the sea.</em></h1>
+    <p>A serious strength gym with a friendly floor. Barbell training, Olympic lifting, and conditioning classes — coached properly, in a space two blocks from the beach.</p>
+    <div class="hero-actions">
+      <a href="#pricing" class="btn btn-teal">Try a Free Class</a>
+      <a href="#schedule" class="btn btn-ghost">View Class Schedule</a>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="strip-inner">
+    <div class="strip-item"><strong>9 yrs</strong><span>Serving Long Beach</span></div>
+    <div class="strip-item"><strong>40+</strong><span>Classes every week</span></div>
+    <div class="strip-item"><strong>1,400</strong><span>Active members</span></div>
+    <div class="strip-item"><strong>4.8 ★</strong><span>390+ Google reviews</span></div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-copy">
+        <p class="eyebrow">About Pacific Strength</p>
+        <h2 style="font-size:clamp(34px,4.2vw,48px);margin-bottom:16px">A gym for people who actually like training.</h2>
+        <p>We opened Pacific Strength in 2017 because Long Beach needed a gym that took lifting seriously without taking itself too seriously. No mirrors everywhere, no waiting for a squat rack, no upselling — just good equipment, good coaching, and good people.</p>
+        <p>Our 10,000-square-foot facility has eight lifting platforms, a full dumbbell range up to 150 lbs, sled turf, and a dedicated conditioning area. Beginners get a free onboarding session so day one never feels overwhelming.</p>
+        <div class="pill-row">
+          <span class="pill">8 lifting platforms</span>
+          <span class="pill">Olympic lifting area</span>
+          <span class="pill">Sled &amp; turf zone</span>
+          <span class="pill">Sauna &amp; cold plunge</span>
+        </div>
+      </div>
+      <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1200&auto=format&fit=crop" alt="Member training with dumbbells at Pacific Strength" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section id="classes" class="section classes">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Classes &amp; Training</p>
+      <h2>Find your session</h2>
+      <p>Every class is capped at 14 people and led by a certified coach. Your first class is free — just show up 10 minutes early.</p>
+    </div>
+    <div class="class-grid">
+      <article class="class-card">
+        <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?q=80&w=800&auto=format&fit=crop" alt="Barbell deadlift on a lifting platform" loading="lazy">
+        <div class="class-body">
+          <h3>Barbell Club</h3>
+          <p>Structured strength programming around squat, bench, and deadlift. Lift in small groups with a coach checking every set.</p>
+          <p class="class-tag">60 min · All levels</p>
+        </div>
+      </article>
+      <article class="class-card">
+        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=800&auto=format&fit=crop" alt="High-energy conditioning class" loading="lazy">
+        <div class="class-body">
+          <h3>Pacific Conditioning</h3>
+          <p>Intervals, sleds, and bodyweight work in a fast 45 minutes. The class that gets your heart rate up and your week started right.</p>
+          <p class="class-tag">45 min · High energy</p>
+        </div>
+      </article>
+      <article class="class-card">
+        <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=800&auto=format&fit=crop" alt="Athlete training with battle ropes" loading="lazy">
+        <div class="class-body">
+          <h3>Olympic Lifting</h3>
+          <p>Snatch and clean &amp; jerk technique work with USAW-certified coaches. Platforms, bumpers, and plenty of patience.</p>
+          <p class="class-tag">75 min · Technique focused</p>
+        </div>
+      </article>
+      <article class="class-card">
+        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop" alt="Yoga and mobility session" loading="lazy">
+        <div class="class-body">
+          <h3>Mobility &amp; Recovery</h3>
+          <p>Guided stretching, breathwork, and foam rolling to keep you lifting pain-free. Pairs perfectly with our sauna and cold plunge.</p>
+          <p class="class-tag">50 min · Low intensity</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="schedule" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Weekly Schedule</p>
+      <h2>Classes all week, morning to night</h2>
+      <p>Open gym runs all day during opening hours. Drop-ins are $20 — or grab a free first class below.</p>
+    </div>
+    <table class="schedule-table">
+      <tr><th>Class</th><th>Days</th><th>Times</th><th>Coach</th></tr>
+      <tr><td>Barbell Club</td><td>Mon, Wed, Fri</td><td>6:00 AM &amp; 6:00 PM</td><td>Marcus</td></tr>
+      <tr><td>Pacific Conditioning</td><td>Mon – Fri</td><td>7:00 AM, 12:00 PM, 5:30 PM</td><td>Priya</td></tr>
+      <tr><td>Olympic Lifting</td><td>Tue, Thu</td><td>6:30 PM</td><td>Dan</td></tr>
+      <tr><td>Olympic Lifting</td><td>Saturday</td><td>10:00 AM</td><td>Dan</td></tr>
+      <tr><td>Mobility &amp; Recovery</td><td>Tue, Thu</td><td>7:30 AM</td><td>Lena</td></tr>
+      <tr><td>Mobility &amp; Recovery</td><td>Sunday</td><td>10:30 AM</td><td>Lena</td></tr>
+      <tr><td>Barbell Club</td><td>Saturday</td><td>9:00 AM</td><td>Marcus</td></tr>
+    </table>
+    <p class="schedule-note">Holiday hours and schedule changes are posted at the front desk and on our Instagram page.</p>
+  </div>
+</section>
+
+<section id="pricing" class="section pricing">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Membership</p>
+      <h2>Pick your plan</h2>
+      <p>No joining fee, no annual contract, no cancellation hassle. Every plan starts with a free class.</p>
+    </div>
+    <div class="pricing-grid">
+      <article class="plan">
+        <h3>Off-Peak</h3>
+        <p>Train outside the busy hours and save.</p>
+        <p class="plan-price">$45<span>/month</span></p>
+        <ul>
+          <li>Open gym 9 AM – 4 PM weekdays</li>
+          <li>Full weekend access</li>
+          <li>2 classes per month included</li>
+          <li>Locker room &amp; showers</li>
+        </ul>
+        <a href="#visit" class="btn btn-teal">Start Free Class</a>
+      </article>
+      <article class="plan featured">
+        <h3>Unlimited</h3>
+        <p>Everything, all the time — our most popular plan.</p>
+        <p class="plan-price">$89<span>/month</span></p>
+        <ul>
+          <li>Unlimited open gym, 7 days a week</li>
+          <li>Unlimited classes</li>
+          <li>Sauna &amp; cold plunge access</li>
+          <li>Quarterly body composition scan</li>
+          <li>1 guest pass per month</li>
+        </ul>
+        <a href="#visit" class="btn btn-navy">Start Free Class</a>
+      </article>
+      <article class="plan">
+        <h3>Coaching</h3>
+        <p>Unlimited access plus one-on-one coaching.</p>
+        <p class="plan-price">$279<span>/month</span></p>
+        <ul>
+          <li>Everything in Unlimited</li>
+          <li>4 personal training sessions / month</li>
+          <li>Custom program, updated monthly</li>
+          <li>Nutrition check-ins</li>
+        </ul>
+        <a href="#visit" class="btn btn-teal">Book a Free Consult</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Member Reviews</p>
+      <h2>Loved by Long Beach lifters</h2>
+    </div>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>"Finally, a gym where I don't have to wait 20 minutes for a squat rack. The coaches know my name, my numbers, and when I'm slacking."</blockquote>
+        <cite>Chris <span>Member since 2019</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>"I came for the Olympic lifting coaching and stayed for the community. Dan fixed my snatch in three sessions after a year of struggling alone."</blockquote>
+        <cite>Angela <span>Olympic lifting member</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>"As a total beginner I was worried I'd feel out of place. The onboarding session was perfect, and the 7 AM conditioning class is now my favorite hour of the day."</blockquote>
+        <cite>Tyler <span>Joined 2025</span></cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section cta">
+  <div class="wrap">
+    <h2>Come lift with us — first class free.</h2>
+    <p>No card, no commitment. Show up, train, and see if Pacific Strength feels like home.</p>
+    <a href="tel:+15625550201" class="btn btn-navy">Call (562) 555-0201</a>
+  </div>
+</section>
+
+<section id="visit" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Visit Us</p>
+      <h2>Two blocks from the beach</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-card">
+        <h3>Opening Hours</h3>
+        <ul class="hours">
+          <li><span>Monday – Friday</span><span>5:30 AM – 9:00 PM</span></li>
+          <li><span>Saturday</span><span>7:00 AM – 7:00 PM</span></li>
+          <li><span>Sunday</span><span>8:00 AM – 5:00 PM</span></li>
+        </ul>
+      </div>
+      <div class="visit-card">
+        <h3>Location</h3>
+        <p><strong style="color:var(--text)">Pacific Strength &amp; Conditioning</strong><br>
+        418 East Broadway<br>
+        Long Beach, CA 90802<br><br>
+        Free 2-hour parking in the lot on Broadway. Bike racks at the front door.</p>
+      </div>
+      <div class="visit-card">
+        <h3>Contact</h3>
+        <p><a href="tel:+15625550201">(562) 555-0201</a><br>
+        <a href="mailto:train@pacificstrengthlb.com">train@pacificstrengthlb.com</a></p>
+        <p style="margin-top:12px">Questions about a class or membership? Call or email — a coach will get back to you the same day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 3c3.2 2.6 6 5.6 6 9.4 0 4.5-2.7 7.6-6 7.6s-6-3.1-6-7.6C10 8.6 12.8 5.6 16 3z" fill="#14b8a6"/><path d="M4 24c2.4-2.2 4.8-2.2 7.2 0s4.8 2.2 7.2 0 4.8-2.2 7.2 0" stroke="#5eead4" stroke-width="2.2" stroke-linecap="round" fill="none"/><path d="M4 28.5c2.4-2.2 4.8-2.2 7.2 0s4.8 2.2 7.2 0 4.8-2.2 7.2 0" stroke="#5eead4" stroke-width="2.2" stroke-linecap="round" fill="none" opacity=".55"/></svg><span class="logo-line">Pacific Strength<small>Strength &amp; Conditioning</small></span></a>
+        <p>A strength gym in Long Beach, CA. Real coaching, real equipment, and a community that lifts each other up.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="#classes">Classes</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#pricing">Membership</a>
+        <a href="#visit">Visit</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+15625550201">(562) 555-0201</a>
+        <a href="mailto:train@pacificstrengthlb.com">train@pacificstrengthlb.com</a>
+        <a href="#visit">418 E Broadway, Long Beach, CA 90802</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Pacific Strength &amp; Conditioning. All rights reserved.</span>
+      <span>Website designed &amp; built by <a href="https://weblodge.agency" target="_blank" rel="noopener">Weblodge Agency</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

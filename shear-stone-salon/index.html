@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shear &amp; Stone — Hair Salon in Portland, Oregon</title>
+<meta name="description" content="Shear & Stone is a calm, modern hair salon in Portland's Alberta Arts District. Precision cuts, natural color, and styling that fits real life.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --stone:#3e3a34;
+    --stone-dark:#292622;
+    --clay:#b4552d;
+    --clay-dark:#96421f;
+    --sand:#f6f1e8;
+    --sand-dark:#ece3d3;
+    --sage:#7d8b6f;
+    --cream:#fdfaf5;
+    --ink:#2c2823;
+    --muted:#6f675c;
+    --line:#e5dccc;
+    --radius:18px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Outfit',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;line-height:1.12;font-weight:600}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+  .section{padding:92px 0}
+  .eyebrow{font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--clay);margin-bottom:12px}
+  .section-title{font-size:clamp(32px,4.5vw,46px);color:var(--stone-dark);margin-bottom:14px}
+  .section-sub{color:var(--muted);max-width:620px;font-size:18px}
+  .btn{display:inline-block;padding:14px 30px;border-radius:999px;font-weight:600;font-size:16px;transition:.2s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-clay{background:var(--clay);color:#fff}
+  .btn-clay:hover{background:var(--clay-dark)}
+  .btn-ghost{background:transparent;color:var(--stone-dark);border:2px solid var(--stone-dark)}
+  .btn-ghost:hover{background:var(--stone-dark);color:#fff}
+  .btn-light{background:#fff;color:var(--stone-dark)}
+  .btn-light:hover{background:var(--sand)}
+
+  /* Nav */
+  .nav{position:sticky;top:0;z-index:100;background:rgba(253,250,245,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav-inner{max-width:1140px;margin:0 auto;padding:0 24px;height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .logo{display:inline-flex;align-items:center;gap:11px;font-family:'Cormorant Garamond',Georgia,serif;font-size:27px;font-weight:700;color:var(--stone-dark)}
+  .logo em{font-style:italic;color:var(--clay)}
+  .logo svg{flex-shrink:0}
+  .nav-links{display:flex;gap:30px;list-style:none;font-weight:500;font-size:15px;color:var(--stone)}
+  .nav-links a:hover{color:var(--clay)}
+  .nav-cta{padding:11px 22px;font-size:15px}
+
+  /* Hero — split */
+  .hero{background:var(--sand)}
+  .hero-grid{display:grid;grid-template-columns:1fr 1fr;min-height:640px;align-items:stretch}
+  .hero-copy{display:flex;flex-direction:column;justify-content:center;padding:72px 48px 72px max(24px,calc((100vw - 1140px)/2 + 24px))}
+  .hero-copy h1{font-size:clamp(44px,5.5vw,68px);color:var(--stone-dark);margin-bottom:20px}
+  .hero-copy h1 em{font-style:italic;color:var(--clay)}
+  .hero-copy p{font-size:19px;color:var(--muted);margin-bottom:32px;max-width:480px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-stats{display:flex;gap:36px;margin-top:44px;padding-top:28px;border-top:1px solid var(--line)}
+  .hero-stats b{display:block;font-family:'Cormorant Garamond',Georgia,serif;font-size:30px;color:var(--stone-dark);line-height:1}
+  .hero-stats span{font-size:13px;color:var(--muted);letter-spacing:.04em}
+  .hero-img{position:relative;overflow:hidden}
+  .hero-img img{width:100%;height:100%;min-height:420px;object-fit:cover}
+
+  /* About */
+  .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+  .about-imgs{position:relative}
+  .about-imgs img:first-child{border-radius:var(--radius);width:100%;height:440px;object-fit:cover}
+  .about-imgs img:last-child{position:absolute;right:-18px;bottom:-28px;width:210px;height:210px;object-fit:cover;border-radius:14px;border:6px solid var(--cream);box-shadow:0 14px 30px rgba(0,0,0,.14)}
+  .about-copy p{color:var(--muted);margin-bottom:16px;font-size:18px}
+  .feature-list{list-style:none;margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:12px 24px}
+  .feature-list li{font-weight:500;font-size:16px;padding-left:26px;position:relative}
+  .feature-list li::before{content:"";position:absolute;left:0;top:9px;width:12px;height:12px;border-radius:50%;background:var(--sage)}
+
+  /* Services — price list */
+  .services-section{background:var(--sand)}
+  .price-list{margin-top:48px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  .price-row{display:grid;grid-template-columns:1fr auto;gap:8px 24px;padding:26px 32px;border-bottom:1px solid var(--line);align-items:baseline}
+  .price-row:last-child{border-bottom:none}
+  .price-row:hover{background:#fdfaf5}
+  .price-row h3{font-size:26px;color:var(--stone-dark)}
+  .price-row .price{font-family:'Cormorant Garamond',Georgia,serif;font-size:26px;font-weight:700;color:var(--clay);white-space:nowrap}
+  .price-row p{color:var(--muted);grid-column:1/2;font-size:16px}
+  .price-row .dur{font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--sage);text-align:right}
+  .services-note{text-align:center;margin-top:28px;color:var(--muted)}
+  .services-note a{color:var(--clay);font-weight:600}
+
+  /* Stylists */
+  .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:48px}
+  .member{text-align:center}
+  .member img{width:100%;height:360px;object-fit:cover;border-radius:var(--radius);margin-bottom:18px}
+  .member h3{font-size:26px;color:var(--stone-dark)}
+  .member .role{color:var(--clay);font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:4px 0 10px}
+  .member p{color:var(--muted);font-size:16px}
+
+  /* Reviews */
+  .reviews-section{background:var(--stone-dark);color:#e9e2d4}
+  .reviews-section .section-title{color:#fff}
+  .reviews-section .eyebrow{color:#e0a878}
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+  .review{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:32px 28px}
+  .stars{color:#e0a878;letter-spacing:3px;font-size:17px;margin-bottom:16px}
+  .review blockquote{font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;line-height:1.4;color:#f5efe3;margin-bottom:20px}
+  .review cite{font-style:normal;font-weight:600;color:#fff}
+  .review cite span{display:block;font-weight:400;font-size:14px;color:#b9ad97}
+
+  /* Visit */
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:48px;align-items:start}
+  .visit-card h3{font-size:24px;color:var(--stone-dark);margin-bottom:14px}
+  .visit-card p{color:var(--muted);margin-bottom:10px}
+  .visit-card a{font-weight:600;color:var(--clay)}
+  .hours{width:100%;border-collapse:collapse;margin-top:8px}
+  .hours td{padding:10px 0;border-bottom:1px solid var(--line);color:var(--muted)}
+  .hours td:last-child{text-align:right;font-weight:600;color:var(--stone-dark)}
+  .visit-img{border-radius:var(--radius);overflow:hidden}
+  .visit-img img{width:100%;height:100%;min-height:340px;object-fit:cover}
+
+  /* CTA */
+  .cta{background:var(--clay);color:#fff;text-align:center}
+  .cta h2{font-size:clamp(32px,4.5vw,46px);margin-bottom:14px}
+  .cta p{color:#fbe9df;font-size:18px;max-width:560px;margin:0 auto 30px}
+  .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .cta small{display:block;margin-top:20px;color:#f3d5c3;font-size:14px}
+
+  footer{background:var(--stone-dark);color:#b9ad97;padding:48px 0 32px;font-size:15px}
+  .footer-inner{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;align-items:flex-start;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .footer-brand .logo{color:#fff}
+  .footer-brand p{margin-top:10px;max-width:340px}
+  .footer-col h4{color:#fff;font-family:'Outfit',sans-serif;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
+  .footer-col a{display:block;margin-bottom:8px}
+  .footer-col a:hover{color:#e0a878}
+  .footer-bottom{padding-top:24px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .footer-bottom a{color:#e0a878;font-weight:600}
+
+  @media (max-width:900px){
+    .hero-grid{grid-template-columns:1fr}
+    .hero-copy{padding:56px 24px}
+    .hero-img img{min-height:320px}
+    .about-grid,.visit-grid{grid-template-columns:1fr;gap:36px}
+    .about-imgs img:last-child{display:none}
+    .team-grid,.reviews-grid{grid-template-columns:1fr 1fr}
+    .section{padding:68px 0}
+  }
+  @media (max-width:640px){
+    .nav-links{display:none}
+    .team-grid,.reviews-grid{grid-template-columns:1fr}
+    .feature-list{grid-template-columns:1fr}
+    .price-row{padding:22px}
+    .hero-stats{gap:22px;flex-wrap:wrap}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="4" stroke="#b4552d" stroke-width="2"/><circle cx="9" cy="23" r="4" stroke="#b4552d" stroke-width="2"/><path d="M12.5 11.5 27 26M12.5 20.5 27 6" stroke="#3e3a34" stroke-width="2" stroke-linecap="round"/></svg>Shear <em>&amp;</em> Stone</a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#team">Stylists</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+    </nav>
+    <a href="#book" class="btn btn-clay nav-cta">Book Now</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Hair Salon &middot; Alberta Arts District</p>
+      <h1>Honest hair, <em>beautifully</em> done.</h1>
+      <p>A calm, light-filled salon in Northeast Portland. Precision cuts, natural color, and styles that still look great three weeks later — because we cut for your real life, not just the chair.</p>
+      <div class="hero-actions">
+        <a href="#services" class="btn btn-clay">View Services</a>
+        <a href="#book" class="btn btn-ghost">Book an Appointment</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>4.9</b><span>from 480+ reviews</span></div>
+        <div><b>9 yrs</b><span>serving Portland</span></div>
+        <div><b>15 min</b><span>free consultation</span></div>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1400&auto=format&fit=crop" alt="Bright, modern interior of Shear and Stone salon in Portland">
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-imgs">
+        <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=1200&auto=format&fit=crop" alt="Stylist finishing a client's hair at Shear and Stone" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=600&auto=format&fit=crop" alt="Close-up of a precision haircut" loading="lazy">
+      </div>
+      <div class="about-copy">
+        <p class="eyebrow">Our Salon</p>
+        <h2 class="section-title">A slower kind of salon.</h2>
+        <p>Shear &amp; Stone opened in 2017 with a simple idea: fewer chairs, longer appointments, and stylists who actually listen. No rushing, no upselling, no haircut that falls apart the moment you wash it at home.</p>
+        <p>We use ammonia-free color and cruelty-free products, and every service starts with a real conversation about your hair, your routine, and what you want to walk out with.</p>
+        <ul class="feature-list">
+          <li>Free consultation with every service</li>
+          <li>Ammonia-free, cruelty-free color</li>
+          <li>Online booking, same-day slots</li>
+          <li>Gender-neutral pricing</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section services-section">
+  <div class="wrap">
+    <p class="eyebrow">Services &amp; Pricing</p>
+    <h2 class="section-title">Clear prices, no surprises.</h2>
+    <p class="section-sub">Every cut includes a wash, a consultation, and a style you can repeat at home. Prices are starting rates — your stylist confirms the exact price before we begin.</p>
+    <div class="price-list">
+      <div class="price-row">
+        <h3>Signature Cut</h3><span class="price">$55</span>
+        <p>A tailored cut for any length or texture, with a wash, scalp massage, and a finished style.</p><span class="dur">60 min</span>
+      </div>
+      <div class="price-row">
+        <h3>Cut &amp; Color</h3><span class="price">$140</span>
+        <p>Full color or root touch-up paired with a cut and gloss finish, matched to your skin tone.</p><span class="dur">2 hrs</span>
+      </div>
+      <div class="price-row">
+        <h3>Balayage &amp; Highlights</h3><span class="price">$165</span>
+        <p>Hand-painted dimension that grows out softly — sun-kissed, natural, and low maintenance.</p><span class="dur">2.5 hrs</span>
+      </div>
+      <div class="price-row">
+        <h3>Blowout &amp; Style</h3><span class="price">$45</span>
+        <p>A smooth, bouncy blowout with a wash and light finish — perfect for a night out or a big day.</p><span class="dur">45 min</span>
+      </div>
+      <div class="price-row">
+        <h3>Deep Conditioning Treatment</h3><span class="price">$35</span>
+        <p>A restorative mask and steam treatment that brings dry or color-treated hair back to life.</p><span class="dur">30 min</span>
+      </div>
+      <div class="price-row">
+        <h3>Kids Cut (12 &amp; under)</h3><span class="price">$32</span>
+        <p>A patient, gentle cut for kids — first haircuts included, with a keepsake lock of hair.</p><span class="dur">30 min</span>
+      </div>
+    </div>
+    <p class="services-note">Not sure what you need? <a href="tel:+15035550120">Call (503) 555-0120</a> and we'll help you pick the right service.</p>
+  </div>
+</section>
+
+<section id="team" class="section">
+  <div class="wrap">
+    <p class="eyebrow">Meet the Team</p>
+    <h2 class="section-title">Stylists who know your hair.</h2>
+    <p class="section-sub">A small team with real experience. Every stylist here has spent years behind the chair — and it shows.</p>
+    <div class="team-grid">
+      <article class="member">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop" alt="Portrait of Elena, founder and master stylist" loading="lazy">
+        <h3>Elena</h3>
+        <p class="role">Founder &middot; Master Stylist</p>
+        <p>Twelve years in the chair and the founder of Shear &amp; Stone. Elena specializes in lived-in color and cuts that grow out beautifully.</p>
+      </article>
+      <article class="member">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop" alt="Portrait of David, senior stylist" loading="lazy">
+        <h3>David</h3>
+        <p class="role">Senior Stylist &middot; Short Cuts</p>
+        <p>Sharp short cuts, clean fades, and textured crops. David is the one to ask for if you want a cut with real structure.</p>
+      </article>
+      <article class="member">
+        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=800&auto=format&fit=crop" alt="Portrait of Nora, color specialist" loading="lazy">
+        <h3>Nora</h3>
+        <p class="role">Color Specialist &middot; Balayage</p>
+        <p>From rich brunettes to bright blondes, Nora builds color that suits your skin tone — and teaches you how to keep it fresh.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="section reviews-section">
+  <div class="wrap">
+    <p class="eyebrow">Client Reviews</p>
+    <h2 class="section-title">What Portland says about us.</h2>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>&ldquo;Elena is the first stylist who ever asked how I actually style my hair at home — and then cut it to match. Three weeks later it still looks great.&rdquo;</blockquote>
+        <cite>Katie <span>Signature cut &middot; Alberta Arts</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>&ldquo;The balayage Nora did is perfect — natural, soft, and it grows out so well I only need to come in every few months. Worth every penny.&rdquo;</blockquote>
+        <cite>Sarah <span>Balayage &middot; Laurelhurst</span></cite>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>&ldquo;Calm, welcoming, and never rushed. David gave my son his first real haircut and was so patient with him. This is our salon now.&rdquo;</blockquote>
+        <cite>Michael <span>Kids cut &middot; Concordia</span></cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="section">
+  <div class="wrap">
+    <p class="eyebrow">Visit Us</p>
+    <h2 class="section-title">Find us on Alberta Street.</h2>
+    <div class="visit-grid">
+      <div>
+        <div class="visit-card">
+          <h3>Location &amp; Contact</h3>
+          <p>1827 NE Alberta Street<br>Portland, OR 97211</p>
+          <p><a href="tel:+15035550120">(503) 555-0120</a><br><a href="mailto:hello@shearandstone.com">hello@shearandstone.com</a></p>
+          <p>Street parking on Alberta Street and NE 19th Avenue. We're two doors down from the Alberta Street Fair mural wall.</p>
+        </div>
+        <div class="visit-card" style="margin-top:28px">
+          <h3>Opening Hours</h3>
+          <table class="hours">
+            <tr><td>Tuesday – Friday</td><td>9:00 AM – 7:00 PM</td></tr>
+            <tr><td>Saturday</td><td>9:00 AM – 6:00 PM</td></tr>
+            <tr><td>Sunday</td><td>11:00 AM – 5:00 PM</td></tr>
+            <tr><td>Monday</td><td>Closed</td></tr>
+          </table>
+        </div>
+      </div>
+      <div class="visit-img">
+        <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?q=80&w=1200&auto=format&fit=crop" alt="Styling stations inside Shear and Stone salon" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="book" class="section cta">
+  <div class="wrap">
+    <h2>Your chair is waiting.</h2>
+    <p>Book online in under a minute, or call us and we'll find a time that works. Same-day appointments are often available — walk-ins are always welcome.</p>
+    <div class="cta-actions">
+      <a href="tel:+15035550120" class="btn btn-light">Call (503) 555-0120</a>
+      <a href="#visit" class="btn btn-ghost" style="color:#fff;border-color:#fff">Get Directions</a>
+    </div>
+    <small>No deposit needed for cuts and styling. Color appointments are held with a card on file.</small>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="4" stroke="#e0a878" stroke-width="2"/><circle cx="9" cy="23" r="4" stroke="#e0a878" stroke-width="2"/><path d="M12.5 11.5 27 26M12.5 20.5 27 6" stroke="#fdfaf5" stroke-width="2" stroke-linecap="round"/></svg>Shear <em>&amp;</em> Stone</span>
+        <p>A calm, modern hair salon in Portland's Alberta Arts District. Honest hair, beautifully done.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#team">Stylists</a>
+        <a href="#reviews">Reviews</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+15035550120">(503) 555-0120</a>
+        <a href="mailto:hello@shearandstone.com">hello@shearandstone.com</a>
+        <a href="#visit">1827 NE Alberta St, Portland, OR 97211</a>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <a href="#visit">Tue – Fri: 9 AM – 7 PM</a>
+        <a href="#visit">Saturday: 9 AM – 6 PM</a>
+        <a href="#visit">Sunday: 11 AM – 5 PM</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Shear &amp; Stone Salon, Portland OR. All rights reserved.</span>
+      <span>Website designed &amp; built by <a href="https://weblodge.agency" target="_blank" rel="noopener">Weblodge Agency</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
