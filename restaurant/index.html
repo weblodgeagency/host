@@ -66,7 +66,8 @@
     display: flex; align-items: center; justify-content: space-between;
     height: 68px;
   }
-  .logo { font-family: 'Fraunces', Georgia, serif; font-size: 24px; font-weight: 700; color: #fff; }
+  .logo { display: inline-flex; align-items: center; gap: 10px; font-family: 'Fraunces', Georgia, serif; font-size: 24px; font-weight: 700; color: #fff; text-decoration: none; }
+  .logo svg { flex-shrink: 0; }
   .logo span { color: var(--amber); }
   .nav-links { display: flex; gap: 32px; list-style: none; }
   .nav-links a { color: #e9e2d4; font-weight: 500; font-size: 15px; }
@@ -147,6 +148,7 @@
   /* ---- Footer ---- */
   footer { background: var(--green-dark); color: #b9ad97; padding: 40px 0; text-align: center; font-size: 15px; }
   footer .logo { font-size: 21px; display: block; margin-bottom: 10px; }
+  footer .logo svg { vertical-align: -7px; }
   footer a { color: var(--amber); font-weight: 600; }
   footer a:hover { text-decoration: underline; }
 
@@ -172,7 +174,7 @@
 
 <header class="nav">
   <div class="nav-inner">
-    <a href="#" class="logo">The Copper <span>Skillet</span></a>
+    <a href="#" class="logo"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="13" cy="19" r="9.5" fill="#c05621"/><circle cx="13" cy="19" r="6" fill="#9c4218"/><path d="M20.5 11.5 28 4" stroke="#e8a04c" stroke-width="3.5" stroke-linecap="round"/></svg>The Copper <span>Skillet</span></a>
     <nav aria-label="Main navigation">
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
@@ -336,9 +338,9 @@
 
 <footer>
   <div class="wrap">
-    <span class="logo">The Copper <span>Skillet</span></span>
+    <span class="logo"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="13" cy="19" r="9.5" fill="#c05621"/><circle cx="13" cy="19" r="6" fill="#9c4218"/><path d="M20.5 11.5 28 4" stroke="#e8a04c" stroke-width="3.5" stroke-linecap="round"/></svg> The Copper <span>Skillet</span></span>
     <p>2410 South Congress Avenue, Austin, TX 78704 &middot; (512) 555-0184</p>
-    <p style="margin-top: 12px;">Demo website crafted by <a href="https://weblodge.agency">Weblodge Agency</a> &mdash; we build beautiful websites for small businesses.</p>
+    <p style="margin-top: 12px;">Website designed &amp; built by <a href="https://weblodge.agency">Weblodge Agency</a> &mdash; we build beautiful websites for small businesses.</p>
   </div>
 </footer>
 

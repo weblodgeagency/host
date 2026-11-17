@@ -56,7 +56,8 @@
     max-width:1120px;margin:0 auto;padding:16px 24px;
     display:flex;align-items:center;justify-content:space-between;gap:20px;
   }
-  .logo{font-family:'Playfair Display',Georgia,serif;font-size:1.45rem;font-weight:700;letter-spacing:.01em}
+  .logo{display:inline-flex;align-items:center;gap:10px;font-family:'Playfair Display',Georgia,serif;font-size:1.45rem;font-weight:700;letter-spacing:.01em;text-decoration:none}
+  .logo svg{flex-shrink:0}
   .logo span{color:var(--gold-dark);font-style:italic}
   .nav-links{display:flex;align-items:center;gap:28px;font-size:.95rem;font-weight:500;color:var(--ink-soft)}
   .nav-links a:hover{color:var(--gold-dark)}
@@ -214,7 +215,7 @@
 
 <header class="nav">
   <div class="nav-inner">
-    <a class="logo" href="#top">The Velvet <span>Strand</span></a>
+    <a class="logo" href="#top"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#c19a5b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.12 15.88"/><path d="M14.47 14.48 20 20"/><path d="M8.12 8.12 12 12"/></svg>The Velvet <span>Strand</span></a>
     <nav class="nav-links" aria-label="Main navigation">
       <a href="#services">Services</a>
       <a href="#stylists">Stylists</a>
@@ -449,7 +450,7 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a class="logo" href="#top">The Velvet <span>Strand</span></a>
+        <a class="logo" href="#top"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#c19a5b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.12 15.88"/><path d="M14.47 14.48 20 20"/><path d="M8.12 8.12 12 12"/></svg>The Velvet <span>Strand</span></a>
         <p>A modern salon and barbershop in Uptown Dallas. Precision cuts, beautiful color, and a chair that feels like yours.</p>
       </div>
       <div class="footer-col">
@@ -474,7 +475,7 @@
     </div>
     <div class="footer-bottom">
       <span>&copy; 2026 The Velvet Strand Salon &amp; Barbershop, Dallas TX. All rights reserved.</span>
-      <span>Demo website crafted by <a href="https://weblodge.agency" target="_blank" rel="noopener">Weblodge Agency</a></span>
+      <span>Website designed &amp; built by <a href="https://weblodge.agency" target="_blank" rel="noopener">Weblodge Agency</a></span>
     </div>
   </div>
 </footer>
